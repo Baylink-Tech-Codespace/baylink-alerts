@@ -1,0 +1,461 @@
+2025-02-19 13:19:16,549 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:17,554 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:18,558 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:19,563 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:20,568 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:21,570 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:22,572 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:23,577 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:24,582 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:25,585 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:26,590 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:27,596 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:28,600 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:29,601 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:30,607 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:31,612 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:32,618 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:33,623 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:34,628 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:35,634 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:19:36,637 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 3}
+2025-02-19 13:21:04,757 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 1000, 'historical_avg_sales': 2000}
+2025-02-19 13:21:05,762 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 1000, 'historical_avg_sales': 2000}
+2025-02-19 13:21:06,768 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 1000, 'historical_avg_sales': 2000}
+2025-02-19 13:21:07,769 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 1000, 'historical_avg_sales': 2000}
+2025-02-19 13:21:08,775 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 1000, 'historical_avg_sales': 2000} 2025-02-19 14:25:59,688 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-19 14:25:59,688 - [33mPress CTRL+C to quit[0m
+2025-02-19 14:25:59,688 -  * Restarting with watchdog (fsevents)
+2025-02-19 14:25:59,902 -  * Debugger is active!
+2025-02-19 14:25:59,911 -  * Debugger PIN: 724-218-236
+2025-02-19 14:25:59,922 - 127.0.0.1 - - [19/Feb/2025 14:25:59] "GET /socket.io/?EIO=4&transport=polling&t=PKTQz27 HTTP/1.1" 200 -
+2025-02-19 14:25:59,926 - 127.0.0.1 - - [19/Feb/2025 14:25:59] "POST /socket.io/?EIO=4&transport=polling&t=PKTQz2q&sid=NA7sCsn434spmCOyAAAA HTTP/1.1" 200 -
+2025-02-19 14:25:59,928 - 127.0.0.1 - - [19/Feb/2025 14:25:59] "GET /socket.io/?EIO=4&transport=polling&t=PKTQz2r&sid=NA7sCsn434spmCOyAAAA HTTP/1.1" 200 -
+2025-02-19 14:25:59,931 - 127.0.0.1 - - [19/Feb/2025 14:25:59] "GET /socket.io/?EIO=4&transport=polling&t=PKTQz2v&sid=NA7sCsn434spmCOyAAAA HTTP/1.1" 200 -
+2025-02-19 14:26:00,661 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 5}
+2025-02-19 14:26:00,891 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 195, 'historical_avg_sales': 570}
+2025-02-19 14:26:01,894 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 4}
+2025-02-19 14:26:02,670 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 68, 'pending_bills': 5}
+2025-02-19 14:26:02,899 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 65, 'required_stock': 268}
+2025-02-19 14:26:03,597 - 127.0.0.1 - - [19/Feb/2025 14:26:03] "GET /socket.io/?EIO=4&transport=websocket&sid=NA7sCsn434spmCOyAAAA HTTP/1.1" 200 -
+2025-02-19 14:26:03,605 - 127.0.0.1 - - [19/Feb/2025 14:26:03] "GET / HTTP/1.1" 200 -
+2025-02-19 14:26:03,619 - 127.0.0.1 - - [19/Feb/2025 14:26:03] "GET /socket.io/?EIO=4&transport=polling&t=PKTQzyX HTTP/1.1" 200 -
+2025-02-19 14:26:03,623 - 127.0.0.1 - - [19/Feb/2025 14:26:03] "POST /socket.io/?EIO=4&transport=polling&t=PKTQzya&sid=UzMIPbfYJvhJ2sl-AAAC HTTP/1.1" 200 -
+2025-02-19 14:26:03,628 - 127.0.0.1 - - [19/Feb/2025 14:26:03] "GET /socket.io/?EIO=4&transport=polling&t=PKTQzyb&sid=UzMIPbfYJvhJ2sl-AAAC HTTP/1.1" 200 -
+2025-02-19 14:26:03,631 - 127.0.0.1 - - [19/Feb/2025 14:26:03] "GET /socket.io/?EIO=4&transport=polling&t=PKTQzyj&sid=UzMIPbfYJvhJ2sl-AAAC HTTP/1.1" 200 -
+2025-02-19 14:26:03,673 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 1}
+2025-02-19 14:26:03,905 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 77, 'pending_bills': 1}
+2025-02-19 14:26:04,678 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 78, 'pending_bills': 2}
+2025-02-19 14:26:05,684 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 257, 'historical_avg_sales': 492}
+2025-02-19 14:26:06,690 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 9, 'required_stock': 239}
+2025-02-19 14:26:07,695 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 20}
+2025-02-19 14:26:08,697 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 11, 'required_stock': 148}
+2025-02-19 14:26:08,921 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 73, 'pending_bills': 5}
+2025-02-19 14:26:09,702 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 15}
+2025-02-19 14:26:09,922 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 0, 'required_stock': 259}
+2025-02-19 14:26:10,708 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 34, 'required_stock': 280}
+2025-02-19 14:26:10,924 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 13}
+2025-02-19 14:26:11,714 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 318, 'historical_avg_sales': 482}
+2025-02-19 14:26:11,927 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 24, 'required_stock': 249}
+2025-02-19 14:26:12,717 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 89, 'pending_bills': 3}
+2025-02-19 14:26:13,720 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 44, 'required_stock': 271}
+2025-02-19 14:26:14,729 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 11}
+2025-02-19 14:26:14,934 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 1, 'required_stock': 152}
+2025-02-19 14:26:16,941 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 152, 'historical_avg_sales': 600}
+2025-02-19 14:26:17,943 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 25}
+2025-02-19 14:26:18,745 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 164, 'historical_avg_sales': 352}
+2025-02-19 14:26:19,954 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 26}
+2025-02-19 14:26:20,755 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 392, 'historical_avg_sales': 578}
+2025-02-19 14:26:20,959 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 8}
+2025-02-19 14:26:21,758 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 155, 'historical_avg_sales': 264}
+2025-02-19 14:26:21,964 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 288, 'historical_avg_sales': 602}
+2025-02-19 14:26:23,768 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 414, 'historical_avg_sales': 679}
+2025-02-19 14:26:23,975 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 81, 'pending_bills': 2}
+2025-02-19 14:26:24,979 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 77, 'historical_avg_sales': 678}
+2025-02-19 14:26:25,982 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 83, 'pending_bills': 3}
+2025-02-19 14:26:26,784 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 62, 'pending_bills': 1}
+2025-02-19 14:26:28,792 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 118, 'historical_avg_sales': 380}
+2025-02-19 14:26:28,993 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 283, 'historical_avg_sales': 542}
+2025-02-19 14:26:29,333 - 127.0.0.1 - - [19/Feb/2025 14:26:29] "GET /socket.io/?EIO=4&transport=websocket&sid=UzMIPbfYJvhJ2sl-AAAC HTTP/1.1" 200 -
+2025-02-19 14:26:29,341 - 127.0.0.1 - - [19/Feb/2025 14:26:29] "GET / HTTP/1.1" 200 -
+2025-02-19 14:26:29,354 - 127.0.0.1 - - [19/Feb/2025 14:26:29] "GET /socket.io/?EIO=4&transport=polling&t=PKTR4Ee HTTP/1.1" 200 -
+2025-02-19 14:26:29,357 - 127.0.0.1 - - [19/Feb/2025 14:26:29] "POST /socket.io/?EIO=4&transport=polling&t=PKTR4Eh&sid=UPc0yUnJSHVghc6RAAAE HTTP/1.1" 200 -
+2025-02-19 14:26:29,359 - 127.0.0.1 - - [19/Feb/2025 14:26:29] "GET /socket.io/?EIO=4&transport=polling&t=PKTR4Eh.0&sid=UPc0yUnJSHVghc6RAAAE HTTP/1.1" 200 -
+2025-02-19 14:26:29,362 - 127.0.0.1 - - [19/Feb/2025 14:26:29] "GET /socket.io/?EIO=4&transport=polling&t=PKTR4Em&sid=UPc0yUnJSHVghc6RAAAE HTTP/1.1" 200 -
+2025-02-19 14:26:29,798 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 0, 'required_stock': 226}
+2025-02-19 14:26:31,003 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 58, 'pending_bills': 4}
+2025-02-19 14:26:32,804 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 74, 'pending_bills': 5}
+2025-02-19 14:26:33,011 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 18}
+2025-02-19 14:26:33,810 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 65, 'pending_bills': 2}
+2025-02-19 14:26:34,013 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 47, 'pending_bills': 3}
+2025-02-19 14:26:34,815 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 81, 'pending_bills': 4}
+2025-02-19 14:26:35,015 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 25, 'required_stock': 264}
+2025-02-19 14:26:35,821 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 40, 'required_stock': 183}
+2025-02-19 14:26:36,020 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 226, 'historical_avg_sales': 595}
+2025-02-19 14:26:36,826 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 16}
+2025-02-19 14:26:37,832 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 66, 'pending_bills': 5}
+2025-02-19 14:26:38,030 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 479, 'historical_avg_sales': 777}
+2025-02-19 14:26:38,838 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 79, 'pending_bills': 4}
+2025-02-19 14:26:40,041 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 176, 'historical_avg_sales': 550}
+2025-02-19 14:26:40,844 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 0, 'required_stock': 107}
+2025-02-19 14:26:41,042 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 66, 'required_stock': 286}
+2025-02-19 14:26:41,850 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 83, 'pending_bills': 2}
+2025-02-19 14:26:42,855 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 14}
+2025-02-19 14:26:43,050 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 55, 'pending_bills': 5}
+2025-02-19 14:26:44,055 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 57, 'pending_bills': 3}
+2025-02-19 14:26:45,058 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 47, 'required_stock': 200}
+2025-02-19 14:26:45,869 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 80, 'historical_avg_sales': 532}
+2025-02-19 14:26:46,061 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 107, 'historical_avg_sales': 591}
+2025-02-19 14:26:46,874 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 49, 'required_stock': 214}
+2025-02-19 14:26:47,066 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 11}
+2025-02-19 14:26:47,876 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 21}
+2025-02-19 14:26:48,069 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 116, 'historical_avg_sales': 605}
+2025-02-19 14:26:48,877 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 87, 'pending_bills': 2}
+2025-02-19 14:26:49,075 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 411, 'historical_avg_sales': 738}
+2025-02-19 14:26:49,879 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 21}
+2025-02-19 14:26:50,081 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 146, 'historical_avg_sales': 464}
+2025-02-19 14:26:50,883 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 17, 'required_stock': 277}
+2025-02-19 14:26:51,086 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 52, 'required_stock': 300}
+2025-02-19 14:26:52,091 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 21}
+2025-02-19 14:26:52,894 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 35, 'pending_bills': 4}
+2025-02-19 14:26:53,097 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 32, 'pending_bills': 5}
+2025-02-19 14:26:53,899 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 7}
+2025-02-19 14:26:54,101 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 23, 'required_stock': 123}
+2025-02-19 14:26:54,905 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 62, 'pending_bills': 2}
+2025-02-19 14:26:55,908 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 285, 'historical_avg_sales': 547}
+2025-02-19 14:26:56,112 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 87, 'pending_bills': 2}
+2025-02-19 14:26:56,912 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 73, 'pending_bills': 1}
+2025-02-19 14:26:57,113 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 32, 'pending_bills': 4}
+2025-02-19 14:26:57,916 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 86, 'pending_bills': 5}
+2025-02-19 14:26:58,119 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 46, 'pending_bills': 3}
+2025-02-19 14:26:58,918 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 48, 'pending_bills': 4}
+2025-02-19 14:26:59,121 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 9}
+2025-02-19 14:27:01,126 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 62, 'pending_bills': 2}
+2025-02-19 14:27:01,929 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 18, 'required_stock': 210}
+2025-02-19 14:27:02,131 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 137, 'historical_avg_sales': 537}
+2025-02-19 14:27:03,940 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 25}
+2025-02-19 14:27:05,144 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 221, 'historical_avg_sales': 473}
+2025-02-19 14:27:05,948 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 85, 'required_stock': 286}
+2025-02-19 14:27:06,147 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 0, 'required_stock': 230}
+2025-02-19 14:27:06,953 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 90, 'pending_bills': 4}
+2025-02-19 14:27:07,153 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 27}
+2025-02-19 14:27:07,958 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 17}
+2025-02-19 14:27:08,159 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 31, 'required_stock': 118}
+2025-02-19 14:27:08,964 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 25}
+2025-02-19 14:27:09,165 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 7}
+2025-02-19 14:27:09,970 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 6}
+2025-02-19 14:27:10,166 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 12}
+2025-02-19 14:27:10,976 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 9}
+2025-02-19 14:27:11,172 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 20, 'required_stock': 293}
+2025-02-19 14:27:12,175 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 34, 'required_stock': 238}
+2025-02-19 14:27:13,181 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 51, 'required_stock': 243}
+2025-02-19 14:27:13,987 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 239, 'historical_avg_sales': 421}
+2025-02-19 14:27:14,993 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 54, 'required_stock': 262}
+2025-02-19 14:27:15,189 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 70, 'pending_bills': 5}
+2025-02-19 14:27:15,998 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 51, 'required_stock': 182}
+2025-02-19 14:27:16,195 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 187, 'historical_avg_sales': 289}
+2025-02-19 14:27:16,998 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 33, 'required_stock': 283}
+2025-02-19 14:27:17,199 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 339, 'historical_avg_sales': 731}
+2025-02-19 14:27:18,003 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 72, 'required_stock': 277}
+2025-02-19 14:27:19,008 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 90, 'pending_bills': 5}
+2025-02-19 14:27:20,212 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 84, 'pending_bills': 3}
+2025-02-19 14:27:21,214 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 19}
+2025-02-19 14:27:22,019 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 236, 'historical_avg_sales': 402}
+2025-02-19 14:27:22,220 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 8}
+2025-02-19 14:27:23,226 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 48, 'required_stock': 266}
+2025-02-19 14:27:24,029 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 13, 'required_stock': 300}
+2025-02-19 14:27:24,229 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 56, 'historical_avg_sales': 619}
+2025-02-19 14:27:26,038 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 254, 'historical_avg_sales': 538}
+2025-02-19 14:27:27,039 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 24}
+2025-02-19 14:27:27,237 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 17, 'required_stock': 213}
+2025-02-19 14:27:28,043 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 7}
+2025-02-19 14:27:29,246 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 7, 'required_stock': 207}
+2025-02-19 14:27:30,046 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 66, 'pending_bills': 1}
+2025-02-19 14:27:31,253 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 22}
+2025-02-19 14:27:33,264 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 52, 'pending_bills': 3}
+2025-02-19 14:27:34,060 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 15}
+2025-02-19 14:27:35,270 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 78, 'pending_bills': 5}
+2025-02-19 14:27:36,274 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 137, 'historical_avg_sales': 714}
+2025-02-19 14:27:37,074 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 24}
+2025-02-19 14:27:37,278 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 74, 'pending_bills': 5}
+2025-02-19 14:27:38,080 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 86, 'pending_bills': 5}
+2025-02-19 14:27:38,282 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 6}
+2025-02-19 14:27:39,081 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 66, 'pending_bills': 1}
+2025-02-19 14:27:39,287 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 136, 'historical_avg_sales': 490}
+2025-02-19 14:27:40,085 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 72, 'pending_bills': 2}
+2025-02-19 14:27:40,292 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 16, 'required_stock': 210}
+2025-02-19 14:27:41,091 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 88, 'pending_bills': 5}
+2025-02-19 14:27:41,298 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 16, 'required_stock': 258}
+2025-02-19 14:27:42,303 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 19}
+2025-02-19 14:27:43,101 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 308, 'historical_avg_sales': 501}
+2025-02-19 14:27:43,309 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 56, 'historical_avg_sales': 321}
+2025-02-19 14:27:44,314 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 65, 'pending_bills': 4}
+2025-02-19 14:27:45,107 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 80, 'required_stock': 275}
+2025-02-19 14:27:45,317 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 52, 'required_stock': 207}
+2025-02-19 14:27:46,110 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 22, 'required_stock': 159}
+2025-02-19 14:27:46,323 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 1, 'required_stock': 180}
+2025-02-19 14:27:47,117 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 290, 'historical_avg_sales': 783}
+2025-02-19 14:27:47,329 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 38, 'required_stock': 258}
+2025-02-19 14:27:48,124 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 160, 'historical_avg_sales': 580}
+2025-02-19 14:27:48,334 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 11, 'required_stock': 284}
+2025-02-19 14:27:50,132 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 1, 'required_stock': 150}
+2025-02-19 14:27:50,341 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 66, 'required_stock': 285}
+2025-02-19 14:27:51,137 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 59, 'pending_bills': 5}
+2025-02-19 14:27:51,347 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 431, 'historical_avg_sales': 618}
+2025-02-19 14:27:52,140 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 35, 'pending_bills': 3}
+2025-02-19 14:27:52,352 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 79, 'pending_bills': 3}
+2025-02-19 14:27:53,144 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 29}
+2025-02-19 14:27:53,354 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 56, 'pending_bills': 5}
+2025-02-19 14:27:54,149 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 7}
+2025-02-19 14:27:55,361 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 36, 'required_stock': 208}
+2025-02-19 14:27:56,157 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 56, 'pending_bills': 4}
+2025-02-19 14:27:56,363 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 10}
+2025-02-19 14:27:57,158 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 81, 'pending_bills': 5}
+2025-02-19 14:27:58,161 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 14, 'required_stock': 189}
+2025-02-19 14:27:58,373 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 6, 'required_stock': 168}
+2025-02-19 14:27:59,166 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 7, 'required_stock': 107}
+2025-02-19 14:27:59,379 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 91, 'historical_avg_sales': 647}
+2025-02-19 14:28:00,384 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 21}
+2025-02-19 14:28:01,175 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 16}
+2025-02-19 14:28:01,390 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 25}
+2025-02-19 14:28:02,179 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 42, 'pending_bills': 5}
+2025-02-19 14:28:02,395 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 33, 'pending_bills': 3}
+2025-02-19 14:28:03,185 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 21, 'required_stock': 251}
+2025-02-19 14:28:04,191 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 423, 'historical_avg_sales': 767}
+2025-02-19 14:28:04,404 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 256, 'historical_avg_sales': 415}
+2025-02-19 14:28:05,196 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 16}
+2025-02-19 14:28:05,406 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 83, 'pending_bills': 3}
+2025-02-19 14:28:06,202 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 33, 'pending_bills': 3}
+2025-02-19 14:28:07,207 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 147, 'historical_avg_sales': 523}
+2025-02-19 14:28:07,412 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 40, 'required_stock': 194}
+2025-02-19 14:28:08,213 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 21}
+2025-02-19 14:28:08,417 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 87, 'pending_bills': 3}
+2025-02-19 14:28:10,221 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 140, 'historical_avg_sales': 260}
+2025-02-19 14:28:11,224 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 15}
+2025-02-19 14:28:13,232 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 19}
+2025-02-19 14:28:13,440 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 248, 'historical_avg_sales': 450}
+2025-02-19 14:28:14,236 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 40, 'required_stock': 197}
+2025-02-19 14:28:14,446 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 50, 'pending_bills': 5}
+2025-02-19 14:28:15,241 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 215, 'historical_avg_sales': 677}
+2025-02-19 14:28:15,449 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 16, 'required_stock': 274}
+2025-02-19 14:28:16,247 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 73, 'pending_bills': 1}
+2025-02-19 14:28:16,455 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 331, 'historical_avg_sales': 705}
+2025-02-19 14:28:17,252 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 137, 'historical_avg_sales': 767}
+2025-02-19 14:28:17,459 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 67, 'pending_bills': 1}
+2025-02-19 14:28:18,258 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 18}
+2025-02-19 14:28:19,263 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 15}
+2025-02-19 14:28:19,470 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 74, 'required_stock': 272}
+2025-02-19 14:28:20,269 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 30, 'required_stock': 193}
+2025-02-19 14:28:20,473 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 37, 'required_stock': 183}
+2025-02-19 14:28:21,479 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 123, 'historical_avg_sales': 568}
+2025-02-19 14:28:22,275 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 53, 'pending_bills': 4}
+2025-02-19 14:28:23,281 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 433, 'historical_avg_sales': 747}
+2025-02-19 14:28:23,490 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 13}
+2025-02-19 14:28:24,287 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 37, 'required_stock': 210}
+2025-02-19 14:28:24,495 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 0, 'required_stock': 145}
+2025-02-19 14:28:25,293 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 498, 'historical_avg_sales': 724}
+2025-02-19 14:28:25,497 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 28}
+2025-02-19 14:28:26,297 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 81, 'pending_bills': 1}
+2025-02-19 14:28:26,503 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 64, 'pending_bills': 2}
+2025-02-19 14:28:27,508 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 186, 'historical_avg_sales': 610}
+2025-02-19 14:28:28,308 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 19, 'required_stock': 140}
+2025-02-19 14:28:29,313 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 17}
+2025-02-19 14:28:29,517 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 21, 'required_stock': 112}
+2025-02-19 14:28:30,319 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 245, 'historical_avg_sales': 784}
+2025-02-19 14:28:31,527 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 84, 'pending_bills': 4}
+2025-02-19 14:28:32,325 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 20}
+2025-02-19 14:28:33,330 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 38, 'required_stock': 212}
+2025-02-19 14:28:33,535 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 19}
+2025-02-19 14:28:34,336 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 68, 'pending_bills': 3}
+2025-02-19 14:28:35,341 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 251, 'historical_avg_sales': 747}
+2025-02-19 14:28:35,545 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 51, 'pending_bills': 3}
+2025-02-19 14:28:36,547 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 57, 'required_stock': 196}
+2025-02-19 14:28:38,354 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 66, 'historical_avg_sales': 611}
+2025-02-19 14:28:38,557 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 63, 'pending_bills': 3}
+2025-02-19 14:28:41,573 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 424, 'historical_avg_sales': 722}
+2025-02-19 14:28:42,351 -  * Detected change in '/Users/anshumantiwari/Desktop/baylink-alerts/main.py', reloading
+2025-02-19 14:28:42,371 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 88, 'pending_bills': 2}
+2025-02-19 14:28:42,969 -  * Restarting with watchdog (fsevents)
+2025-02-19 14:28:43,375 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 16}
+2025-02-19 14:28:44,380 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 426, 'historical_avg_sales': 647}
+2025-02-19 14:29:13,615 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-19 14:29:13,615 - [33mPress CTRL+C to quit[0m
+2025-02-19 14:29:13,615 -  * Restarting with watchdog (fsevents)
+2025-02-19 14:29:13,828 -  * Debugger is active!
+2025-02-19 14:29:13,836 -  * Debugger PIN: 724-218-236
+2025-02-19 14:29:14,593 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 359, 'historical_avg_sales': 697}
+2025-02-19 14:29:14,874 - 127.0.0.1 - - [19/Feb/2025 14:29:14] "GET /socket.io/?EIO=4&transport=polling&t=PKTRieu HTTP/1.1" 200 -
+2025-02-19 14:29:14,877 - 127.0.0.1 - - [19/Feb/2025 14:29:14] "POST /socket.io/?EIO=4&transport=polling&t=PKTRiex&sid=Gqhr373P69uSENYCAAAA HTTP/1.1" 200 -
+2025-02-19 14:29:14,879 - 127.0.0.1 - - [19/Feb/2025 14:29:14] "GET /socket.io/?EIO=4&transport=polling&t=PKTRiez&sid=Gqhr373P69uSENYCAAAA HTTP/1.1" 200 -
+2025-02-19 14:29:15,595 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 27, 'required_stock': 299}
+2025-02-19 14:29:15,825 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 184, 'historical_avg_sales': 424}
+2025-02-19 14:29:16,827 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 4, 'required_stock': 271}
+2025-02-19 14:29:17,578 - 127.0.0.1 - - [19/Feb/2025 14:29:17] "GET /socket.io/?EIO=4&transport=websocket&sid=Gqhr373P69uSENYCAAAA HTTP/1.1" 200 -
+2025-02-19 14:29:17,589 - 127.0.0.1 - - [19/Feb/2025 14:29:17] "GET / HTTP/1.1" 200 -
+2025-02-19 14:29:17,603 - 127.0.0.1 - - [19/Feb/2025 14:29:17] "GET /socket.io/?EIO=4&transport=polling&t=PKTRjJV HTTP/1.1" 200 -
+2025-02-19 14:29:17,606 - 127.0.0.1 - - [19/Feb/2025 14:29:17] "POST /socket.io/?EIO=4&transport=polling&t=PKTRjJa&sid=AZnv1LdlDjVfxDXWAAAC HTTP/1.1" 200 -
+2025-02-19 14:29:17,608 - 127.0.0.1 - - [19/Feb/2025 14:29:17] "GET /socket.io/?EIO=4&transport=polling&t=PKTRjJa.0&sid=AZnv1LdlDjVfxDXWAAAC HTTP/1.1" 200 -
+2025-02-19 14:29:17,830 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 75, 'required_stock': 265}
+2025-02-19 14:29:18,609 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 13}
+2025-02-19 14:29:18,835 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 69, 'pending_bills': 3}
+2025-02-19 14:29:19,838 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 25}
+2025-02-19 14:29:20,618 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 11}
+2025-02-19 14:29:21,624 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 12}
+2025-02-19 14:29:21,841 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 24, 'required_stock': 110}
+2025-02-19 14:29:23,631 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 71, 'pending_bills': 1}
+2025-02-19 14:29:24,637 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 282, 'historical_avg_sales': 624}
+2025-02-19 14:29:24,856 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 410, 'historical_avg_sales': 654}
+2025-02-19 14:29:25,861 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 12}
+2025-02-19 14:29:26,643 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 14}
+2025-02-19 14:29:27,869 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 31, 'required_stock': 254}
+2025-02-19 14:29:28,875 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 84, 'pending_bills': 2}
+2025-02-19 14:29:29,877 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 45, 'required_stock': 218}
+2025-02-19 14:29:30,663 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 71, 'pending_bills': 3}
+2025-02-19 14:29:30,880 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 81, 'pending_bills': 3}
+2025-02-19 14:29:31,885 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 30, 'pending_bills': 3}
+2025-02-19 14:29:32,671 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 5, 'required_stock': 194}
+2025-02-19 14:29:32,890 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 79, 'pending_bills': 3}
+2025-02-19 14:29:33,676 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 41, 'required_stock': 216}
+2025-02-19 14:29:33,895 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 7}
+2025-02-19 14:29:34,677 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 10}
+2025-02-19 14:29:34,898 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 30, 'required_stock': 234}
+2025-02-19 14:29:35,167 -  * Detected change in '/Users/anshumantiwari/Desktop/baylink-alerts/main.py', reloading
+2025-02-19 14:29:35,680 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 8}
+2025-02-19 14:29:36,082 -  * Restarting with watchdog (fsevents)
+2025-02-19 14:29:36,309 -  * Debugger is active!
+2025-02-19 14:29:36,317 -  * Debugger PIN: 724-218-236
+2025-02-19 14:29:38,656 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-19 14:29:38,656 - [33mPress CTRL+C to quit[0m
+2025-02-19 14:29:38,656 -  * Restarting with watchdog (fsevents)
+2025-02-19 14:29:38,878 -  * Debugger is active!
+2025-02-19 14:29:38,885 -  * Debugger PIN: 724-218-236
+2025-02-19 14:29:39,636 - 127.0.0.1 - - [19/Feb/2025 14:29:39] "GET / HTTP/1.1" 200 -
+2025-02-19 14:29:39,650 - 127.0.0.1 - - [19/Feb/2025 14:29:39] "GET /socket.io/?EIO=4&transport=polling&t=PKTRoh_ HTTP/1.1" 200 -
+2025-02-19 14:29:39,654 - 127.0.0.1 - - [19/Feb/2025 14:29:39] "POST /socket.io/?EIO=4&transport=polling&t=PKTRoi3&sid=GRYf7qJKACwOX4AeAAAA HTTP/1.1" 200 -
+2025-02-19 14:29:39,656 - 127.0.0.1 - - [19/Feb/2025 14:29:39] "GET /socket.io/?EIO=4&transport=polling&t=PKTRoi4&sid=GRYf7qJKACwOX4AeAAAA HTTP/1.1" 200 -
+2025-02-19 14:29:48,667 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 65, 'pending_bills': 1}
+2025-02-19 14:29:48,904 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 62, 'pending_bills': 4}
+2025-02-19 14:29:58,704 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 69, 'pending_bills': 5}
+2025-02-19 14:29:58,939 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 45, 'pending_bills': 3}
+2025-02-19 14:30:15,306 -  * Detected change in '/Users/anshumantiwari/Desktop/baylink-alerts/main.py', reloading
+2025-02-19 14:30:16,277 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-19 14:30:16,278 - [33mPress CTRL+C to quit[0m
+2025-02-19 14:30:16,278 -  * Restarting with watchdog (fsevents)
+2025-02-19 14:30:16,491 -  * Debugger is active!
+2025-02-19 14:30:16,499 -  * Debugger PIN: 724-218-236
+2025-02-19 14:30:17,121 - 127.0.0.1 - - [19/Feb/2025 14:30:17] "GET /socket.io/?EIO=4&transport=polling&t=PKTRxrT HTTP/1.1" 200 -
+2025-02-19 14:30:17,126 - 127.0.0.1 - - [19/Feb/2025 14:30:17] "POST /socket.io/?EIO=4&transport=polling&t=PKTRxrZ&sid=XtOrGQ4tPQOr21HSAAAA HTTP/1.1" 200 -
+2025-02-19 14:30:17,127 - 127.0.0.1 - - [19/Feb/2025 14:30:17] "GET /socket.io/?EIO=4&transport=polling&t=PKTRxrZ.0&sid=XtOrGQ4tPQOr21HSAAAA HTTP/1.1" 200 -
+2025-02-19 14:30:17,130 - 127.0.0.1 - - [19/Feb/2025 14:30:17] "GET /socket.io/?EIO=4&transport=polling&t=PKTRxrf&sid=XtOrGQ4tPQOr21HSAAAA HTTP/1.1" 200 -
+2025-02-19 14:30:18,140 - 127.0.0.1 - - [19/Feb/2025 14:30:18] "GET /socket.io/?EIO=4&transport=websocket&sid=XtOrGQ4tPQOr21HSAAAA HTTP/1.1" 200 -
+2025-02-19 14:30:18,148 - 127.0.0.1 - - [19/Feb/2025 14:30:18] "GET / HTTP/1.1" 200 -
+2025-02-19 14:30:18,163 - 127.0.0.1 - - [19/Feb/2025 14:30:18] "GET /socket.io/?EIO=4&transport=polling&t=PKTRy5n HTTP/1.1" 200 -
+2025-02-19 14:30:18,167 - 127.0.0.1 - - [19/Feb/2025 14:30:18] "POST /socket.io/?EIO=4&transport=polling&t=PKTRy5r&sid=043RBA-A3kIhEuYtAAAC HTTP/1.1" 200 -
+2025-02-19 14:30:18,171 - 127.0.0.1 - - [19/Feb/2025 14:30:18] "GET /socket.io/?EIO=4&transport=polling&t=PKTRy5r.0&sid=043RBA-A3kIhEuYtAAAC HTTP/1.1" 200 -
+2025-02-19 14:30:26,297 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 209, 'historical_avg_sales': 356}
+2025-02-19 14:30:36,335 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 23}
+2025-02-19 14:30:36,548 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 225, 'historical_avg_sales': 372}
+2025-02-19 14:30:45,558 - 127.0.0.1 - - [19/Feb/2025 14:30:45] "GET /socket.io/?EIO=4&transport=websocket&sid=043RBA-A3kIhEuYtAAAC HTTP/1.1" 200 -
+2025-02-19 14:30:46,376 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 9, 'required_stock': 242}
+2025-02-20 13:02:23,217 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-20 13:02:23,217 - [33mPress CTRL+C to quit[0m
+2025-02-20 13:02:23,218 -  * Restarting with watchdog (fsevents)
+2025-02-20 13:02:23,678 -  * Debugger is active!
+2025-02-20 13:02:23,690 -  * Debugger PIN: 724-218-236
+2025-02-20 13:02:27,126 - 127.0.0.1 - - [20/Feb/2025 13:02:27] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:27,150 - 127.0.0.1 - - [20/Feb/2025 13:02:27] "GET /socket.io/?EIO=4&transport=polling&t=PKYHQ-C HTTP/1.1" 200 -
+2025-02-20 13:02:27,166 - 127.0.0.1 - - [20/Feb/2025 13:02:27] "POST /socket.io/?EIO=4&transport=polling&t=PKYHQ-R&sid=4HGuiAagPlAT2cIiAAAA HTTP/1.1" 200 -
+2025-02-20 13:02:27,171 - 127.0.0.1 - - [20/Feb/2025 13:02:27] "GET /socket.io/?EIO=4&transport=polling&t=PKYHQ-T&sid=4HGuiAagPlAT2cIiAAAA HTTP/1.1" 200 -
+2025-02-20 13:02:27,173 - 127.0.0.1 - - [20/Feb/2025 13:02:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-02-20 13:02:33,169 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 67, 'required_stock': 295}
+2025-02-20 13:02:33,574 - 127.0.0.1 - - [20/Feb/2025 13:02:33] "GET /socket.io/?EIO=4&transport=websocket&sid=4HGuiAagPlAT2cIiAAAA HTTP/1.1" 200 -
+2025-02-20 13:02:33,578 - 127.0.0.1 - - [20/Feb/2025 13:02:33] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:33,590 - 127.0.0.1 - - [20/Feb/2025 13:02:33] "GET /socket.io/?EIO=4&transport=polling&t=PKYHSYn HTTP/1.1" 200 -
+2025-02-20 13:02:33,593 - 127.0.0.1 - - [20/Feb/2025 13:02:33] "POST /socket.io/?EIO=4&transport=polling&t=PKYHSYt&sid=XMHOw_Hsf6q9hlsaAAAC HTTP/1.1" 200 -
+2025-02-20 13:02:33,596 - 127.0.0.1 - - [20/Feb/2025 13:02:33] "GET /socket.io/?EIO=4&transport=polling&t=PKYHSYt.0&sid=XMHOw_Hsf6q9hlsaAAAC HTTP/1.1" 200 -
+2025-02-20 13:02:33,599 - 127.0.0.1 - - [20/Feb/2025 13:02:33] "GET /socket.io/?EIO=4&transport=polling&t=PKYHSYz&sid=XMHOw_Hsf6q9hlsaAAAC HTTP/1.1" 200 -
+2025-02-20 13:02:36,298 - 127.0.0.1 - - [20/Feb/2025 13:02:36] "GET /socket.io/?EIO=4&transport=websocket&sid=XMHOw_Hsf6q9hlsaAAAC HTTP/1.1" 200 -
+2025-02-20 13:02:36,301 - 127.0.0.1 - - [20/Feb/2025 13:02:36] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:36,308 - 127.0.0.1 - - [20/Feb/2025 13:02:36] "GET /socket.io/?EIO=4&transport=polling&t=PKYHTDI HTTP/1.1" 200 -
+2025-02-20 13:02:36,310 - 127.0.0.1 - - [20/Feb/2025 13:02:36] "POST /socket.io/?EIO=4&transport=polling&t=PKYHTDK&sid=MMSv1MN6BqiZ6h7YAAAE HTTP/1.1" 200 -
+2025-02-20 13:02:36,312 - 127.0.0.1 - - [20/Feb/2025 13:02:36] "GET /socket.io/?EIO=4&transport=polling&t=PKYHTDL&sid=MMSv1MN6BqiZ6h7YAAAE HTTP/1.1" 200 -
+2025-02-20 13:02:46,868 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-20 13:02:46,869 - [33mPress CTRL+C to quit[0m
+2025-02-20 13:02:46,869 -  * Restarting with watchdog (fsevents)
+2025-02-20 13:02:47,091 -  * Debugger is active!
+2025-02-20 13:02:47,099 -  * Debugger PIN: 724-218-236
+2025-02-20 13:02:49,152 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWL- HTTP/1.1" 200 -
+2025-02-20 13:02:49,155 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "POST /socket.io/?EIO=4&transport=polling&t=PKYHWM1&sid=y8nqxyFV2y3WAXrcAAAA HTTP/1.1" 200 -
+2025-02-20 13:02:49,157 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWM2&sid=y8nqxyFV2y3WAXrcAAAA HTTP/1.1" 200 -
+2025-02-20 13:02:49,578 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "GET /socket.io/?EIO=4&transport=websocket&sid=y8nqxyFV2y3WAXrcAAAA HTTP/1.1" 200 -
+2025-02-20 13:02:49,586 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:49,593 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWSt HTTP/1.1" 200 -
+2025-02-20 13:02:49,595 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "POST /socket.io/?EIO=4&transport=polling&t=PKYHWSv&sid=HubHTr4l69jI6Z30AAAC HTTP/1.1" 200 -
+2025-02-20 13:02:49,598 - 127.0.0.1 - - [20/Feb/2025 13:02:49] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWSw&sid=HubHTr4l69jI6Z30AAAC HTTP/1.1" 200 -
+2025-02-20 13:02:50,488 - 127.0.0.1 - - [20/Feb/2025 13:02:50] "GET /socket.io/?EIO=4&transport=websocket&sid=HubHTr4l69jI6Z30AAAC HTTP/1.1" 200 -
+2025-02-20 13:02:50,492 - 127.0.0.1 - - [20/Feb/2025 13:02:50] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:50,499 - 127.0.0.1 - - [20/Feb/2025 13:02:50] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWh0 HTTP/1.1" 200 -
+2025-02-20 13:02:50,502 - 127.0.0.1 - - [20/Feb/2025 13:02:50] "POST /socket.io/?EIO=4&transport=polling&t=PKYHWh4&sid=RfzvOwjhD7LBop2dAAAE HTTP/1.1" 200 -
+2025-02-20 13:02:50,509 - 127.0.0.1 - - [20/Feb/2025 13:02:50] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWh4.0&sid=RfzvOwjhD7LBop2dAAAE HTTP/1.1" 200 -
+2025-02-20 13:02:51,083 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=websocket&sid=RfzvOwjhD7LBop2dAAAE HTTP/1.1" 200 -
+2025-02-20 13:02:51,090 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:51,119 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWqQ HTTP/1.1" 200 -
+2025-02-20 13:02:51,125 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "POST /socket.io/?EIO=4&transport=polling&t=PKYHWqn&sid=7Joy9sfbYuvNMmTBAAAG HTTP/1.1" 200 -
+2025-02-20 13:02:51,129 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWqn.0&sid=7Joy9sfbYuvNMmTBAAAG HTTP/1.1" 200 -
+2025-02-20 13:02:51,136 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWq-&sid=7Joy9sfbYuvNMmTBAAAG HTTP/1.1" 200 -
+2025-02-20 13:02:51,672 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=websocket&sid=7Joy9sfbYuvNMmTBAAAG HTTP/1.1" 200 -
+2025-02-20 13:02:51,675 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET / HTTP/1.1" 200 -
+2025-02-20 13:02:51,682 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWzW HTTP/1.1" 200 -
+2025-02-20 13:02:51,685 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "POST /socket.io/?EIO=4&transport=polling&t=PKYHWzZ&sid=obxc2wyrT3Lcpn8kAAAI HTTP/1.1" 200 -
+2025-02-20 13:02:51,687 - 127.0.0.1 - - [20/Feb/2025 13:02:51] "GET /socket.io/?EIO=4&transport=polling&t=PKYHWzZ.0&sid=obxc2wyrT3Lcpn8kAAAI HTTP/1.1" 200 -
+2025-02-20 13:02:55,426 -  * Detected change in '/Users/anshumantiwari/Desktop/baylink-alerts/main.py', reloading
+2025-02-20 13:02:56,225 -  * Restarting with watchdog (fsevents)
+2025-02-20 13:02:56,556 -  * Debugger is active!
+2025-02-20 13:02:56,563 -  * Debugger PIN: 724-218-236
+2025-02-20 13:03:06,901 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 6, 'required_stock': 296}
+2025-02-20 13:03:15,211 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.8:3000
+2025-02-20 13:03:15,211 - [33mPress CTRL+C to quit[0m
+2025-02-20 13:03:15,211 -  * Restarting with watchdog (fsevents)
+2025-02-20 13:03:15,436 -  * Debugger is active!
+2025-02-20 13:03:15,444 -  * Debugger PIN: 724-218-236
+2025-02-20 13:03:16,189 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 20}
+2025-02-20 13:03:16,426 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 58, 'pending_bills': 3}
+2025-02-20 13:03:17,430 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 11}
+2025-02-20 13:03:18,096 - 127.0.0.1 - - [20/Feb/2025 13:03:18] "GET / HTTP/1.1" 200 -
+2025-02-20 13:03:18,115 - 127.0.0.1 - - [20/Feb/2025 13:03:18] "GET /socket.io/?EIO=4&transport=polling&t=PKYHdQX HTTP/1.1" 200 -
+2025-02-20 13:03:18,128 - 127.0.0.1 - - [20/Feb/2025 13:03:18] "POST /socket.io/?EIO=4&transport=polling&t=PKYHdQj&sid=xdxAlxxOOKLoomptAAAA HTTP/1.1" 200 -
+2025-02-20 13:03:18,129 - 127.0.0.1 - - [20/Feb/2025 13:03:18] "GET /socket.io/?EIO=4&transport=polling&t=PKYHdQj.0&sid=xdxAlxxOOKLoomptAAAA HTTP/1.1" 200 -
+2025-02-20 13:03:18,134 - 127.0.0.1 - - [20/Feb/2025 13:03:18] "GET /socket.io/?EIO=4&transport=polling&t=PKYHdQq&sid=xdxAlxxOOKLoomptAAAA HTTP/1.1" 200 -
+2025-02-20 13:03:18,199 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 35, 'pending_bills': 3}
+2025-02-20 13:03:19,204 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 11}
+2025-02-20 13:03:19,436 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 68, 'required_stock': 241}
+2025-02-20 13:03:20,207 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 8}
+2025-02-20 13:03:20,442 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 57, 'required_stock': 195}
+2025-02-20 13:03:21,207 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 23}
+2025-02-20 13:03:21,447 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 4, 'required_stock': 132}
+2025-02-20 13:03:22,210 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 35, 'required_stock': 269}
+2025-02-20 13:03:23,216 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'days_to_expiry': 14}
+2025-02-20 13:03:23,451 - Alert sent to Aman Retailer: Alert: Pending Payment - {'pending_days': 47, 'pending_bills': 4}
+2025-02-20 13:03:24,217 - Alert sent to Aman Retailer: Alert: Sales Drop - {'current_sales': 182, 'historical_avg_sales': 318}
+2025-02-20 13:03:24,452 - Alert sent to Aman Retailer: Alert: Low Inventory - {'current_stock': 77, 'required_stock': 276}
