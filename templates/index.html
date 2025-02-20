@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Alert Logs</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+            background: #f0f2f5;
+            text-align: center;
+        }
+
+        #dashboard {
+            max-width: 100vw;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .table-container {
+            flex-grow: 1;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="dashboard">
+        <h2>📢 Admin Dashboard - Real-Time Alerts</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Retailer</th>
+                        <th>Alert Type</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody id="log-table"> 
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        const socket = io.connect("http://" + document.domain + ":" + location.port);
+
+        socket.on("new_log", function (data) {
+
+            let logMessage = data.message.trim();
+            let match = logMessage.match(/(\d+-\d+-\d+ \d+:\d+:\d+),\d+ - Alert sent to (.+?): Alert: (.+?) - (\{.+\})/);
+ 
+            if (match) {
+                let [_, timestamp, retailer, alertType, details] = match;
+                let table = document.getElementById("log-table");
+                let row = table.insertRow(0);
+
+                console.log(timestamp, retailer, alertType, details)
+
+                row.insertCell(0).innerText = timestamp;
+                row.insertCell(1).innerText = retailer;
+                row.insertCell(2).innerText = alertType;
+                row.insertCell(3).innerText = details;
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
