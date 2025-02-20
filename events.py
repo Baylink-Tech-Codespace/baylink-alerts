@@ -1,29 +1,44 @@
-import random
-
+ 
+from database.main import db
+from database.models.ASM import ASM 
+from database.models.SuperZone import SuperZone
+from database.models.Retailer import Retailer
+from database.models.Recon import Recon
+ 
 def get_test_event() -> dict:
-    event_types = ["pending_payment", "low_inventory", "sales_drop", "stock_near_expiry"]
+    event_type = "is_retailer_shelf_image"
     
-    event_name = random.choice(event_types)  
-
-    event_data = {
-        "pending_payment": {
-            "pending_days": random.randint(30, 90),  
-            "pending_bills": random.randint(1, 5)
-        },
-        "low_inventory": {
-            "current_stock": random.randint(0, 100),
-            "required_stock": random.randint(100, 300)
-        },
-        "sales_drop": {
-            "current_sales": random.randint(50, 500),
-            "historical_avg_sales": random.randint(200, 800)
-        },
-        "stock_near_expiry": {
-            "days_to_expiry": random.randint(5, 40)
-        }
+    asms = db.get_session().query(ASM).all() 
+    
+    asm_ids = []
+    
+    for asm in asms:
+        if asm._id:
+            asm_ids.append(asm._id)
+            
+    asm_id = asm_ids[0]
+    
+    retailers = db.get_session().query(Retailer).filter(Retailer.ASM_id == asm_id).all()
+    recon_list = []
+    
+    for retailer in retailers:
+        recon = db.get_session().query(Recon).filter(Recon.retailer_id == retailer._id).all()
+        if recon: 
+                recon_list.append(recon)
+        
+    test_recon = recon_list[0][0]
+    quantity = 0
+    image = "" if len(test_recon.image) == 0 else test_recon.image[0]
+    
+    for recon_item in test_recon.ReconItems:
+        quantity += recon_item.quantity
+ 
+    event_data = { 
+        "image_url": image,
+        "quantity": quantity   
     }
 
     return {
-        "event_name": event_name,
-        "event_data": event_data[event_name]
-    }
+        "event_name": event_type,
+        "event_data": event_data
+    } 
