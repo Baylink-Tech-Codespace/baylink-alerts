@@ -1,14 +1,12 @@
 from sqlalchemy import Column, String, ForeignKey, JSON, DECIMAL, Enum, DateTime, UUID
 from sqlalchemy.orm import relationship, Mapped
-from sqlalchemy.ext.declarative import declarative_base
+from database.main import Base
 import uuid
 from typing import List, TYPE_CHECKING
 from datetime import datetime
 
 if TYPE_CHECKING:
     from database.models.Recon import Recon
-
-Base = declarative_base()
 
 class Retailer(Base):
     __tablename__ = "Retailer"
@@ -49,7 +47,8 @@ class Retailer(Base):
     nextVisit = Column(DateTime, nullable=True)
     fssaiCode = Column(String, nullable=True)
     fssaiImage = Column(String, nullable=True)
-    createdAt = Column(DateTime, default=datetime.utcnow, nullable=False)
-    updatedAt = Column(DateTime, default=datetime.utcnow, onupdate=datetime.now, nullable=False)
+    createdAt = Column(DateTime, default=datetime.now, nullable=False)
+    updatedAt = Column(DateTime, default=datetime.now, onupdate=datetime.now, nullable=False)
+
+    Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
  
-    #Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
