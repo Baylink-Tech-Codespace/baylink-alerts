@@ -13,6 +13,7 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 def process_alerts():
     test_event = get_test_event()
+     
     alert_system.alert_pipeline(
         event_name=test_event["event_name"],
         event_data=test_event["event_data"]
