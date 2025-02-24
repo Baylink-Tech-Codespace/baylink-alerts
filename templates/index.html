@@ -67,7 +67,7 @@
                         <th>Details</th>
                     </tr>
                 </thead>
-                <tbody id="log-table"> 
+                <tbody id="log-table">
                 </tbody>
             </table>
         </div>
@@ -78,9 +78,11 @@
 
         socket.on("new_log", function (data) {
 
+            console.log(data)
+
             let logMessage = data.message.trim();
             let match = logMessage.match(/(\d+-\d+-\d+ \d+:\d+:\d+),\d+ - Alert sent to (.+?): Alert: (.+?) - (\{.+\})/);
- 
+
             if (match) {
                 let [_, timestamp, retailer, alertType, details] = match;
                 let table = document.getElementById("log-table");

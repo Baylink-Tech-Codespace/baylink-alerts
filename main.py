@@ -3,20 +3,42 @@ import time
 import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO
-from events import get_test_event
+from events import process_latest_recon
 from pipeline import alert_system
+
+import os 
+import dotenv
+dotenv.load_dotenv()
 
 LOG_FILE = "logs/alerts.log"
 
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
+db_config = { 
+    "user" : os.getenv("DB_USERNAME"),
+    "password" : os.getenv("DB_PASSWORD"),
+    "host" : os.getenv("DB_HOST"),
+    "port" : os.getenv("DB_PORT", "5432"),
+    "database" : os.getenv("DB_NAME"), 
+}
+
 def process_alerts():
-    test_event = get_test_event()
+    # recon_event = process_latest_recon(db_config)
+    
+    recon_event = { 
+                "event_name" : "stock_near_expiry",
+                "event_data" : { 
+                    "image_url" : "",
+                    "quantity" : 0  
+                    }
+                   }
+    
+    print("recon_event",recon_event)
      
     alert_system.alert_pipeline(
-        event_name=test_event["event_name"],
-        event_data=test_event["event_data"]
+        event_name=recon_event["event_name"],
+        event_data=recon_event["event_data"]
     )
 
 schedule.every(1).seconds.do(process_alerts)
@@ -27,13 +49,20 @@ def run_scheduler():
         time.sleep(1)
  
 def tail_log():
+    print(f"Attempting to read from log file: {LOG_FILE}")  
+    if not os.path.exists(LOG_FILE):
+        print(f"Log file {LOG_FILE} does not exist - creating it")
+        open(LOG_FILE, 'a').close()
+    
     with open(LOG_FILE, "r") as file:
+        file.seek(0, os.SEEK_END)  
         while True:
             line = file.readline()
             if line:
+                print(f"Emitting log line: {line.strip()}")  
                 socketio.emit("new_log", {"message": line.strip()})
             else:
-                time.sleep(1)
+                time.sleep(0.1)
 
 @app.route("/")
 def index():

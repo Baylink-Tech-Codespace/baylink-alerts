@@ -1,310 +1,254 @@
-2025-02-20 16:58:01,053 -  * Debugger is active!
-2025-02-20 16:58:01,061 -  * Debugger PIN: 533-908-980
-2025-02-20 16:58:01,068 - 127.0.0.1 - - [20/Feb/2025 16:58:01] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7KG- HTTP/1.1" 200 -
-2025-02-20 16:58:01,080 - 127.0.0.1 - - [20/Feb/2025 16:58:01] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7Lel&sid=biSrygrseCXHPY38AAAA HTTP/1.1" 200 -
-2025-02-20 16:58:01,082 - 127.0.0.1 - - [20/Feb/2025 16:58:01] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7Lel.0&sid=biSrygrseCXHPY38AAAA HTTP/1.1" 200 -
-2025-02-20 16:58:19,685 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET /socket.io/?EIO=4&transport=websocket&sid=biSrygrseCXHPY38AAAA HTTP/1.1" 200 -
-2025-02-20 16:58:19,696 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:19,708 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QBv HTTP/1.1" 200 -
-2025-02-20 16:58:19,712 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QBz&sid=3R2I4SfQZnYaGqPMAAAC HTTP/1.1" 200 -
-2025-02-20 16:58:19,714 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QB-&sid=3R2I4SfQZnYaGqPMAAAC HTTP/1.1" 200 -
-2025-02-20 16:58:19,919 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET /socket.io/?EIO=4&transport=websocket&sid=3R2I4SfQZnYaGqPMAAAC HTTP/1.1" 200 -
-2025-02-20 16:58:19,923 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:19,936 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QFR HTTP/1.1" 200 -
-2025-02-20 16:58:19,941 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QFX&sid=HOJHiFnNps2oa8k3AAAE HTTP/1.1" 200 -
-2025-02-20 16:58:19,942 - 127.0.0.1 - - [20/Feb/2025 16:58:19] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QFY&sid=HOJHiFnNps2oa8k3AAAE HTTP/1.1" 200 -
-2025-02-20 16:58:20,072 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=websocket&sid=HOJHiFnNps2oa8k3AAAE HTTP/1.1" 200 -
-2025-02-20 16:58:20,074 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:20,085 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QHm HTTP/1.1" 200 -
-2025-02-20 16:58:20,090 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QHt&sid=mUbPUw_XOhCTl_6EAAAG HTTP/1.1" 200 -
-2025-02-20 16:58:20,091 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QHt.0&sid=mUbPUw_XOhCTl_6EAAAG HTTP/1.1" 200 -
-2025-02-20 16:58:20,339 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=websocket&sid=mUbPUw_XOhCTl_6EAAAG HTTP/1.1" 200 -
-2025-02-20 16:58:20,342 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:20,355 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QL- HTTP/1.1" 200 -
-2025-02-20 16:58:20,359 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QM5&sid=mQr708L-5qgE-D7MAAAI HTTP/1.1" 200 -
-2025-02-20 16:58:20,361 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QM5.0&sid=mQr708L-5qgE-D7MAAAI HTTP/1.1" 200 -
-2025-02-20 16:58:20,365 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QMB&sid=mQr708L-5qgE-D7MAAAI HTTP/1.1" 200 -
-2025-02-20 16:58:20,497 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=websocket&sid=mQr708L-5qgE-D7MAAAI HTTP/1.1" 200 -
-2025-02-20 16:58:20,509 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:20,518 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QOa HTTP/1.1" 200 -
-2025-02-20 16:58:20,522 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QOd&sid=hiYgJ3lOVTqLdvWnAAAK HTTP/1.1" 200 -
-2025-02-20 16:58:20,524 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QOe&sid=hiYgJ3lOVTqLdvWnAAAK HTTP/1.1" 200 -
-2025-02-20 16:58:20,613 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=websocket&sid=hiYgJ3lOVTqLdvWnAAAK HTTP/1.1" 200 -
-2025-02-20 16:58:20,617 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:20,624 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QQE HTTP/1.1" 200 -
-2025-02-20 16:58:20,627 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QQH&sid=SZCci_RiaLyBuFUuAAAM HTTP/1.1" 200 -
-2025-02-20 16:58:20,628 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QQH.0&sid=SZCci_RiaLyBuFUuAAAM HTTP/1.1" 200 -
-2025-02-20 16:58:20,630 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QQL&sid=SZCci_RiaLyBuFUuAAAM HTTP/1.1" 200 -
-2025-02-20 16:58:20,789 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=websocket&sid=SZCci_RiaLyBuFUuAAAM HTTP/1.1" 200 -
-2025-02-20 16:58:20,793 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:20,804 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QT2 HTTP/1.1" 200 -
-2025-02-20 16:58:20,808 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QT5&sid=pJAPbeFxkpmkpf9lAAAO HTTP/1.1" 200 -
-2025-02-20 16:58:20,809 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QT6&sid=pJAPbeFxkpmkpf9lAAAO HTTP/1.1" 200 -
-2025-02-20 16:58:20,909 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=websocket&sid=pJAPbeFxkpmkpf9lAAAO HTTP/1.1" 200 -
-2025-02-20 16:58:20,911 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:20,922 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QUt HTTP/1.1" 200 -
-2025-02-20 16:58:20,925 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QUx&sid=vh5xKMpF-eKG4oc4AAAQ HTTP/1.1" 200 -
-2025-02-20 16:58:20,927 - 127.0.0.1 - - [20/Feb/2025 16:58:20] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QUy&sid=vh5xKMpF-eKG4oc4AAAQ HTTP/1.1" 200 -
-2025-02-20 16:58:21,039 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=websocket&sid=vh5xKMpF-eKG4oc4AAAQ HTTP/1.1" 200 -
-2025-02-20 16:58:21,042 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:21,059 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QWv HTTP/1.1" 200 -
-2025-02-20 16:58:21,065 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QX5&sid=Ep7gG7UNckPhmL1DAAAS HTTP/1.1" 200 -
-2025-02-20 16:58:21,066 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QX6&sid=Ep7gG7UNckPhmL1DAAAS HTTP/1.1" 200 -
-2025-02-20 16:58:21,068 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QXB&sid=Ep7gG7UNckPhmL1DAAAS HTTP/1.1" 200 -
-2025-02-20 16:58:21,197 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=websocket&sid=Ep7gG7UNckPhmL1DAAAS HTTP/1.1" 200 -
-2025-02-20 16:58:21,203 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:21,214 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QZQ HTTP/1.1" 200 -
-2025-02-20 16:58:21,219 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7QZW&sid=-r84LxXP9YffoQ7gAAAU HTTP/1.1" 200 -
-2025-02-20 16:58:21,222 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7QZW.0&sid=-r84LxXP9YffoQ7gAAAU HTTP/1.1" 200 -
-2025-02-20 16:58:21,335 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=websocket&sid=-r84LxXP9YffoQ7gAAAU HTTP/1.1" 200 -
-2025-02-20 16:58:21,341 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET / HTTP/1.1" 200 -
-2025-02-20 16:58:21,350 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7Qba HTTP/1.1" 200 -
-2025-02-20 16:58:21,354 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7Qbd&sid=_7Zv7PoqnoP_UW-JAAAW HTTP/1.1" 200 -
-2025-02-20 16:58:21,356 - 127.0.0.1 - - [20/Feb/2025 16:58:21] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7Qbe&sid=_7Zv7PoqnoP_UW-JAAAW HTTP/1.1" 200 -
-2025-02-20 16:58:29,709 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 16:58:30,628 -  * Restarting with watchdog (fsevents)
-2025-02-20 16:58:36,950 -  * Debugger is active!
-2025-02-20 16:58:36,959 -  * Debugger PIN: 533-908-980
-2025-02-20 16:58:36,967 - 127.0.0.1 - - [20/Feb/2025 16:58:36] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7T3T HTTP/1.1" 200 -
-2025-02-20 16:58:36,974 - 127.0.0.1 - - [20/Feb/2025 16:58:36] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7UPf&sid=_QbErgaWSY88b4GiAAAA HTTP/1.1" 200 -
-2025-02-20 16:58:36,974 - 127.0.0.1 - - [20/Feb/2025 16:58:36] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7UPh&sid=_QbErgaWSY88b4GiAAAA HTTP/1.1" 200 -
-2025-02-20 16:58:36,977 - 127.0.0.1 - - [20/Feb/2025 16:58:36] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7UPl&sid=_QbErgaWSY88b4GiAAAA HTTP/1.1" 200 -
-2025-02-20 16:59:10,094 - 127.0.0.1 - - [20/Feb/2025 16:59:10] "GET /socket.io/?EIO=4&transport=websocket&sid=_QbErgaWSY88b4GiAAAA HTTP/1.1" 200 -
-2025-02-20 16:59:10,106 - 127.0.0.1 - - [20/Feb/2025 16:59:10] "GET / HTTP/1.1" 200 -
-2025-02-20 16:59:10,118 - 127.0.0.1 - - [20/Feb/2025 16:59:10] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7cVX HTTP/1.1" 200 -
-2025-02-20 16:59:10,123 - 127.0.0.1 - - [20/Feb/2025 16:59:10] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7cVe&sid=oV3t6uVhPThvK6UPAAAC HTTP/1.1" 200 -
-2025-02-20 16:59:10,125 - 127.0.0.1 - - [20/Feb/2025 16:59:10] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7cVf&sid=oV3t6uVhPThvK6UPAAAC HTTP/1.1" 200 -
-2025-02-20 16:59:24,189 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/events.py', reloading
-2025-02-20 16:59:24,309 -  * Restarting with watchdog (fsevents)
-2025-02-20 16:59:46,778 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-02-24 17:03:05,933 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:3000
- * Running on http://192.168.1.8:3000
-2025-02-20 16:59:46,778 - [33mPress CTRL+C to quit[0m
-2025-02-20 16:59:46,778 -  * Restarting with watchdog (fsevents)
-2025-02-20 16:59:53,098 -  * Debugger is active!
-2025-02-20 16:59:53,107 -  * Debugger PIN: 533-908-980
-2025-02-20 16:59:53,115 - 127.0.0.1 - - [20/Feb/2025 16:59:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7mZn HTTP/1.1" 200 -
-2025-02-20 16:59:53,118 - 127.0.0.1 - - [20/Feb/2025 16:59:53] "GET / HTTP/1.1" 200 -
-2025-02-20 16:59:53,129 - 127.0.0.1 - - [20/Feb/2025 16:59:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7m_a HTTP/1.1" 200 -
-2025-02-20 16:59:53,135 - 127.0.0.1 - - [20/Feb/2025 16:59:53] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7m_j&sid=1IaicYX2iWYuYJp3AAAB HTTP/1.1" 200 -
-2025-02-20 16:59:53,137 - 127.0.0.1 - - [20/Feb/2025 16:59:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7m_k&sid=1IaicYX2iWYuYJp3AAAB HTTP/1.1" 200 -
-2025-02-20 17:00:16,010 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
-2025-02-20 17:00:16,332 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:00:22,597 -  * Debugger is active!
-2025-02-20 17:00:22,606 -  * Debugger PIN: 533-908-980
-2025-02-20 17:00:22,614 - 127.0.0.1 - - [20/Feb/2025 17:00:22] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7tBH HTTP/1.1" 200 -
-2025-02-20 17:00:22,620 - 127.0.0.1 - - [20/Feb/2025 17:00:22] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7uCO&sid=_N2-Lem6cMsrjR1WAAAA HTTP/1.1" 200 -
-2025-02-20 17:00:22,620 - 127.0.0.1 - - [20/Feb/2025 17:00:22] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7uCP&sid=_N2-Lem6cMsrjR1WAAAA HTTP/1.1" 200 -
-2025-02-20 17:00:25,947 - 127.0.0.1 - - [20/Feb/2025 17:00:25] "GET /socket.io/?EIO=4&transport=websocket&sid=_N2-Lem6cMsrjR1WAAAA HTTP/1.1" 200 -
-2025-02-20 17:00:25,955 - 127.0.0.1 - - [20/Feb/2025 17:00:25] "GET / HTTP/1.1" 200 -
-2025-02-20 17:00:25,971 - 127.0.0.1 - - [20/Feb/2025 17:00:25] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7v0i HTTP/1.1" 200 -
-2025-02-20 17:00:25,976 - 127.0.0.1 - - [20/Feb/2025 17:00:25] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7v0r&sid=arWjHFOgmJ2dC6cMAAAC HTTP/1.1" 200 -
-2025-02-20 17:00:25,978 - 127.0.0.1 - - [20/Feb/2025 17:00:25] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7v0r.0&sid=arWjHFOgmJ2dC6cMAAAC HTTP/1.1" 200 -
-2025-02-20 17:00:25,982 - 127.0.0.1 - - [20/Feb/2025 17:00:25] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7v0y&sid=arWjHFOgmJ2dC6cMAAAC HTTP/1.1" 200 -
-2025-02-20 17:00:35,852 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:00:36,788 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:00:46,875 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.4:3000
+2025-02-24 17:03:05,934 - [33mPress CTRL+C to quit[0m
+2025-02-24 17:03:05,935 -  * Restarting with watchdog (fsevents)
+2025-02-24 17:03:06,904 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:07,910 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:08,914 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:09,920 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:10,923 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:11,927 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:12,155 -  * Debugger is active!
+2025-02-24 17:03:12,168 -  * Debugger PIN: 533-908-980
+2025-02-24 17:03:12,181 - 127.0.0.1 - - [24/Feb/2025 17:03:12] "GET /socket.io/?EIO=4&transport=polling&t=PKtku4X HTTP/1.1" 200 -
+2025-02-24 17:03:12,186 - 127.0.0.1 - - [24/Feb/2025 17:03:12] "POST /socket.io/?EIO=4&transport=polling&t=PKtkubt&sid=w4592xyY2B8zAxnjAAAA HTTP/1.1" 200 -
+2025-02-24 17:03:12,191 - 127.0.0.1 - - [24/Feb/2025 17:03:12] "GET /socket.io/?EIO=4&transport=polling&t=PKtkubv&sid=w4592xyY2B8zAxnjAAAA HTTP/1.1" 200 -
+2025-02-24 17:03:12,196 - 127.0.0.1 - - [24/Feb/2025 17:03:12] "GET /socket.io/?EIO=4&transport=polling&t=PKtkuc1&sid=w4592xyY2B8zAxnjAAAA HTTP/1.1" 200 -
+2025-02-24 17:03:12,929 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:13,142 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:13,934 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:14,147 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:14,940 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:15,152 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:15,945 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:16,158 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:16,948 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:17,160 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:17,953 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:18,163 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:18,957 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:19,164 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:19,963 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:20,169 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:20,968 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:21,174 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:21,970 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:22,176 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:22,976 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:23,182 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:23,976 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:24,184 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:24,980 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:25,189 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:25,983 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:26,194 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:26,989 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:27,200 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:27,994 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:28,205 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:29,001 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:29,210 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:30,003 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:30,216 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:31,008 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:31,216 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:32,013 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:32,222 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:33,018 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:33,224 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:34,019 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:34,229 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:35,026 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:35,235 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:36,029 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:36,236 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:37,035 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:37,241 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:38,039 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:38,242 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:39,043 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:39,247 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:40,048 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:40,253 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:41,053 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:41,259 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:42,056 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:42,263 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:43,062 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:43,265 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:44,067 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:44,269 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:45,072 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:45,275 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:46,076 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:46,280 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:47,079 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:47,281 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:48,084 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:48,282 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:49,088 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:49,285 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:50,094 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:50,290 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:51,094 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:51,295 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:52,100 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:52,300 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:53,105 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:53,305 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:54,107 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:54,309 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:55,112 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:55,314 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:56,116 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:56,319 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:57,117 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:57,322 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:58,120 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:58,327 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:59,126 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:03:59,332 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:00,131 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:00,338 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:01,136 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:01,340 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:02,137 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:02,344 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:03,143 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:03,345 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:04,145 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:04,347 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:05,148 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:05,352 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:06,152 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:06,359 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:07,158 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:07,364 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:08,164 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:08,366 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:09,166 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:09,371 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:10,171 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:10,372 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:11,177 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:04:11,378 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:34,485 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:3000
- * Running on http://192.168.1.8:3000
-2025-02-20 17:00:46,875 - [33mPress CTRL+C to quit[0m
-2025-02-20 17:00:46,875 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:00:53,116 -  * Debugger is active!
-2025-02-20 17:00:53,128 -  * Debugger PIN: 533-908-980
-2025-02-20 17:00:53,136 - 127.0.0.1 - - [20/Feb/2025 17:00:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7_UV HTTP/1.1" 200 -
-2025-02-20 17:00:53,143 - 127.0.0.1 - - [20/Feb/2025 17:00:53] "POST /socket.io/?EIO=4&transport=polling&t=PKZ7_fI&sid=QZTKRdK64g1eyswuAAAA HTTP/1.1" 200 -
-2025-02-20 17:00:53,143 - 127.0.0.1 - - [20/Feb/2025 17:00:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ7_fK&sid=QZTKRdK64g1eyswuAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:04,056 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:01:04,265 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:01:11,218 -  * Debugger is active!
-2025-02-20 17:01:11,226 -  * Debugger PIN: 533-908-980
-2025-02-20 17:01:11,232 - 127.0.0.1 - - [20/Feb/2025 17:01:11] "GET /socket.io/?EIO=4&transport=polling&t=PKZ82fd HTTP/1.1" 200 -
-2025-02-20 17:01:11,239 - 127.0.0.1 - - [20/Feb/2025 17:01:11] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8443&sid=IzATXl_X9Vzob1diAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:11,239 - 127.0.0.1 - - [20/Feb/2025 17:01:11] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8444&sid=IzATXl_X9Vzob1diAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:24,036 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:01:24,389 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:01:30,573 -  * Debugger is active!
-2025-02-20 17:01:30,582 -  * Debugger PIN: 533-908-980
-2025-02-20 17:01:30,590 - 127.0.0.1 - - [20/Feb/2025 17:01:30] "GET /socket.io/?EIO=4&transport=polling&t=PKZ87Y6 HTTP/1.1" 200 -
-2025-02-20 17:01:30,596 - 127.0.0.1 - - [20/Feb/2025 17:01:30] "POST /socket.io/?EIO=4&transport=polling&t=PKZ88oW&sid=v3o25t9LZLJNR1FWAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:30,596 - 127.0.0.1 - - [20/Feb/2025 17:01:30] "GET /socket.io/?EIO=4&transport=polling&t=PKZ88oX&sid=v3o25t9LZLJNR1FWAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:38,993 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:3000
- * Running on http://192.168.1.8:3000
-2025-02-20 17:01:38,993 - [33mPress CTRL+C to quit[0m
-2025-02-20 17:01:38,993 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:01:45,518 -  * Debugger is active!
-2025-02-20 17:01:45,526 -  * Debugger PIN: 533-908-980
-2025-02-20 17:01:45,534 - 127.0.0.1 - - [20/Feb/2025 17:01:45] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8BS5 HTTP/1.1" 200 -
-2025-02-20 17:01:45,540 - 127.0.0.1 - - [20/Feb/2025 17:01:45] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8CS0&sid=2ovSgq9zJXGlSR3IAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:45,540 - 127.0.0.1 - - [20/Feb/2025 17:01:45] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8CS1&sid=2ovSgq9zJXGlSR3IAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:45,544 - 127.0.0.1 - - [20/Feb/2025 17:01:45] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8CS7&sid=2ovSgq9zJXGlSR3IAAAA HTTP/1.1" 200 -
-2025-02-20 17:01:55,997 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:01:56,696 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:02:03,151 -  * Debugger is active!
-2025-02-20 17:02:03,160 -  * Debugger PIN: 533-908-980
-2025-02-20 17:02:03,168 - 127.0.0.1 - - [20/Feb/2025 17:02:03] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8FM5 HTTP/1.1" 200 -
-2025-02-20 17:02:03,176 - 127.0.0.1 - - [20/Feb/2025 17:02:03] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8GlZ&sid=JayHAg02NW0FYv47AAAA HTTP/1.1" 200 -
-2025-02-20 17:02:03,176 - 127.0.0.1 - - [20/Feb/2025 17:02:03] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Gla&sid=JayHAg02NW0FYv47AAAA HTTP/1.1" 200 -
-2025-02-20 17:02:03,178 - 127.0.0.1 - - [20/Feb/2025 17:02:03] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Glf&sid=JayHAg02NW0FYv47AAAA HTTP/1.1" 200 -
-2025-02-20 17:02:09,916 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:02:10,283 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:02:16,740 -  * Debugger is active!
-2025-02-20 17:02:16,752 -  * Debugger PIN: 533-908-980
-2025-02-20 17:02:16,760 - 127.0.0.1 - - [20/Feb/2025 17:02:16] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Imq HTTP/1.1" 200 -
-2025-02-20 17:02:16,766 - 127.0.0.1 - - [20/Feb/2025 17:02:16] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8K3w&sid=cslrtHLVEBiGFH_PAAAA HTTP/1.1" 200 -
-2025-02-20 17:02:16,766 - 127.0.0.1 - - [20/Feb/2025 17:02:16] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8K3w.0&sid=cslrtHLVEBiGFH_PAAAA HTTP/1.1" 200 -
-2025-02-20 17:02:40,610 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:02:41,006 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:02:47,701 -  * Debugger is active!
-2025-02-20 17:02:47,710 -  * Debugger PIN: 533-908-980
-2025-02-20 17:02:47,718 - 127.0.0.1 - - [20/Feb/2025 17:02:47] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8QLC HTTP/1.1" 200 -
-2025-02-20 17:02:47,730 - 127.0.0.1 - - [20/Feb/2025 17:02:47] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8Rdl&sid=ob3QaMFWbVkyXR9KAAAA HTTP/1.1" 200 -
-2025-02-20 17:02:47,730 - 127.0.0.1 - - [20/Feb/2025 17:02:47] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Rdn&sid=ob3QaMFWbVkyXR9KAAAA HTTP/1.1" 200 -
-2025-02-20 17:02:47,733 - 127.0.0.1 - - [20/Feb/2025 17:02:47] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Rdp&sid=ob3QaMFWbVkyXR9KAAAA HTTP/1.1" 200 -
-2025-02-20 17:02:47,735 - 127.0.0.1 - - [20/Feb/2025 17:02:47] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Rds&sid=ob3QaMFWbVkyXR9KAAAA HTTP/1.1" 200 -
-2025-02-20 17:03:15,675 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/events.py', reloading
-2025-02-20 17:03:15,966 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:03:22,201 -  * Debugger is active!
-2025-02-20 17:03:22,209 -  * Debugger PIN: 533-908-980
-2025-02-20 17:03:22,217 - 127.0.0.1 - - [20/Feb/2025 17:03:22] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8Yu2 HTTP/1.1" 200 -
-2025-02-20 17:03:22,224 - 127.0.0.1 - - [20/Feb/2025 17:03:22] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8a2h&sid=9-CysyQMz4947uM3AAAA HTTP/1.1" 200 -
-2025-02-20 17:03:22,224 - 127.0.0.1 - - [20/Feb/2025 17:03:22] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8a2i&sid=9-CysyQMz4947uM3AAAA HTTP/1.1" 200 -
-2025-02-20 17:03:23,184 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:24,190 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:25,194 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:26,197 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:27,202 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:28,204 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:29,209 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:30,212 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:31,218 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:32,218 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:33,222 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:34,227 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:35,230 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:36,236 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:37,241 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:38,243 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:39,246 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:40,251 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:41,257 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:42,263 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:43,268 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:44,274 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:45,276 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:46,280 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:47,285 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:48,291 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:49,294 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:50,300 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:51,302 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:52,307 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:53,313 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:54,318 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:55,324 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:56,328 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:57,330 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:58,332 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:03:59,337 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:00,338 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:01,344 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:02,350 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:03,352 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:04,357 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:05,363 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:06,365 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:07,368 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:08,371 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:08,538 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
-2025-02-20 17:04:09,376 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:09,565 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:04:16,066 -  * Debugger is active!
-2025-02-20 17:04:16,075 -  * Debugger PIN: 533-908-980
-2025-02-20 17:04:16,082 - 127.0.0.1 - - [20/Feb/2025 17:04:16] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8m3m HTTP/1.1" 200 -
-2025-02-20 17:04:16,087 - 127.0.0.1 - - [20/Feb/2025 17:04:16] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8nCL&sid=CG0GklKr_MsUq34NAAAA HTTP/1.1" 200 -
-2025-02-20 17:04:16,090 - 127.0.0.1 - - [20/Feb/2025 17:04:16] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8nCN&sid=CG0GklKr_MsUq34NAAAA HTTP/1.1" 200 -
-2025-02-20 17:04:16,092 - 127.0.0.1 - - [20/Feb/2025 17:04:16] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8nCR&sid=CG0GklKr_MsUq34NAAAA HTTP/1.1" 200 -
-2025-02-20 17:04:17,050 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:18,056 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:19,060 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:20,061 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:21,064 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:22,065 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:23,067 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:24,068 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:25,074 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:26,076 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:27,078 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:28,084 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:29,089 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:29,403 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
-2025-02-20 17:04:30,095 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:30,257 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:04:36,488 -  * Debugger is active!
-2025-02-20 17:04:36,501 -  * Debugger PIN: 533-908-980
-2025-02-20 17:04:36,513 - 127.0.0.1 - - [20/Feb/2025 17:04:36] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8qyG HTTP/1.1" 200 -
-2025-02-20 17:04:36,518 - 127.0.0.1 - - [20/Feb/2025 17:04:36] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8sBZ&sid=6mhUgkd0sQPUYOG2AAAA HTTP/1.1" 200 -
-2025-02-20 17:04:36,523 - 127.0.0.1 - - [20/Feb/2025 17:04:36] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8sBa&sid=6mhUgkd0sQPUYOG2AAAA HTTP/1.1" 200 -
-2025-02-20 17:04:37,471 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:38,049 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
-2025-02-20 17:04:38,476 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:38,625 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:04:44,777 -  * Debugger is active!
-2025-02-20 17:04:44,786 -  * Debugger PIN: 533-908-980
-2025-02-20 17:04:44,792 - 127.0.0.1 - - [20/Feb/2025 17:04:44] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8t8t HTTP/1.1" 200 -
-2025-02-20 17:04:44,799 - 127.0.0.1 - - [20/Feb/2025 17:04:44] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8uCw&sid=lDeuxY0fzmhvv9fCAAAA HTTP/1.1" 200 -
-2025-02-20 17:04:44,799 - 127.0.0.1 - - [20/Feb/2025 17:04:44] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8uCx&sid=lDeuxY0fzmhvv9fCAAAA HTTP/1.1" 200 -
-2025-02-20 17:04:45,752 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:46,281 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
-2025-02-20 17:04:46,757 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:46,896 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:04:53,101 -  * Debugger is active!
-2025-02-20 17:04:53,108 -  * Debugger PIN: 533-908-980
-2025-02-20 17:04:53,118 - 127.0.0.1 - - [20/Feb/2025 17:04:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8v5t HTTP/1.1" 200 -
-2025-02-20 17:04:53,123 - 127.0.0.1 - - [20/Feb/2025 17:04:53] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8wF0&sid=yNN8fVytWFVVRvZ1AAAA HTTP/1.1" 200 -
-2025-02-20 17:04:53,124 - 127.0.0.1 - - [20/Feb/2025 17:04:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8wF1&sid=yNN8fVytWFVVRvZ1AAAA HTTP/1.1" 200 -
-2025-02-20 17:04:53,128 - 127.0.0.1 - - [20/Feb/2025 17:04:53] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8wF6&sid=yNN8fVytWFVVRvZ1AAAA HTTP/1.1" 200 -
-2025-02-20 17:04:54,083 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:55,089 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:55,520 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
-2025-02-20 17:04:56,089 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:04:56,223 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:05:02,431 -  * Debugger is active!
-2025-02-20 17:05:02,442 -  * Debugger PIN: 533-908-980
-2025-02-20 17:05:02,449 - 127.0.0.1 - - [20/Feb/2025 17:05:02] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8xY7 HTTP/1.1" 200 -
-2025-02-20 17:05:02,453 - 127.0.0.1 - - [20/Feb/2025 17:05:02] "POST /socket.io/?EIO=4&transport=polling&t=PKZ8yWo&sid=ukLE5QHUftaULMWfAAAA HTTP/1.1" 200 -
-2025-02-20 17:05:02,454 - 127.0.0.1 - - [20/Feb/2025 17:05:02] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8yWp&sid=ukLE5QHUftaULMWfAAAA HTTP/1.1" 200 -
-2025-02-20 17:05:02,458 - 127.0.0.1 - - [20/Feb/2025 17:05:02] "GET /socket.io/?EIO=4&transport=polling&t=PKZ8yWu&sid=ukLE5QHUftaULMWfAAAA HTTP/1.1" 200 -
-2025-02-20 17:05:03,412 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:05:04,418 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:05:04,608 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/events.py', reloading
-2025-02-20 17:05:05,422 - Alert sent to Aman Retailer: Alert: Is Retailer Shelf Image - {'image_url': '', 'quantity': 39}
-2025-02-20 17:05:05,565 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:05:20,685 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:3000
- * Running on http://192.168.1.8:3000
-2025-02-20 17:05:20,685 - [33mPress CTRL+C to quit[0m
-2025-02-20 17:05:20,685 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:05:27,731 -  * Debugger is active!
-2025-02-20 17:05:27,740 -  * Debugger PIN: 533-908-980
-2025-02-20 17:05:27,747 - 127.0.0.1 - - [20/Feb/2025 17:05:27] "GET /socket.io/?EIO=4&transport=polling&t=PKZ927- HTTP/1.1" 200 -
-2025-02-20 17:05:27,751 - 127.0.0.1 - - [20/Feb/2025 17:05:27] "POST /socket.io/?EIO=4&transport=polling&t=PKZ92i5&sid=5-LqbFFn1I44afE8AAAA HTTP/1.1" 200 -
-2025-02-20 17:05:27,754 - 127.0.0.1 - - [20/Feb/2025 17:05:27] "GET /socket.io/?EIO=4&transport=polling&t=PKZ92i6&sid=5-LqbFFn1I44afE8AAAA HTTP/1.1" 200 -
-2025-02-20 17:05:30,433 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/events.py', reloading
-2025-02-20 17:05:30,839 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:06:28,068 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:3000
- * Running on http://192.168.1.8:3000
-2025-02-20 17:06:28,068 - [33mPress CTRL+C to quit[0m
-2025-02-20 17:06:28,068 -  * Restarting with watchdog (fsevents)
-2025-02-20 17:06:34,126 -  * Debugger is active!
-2025-02-20 17:06:34,136 -  * Debugger PIN: 533-908-980
-2025-02-20 17:06:34,142 - 127.0.0.1 - - [20/Feb/2025 17:06:34] "GET /socket.io/?EIO=4&transport=polling&t=PKZ9IkR HTTP/1.1" 200 -
-2025-02-20 17:06:34,147 - 127.0.0.1 - - [20/Feb/2025 17:06:34] "POST /socket.io/?EIO=4&transport=polling&t=PKZ9IvX&sid=sWCXFLdckSImIc6NAAAA HTTP/1.1" 200 -
-2025-02-20 17:06:34,149 - 127.0.0.1 - - [20/Feb/2025 17:06:34] "GET /socket.io/?EIO=4&transport=polling&t=PKZ9IvY&sid=sWCXFLdckSImIc6NAAAA HTTP/1.1" 200 -
-2025-02-20 17:06:34,152 - 127.0.0.1 - - [20/Feb/2025 17:06:34] "GET /socket.io/?EIO=4&transport=polling&t=PKZ9Ivc&sid=sWCXFLdckSImIc6NAAAA HTTP/1.1" 200 -
+ * Running on http://192.168.1.4:3000
+2025-02-24 17:21:34,485 - [33mPress CTRL+C to quit[0m
+2025-02-24 17:21:34,485 -  * Restarting with watchdog (fsevents)
+2025-02-24 17:21:35,461 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:36,466 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:37,472 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:38,477 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:39,479 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:40,483 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:41,049 -  * Debugger is active!
+2025-02-24 17:21:41,061 -  * Debugger PIN: 533-908-980
+2025-02-24 17:21:41,070 - 127.0.0.1 - - [24/Feb/2025 17:21:41] "GET /socket.io/?EIO=4&transport=polling&t=PKtp5rW HTTP/1.1" 200 -
+2025-02-24 17:21:41,080 - 127.0.0.1 - - [24/Feb/2025 17:21:41] "POST /socket.io/?EIO=4&transport=polling&t=PKtp7KL&sid=a9T3fE6zB_NpqbZyAAAA HTTP/1.1" 200 -
+2025-02-24 17:21:41,088 - 127.0.0.1 - - [24/Feb/2025 17:21:41] "GET /socket.io/?EIO=4&transport=polling&t=PKtp7KP&sid=a9T3fE6zB_NpqbZyAAAA HTTP/1.1" 200 -
+2025-02-24 17:21:41,093 - 127.0.0.1 - - [24/Feb/2025 17:21:41] "GET /socket.io/?EIO=4&transport=polling&t=PKtp7Ka&sid=a9T3fE6zB_NpqbZyAAAA HTTP/1.1" 200 -
+2025-02-24 17:21:41,485 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:42,035 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:42,490 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:43,040 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:43,496 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:44,043 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:44,501 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:45,044 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:45,506 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:46,050 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:46,081 - 127.0.0.1 - - [24/Feb/2025 17:21:46] "GET /socket.io/?EIO=4&transport=websocket&sid=a9T3fE6zB_NpqbZyAAAA HTTP/1.1" 200 -
+2025-02-24 17:21:46,110 - 127.0.0.1 - - [24/Feb/2025 17:21:46] "GET / HTTP/1.1" 200 -
+2025-02-24 17:21:46,165 - 127.0.0.1 - - [24/Feb/2025 17:21:46] "GET /socket.io/?EIO=4&transport=polling&t=PKtp8Zg HTTP/1.1" 200 -
+2025-02-24 17:21:46,181 - 127.0.0.1 - - [24/Feb/2025 17:21:46] "POST /socket.io/?EIO=4&transport=polling&t=PKtp8a2&sid=FzHW9IORhjID1GuQAAAC HTTP/1.1" 200 -
+2025-02-24 17:21:46,184 - 127.0.0.1 - - [24/Feb/2025 17:21:46] "GET /socket.io/?EIO=4&transport=polling&t=PKtp8a3&sid=FzHW9IORhjID1GuQAAAC HTTP/1.1" 200 -
+2025-02-24 17:21:46,192 - 127.0.0.1 - - [24/Feb/2025 17:21:46] "GET /socket.io/?EIO=4&transport=polling&t=PKtp8aE&sid=FzHW9IORhjID1GuQAAAC HTTP/1.1" 200 -
+2025-02-24 17:21:46,513 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:47,056 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:47,518 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:48,057 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:48,521 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:49,062 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:49,525 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:50,063 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:50,528 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:51,065 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:51,535 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:52,069 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:52,541 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:53,075 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:53,546 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:54,080 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:54,552 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:55,086 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:55,554 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:56,086 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:56,559 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:57,091 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:57,561 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:58,095 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:58,564 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:59,101 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:21:59,569 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:00,106 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:00,574 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:01,117 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:01,582 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:02,117 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:02,587 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:03,121 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:03,592 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:04,126 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:04,526 - 127.0.0.1 - - [24/Feb/2025 17:22:04] "GET /socket.io/?EIO=4&transport=websocket&sid=FzHW9IORhjID1GuQAAAC HTTP/1.1" 200 -
+2025-02-24 17:22:04,547 - 127.0.0.1 - - [24/Feb/2025 17:22:04] "GET / HTTP/1.1" 200 -
+2025-02-24 17:22:04,569 - 127.0.0.1 - - [24/Feb/2025 17:22:04] "GET /socket.io/?EIO=4&transport=polling&t=PKtpD3I HTTP/1.1" 200 -
+2025-02-24 17:22:04,573 - 127.0.0.1 - - [24/Feb/2025 17:22:04] "POST /socket.io/?EIO=4&transport=polling&t=PKtpD3Q&sid=5GsWp9EJwao9oup4AAAE HTTP/1.1" 200 -
+2025-02-24 17:22:04,574 - 127.0.0.1 - - [24/Feb/2025 17:22:04] "GET /socket.io/?EIO=4&transport=polling&t=PKtpD3R&sid=5GsWp9EJwao9oup4AAAE HTTP/1.1" 200 -
+2025-02-24 17:22:04,576 - 127.0.0.1 - - [24/Feb/2025 17:22:04] "GET /socket.io/?EIO=4&transport=polling&t=PKtpD3V&sid=5GsWp9EJwao9oup4AAAE HTTP/1.1" 200 -
+2025-02-24 17:22:04,595 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:05,131 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:05,600 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:06,136 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:06,606 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:07,137 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:07,611 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:08,139 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:08,614 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:09,145 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:09,619 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:10,149 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:10,624 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:11,155 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:11,627 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:12,160 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:12,633 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:13,165 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:13,638 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:14,171 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:14,640 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:15,173 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:15,642 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:16,179 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:16,645 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:17,182 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:17,648 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:18,188 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:18,650 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:19,193 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:19,650 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:20,199 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:20,654 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:21,204 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:21,658 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:22,208 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:22,663 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:23,211 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:23,667 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:24,213 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:24,668 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}
+2025-02-24 17:22:25,216 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'image_url': '', 'quantity': 0}

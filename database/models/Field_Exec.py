@@ -1,7 +1,7 @@
 from sqlalchemy.dialects.postgresql import UUID as PGUUID
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
-from database.main import Base
+from database.db import Base
 import uuid
 
 

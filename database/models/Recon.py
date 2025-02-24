@@ -1,4 +1,4 @@
-from database.main import Base
+from database.db import Base
 from sqlalchemy.orm import relationship, Mapped
 from sqlalchemy import Column, String, Date, JSON, ARRAY
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
@@ -23,4 +23,4 @@ class Recon(Base):
     updated_by = Column(String, nullable=False)
     
     ReconItems : Mapped[List["ReconItem"]] = relationship("ReconItem", back_populates="recon")
-    Retailer: Mapped[Optional["Retailer"]] = relationship("Retailer", back_populates="Recon")
+    # Retailer: Mapped[Optional["Retailer"]] = relationship("Retailer", back_populates="Recon")

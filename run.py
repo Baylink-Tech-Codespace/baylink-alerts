@@ -1,4 +1,4 @@
-from database.main import db
+from database.db import db
 from database.models.ASM import ASM 
 from database.models.SuperZone import SuperZone
 from database.models.Retailer import Retailer

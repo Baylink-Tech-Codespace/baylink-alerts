@@ -3,10 +3,10 @@ def is_retailer_shelf_image_event(data):
     image = data["image_url"]
     quantity = data["quantity"]
     
-    print("IMAGE",image)
-    
-    if quantity == 0 and image == "": return False
-    if quantity > 0 and image == "": return True 
+    return True
+
+    # if quantity == 0 and image == "": return False
+    # if quantity > 0 and image == "": return True 
  
 ALERT_RULES = {
     "pending_payment": lambda data: data["pending_days"] > 60 or data["pending_bills"] > 2,

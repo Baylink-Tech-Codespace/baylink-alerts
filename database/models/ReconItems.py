@@ -1,4 +1,4 @@
-from database.main import Base
+from database.db import Base
 from sqlalchemy.orm import relationship, Mapped
 from sqlalchemy import Column, Integer, DateTime ,ForeignKey
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID

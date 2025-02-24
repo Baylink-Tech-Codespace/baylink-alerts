@@ -26,6 +26,7 @@ class DB:
 
     def close_session(self):
         self.SessionLocal.remove()
+        
 
 db = DB()
 Base.metadata.create_all(db.engine)
