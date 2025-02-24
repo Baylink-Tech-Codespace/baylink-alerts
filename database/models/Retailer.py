@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, ForeignKey, JSON, DECIMAL, Enum, DateTime, UUID
 from sqlalchemy.orm import relationship, Mapped
-from database.main import Base
+from database.db import Base
 import uuid
 from typing import List, TYPE_CHECKING
 from datetime import datetime

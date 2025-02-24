@@ -14,11 +14,15 @@ class AlertSystem:
         
             if condition(event_data):
                 message = f"Alert: {event_name.replace('_', ' ').title()} - {event_data}"
-                print(message)
+                print("message",message)
                 recipients = ['Aman Retailer']
                 self.alerts.append({"message": message, "recipients": recipients})
                 send_alert(message, recipients)
-        else:
-            print("Invalid event name:", event_name)
+            else:
+                message = f"No Alert: {event_name.replace('_', ' ').title()}"
+                print("message",message)
+                recipients = ['Aman Retailer']
+                self.alerts.append({"message": message, "recipients": recipients})
+                send_alert(message, recipients)
  
 alert_system = AlertSystem()
