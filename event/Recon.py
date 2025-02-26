@@ -2,17 +2,8 @@ from database.db import db
 from database.models.Recon import Recon
 import select
 import json
-import logging
 from sqlalchemy.exc import SQLAlchemyError
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
-
-'''# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
-'''
 
 class ReconMonitor:
     def __init__(self):

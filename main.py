@@ -3,9 +3,8 @@ import time
 import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO
-from events import process_latest_recon
 from pipeline import alert_system
-
+from event.Recon import process_latest_recon
 import os 
 import dotenv
 dotenv.load_dotenv()
@@ -24,8 +23,7 @@ db_config = {
 }
 
 def process_alerts():
-    # recon_event = process_latest_recon(db_config)
-    
+    econ_event = process_latest_recon(db_config)
     recon_event = { 
                 "event_name" : "stock_near_expiry",
                 "event_data" : { 
