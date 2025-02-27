@@ -9,8 +9,9 @@ class AlertSystem:
     def __init__(self):
         self.alerts = []
 
-    def send_log_to_db(self, message: str, data: Dict[str, Any], message_type: str, retailer_id: uuid.UUID):
+    def send_log_to_db(self, message: str, data: Dict[str, Any], message_type: str):
         session = db.get_session()
+        retailer_id = data['retailer_id']
         try:
             log_entry = BaylinkAlertLogs(
                 retailer_id=  retailer_id,
@@ -26,7 +27,7 @@ class AlertSystem:
         finally:
             session.close()
 
-    def alert_pipeline(self, event_name: str, event_data: Dict[str, Any], retailer_id: uuid.UUID): 
+    def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]): 
         if event_name in config.ALERT_RULES: 
             condition: Callable[[Dict[str, Any]], bool] = config.ALERT_RULES[event_name]
         
@@ -37,10 +38,10 @@ class AlertSystem:
                 message = f"No Alert: {event_name.replace('_', ' ').title()}"
                 message_type = 'NO_ALERT'
 
-            print("message", message)
-            recipients = ['Aman Retailer']
-            self.alerts.append({"message": message, "recipients": recipients})
-            send_alert(message, recipients)
+            recipient = event_data['asm_number']
+            retailer_id = event_data['retailer_id']
+            self.alerts.append({"message": message, "recipient": recipient})
+            send_alert(message, recipient)
 
             self.send_log_to_db(message, event_data, message_type, retailer_id)
 

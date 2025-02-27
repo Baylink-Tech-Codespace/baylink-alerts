@@ -3152,3 +3152,80 @@
 2025-02-24 19:19:51,935 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'retailer_id': '0131e04a-f434-4d00-ae84-ce99e970bedd', 'image_url': '', 'quantity': 0}
 2025-02-24 19:19:53,203 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'retailer_id': '0131e04a-f434-4d00-ae84-ce99e970bedd', 'image_url': '', 'quantity': 0}
 2025-02-24 19:19:53,839 - Alert sent to Aman Retailer: Alert: Stock Near Expiry - {'retailer_id': '0131e04a-f434-4d00-ae84-ce99e970bedd', 'image_url': '', 'quantity': 0}
+2025-02-27 17:52:02,813 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.2:3000
+2025-02-27 17:52:02,813 - [33mPress CTRL+C to quit[0m
+2025-02-27 17:52:02,813 -  * Restarting with watchdog (fsevents)
+2025-02-27 17:52:09,017 -  * Debugger is active!
+2025-02-27 17:52:09,029 -  * Debugger PIN: 885-591-480
+2025-02-27 17:52:20,536 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/Recon.py', reloading
+2025-02-27 17:52:21,199 -  * Restarting with watchdog (fsevents)
+2025-02-27 17:52:27,352 -  * Debugger is active!
+2025-02-27 17:52:27,362 -  * Debugger PIN: 885-591-480
+2025-02-27 17:52:40,609 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/Recon.py', reloading
+2025-02-27 17:52:50,065 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.2:3000
+2025-02-27 17:52:50,065 - [33mPress CTRL+C to quit[0m
+2025-02-27 17:52:50,065 -  * Restarting with watchdog (fsevents)
+2025-02-27 17:52:56,877 -  * Debugger is active!
+2025-02-27 17:52:56,896 -  * Debugger PIN: 885-591-480
+2025-02-27 17:59:32,840 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/Recon.py', reloading
+2025-02-27 17:59:33,480 -  * Restarting with watchdog (fsevents)
+2025-02-27 17:59:40,332 -  * Debugger is active!
+2025-02-27 17:59:40,348 -  * Debugger PIN: 885-591-480
+2025-02-27 18:04:33,771 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/Recon.py', reloading
+2025-02-27 18:04:34,290 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:04:40,530 -  * Debugger is active!
+2025-02-27 18:04:40,541 -  * Debugger PIN: 885-591-480
+2025-02-27 18:04:43,787 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/Recon.py', reloading
+2025-02-27 18:04:50,579 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.2:3000
+2025-02-27 18:04:50,579 - [33mPress CTRL+C to quit[0m
+2025-02-27 18:04:50,579 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:04:56,890 -  * Debugger is active!
+2025-02-27 18:04:56,900 -  * Debugger PIN: 885-591-480
+2025-02-27 18:07:39,199 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/Recon.py', reloading
+2025-02-27 18:07:40,057 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:07:46,663 -  * Debugger is active!
+2025-02-27 18:07:46,678 -  * Debugger PIN: 885-591-480
+2025-02-27 18:07:54,248 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.2:3000
+2025-02-27 18:07:54,248 - [33mPress CTRL+C to quit[0m
+2025-02-27 18:07:54,248 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:08:00,414 -  * Debugger is active!
+2025-02-27 18:08:00,426 -  * Debugger PIN: 885-591-480
+2025-02-27 18:09:01,816 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/database/models/Retailer.py', reloading
+2025-02-27 18:09:02,918 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:09:09,209 -  * Debugger is active!
+2025-02-27 18:09:09,227 -  * Debugger PIN: 885-591-480
+2025-02-27 18:12:16,233 - Alert sent to 8, 4, 4, 7, 6, 8, 6, 8, 6, 9: No Alert: Is Retailer Shelf Image
+2025-02-27 18:12:37,533 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/notification.py', reloading
+2025-02-27 18:12:38,566 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:13:06,822 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:3000
+ * Running on http://192.168.1.2:3000
+2025-02-27 18:13:06,823 - [33mPress CTRL+C to quit[0m
+2025-02-27 18:13:06,823 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:13:12,901 -  * Debugger is active!
+2025-02-27 18:13:12,918 -  * Debugger PIN: 885-591-480
+2025-02-27 18:13:29,388 - Alert sent to 8447686869: No Alert: Is Retailer Shelf Image
+2025-02-27 18:13:29,398 - Alert sent to 8447686869: No Alert: Is Retailer Shelf Image
+2025-02-27 18:14:36,983 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-02-27 18:14:37,508 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:14:43,800 -  * Debugger is active!
+2025-02-27 18:14:43,811 -  * Debugger PIN: 885-591-480
+2025-02-27 18:15:44,922 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/notification.py', reloading
+2025-02-27 18:15:45,241 -  * Restarting with watchdog (fsevents)
+2025-02-27 18:15:52,191 -  * Debugger is active!
+2025-02-27 18:15:52,201 -  * Debugger PIN: 885-591-480
+2025-02-27 18:15:58,419 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/notification.py', reloading
+2025-02-27 18:15:59,338 -  * Restarting with watchdog (fsevents)
