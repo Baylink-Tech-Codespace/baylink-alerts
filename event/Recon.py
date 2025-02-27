@@ -1,5 +1,7 @@
 from database.db import db
 from database.models.Recon import Recon
+from database.models.Retailer import Retailer
+from database.models.ASM import ASM
 import select
 import json
 from sqlalchemy.exc import SQLAlchemyError
@@ -51,14 +53,12 @@ class ReconMonitor:
         """Process a recon record."""
         session = db.get_session()
         
-        print("RECON DATA",recon_data)
-        
         try:
             recon_id = recon_data['_id']
             # logger.info(f"Processing recon with ID: {recon_id}") 
             recon = session.query(Recon).filter(Recon._id == recon_id).first()
             
-            print("RECON",recon) 
+            print("recon.recon_date" , recon.recon_date)
             
             # logger.debug(f"Retrieved recon: {recon}")
             
@@ -66,8 +66,22 @@ class ReconMonitor:
                 quantity = sum(item.quantity for item in recon.ReconItems)
                 image = recon.image[0] if recon.image else ""
                 
-                print(quantity , image , "RECON - QUANTITY / IMAGE ")
+                print("IMAGE : Recon.py ",image)
+                 
+                retailer = session.query(Retailer).filter(Retailer._id == recon.retailer_id).first()
                 
+                if not retailer:
+                    # logger.warning(f"Retailer not found for recon ID: {recon_id}")
+                    return None
+                
+                asm = session.query(ASM).filter(ASM._id == retailer.ASM_id).first()
+                
+                if not asm:
+                    # logger.warning(f"ASM not found for retailer ID: {retailer._id}")
+                    return None
+    
+                print("Retailer name",retailer.name , "ASM NAme",asm.name)
+                 
                 event_data = {
                     "event_name": "is_retailer_shelf_image",
                     "event_data": {
@@ -75,7 +89,9 @@ class ReconMonitor:
                         "quantity": quantity,
                         "recon_id": str(recon._id),
                         "retailer_id": str(recon.retailer_id),
-                        "recon_date": recon.recon_date.isoformat()
+                        "recon_date": recon.recon_date.isoformat(),
+                        "retailer_name": retailer.name,
+                        "asm_number": asm.Contact_Number
                     }
                 }
                 # logger.info(f"Processed new recon: {json.dumps(event_data)}")
@@ -85,10 +101,10 @@ class ReconMonitor:
                 # logger.warning(f"No recon found for ID: {recon_id}")
                 
         except SQLAlchemyError as e:
-            print("e")
+            print(e)
             # logger.error(f"SQLAlchemy error processing recon {recon_id}: {str(e)}")
         except Exception as e:
-            print("e")
+            print(e)
             # logger.error(f"Unexpected error processing recon {recon_id}: {str(e)}")
         finally:
             db.close_session()

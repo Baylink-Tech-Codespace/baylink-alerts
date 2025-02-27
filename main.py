@@ -23,22 +23,11 @@ db_config = {
 }
 
 def process_alerts():
-    econ_event = process_latest_recon(db_config)
-    recon_event = { 
-                "event_name" : "stock_near_expiry",
-                "event_data" : { 
-                    "retailer_id"  :"0131e04a-f434-4d00-ae84-ce99e970bedd",
-                    "image_url" : "",
-                    "quantity" : 0  
-                    }
-                   }
-    
-    print("recon_event",recon_event)
+    recon_event = process_latest_recon(db_config)
      
     alert_system.alert_pipeline(
         event_name=recon_event["event_name"],
-        event_data=recon_event["event_data"],
-        retailer_id=recon_event['event_data']['retailer_id']
+        event_data=recon_event["event_data"], 
     )
 
 schedule.every(1).seconds.do(process_alerts)

@@ -50,5 +50,5 @@ class Retailer(Base):
     createdAt = Column(DateTime, default=datetime.now, nullable=False)
     updatedAt = Column(DateTime, default=datetime.now, onupdate=datetime.now, nullable=False)
 
-    Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
+    # Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
  
