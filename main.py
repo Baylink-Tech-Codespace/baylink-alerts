@@ -6,6 +6,7 @@ from flask_socketio import SocketIO
 from pipeline import alert_system
 from event.Recon import process_latest_recon
 import os 
+import _asyncio
 import dotenv
 dotenv.load_dotenv()
 
@@ -22,22 +23,22 @@ db_config = {
     "database" : os.getenv("DB_NAME"), 
 }
 
-def process_alerts():
+async def process_alerts():
     recon_event = process_latest_recon(db_config)
      
-    alert_system.alert_pipeline(
+    await alert_system.alert_pipeline(
         event_name=recon_event["event_name"],
         event_data=recon_event["event_data"], 
     )
 
 schedule.every(1).seconds.do(process_alerts)
 
-def run_scheduler():
+async def run_scheduler():
     while True:
         schedule.run_pending()
         time.sleep(1)
  
-def tail_log():
+async def tail_log():
     print(f"Attempting to read from log file: {LOG_FILE}")  
     if not os.path.exists(LOG_FILE):
         print(f"Log file {LOG_FILE} does not exist - creating it")
@@ -49,12 +50,12 @@ def tail_log():
             line = file.readline()
             if line:
                 print(f"Emitting log line: {line.strip()}")  
-                socketio.emit("new_log", {"message": line.strip()})
+                await socketio.emit("new_log", {"message": line.strip()})
             else:
                 time.sleep(0.1)
 
 @app.route("/")
-def index():
+async def index():
     return render_template("index.html")
 
 if __name__ == "__main__":

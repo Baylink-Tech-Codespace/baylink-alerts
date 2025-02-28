@@ -1,11 +1,10 @@
 
 from llm import llm
 
-def check_image_llm(image):
+async def check_image_llm(image):
     
-    response = llm.process_image_and_prompt(image,"is_retailer_shelf_image")
-    
-    
+    response = await llm.process_image_and_prompt(image,"is_retailer_shelf_image")
+        
     return True
 
 def is_retailer_shelf_image_event(data):
