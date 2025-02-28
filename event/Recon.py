@@ -2,6 +2,7 @@ from database.db import db
 from database.models.Recon import Recon
 from database.models.Retailer import Retailer
 from database.models.ASM import ASM
+from database.models.Inventory import InventoryStockList
 import select
 import json
 from sqlalchemy.exc import SQLAlchemyError
@@ -58,7 +59,24 @@ class ReconMonitor:
             # logger.info(f"Processing recon with ID: {recon_id}") 
             recon = session.query(Recon).filter(Recon._id == recon_id).first()
             
-            print("recon.recon_date" , recon.recon_date)
+            recon_items = []
+            for item in recon.ReconItems:
+                recon_items.append({
+                    "product_id": str(item.product_id),
+                    "quantity": item.quantity
+                })
+            inventory_items = []
+                
+            for item in recon_items:
+                inventory_stock_lists = db.get_session().query(InventoryStockList).filter(InventoryStockList.product_id == item.product_id).all()    
+                for item in inventory_stock_lists:
+                    inventory_items.append({
+                        "product_id": str(item.product_id),
+                        "quantity": item.quantity
+                    })
+                
+            print("recon_items" , recon_items)
+            print("inventory_items" , inventory_items)
             
             # logger.debug(f"Retrieved recon: {recon}")
             
@@ -81,8 +99,10 @@ class ReconMonitor:
                     return None
     
                 print("Retailer name",retailer.name , "ASM NAme",asm.name)
+                
+                events = []
                  
-                event_data = {
+                shelf_image_event_data = {
                     "event_name": "is_retailer_shelf_image",
                     "event_data": {
                         "image_url": image,
@@ -91,11 +111,25 @@ class ReconMonitor:
                         "retailer_id": str(recon.retailer_id),
                         "recon_date": recon.recon_date.isoformat(),
                         "retailer_name": retailer.name,
-                        "asm_number": asm.Contact_Number
+                        "asm_number": asm.Contact_Number,
                     }
                 }
+                
+                recon_inventory_qty_compare_event = {
+                    "event_name": "compare_quantity_inventory_recon",
+                    "event_data": {
+                        "retailer_name": retailer.name,
+                        "asm_number": asm.Contact_Number,
+                        "recon_items": recon_items,
+                        "inventory_items": inventory_items
+                    }
+                }
+                
+                events.append(shelf_image_event_data)
+                events.append(recon_inventory_qty_compare_event)
+                
                 # logger.info(f"Processed new recon: {json.dumps(event_data)}")
-                return event_data
+                return events
             else:
                 print("")
                 # logger.warning(f"No recon found for ID: {recon_id}")
