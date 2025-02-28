@@ -35,4 +35,4 @@ class MultimodalLLM:
         
         return response
 
-llm = MultimodalLLM() 
+# llm = MultimodalLLM() 

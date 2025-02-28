@@ -3,11 +3,10 @@ from notification import send_alert
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.db import db
 import config
-import uuid
 
 class AlertSystem:
     def __init__(self):
-        self.alerts = []
+        pass
 
     def send_log_to_db(self, message: str, data: Dict[str, Any], message_type: str):
         session = db.get_session()
@@ -38,11 +37,9 @@ class AlertSystem:
                 message = f"No Alert: {event_name.replace('_', ' ').title()}"
                 message_type = 'NO_ALERT'
 
-            recipient = event_data['asm_number']
-            retailer_id = event_data['retailer_id']
-            self.alerts.append({"message": message, "recipient": recipient})
+            recipient = "7007555103" # event_data['asm_number']
             send_alert(message, recipient)
 
-            self.send_log_to_db(message, event_data, message_type, retailer_id)
+            self.send_log_to_db(message, event_data, message_type)
 
 alert_system = AlertSystem()

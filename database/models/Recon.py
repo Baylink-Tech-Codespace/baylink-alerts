@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship, Mapped
 from sqlalchemy import Column, String, Date, JSON, ARRAY
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
 from sqlalchemy import ForeignKey
-from typing import List,Optional ,TYPE_CHECKING
+from typing import List ,TYPE_CHECKING
 import uuid
 
 from database.models.ReconItems import ReconItem
