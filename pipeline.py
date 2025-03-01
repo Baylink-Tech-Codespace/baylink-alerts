@@ -11,9 +11,10 @@ class AlertSystem:
     def send_log_to_db(self, message: str, data: Dict[str, Any], message_type: str):
         session = db.get_session()
         retailer_id = data['retailer_id']
+    
         try:
             log_entry = BaylinkAlertLogs(
-                retailer_id=  retailer_id,
+                retailer_id=retailer_id,
                 message=message,
                 data=data,
                 message_type=message_type,
@@ -37,7 +38,7 @@ class AlertSystem:
                 message = f"No Alert: {event_name.replace('_', ' ').title()}"
                 message_type = 'NO_ALERT'
 
-            recipient = "7007555103" # event_data['asm_number']
+            recipient = event_data['phone_number']
             send_alert(message, recipient)
 
             self.send_log_to_db(message, event_data, message_type)

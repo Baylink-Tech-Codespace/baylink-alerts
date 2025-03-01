@@ -8,8 +8,7 @@ os.makedirs(log_dir, exist_ok=True)
 
 logging.basicConfig(filename=f"{log_dir}/alerts.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
-# Update to use WA Microservice URL, update once it is deployed.
-WA_MICROSERVICE_URL = "http://localhost:3005/api/send-alert"
+WA_MICROSERVICE_URL = "http://localhost:8080/api/send-alert"
 
 def send_alert(message: str, recipient: str) -> None:
     """
@@ -21,7 +20,6 @@ def send_alert(message: str, recipient: str) -> None:
     """
     
     alert_msg = f"Alert for {recipient}: {message}"
-    print('22 alert:', alert_msg)
     
     try:
         response = requests.post(
@@ -43,3 +41,4 @@ def send_alert(message: str, recipient: str) -> None:
     except requests.exceptions.RequestException as e:
         logging.error(f"Error sending alert to {recipient}: {str(e)}")
         print(f"Error sending alert: {str(e)}")
+         

@@ -54,7 +54,7 @@ class ReconMonitor:
         """Process a recon record."""
         session = db.get_session()
         
-        try:
+        try:            
             recon_id = recon_data['_id']
             # logger.info(f"Processing recon with ID: {recon_id}") 
             recon = session.query(Recon).filter(Recon._id == recon_id).first()
@@ -65,27 +65,22 @@ class ReconMonitor:
                     "product_id": str(item.product_id),
                     "quantity": item.quantity
                 })
+                
             inventory_items = []
-                
-            for item in recon_items:
-                inventory_stock_lists = db.get_session().query(InventoryStockList).filter(InventoryStockList.product_id == item.product_id).all()    
-                for item in inventory_stock_lists:
-                    inventory_items.append({
-                        "product_id": str(item.product_id),
-                        "quantity": item.quantity
-                    })
-                
-            print("recon_items" , recon_items)
-            print("inventory_items" , inventory_items)
+            inventory_stock_lists = db.get_session().query(InventoryStockList).all()
             
-            # logger.debug(f"Retrieved recon: {recon}")
+            for recon_item in recon_items:                 
+                for inventory_item in inventory_stock_lists: 
+                    if(inventory_item.product_id == recon_item['product_id']):
+                        inventory_items.append({
+                            "product_id": str(inventory_item.product_id),
+                            "quantity": inventory_item.quantity
+                        })
             
             if recon:
                 quantity = sum(item.quantity for item in recon.ReconItems)
                 image = recon.image[0] if recon.image else ""
                 
-                print("IMAGE : Recon.py ",image)
-                 
                 retailer = session.query(Retailer).filter(Retailer._id == recon.retailer_id).first()
                 
                 if not retailer:
@@ -98,8 +93,6 @@ class ReconMonitor:
                     # logger.warning(f"ASM not found for retailer ID: {retailer._id}")
                     return None
     
-                print("Retailer name",retailer.name , "ASM NAme",asm.name)
-                
                 events = []
                  
                 shelf_image_event_data = {
@@ -111,15 +104,16 @@ class ReconMonitor:
                         "retailer_id": str(recon.retailer_id),
                         "recon_date": recon.recon_date.isoformat(),
                         "retailer_name": retailer.name,
-                        "asm_number": asm.Contact_Number,
+                        "phone_number": asm.Contact_Number,
                     }
                 }
                 
                 recon_inventory_qty_compare_event = {
                     "event_name": "compare_quantity_inventory_recon",
                     "event_data": {
+                        "retailer_id": str(recon.retailer_id),
                         "retailer_name": retailer.name,
-                        "asm_number": asm.Contact_Number,
+                        "phone_number": asm.Contact_Number,
                         "recon_items": recon_items,
                         "inventory_items": inventory_items
                     }
@@ -151,7 +145,6 @@ class ReconMonitor:
             cursor.execute("LISTEN recon_inserted;")
             # logger.info("Listening for 'recon_inserted' notifications...")
             
-             
             while True:
                 if select.select([self.conn], [], [], 5) == ([], [], []):
                     # logger.debug("No notifications received in the last 5 seconds")
