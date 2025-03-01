@@ -28,8 +28,8 @@ def process_alerts():
     events: List[Dict] = process_latest_recon(db_config)
     
     for event in events:
-        print(event)
-          
+        alert_system.alert_pipeline(event['event_name'], event['event_data'])
+        
 schedule.every(1).seconds.do(process_alerts)
 
 def run_scheduler():
