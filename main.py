@@ -5,6 +5,7 @@ from flask import Flask, render_template
 from flask_socketio import SocketIO
 from pipeline import alert_system
 from event.Recon import process_latest_recon
+from event.Sales import process_latest_sales_drop
 import os 
 import dotenv
 from typing import List, Dict
@@ -25,10 +26,10 @@ db_config = {
 }
 
 def process_alerts():
-    events: List[Dict] = process_latest_recon(db_config)
+    events: List[Dict] = process_latest_sales_drop(db_config)
     
-    for event in events:
-        alert_system.alert_pipeline(event['event_name'], event['event_data'])
+    #for event in events:
+    #    alert_system.alert_pipeline(event['event_name'], event['event_data'])
         
 schedule.every(1).seconds.do(process_alerts)
 

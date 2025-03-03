@@ -7,6 +7,7 @@ from datetime import datetime
 
 if TYPE_CHECKING:
     from database.models.Recon import Recon
+    from database.models.Sales import Sales
 
 class Retailer(Base):
     __tablename__ = "Retailer"
@@ -51,4 +52,5 @@ class Retailer(Base):
     updatedAt = Column(DateTime, default=datetime.now, onupdate=datetime.now, nullable=False)
 
     # Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
+    sales: Mapped[List["Sales"]] = relationship('Sales', back_populates='retailer')
  
