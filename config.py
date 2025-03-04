@@ -4,7 +4,8 @@ from sqlalchemy import func
 from datetime import datetime, timedelta
 import uuid
 from database.models.Sales import Sales
-
+from database.db import db
+from database.models.WarehouseItems import WarehouseItems
 
 # from llm import llm
 
@@ -52,8 +53,8 @@ def detect_sales_drop(data):
     
     return False
  
-
-
+ 
+# CASE 3 
 def check_sales_anomaly(session: Session, retailer_id: uuid.UUID, product_id: uuid.UUID, current_quantity: int, threshold: float):
     # Define time period (e.g., last 30 days)
     start_date = datetime.now() - timedelta(days=30)
@@ -63,8 +64,8 @@ def check_sales_anomaly(session: Session, retailer_id: uuid.UUID, product_id: uu
     historical_sales = session.query(Sales).filter(
         Sales.retailer_id == retailer_id,
         Sales.product_id == product_id,
-        #Sales.date >= start_date,
-        #Sales.date <= end_date
+        Sales.date >= start_date,
+        Sales.date <= end_date
     ).all()
 
     print(historical_sales)
@@ -91,6 +92,19 @@ def check_sales_anomaly(session: Session, retailer_id: uuid.UUID, product_id: uu
         return f"⚠️ Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average."
     else:
         return "✅ Sales are within normal historical range."
+
+
+# CASE 6 
+def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
+    warehouse_items = db.get_session().query(WarehouseItems).all()
+    
+    items = []
+    
+    for item in warehouse_items:
+        if item.quantity < MIN_STOCK_LEVEL:
+            items.append(item)
+    
+    return items
 
  
 ALERT_RULES = {
