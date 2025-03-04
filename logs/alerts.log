@@ -3796,3 +3796,6 @@ psycopg2.InterfaceError: connection already closed
 2025-03-03 16:04:18,871 -  * Restarting with watchdog (fsevents)
 2025-03-03 16:04:25,166 -  * Debugger is active!
 2025-03-03 16:04:25,178 -  * Debugger PIN: 885-591-480
+2025-03-04 11:46:12,843 - Error sending alert to 7007555103: 400 Client Error: Bad Request for url: http://localhost:8080/api/send-alert
+2025-03-04 11:46:29,870 - Error sending alert to 7007555103: 404 Client Error: Not Found for url: http://localhost:8080/api/send-message
+2025-03-04 11:46:56,107 - Failed to send alert to 7007555103: None
