@@ -7,6 +7,7 @@ from database.models.Inventory import Inventory
 from database.models.Inventory import InventoryStockList
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.models.Sales import Sales
+from database.models.WarehouseItems import WarehouseItems, Warehouse
 
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
@@ -24,7 +25,7 @@ from database.models.Sales import Sales
 #    print(_inventory.product_id , _inventory.quantity)
 
 
-sales = db.get_session().query(Sales).join(Retailer).all()
+warehouse_items = db.get_session().query(WarehouseItems).join(Warehouse).all()
 
-for sale in sales:
-    print(sale.retailer.name)
+for item in warehouse_items:
+    print(item.quantity , item.warehouse_id , item.warehouse)
