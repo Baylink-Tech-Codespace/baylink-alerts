@@ -1,33 +1,29 @@
 import logging
-import os
+import os 
 import requests
 from typing import Union, List
+from constants import get_wa_alert_template
 
 log_dir = "logs"
 os.makedirs(log_dir, exist_ok=True)
 
 logging.basicConfig(filename=f"{log_dir}/alerts.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
-WA_MICROSERVICE_URL = "http://localhost:8080/api/send-alert"
+WA_MICROSERVICE_URL = "http://localhost:8080/send-message"
+
+def formatted_phone(number):
+    if not number : return None
+    return "91" + number
 
 def send_alert(message: str, recipient: str) -> None:
-    """
-    Sends alerts via WhatsApp Microservice.
-    
-    Args:
-        message (str): Alert message to send
-        recipient (str or list): Phone number(s) to send alert to
-    """
     
     alert_msg = f"Alert for {recipient}: {message}"
+    template = get_wa_alert_template(recipient, alert_msg)
     
     try:
         response = requests.post(
             WA_MICROSERVICE_URL,
-            json={
-                "phoneNumber": recipient,
-                "message": message
-            },
+            json=template,
             timeout=10
         )
         
@@ -42,3 +38,5 @@ def send_alert(message: str, recipient: str) -> None:
         logging.error(f"Error sending alert to {recipient}: {str(e)}")
         print(f"Error sending alert: {str(e)}")
           
+          
+send_alert("test", "7007555103")
