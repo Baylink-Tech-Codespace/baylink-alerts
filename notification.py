@@ -1,7 +1,6 @@
 import logging
 import os 
-import requests
-from typing import Union, List
+import requests 
 from constants import get_wa_alert_template
 
 log_dir = "logs"
@@ -16,7 +15,6 @@ def formatted_phone(number):
     return "91" + number
 
 def send_alert(message: str, recipient: str) -> None:
-    
     alert_msg = f"Alert for {recipient}: {message}"
     template = get_wa_alert_template(recipient, alert_msg)
     
@@ -37,6 +35,5 @@ def send_alert(message: str, recipient: str) -> None:
     except requests.exceptions.RequestException as e:
         logging.error(f"Error sending alert to {recipient}: {str(e)}")
         print(f"Error sending alert: {str(e)}")
-          
           
 send_alert("test", "7007555103")

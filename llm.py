@@ -3,11 +3,9 @@ from transformers import BlipProcessor, BlipForConditionalGeneration
 import json
 
 class MultimodalLLM:
-    def __init__(self):
-        # Initialize the image captioning model (BLIP)
+    def __init__(self): 
         self.processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
-        self.image_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
-        
+        self.image_model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")        
         self.text_model = self.simple_text_model
 
     def simple_text_model(self, prompt):

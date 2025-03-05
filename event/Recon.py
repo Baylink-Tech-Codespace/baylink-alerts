@@ -21,7 +21,6 @@ class ReconMonitor:
             raw_conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
             cursor = raw_conn.cursor()
             
-            # Create notification function
             cursor.execute("""
                 CREATE OR REPLACE FUNCTION notify_recon_insert() RETURNS TRIGGER AS $$
                 BEGIN
@@ -32,7 +31,6 @@ class ReconMonitor:
             """)
             # logger.info("Notification function created successfully")
             
-            # Create trigger
             cursor.execute("""
                 DROP TRIGGER IF EXISTS recon_insert_trigger ON "Recon";
                 CREATE TRIGGER recon_insert_trigger

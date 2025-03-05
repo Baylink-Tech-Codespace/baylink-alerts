@@ -6,7 +6,6 @@ import uuid
 from database.models.Sales import Sales
 from database.db import db
 from database.models.WarehouseItems import WarehouseItems
-
 # from llm import llm
 
 
@@ -19,8 +18,7 @@ def compare_quantity_inventory_recon(data):
         for inventory_item in inventory_items:
             if recon_item["product_id"] == inventory_item["product_id"]:
                 if recon_item["quantity"] > inventory_item["quantity"]:
-                    return True
-                
+                    return True                
     return False
 
 
@@ -56,7 +54,6 @@ def detect_sales_drop(data):
  
 # CASE 3 
 def check_sales_anomaly(session: Session, retailer_id: uuid.UUID, product_id: uuid.UUID, current_quantity: int, threshold: float):
-    # Define time period (e.g., last 30 days)
     start_date = datetime.now() - timedelta(days=30)
     end_date = datetime.now()
 
@@ -68,25 +65,17 @@ def check_sales_anomaly(session: Session, retailer_id: uuid.UUID, product_id: uu
         Sales.date <= end_date
     ).all()
 
-    print(historical_sales)
-
-    # Flatten results
     historical_sales = [sale.quantity for sale in historical_sales]
     
-    print(historical_sales)
-
     if len(historical_sales) == 0:
         return "No historical sales data available for this product and retailer."
 
-    # Calculate mean and standard deviation
     avg_sales = sum(historical_sales) / len(historical_sales)
     std_sales = (sum((x - avg_sales) ** 2 for x in historical_sales) / len(historical_sales)) ** 0.5
 
-    # Define anomaly range
     lower_bound = avg_sales - (threshold * std_sales)
     upper_bound = avg_sales + (threshold * std_sales)
 
-    # Check for anomaly
     if current_quantity < lower_bound or current_quantity > upper_bound:
         deviation = ((current_quantity - avg_sales) / avg_sales) * 100
         return f"⚠️ Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average."
@@ -105,6 +94,11 @@ def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
             items.append(item)
     
     return items
+
+
+def notify_delivery_for_orders():
+    pass
+
 
  
 ALERT_RULES = {
