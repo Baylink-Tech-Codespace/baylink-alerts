@@ -6,7 +6,6 @@ import uuid
 from database.models.DeliveryPerson import Delivery 
 from database.base import Base
 
-
 class DeliveryLogs(Base):
     __tablename__ = 'DeliveryLogs'
 
