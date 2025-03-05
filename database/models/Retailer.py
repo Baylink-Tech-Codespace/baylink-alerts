@@ -6,7 +6,7 @@ from typing import List, TYPE_CHECKING
 from datetime import datetime
 
 if TYPE_CHECKING:
-    from database.models.Recon import Recon
+    from database.models.Order import Order
     from database.models.Sales import Sales
 
 class Retailer(Base):
@@ -53,4 +53,4 @@ class Retailer(Base):
 
     # Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
     sales: Mapped[List["Sales"]] = relationship('Sales', back_populates='retailer')
- 
+    orders : Mapped[List["Order"]] = relationship("Order", back_populates="retailer")

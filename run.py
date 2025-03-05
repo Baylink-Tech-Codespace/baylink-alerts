@@ -10,6 +10,7 @@ from database.models.Sales import Sales
 from database.models.WarehouseItems import WarehouseItems, Warehouse
 from database.models.DeliveryPerson import Delivery
 from database.models.DeliveryLogs import DeliveryLogs
+from database.models.Order import Order
 
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
@@ -33,12 +34,17 @@ from database.models.DeliveryLogs import DeliveryLogs
 #     print(item.quantity , item.warehouse_id , item.warehouse)
 
 
-person = db.get_session().query(Delivery).all()
+#person = db.get_session().query(Delivery).all()
 
-for p in person: 
-    print(p.name , p.delivery_logs)
+#for p in person: 
+#    print(p.name , p.delivery_logs)
 
-logs = db.get_session().query(DeliveryLogs).all()
+#logs = db.get_session().query(DeliveryLogs).all()
 
-for log in logs:
-    print(log.boxes , log.delivery_person.name , log.notes)
+#for log in logs:
+#    print(log.boxes , log.delivery_person.name , log.notes)
+
+orders = db.get_session().query(Order).all()
+
+for order in orders:
+    print(order.order_name, order.order_date , order.retailer.name)
