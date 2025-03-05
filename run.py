@@ -8,6 +8,8 @@ from database.models.Inventory import InventoryStockList
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.models.Sales import Sales
 from database.models.WarehouseItems import WarehouseItems, Warehouse
+from database.models.DeliveryPerson import Delivery
+from database.models.DeliveryLogs import DeliveryLogs
 
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
@@ -25,7 +27,18 @@ from database.models.WarehouseItems import WarehouseItems, Warehouse
 #    print(_inventory.product_id , _inventory.quantity)
 
 
-warehouse_items = db.get_session().query(WarehouseItems).join(Warehouse).all()
+# warehouse_items = db.get_session().query(WarehouseItems).join(Warehouse).all()
 
-for item in warehouse_items:
-    print(item.quantity , item.warehouse_id , item.warehouse)
+# for item in warehouse_items:
+#     print(item.quantity , item.warehouse_id , item.warehouse)
+
+
+person = db.get_session().query(Delivery).all()
+
+for p in person: 
+    print(p.name , p.delivery_logs)
+
+logs = db.get_session().query(DeliveryLogs).all()
+
+for log in logs:
+    print(log.boxes , log.delivery_person.name , log.notes)
