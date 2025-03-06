@@ -11,6 +11,7 @@ from database.models.WarehouseItems import WarehouseItems, Warehouse
 from database.models.DeliveryPerson import Delivery
 from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Order import Order
+from database.models.Product import Product
 
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
@@ -44,10 +45,20 @@ from database.models.Order import Order
 #for log in logs:
 #    print(log.boxes , log.delivery_person.name , log.notes)
 
-orders = db.get_session().query(Order).all()
 
-status = []
+#products = db.get_session().query(Product).all()
 
-for order in orders:
-    if order.status == "In-Transit":
-            
+#for product in products:
+#    print(product.name , product.inventory_stock_list,product.batch_codes)
+
+
+inventories = db.get_session().query(Inventory).all()
+
+for inventory in inventories:
+    retailer = inventory.retailer
+    stock_lists = inventory.stock_lists
+    
+    for stock in stock_lists:
+        product = stock.product
+        batch_codes = product.batch_codes
+        batch_codes.sort(key=lambda x: x.expiry_date)

@@ -13,11 +13,11 @@ class Delivery(Base):
     __tablename__ = 'Delivery'
 
     _id = Column(PGUUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    name = Column(String, nullable=True)
+    Name = Column(String, nullable=True)
+    Image = Column(ARRAY(String), nullable=True)
+    feuser_id = Column(PGUUID(as_uuid=True), nullable=True)
+    Contact_Number = Column(String, nullable=True)
     license_no = Column(String, nullable=True)
-    vehicle_image = Column(ARRAY(String), nullable=True)
-    person_image = Column(ARRAY(String), nullable=True)
-    phone_number = Column(String, nullable=True)
     vehicle_id = Column(PGUUID(as_uuid=True), nullable=True)
 
     createdAt = Column(TIMESTAMP, server_default=func.now())
