@@ -5,6 +5,7 @@ from typing import Optional
 import uuid
 from database.models.DeliveryPerson import Delivery 
 from database.base import Base
+from database.models.Order import Order
 
 class DeliveryLogs(Base):
     __tablename__ = 'DeliveryLogs'
@@ -20,7 +21,7 @@ class DeliveryLogs(Base):
     notes = Column(String, nullable=True)
 
     # Relationships
-    # order = relationship('Order', back_populates='delivery_logs')
+    order: Mapped[Optional["Order"]] = relationship('Order', back_populates='delivery_logs')
     delivery_person: Mapped[Optional["Delivery"]] = relationship('Delivery', back_populates='delivery_logs')
 
     def __repr__(self):

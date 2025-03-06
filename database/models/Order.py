@@ -5,6 +5,10 @@ from typing import Optional
 import uuid
 from database.base import Base
 from database.models.Retailer import Retailer
+from typing import List , TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from database.models.DeliveryLogs import DeliveryLogs
 
 class Order(Base):
     __tablename__ = 'Order'
@@ -28,7 +32,9 @@ class Order(Base):
 
     # Relationships
     #fe_user = relationship('FeUser', back_populates='orders')
-    retailer: Mapped[Optional["Retailer"]] = relationship('Retailer', back_populates='orders')
+    retailer: Mapped[Optional["Retailer"]] = relationship('Retailer', back_populates='orders') 
+    delivery_logs: Mapped[List["DeliveryLogs"]]  = relationship('DeliveryLogs', back_populates='order')
+    
     #order_items_rel = relationship('OrderItem', back_populates='order')
 
     def __repr__(self):

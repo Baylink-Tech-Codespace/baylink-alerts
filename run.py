@@ -46,5 +46,8 @@ from database.models.Order import Order
 
 orders = db.get_session().query(Order).all()
 
+status = []
+
 for order in orders:
-    print(order.order_name, order.order_date , order.retailer.name)
+    if order.status == "In-Transit":
+            
