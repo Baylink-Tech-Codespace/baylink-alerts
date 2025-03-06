@@ -6,6 +6,7 @@ from flask_socketio import SocketIO
 from pipeline import alert_system
 from event.Recon import process_latest_recon
 from event.Sales import process_latest_sales_drop
+from event.RetailerVisit import process_low_retailer_visits
 import os 
 import dotenv
 from typing import List, Dict
@@ -26,7 +27,7 @@ db_config = {
 }
 
 def process_alerts():
-    events: List[Dict] = process_latest_sales_drop(db_config)
+    events: List[Dict] = process_low_retailer_visits(db_config)
     
     #for event in events:
     #    alert_system.alert_pipeline(event['event_name'], event['event_data'])
@@ -63,6 +64,6 @@ if __name__ == "__main__":
 
     threading.Thread(target=run_scheduler, daemon=True).start()
     threading.Thread(target=tail_log, daemon=True).start()
-    print(f"Open URL : http://localhost:{3000} to access the dashboard.")
-    socketio.run(app, host="0.0.0.0", port=3000, debug=True)
+    print(f"Open URL : http://localhost:{4000} to access the dashboard.")
+    socketio.run(app, host="0.0.0.0", port=4000, debug=True)
     
