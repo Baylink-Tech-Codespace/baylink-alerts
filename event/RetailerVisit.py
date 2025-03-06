@@ -3,6 +3,8 @@ import select
 import json
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
+
+# CASE 29 
 class RetailerVisitMonitor:
     def __init__(self):
         self.conn = None

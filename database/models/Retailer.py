@@ -2,11 +2,12 @@ from sqlalchemy import Column, String, ForeignKey, JSON, DECIMAL, Enum, DateTime
 from sqlalchemy.orm import relationship, Mapped
 from database.db import Base
 import uuid
-from typing import List, TYPE_CHECKING
+from typing import List, TYPE_CHECKING, Optional
 from datetime import datetime
 
 if TYPE_CHECKING:
     from database.models.Order import Order
+    from database.models.Inventory import Inventory
     from database.models.Sales import Sales
 
 class Retailer(Base):
@@ -21,7 +22,7 @@ class Retailer(Base):
     GSTIN = Column(String, nullable=True)
     FE_id = Column(UUID(as_uuid=True), ForeignKey("Field_Exec._id"), nullable=True)
     ASM_id = Column(UUID(as_uuid=True), ForeignKey("ASM._id"), nullable=True)
-    closing_balance = Column(DECIMAL(10, 2), nullable=True)
+    #closing_balance = Column(DECIMAL(10, 2), nullable=True)
     image = Column(String, nullable=True)
     outsideImage = Column(String, nullable=True)
     storeCategory = Column(Enum("null", "undefined", "Grocery", "Convenience store", "Bakery", "Pharmacy", "Paan Shop", "Other"), nullable=True)
@@ -54,3 +55,4 @@ class Retailer(Base):
     # Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
     sales: Mapped[List["Sales"]] = relationship('Sales', back_populates='retailer')
     orders : Mapped[List["Order"]] = relationship("Order", back_populates="retailer")
+    inventory : Mapped[Optional["Inventory"]] = relationship("Inventory", back_populates="retailer")
