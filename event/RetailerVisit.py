@@ -4,7 +4,7 @@ import json
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 
-# CASE 29 
+# CASE 23 
 class RetailerVisitMonitor:
     def __init__(self):
         self.conn = None

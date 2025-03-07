@@ -1,6 +1,5 @@
-
 from sqlalchemy.orm import Session 
-from sqlalchemy import func
+from sqlalchemy import Date, cast
 from datetime import datetime, timedelta
 import uuid
 from database.models.Sales import Sales
@@ -11,6 +10,8 @@ from database.models.DeliveryLogs import DeliveryLogs
 from database.models.WarehouseItems import WarehouseItems
 from database.models.Inventory import InventoryStockList, Inventory
 from database.models.Recon import Recon
+from database.models.BeatPlan import BeatPlan
+from database.models.Field_Exec import Field_Exec
 
 # CASE 2 
 def compare_quantity_inventory_recon(data):
@@ -175,6 +176,29 @@ def nearly_expiring_stocks():
                     })
                     
     return messages
+
+#CASE 20
+def check_beatplans_for_today(session: Session):
+    today = datetime.today().date()
+    
+    all_fes = db.get_session().query(Field_Exec._id, Field_Exec.Name).all()
+
+    assigned_fes = db.get_session().query(BeatPlan.FE_id).filter(
+        cast(BeatPlan.date, Date) == today 
+    ).distinct().all()
+
+    assigned_fe_ids = {fe.FE_id for fe in assigned_fes} 
+
+    missing_fes = [(fe._id, fe.Name) for fe in all_fes if fe._id not in assigned_fe_ids]
+
+    if missing_fes:
+        print(missing_fes)
+        return {
+            "alert": "BeatPlan not assigned to the following FEs:",
+            "missing_fes": missing_fes
+        }
+    else:
+        return {"message": "All FEs have a BeatPlan assigned for today."}
     
     
 ALERT_RULES = {
@@ -183,5 +207,6 @@ ALERT_RULES = {
     "drop_in_sales" : lambda _ :detect_sales_drop(),
     "check_sales_anomaly" : lambda data:check_sales_anomaly(data),
     "check_warehouse_inventory" : lambda :check_warehouse_inventory(),
-    "notify_delivery_for_orders" : lambda :notify_delivery_for_orders() 
+    "notify_delivery_for_orders" : lambda :notify_delivery_for_orders(),
+    "beat_plan_for_FE": lambda:check_beatplans_for_today()
 }
