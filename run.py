@@ -52,13 +52,13 @@ from database.models.Product import Product
 #    print(product.name , product.inventory_stock_list,product.batch_codes)
 
 
-inventories = db.get_session().query(Inventory).all()
+#inventories = db.get_session().query(Inventory).all()
 
-for inventory in inventories:
-    retailer = inventory.retailer
-    stock_lists = inventory.stock_lists
+#for inventory in inventories:
+#    retailer = inventory.retailer
+#    stock_lists = inventory.stock_lists
     
-    for stock in stock_lists:
-        product = stock.product
-        batch_codes = product.batch_codes
-        batch_codes.sort(key=lambda x: x.expiry_date)
+#    for stock in stock_lists:
+#        product = stock.product
+#        batch_codes = product.batch_codes
+#        batch_codes.sort(key=lambda x: x.expiry_date)

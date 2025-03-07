@@ -29,8 +29,8 @@ db_config = {
 def process_alerts():
     events: List[Dict] = check_retailer_visits_for_month(db_config)
     
-    #for event in events:
-    #    alert_system.alert_pipeline(event['event_name'], event['event_data'])
+    for event in events:
+        alert_system.alert_pipeline(event['event_name'], event['event_data'])
         
 schedule.every(1).seconds.do(process_alerts)
 
