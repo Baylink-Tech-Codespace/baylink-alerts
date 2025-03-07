@@ -4445,3 +4445,667 @@ psycopg2.InterfaceError: connection already closed
 2025-03-06 13:25:52,827 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001666EC22E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
 2025-03-06 13:25:59,937 -  * Debugger is active!
 2025-03-06 13:25:59,941 -  * Debugger PIN: 169-836-830
+2025-03-06 14:12:00,926 - Exception during reset or similar
+Traceback (most recent call last):
+  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 986, in _finalize_fairy
+    fairy._reset(
+    ~~~~~~~~~~~~^
+        pool,
+        ^^^^^
+    ...<2 lines>...
+        asyncio_safe=can_manipulate_connection,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1432, in _reset
+    pool._dialect.do_rollback(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 700, in do_rollback
+    dbapi_connection.rollback()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+psycopg2.InterfaceError: connection already closed
+2025-03-06 15:00:39,516 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\RetailerVisit.py', reloading
+2025-03-06 15:00:39,517 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\RetailerVisit.py', reloading
+2025-03-06 15:00:40,204 -  * Restarting with watchdog (windowsapi)
+2025-03-06 15:00:46,499 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EEFBFD2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 15:00:54,746 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021FE4BFEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 15:01:00,461 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 15:01:00,461 - [33mPress CTRL+C to quit[0m
+2025-03-06 15:01:00,461 -  * Restarting with watchdog (windowsapi)
+2025-03-06 15:01:05,673 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000243522B2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 15:01:11,441 -  * Debugger is active!
+2025-03-06 15:01:11,443 -  * Debugger PIN: 169-836-830
+2025-03-06 15:34:48,281 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BaylinkAlertLogs.py', reloading
+2025-03-06 15:34:49,125 -  * Restarting with watchdog (windowsapi)
+2025-03-06 15:34:54,359 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000024A24BC2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 15:35:00,170 -  * Debugger is active!
+2025-03-06 15:35:00,173 -  * Debugger PIN: 169-836-830
+2025-03-06 16:00:59,566 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Order.py', reloading
+2025-03-06 16:00:59,640 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\expression.py', reloading
+2025-03-06 16:00:59,700 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\functions.py', reloading
+2025-03-06 16:01:00,199 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\__init__.py', reloading
+2025-03-06 16:01:00,236 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\schema.py', reloading
+2025-03-06 16:01:00,273 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\schema.py', reloading
+2025-03-06 16:01:00,412 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\base.py', reloading
+2025-03-06 16:01:00,442 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\event\\__init__.py', reloading
+2025-03-06 16:01:00,443 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\util\\__init__.py', reloading
+2025-03-06 16:01:00,453 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\util\\_collections.py', reloading
+2025-03-06 16:01:00,484 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\util\\_py_collections.py', reloading
+2025-03-06 16:01:00,521 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\util\\typing.py', reloading
+2025-03-06 16:01:00,712 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:01:05,885 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CC8CAE2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:01:11,730 -  * Debugger is active!
+2025-03-06 16:01:11,735 -  * Debugger PIN: 169-836-830
+2025-03-06 16:02:17,999 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\__init__.py', reloading
+2025-03-06 16:02:18,027 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\SuperZone.py', reloading
+2025-03-06 16:02:19,062 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:02:24,270 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001685EF6EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:02:29,823 -  * Debugger is active!
+2025-03-06 16:02:29,825 -  * Debugger PIN: 169-836-830
+2025-03-06 16:02:45,374 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:02:45,763 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Inventory.py', reloading
+2025-03-06 16:02:45,768 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-06 16:02:45,782 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\constants.py', reloading
+2025-03-06 16:02:45,784 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\__init__.py', reloading
+2025-03-06 16:02:45,795 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\pool\\__init__.py', reloading
+2025-03-06 16:02:45,797 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\llm.py', reloading
+2025-03-06 16:02:45,810 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\notification.py', reloading
+2025-03-06 16:02:45,810 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-06 16:02:45,826 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\run.py', reloading
+2025-03-06 16:02:45,828 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\base.py', reloading
+2025-03-06 16:02:45,838 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\utils.py', reloading
+2025-03-06 16:02:45,838 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\__init__.py', reloading
+2025-03-06 16:02:45,851 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\create.py', reloading
+2025-03-06 16:02:45,855 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\ASM.py', reloading
+2025-03-06 16:02:45,868 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Field_Exec.py', reloading
+2025-03-06 16:02:45,884 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Recon.py', reloading
+2025-03-06 16:02:45,884 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\interfaces.py', reloading
+2025-03-06 16:02:45,897 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\WarehouseItems.py', reloading
+2025-03-06 16:02:45,900 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\exc.py', reloading
+2025-03-06 16:02:45,903 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\reflection.py', reloading
+2025-03-06 16:02:45,922 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\row.py', reloading
+2025-03-06 16:02:45,948 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\url.py', reloading
+2025-03-06 16:02:45,972 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\util\\deprecations.py', reloading
+2025-03-06 16:02:45,984 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\pool\\base.py', reloading
+2025-03-06 16:02:45,987 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\schedule\\__init__.py', reloading
+2025-03-06 16:02:46,005 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2025-03-06 16:02:46,021 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\_orm_constructors.py', reloading
+2025-03-06 16:02:46,024 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\ext\\declarative\\__init__.py', reloading
+2025-03-06 16:02:46,051 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\query.py', reloading
+2025-03-06 16:02:46,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\attributes.py', reloading
+2025-03-06 16:02:46,079 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\relationships.py', reloading
+2025-03-06 16:02:46,109 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\scoping.py', reloading
+2025-03-06 16:02:46,154 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\session.py', reloading
+2025-03-06 16:02:46,181 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\util.py', reloading
+2025-03-06 16:02:46,211 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\sql\\lambdas.py', reloading
+2025-03-06 16:02:46,238 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\_py_row.py', reloading
+2025-03-06 16:02:46,239 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\psycopg2\\extensions.py', reloading
+2025-03-06 16:02:46,262 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\uuid.py', reloading
+2025-03-06 16:02:46,443 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:02:51,636 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000190F4B52E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:02:57,382 -  * Debugger is active!
+2025-03-06 16:02:57,386 -  * Debugger PIN: 169-836-830
+2025-03-06 16:03:39,157 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:03:39,158 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:03:39,159 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:03:39,551 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:03:44,661 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002623B992E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:03:49,881 -  * Debugger is active!
+2025-03-06 16:03:49,884 -  * Debugger PIN: 169-836-830
+2025-03-06 16:03:55,050 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:03:55,051 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:03:55,051 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:03:56,236 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:04:01,267 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018C1F4F2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:04:07,023 -  * Debugger is active!
+2025-03-06 16:04:07,029 -  * Debugger PIN: 169-836-830
+2025-03-06 16:14:24,391 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:14:24,418 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:14:24,419 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:14:24,985 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:14:30,070 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F32D7DEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:14:36,082 -  * Debugger is active!
+2025-03-06 16:14:36,085 -  * Debugger PIN: 169-836-830
+2025-03-06 16:14:39,902 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:14:39,929 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:14:39,930 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BeatPlan.py', reloading
+2025-03-06 16:14:40,386 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:14:45,537 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000013A80CC2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:14:50,845 -  * Debugger is active!
+2025-03-06 16:14:50,847 -  * Debugger PIN: 169-836-830
+2025-03-06 16:18:54,814 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Sales.py', reloading
+2025-03-06 16:18:55,352 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:19:00,524 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000221D8852E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:19:05,847 -  * Debugger is active!
+2025-03-06 16:19:05,849 -  * Debugger PIN: 169-836-830
+2025-03-06 16:22:33,345 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 16:22:34,204 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:22:39,361 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000217C3982E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:22:45,382 -  * Debugger is active!
+2025-03-06 16:22:45,385 -  * Debugger PIN: 169-836-830
+2025-03-06 16:22:48,115 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 16:22:48,116 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 16:22:48,117 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 16:22:48,639 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:22:53,788 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D5F86EEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:22:59,913 -  * Debugger is active!
+2025-03-06 16:22:59,915 -  * Debugger PIN: 169-836-830
+2025-03-06 16:23:07,861 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-06 16:23:07,861 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-06 16:23:07,878 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-06 16:23:08,324 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:23:13,595 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C206E12E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:23:19,022 -  * Debugger is active!
+2025-03-06 16:23:19,024 -  * Debugger PIN: 169-836-830
+2025-03-06 16:23:20,467 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-06 16:23:20,468 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-06 16:23:20,469 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-06 16:23:21,323 -  * Restarting with watchdog (windowsapi)
+2025-03-06 16:23:26,521 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D5DCD6EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:24:17,617 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027647C2EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:25:44,935 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D7F4FBEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 16:27:54,187 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E0D0FAEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:30:18,128 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023511D4EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:30:35,328 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000018CA426EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:30:53,224 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023C86C7EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:30:57,764 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 17:30:57,764 - [33mPress CTRL+C to quit[0m
+2025-03-06 17:30:57,764 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:31:02,439 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000266F6A52E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:31:07,219 -  * Debugger is active!
+2025-03-06 17:31:07,221 -  * Debugger PIN: 169-836-830
+2025-03-06 17:31:23,111 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Retailer.py', reloading
+2025-03-06 17:31:23,667 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:31:28,364 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C73A2AEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:31:33,052 -  * Debugger is active!
+2025-03-06 17:31:33,054 -  * Debugger PIN: 169-836-830
+2025-03-06 17:31:49,255 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:31:49,256 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:31:49,259 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:31:49,524 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:31:54,225 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BE4DF52E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:31:58,784 -  * Debugger is active!
+2025-03-06 17:31:58,785 -  * Debugger PIN: 169-836-830
+2025-03-06 17:44:20,733 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025AFCADEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:44:25,335 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 17:44:25,335 - [33mPress CTRL+C to quit[0m
+2025-03-06 17:44:25,336 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:44:30,020 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000010EF4F6EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:46:43,945 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002873586EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:46:48,609 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 17:46:48,609 - [33mPress CTRL+C to quit[0m
+2025-03-06 17:46:48,610 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:46:53,280 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D7666B2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:46:57,707 -  * Debugger is active!
+2025-03-06 17:46:57,709 -  * Debugger PIN: 169-836-830
+2025-03-06 17:47:54,908 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:47:54,909 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:47:54,910 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:47:55,346 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:48:00,099 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D543D02E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:48:04,801 -  * Debugger is active!
+2025-03-06 17:48:04,802 -  * Debugger PIN: 169-836-830
+2025-03-06 17:48:16,372 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:48:16,374 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 17:48:17,242 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:48:21,973 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A972A9EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:48:26,639 -  * Debugger is active!
+2025-03-06 17:48:26,641 -  * Debugger PIN: 169-836-830
+2025-03-06 17:51:23,051 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C139922E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:51:27,561 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 17:51:27,561 - [33mPress CTRL+C to quit[0m
+2025-03-06 17:51:27,561 -  * Restarting with watchdog (windowsapi)
+2025-03-06 17:51:32,270 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019102DCEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 17:51:37,065 -  * Debugger is active!
+2025-03-06 17:51:37,067 -  * Debugger PIN: 169-836-830
+2025-03-06 18:18:49,616 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000225A2C6EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:18:54,531 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:18:54,531 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:18:54,531 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:18:59,214 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000014A068EEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:19:04,004 -  * Debugger is active!
+2025-03-06 18:19:04,007 -  * Debugger PIN: 169-836-830
+2025-03-06 18:21:00,096 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025EE842EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:21:04,590 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:21:04,590 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:21:04,590 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:21:09,363 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021569C8EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:21:13,835 -  * Debugger is active!
+2025-03-06 18:21:13,836 -  * Debugger PIN: 169-836-830
+2025-03-06 18:21:59,596 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:21:59,599 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:21:59,600 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:22:00,260 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:22:05,001 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001ED2BA9EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:22:09,563 -  * Debugger is active!
+2025-03-06 18:22:09,565 -  * Debugger PIN: 169-836-830
+2025-03-06 18:22:23,340 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:22:23,341 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:22:23,941 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:22:28,647 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001AACEDBEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:22:33,140 -  * Debugger is active!
+2025-03-06 18:22:33,141 -  * Debugger PIN: 169-836-830
+2025-03-06 18:22:33,332 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:22:33,333 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:22:33,333 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:22:34,373 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:22:39,038 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002E2C476EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:22:43,467 -  * Debugger is active!
+2025-03-06 18:22:43,469 -  * Debugger PIN: 169-836-830
+2025-03-06 18:23:00,188 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-06 18:23:00,205 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\constants.py', reloading
+2025-03-06 18:23:00,227 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\llm.py', reloading
+2025-03-06 18:23:00,228 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\base.py', reloading
+2025-03-06 18:23:00,228 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\notification.py', reloading
+2025-03-06 18:23:00,232 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\ASM.py', reloading
+2025-03-06 18:23:00,245 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\DeliveryLogs.py', reloading
+2025-03-06 18:23:00,275 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\DeliveryPerson.py', reloading
+2025-03-06 18:23:00,287 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Field_Exec.py', reloading
+2025-03-06 18:23:00,293 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Order.py', reloading
+2025-03-06 18:23:00,294 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Inventory.py', reloading
+2025-03-06 18:23:00,294 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\utils.py', reloading
+2025-03-06 18:23:00,325 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\Sales.py', reloading
+2025-03-06 18:23:00,343 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\WarehouseItems.py', reloading
+2025-03-06 18:23:00,919 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:23:05,642 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029F50F42E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:23:10,501 -  * Debugger is active!
+2025-03-06 18:23:10,502 -  * Debugger PIN: 169-836-830
+2025-03-06 18:30:03,360 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021662512E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:30:08,286 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:30:08,286 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:30:08,286 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:30:12,936 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027132672E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:30:17,451 -  * Debugger is active!
+2025-03-06 18:30:17,453 -  * Debugger PIN: 169-836-830
+2025-03-06 18:31:44,776 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002D8FE382E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:32:04,647 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C774B6EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:32:09,332 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:32:09,332 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:32:09,332 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:32:14,032 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001772AF0EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:32:18,981 -  * Debugger is active!
+2025-03-06 18:32:18,982 -  * Debugger PIN: 169-836-830
+2025-03-06 18:33:54,446 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D470DA2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:33:59,417 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:33:59,417 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:33:59,417 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:34:04,140 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000243A2672E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:45:27,160 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026771CBEE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:45:31,685 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:45:31,685 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:45:31,686 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:45:36,379 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A733352E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:45:40,917 -  * Debugger is active!
+2025-03-06 18:45:40,919 -  * Debugger PIN: 169-836-830
+2025-03-06 18:47:28,468 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000192E0692E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:47:32,984 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:47:32,984 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:47:32,984 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:47:37,667 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000251BE312E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:47:42,170 -  * Debugger is active!
+2025-03-06 18:47:42,171 -  * Debugger PIN: 169-836-830
+2025-03-06 18:48:20,028 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002638FD12E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:48:24,490 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:48:24,490 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:48:24,490 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:48:29,158 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016B42A02E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:48:33,739 -  * Debugger is active!
+2025-03-06 18:48:33,741 -  * Debugger PIN: 169-836-830
+2025-03-06 18:48:37,659 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:48:37,662 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:48:37,663 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:48:38,003 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:48:42,733 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000266751A2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:48:47,431 -  * Debugger is active!
+2025-03-06 18:48:47,433 -  * Debugger PIN: 169-836-830
+2025-03-06 18:50:26,903 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002AE4D3F2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:50:31,327 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:50:31,327 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:50:31,327 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:50:35,978 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025466042E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:50:40,825 -  * Debugger is active!
+2025-03-06 18:50:40,828 -  * Debugger PIN: 169-836-830
+2025-03-06 18:51:16,460 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BAEDB12E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:51:21,172 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 18:51:21,173 - [33mPress CTRL+C to quit[0m
+2025-03-06 18:51:21,173 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:51:25,849 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000248B4E92E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:51:30,820 -  * Debugger is active!
+2025-03-06 18:51:30,822 -  * Debugger PIN: 169-836-830
+2025-03-06 18:51:33,745 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:51:33,746 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:51:33,748 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 18:51:33,993 -  * Restarting with watchdog (windowsapi)
+2025-03-06 18:51:38,695 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000021D3CBC2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 18:51:43,554 -  * Debugger is active!
+2025-03-06 18:51:43,556 -  * Debugger PIN: 169-836-830
+2025-03-06 19:01:31,028 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025485D92E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:01:35,980 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 19:01:35,980 - [33mPress CTRL+C to quit[0m
+2025-03-06 19:01:35,980 -  * Restarting with watchdog (windowsapi)
+2025-03-06 19:01:40,702 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E7580B2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:01:45,289 -  * Debugger is active!
+2025-03-06 19:01:45,291 -  * Debugger PIN: 169-836-830
+2025-03-06 19:01:49,185 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 19:01:49,186 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\BeatPlan.py', reloading
+2025-03-06 19:01:49,503 -  * Restarting with watchdog (windowsapi)
+2025-03-06 19:01:54,178 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016EB1912E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:01:58,946 -  * Debugger is active!
+2025-03-06 19:01:58,948 -  * Debugger PIN: 169-836-830
+2025-03-06 19:02:12,668 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000183FF0F2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:02:17,611 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 19:02:17,611 - [33mPress CTRL+C to quit[0m
+2025-03-06 19:02:17,611 -  * Restarting with watchdog (windowsapi)
+2025-03-06 19:02:22,315 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002235E1C2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:03:27,220 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029760EC2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:03:32,145 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 19:03:32,145 - [33mPress CTRL+C to quit[0m
+2025-03-06 19:03:32,145 -  * Restarting with watchdog (windowsapi)
+2025-03-06 19:06:08,642 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000270286E2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:06:13,552 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 19:06:13,552 - [33mPress CTRL+C to quit[0m
+2025-03-06 19:06:13,552 -  * Restarting with watchdog (windowsapi)
+2025-03-06 19:06:18,242 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000222C7F82E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:07:42,435 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A8DA662E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:07:47,001 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-06 19:07:47,002 - [33mPress CTRL+C to quit[0m
+2025-03-06 19:07:47,002 -  * Restarting with watchdog (windowsapi)
+2025-03-06 19:07:51,712 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000286E2C12E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-06 19:07:56,591 -  * Debugger is active!
+2025-03-06 19:07:56,592 -  * Debugger PIN: 169-836-830
+2025-03-07 12:44:20,215 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002443839EE40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:44:26,531 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 12:44:26,531 - [33mPress CTRL+C to quit[0m
+2025-03-07 12:44:26,531 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:44:31,439 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001732C6B2E40>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:45:31,533 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CEA42312B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:45:31,595 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 12:45:31,595 - [33mPress CTRL+C to quit[0m
+2025-03-07 12:45:31,595 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:45:42,097 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000138EB1F52B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:45:42,162 -  * Debugger is active!
+2025-03-07 12:45:42,169 -  * Debugger PIN: 169-836-830
+2025-03-07 12:45:46,850 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:45:46,851 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:45:46,852 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:45:47,397 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:45:57,624 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000208788A12B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:45:57,688 -  * Debugger is active!
+2025-03-07 12:45:57,690 -  * Debugger PIN: 169-836-830
+2025-03-07 12:47:11,756 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000015F839912B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:47:11,848 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 12:47:11,849 - [33mPress CTRL+C to quit[0m
+2025-03-07 12:47:11,849 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:47:22,339 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000246E4EC52B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:47:22,416 -  * Debugger is active!
+2025-03-07 12:47:22,418 -  * Debugger PIN: 169-836-830
+2025-03-07 12:47:23,790 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:47:23,790 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:47:24,607 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:47:35,019 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000012F9EB612B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:47:35,091 -  * Debugger is active!
+2025-03-07 12:47:35,093 -  * Debugger PIN: 169-836-830
+2025-03-07 12:48:05,535 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:48:05,536 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:48:05,536 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:48:05,853 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:48:16,082 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000026EB31E12B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:48:16,151 -  * Debugger is active!
+2025-03-07 12:48:16,153 -  * Debugger PIN: 169-836-830
+2025-03-07 12:48:53,282 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:48:53,282 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:48:54,232 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:49:04,963 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000247DE6F52B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:49:05,038 -  * Debugger is active!
+2025-03-07 12:49:05,041 -  * Debugger PIN: 169-836-830
+2025-03-07 12:49:54,598 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023052F412B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:49:54,674 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 12:49:54,675 - [33mPress CTRL+C to quit[0m
+2025-03-07 12:49:54,675 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:50:05,421 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001426A5352B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:50:05,508 -  * Debugger is active!
+2025-03-07 12:50:05,511 -  * Debugger PIN: 169-836-830
+2025-03-07 12:50:49,155 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:50:49,158 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:50:49,159 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:50:49,496 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:50:59,542 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001A7721312B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:50:59,619 -  * Debugger is active!
+2025-03-07 12:50:59,622 -  * Debugger PIN: 169-836-830
+2025-03-07 12:51:22,908 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:51:22,908 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:51:22,909 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-07 12:51:23,212 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:51:33,395 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027D890E52B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:51:33,474 -  * Debugger is active!
+2025-03-07 12:51:33,475 -  * Debugger PIN: 169-836-830
+2025-03-07 12:55:35,891 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027BC0F212B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:55:35,959 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 12:55:35,959 - [33mPress CTRL+C to quit[0m
+2025-03-07 12:55:35,959 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:55:46,801 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000224460E12B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:55:46,865 -  * Debugger is active!
+2025-03-07 12:55:46,866 -  * Debugger PIN: 169-836-830
+2025-03-07 12:55:51,383 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:55:51,384 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:55:51,385 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 12:55:52,417 -  * Restarting with watchdog (windowsapi)
+2025-03-07 12:56:13,587 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000235F19712B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 12:56:13,669 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 12:56:13,669 - [33mPress CTRL+C to quit[0m
+2025-03-07 12:56:13,669 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:00:14,999 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025C59FF12B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:00:15,089 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:00:15,089 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:00:15,089 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:02:07,459 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000012C30E012B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:02:07,550 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:02:07,551 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:02:07,551 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:17:40,323 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9EFD812B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:17:40,408 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:17:40,408 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:17:40,408 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:17:50,752 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001BD126012B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:17:50,826 -  * Debugger is active!
+2025-03-07 13:17:50,830 -  * Debugger PIN: 169-836-830
+2025-03-07 13:17:52,020 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:17:52,021 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:17:52,021 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:17:53,346 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:18:03,839 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001CEEC4512B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:18:03,914 -  * Debugger is active!
+2025-03-07 13:18:03,916 -  * Debugger PIN: 169-836-830
+2025-03-07 13:18:05,778 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\orm\\context.py', reloading
+2025-03-07 13:18:06,550 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:18:16,998 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B8C8212B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:18:17,066 -  * Debugger is active!
+2025-03-07 13:18:17,068 -  * Debugger PIN: 169-836-830
+2025-03-07 13:19:27,494 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:19:28,889 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:19:39,761 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019772C212B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:19:39,855 -  * Debugger is active!
+2025-03-07 13:19:39,859 -  * Debugger PIN: 169-836-830
+2025-03-07 13:19:58,049 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:19:58,050 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:19:58,050 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:19:58,647 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:20:09,430 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000017FE61852B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:20:09,508 -  * Debugger is active!
+2025-03-07 13:20:09,509 -  * Debugger PIN: 169-836-830
+2025-03-07 13:20:11,333 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\engine\\result.py', reloading
+2025-03-07 13:20:11,977 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:20:22,670 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002434C6012B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:20:22,729 -  * Debugger is active!
+2025-03-07 13:20:22,731 -  * Debugger PIN: 169-836-830
+2025-03-07 13:21:55,832 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002745EEA12B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:21:55,917 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:21:55,918 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:21:55,918 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:22:06,783 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000248FE3412B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:22:06,847 -  * Debugger is active!
+2025-03-07 13:22:06,849 -  * Debugger PIN: 169-836-830
+2025-03-07 13:22:35,581 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:22:35,581 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:22:36,800 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:23:06,328 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F0DC1412B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:23:06,417 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:23:06,417 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:23:06,417 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:23:16,854 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000029B145F12B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:23:16,919 -  * Debugger is active!
+2025-03-07 13:23:16,922 -  * Debugger PIN: 169-836-830
+2025-03-07 13:23:45,000 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:23:45,001 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:23:45,002 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:23:45,910 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:23:55,754 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C0C9E952B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:23:55,812 -  * Debugger is active!
+2025-03-07 13:23:55,815 -  * Debugger PIN: 169-836-830
+2025-03-07 13:24:26,947 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:24:26,948 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:24:27,876 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:24:37,726 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000023D0E9852B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:24:37,790 -  * Debugger is active!
+2025-03-07 13:24:37,792 -  * Debugger PIN: 169-836-830
+2025-03-07 13:24:41,992 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:24:41,995 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:24:41,996 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-07 13:24:43,246 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:24:53,619 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002A2301F52B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:24:53,695 -  * Debugger is active!
+2025-03-07 13:24:53,697 -  * Debugger PIN: 169-836-830
+2025-03-07 13:26:04,776 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D3C53612B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:26:04,851 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:26:04,852 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:26:04,852 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:30:39,304 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000016E541652B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:31:21,095 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000249D1C5D160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:31:21,169 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-07 13:31:21,170 - [33mPress CTRL+C to quit[0m
+2025-03-07 13:31:21,170 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:31:31,937 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D2E5801160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:31:32,015 -  * Debugger is active!
+2025-03-07 13:31:32,017 -  * Debugger PIN: 169-836-830
+2025-03-07 13:42:53,002 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\BaylinkAlertLogs.py', reloading
+2025-03-07 13:42:53,113 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\sqlalchemy\\ext\\declarative\\__init__.py', reloading
+2025-03-07 13:42:53,290 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:43:04,147 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E90ACBD160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:43:04,207 -  * Debugger is active!
+2025-03-07 13:43:04,209 -  * Debugger PIN: 169-836-830
+2025-03-07 13:59:32,752 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-07 13:59:33,522 -  * Restarting with watchdog (windowsapi)
+2025-03-07 13:59:44,758 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000002271A9DD160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 13:59:44,840 -  * Debugger is active!
+2025-03-07 13:59:44,844 -  * Debugger PIN: 169-836-830
+2025-03-07 13:59:48,823 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\__init__.py', reloading
+2025-03-07 13:59:48,824 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\database\\models\\__init__.py', reloading
+2025-03-07 13:59:49,194 -  * Restarting with watchdog (windowsapi)
+2025-03-07 14:00:00,087 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020776F3D160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 14:00:00,173 -  * Debugger is active!
+2025-03-07 14:00:00,176 -  * Debugger PIN: 169-836-830
+2025-03-07 14:00:44,306 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\RetailerVisit.py', reloading
+2025-03-07 14:00:44,333 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\RetailerVisit.py', reloading
+2025-03-07 14:00:44,555 -  * Restarting with watchdog (windowsapi)
+2025-03-07 14:00:55,223 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000019EBA5AD160>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+2025-03-07 14:00:55,426 -  * Debugger is active!
+2025-03-07 14:00:55,432 -  * Debugger PIN: 169-836-830

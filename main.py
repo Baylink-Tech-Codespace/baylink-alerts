@@ -3,6 +3,7 @@ import time
 import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO
+from config import check_beatplans_for_today
 from pipeline import alert_system
 from event.Recon import process_latest_recon
 from event.Sales import process_latest_sales_drop
