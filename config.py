@@ -230,14 +230,7 @@ def check_retailer_visits_for_month(session: Session):
     return {"message": "All retailers have been visited sufficiently."}
 
     
- 
+    
 ALERT_RULES = {
-    "is_retailer_shelf_image" : lambda data:is_retailer_shelf_image_event(data),
-    "compare_quantity_inventory_recon" : lambda data:compare_quantity_inventory_recon(data),
-    "drop_in_sales" : lambda _ :detect_sales_drop(),
-    "check_sales_anomaly" : lambda data:check_sales_anomaly(data),
-    "check_warehouse_inventory" : lambda :check_warehouse_inventory(),
-    "notify_delivery_for_orders" : lambda :notify_delivery_for_orders(),
-    "beat_plan_for_FE": lambda:check_beatplans_for_today(),
-    "min_retailer_visits": lambda:check_retailer_visits_for_month()
+    
 }

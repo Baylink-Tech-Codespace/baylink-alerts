@@ -8,7 +8,7 @@ class AlertSystem:
     def __init__(self):
         pass
 
-    def send_log_to_db(self, message: str, data: Dict[str, Any], message_type: str):
+    def send_log_to_db(self, message: str, data: Dict[str, Any]):
         session = db.get_session()
         retailer_id = data['retailer_id']
     
@@ -16,8 +16,7 @@ class AlertSystem:
             log_entry = BaylinkAlertLogs(
                 retailer_id=retailer_id,
                 message=message,
-                data=data,
-                message_type=message_type,
+                data=data, 
             )
             session.add(log_entry)
             session.commit()
@@ -32,15 +31,9 @@ class AlertSystem:
             condition: Callable[[Dict[str, Any]], bool] = config.ALERT_RULES[event_name]
         
             if condition(event_data):
-                message = f"Alert: {event_name.replace('_', ' ').title()} - {event_data}"
-                message_type = 'ALERT'
-            else:
-                message = f"No Alert: {event_name.replace('_', ' ').title()}"
-                message_type = 'NO_ALERT'
-
-            recipient = event_data['phone_number']
-            send_alert(message, recipient)
-
-            self.send_log_to_db(message, event_data, message_type)
+                message = event_data['message']
+                recipient = event_data['recepient'] 
+                send_alert(message, recipient)
+                self.send_log_to_db(message, event_data)
 
 alert_system = AlertSystem()

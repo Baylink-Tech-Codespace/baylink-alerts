@@ -1,5 +1,5 @@
 
-get_wa_alert_template = lambda to , msg : {
+get_wa_alert_template = lambda to, msg : {
   "messaging_product": "whatsapp",
   "recipient_type": "individual",
   "to": to,
