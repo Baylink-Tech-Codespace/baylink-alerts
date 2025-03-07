@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session 
 from sqlalchemy import Date, cast
+from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta
 import uuid
 from database.models.Sales import Sales
@@ -12,6 +13,7 @@ from database.models.Inventory import InventoryStockList, Inventory
 from database.models.Recon import Recon
 from database.models.BeatPlan import BeatPlan
 from database.models.Field_Exec import Field_Exec
+from database.models.RetailerVisitedLog import RetailerVisitedLog
 
 # CASE 2 
 def compare_quantity_inventory_recon(data):
@@ -199,6 +201,34 @@ def check_beatplans_for_today(session: Session):
         }
     else:
         return {"message": "All FEs have a BeatPlan assigned for today."}
+
+# CASE 23
+def check_retailer_visits_for_month(session: Session):
+    """Checks which retailers have been visited less than 4 times in the current month."""
+    current_year = datetime.today().year
+    # current_month = datetime.today().month
+
+    current_month = 2
+
+
+    low_visit_retailers = db.get_session().query(
+        RetailerVisitedLog.retailer_id, 
+        func.count(RetailerVisitedLog._id).label("visit_count")
+    ).filter(
+        extract("year", RetailerVisitedLog.lastVisited) == current_year,
+        extract("month", RetailerVisitedLog.lastVisited) == current_month
+    ).group_by(
+        RetailerVisitedLog.retailer_id
+    ).having(
+        func.count(RetailerVisitedLog._id) < 4
+    ).all()
+
+    if low_visit_retailers:
+        print("ALERT: Some retailers were visited fewer than 4 times this month.", low_visit_retailers)
+        return {"alert": "Low visit retailers detected", "data": low_visit_retailers}
+    
+    return {"message": "All retailers have been visited sufficiently."}
+
     
  
 ALERT_RULES = {
@@ -208,5 +238,6 @@ ALERT_RULES = {
     "check_sales_anomaly" : lambda data:check_sales_anomaly(data),
     "check_warehouse_inventory" : lambda :check_warehouse_inventory(),
     "notify_delivery_for_orders" : lambda :notify_delivery_for_orders(),
-    "beat_plan_for_FE": lambda:check_beatplans_for_today()
+    "beat_plan_for_FE": lambda:check_beatplans_for_today(),
+    "min_retailer_visits": lambda:check_retailer_visits_for_month()
 }

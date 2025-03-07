@@ -11,12 +11,8 @@ from database.models.Field_Exec import Field_Exec
 class BeatPlan(Base):
     __tablename__ = "BeatPlan"
 
-    _id: Mapped[uuid.UUID] = Column(
-        PGUUID(as_uuid=True), primary_key=True, default=uuid.uuid4
-    )
-    FE_id: Mapped[Optional[uuid.UUID]] = Column(
-        PGUUID(as_uuid=True), ForeignKey("Field_Exec._id"), nullable=True, comment="Field Executive ID"
-    )
+    _id: Mapped[uuid.UUID] = Column(PGUUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    FE_id: Mapped[Optional[uuid.UUID]] = Column(PGUUID(as_uuid=True), ForeignKey("Field_Exec._id"), nullable=True, comment="Field Executive ID")
     date: Mapped[str] = Column(Date, nullable=False)
     plan: Mapped[List[uuid.UUID]] = Column(JSON, nullable=False, comment="Ordered list of retailer IDs for the beat plan")
     details: Mapped[Optional[dict]] = Column(JSON, nullable=True, comment="Any additional details for the beat plan")
