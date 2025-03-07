@@ -157,6 +157,7 @@ class ReconMonitor:
                     recon_data = json.loads(notify.payload)
                     recon_event = self.process_recon(recon_data)
                     if recon_event:
+                        print(recon_event)
                         return recon_event
                     
         except Exception as e:
@@ -186,3 +187,6 @@ def process_latest_recon(db_config):
         monitor.cleanup()
         # logger.error(f"Monitoring failed: {str(e)}")
         raise 
+
+
+process_latest_recon(db)
