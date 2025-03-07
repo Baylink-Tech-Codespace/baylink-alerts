@@ -176,7 +176,7 @@ def nearly_expiring_stocks():
                     
     return messages
     
- 
+    
 ALERT_RULES = {
     "is_retailer_shelf_image" : lambda data:is_retailer_shelf_image_event(data),
     "compare_quantity_inventory_recon" : lambda data:compare_quantity_inventory_recon(data),
