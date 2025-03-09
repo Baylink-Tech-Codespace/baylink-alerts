@@ -7,6 +7,7 @@ import uuid
 
 if TYPE_CHECKING:
     from database.models.SuperZone import SuperZone
+    from database.models.Field_Exec import Field_Exec
 
 class ASM(Base):
     __tablename__ = 'ASMs'  
@@ -16,6 +17,6 @@ class ASM(Base):
     name = Column(String, nullable=False)
     Image = Column(String, nullable=True)   
     Contact_Number = Column(String, nullable=False)  
-    ASM_id = Column(PGUUID(as_uuid=True), ForeignKey('asm._id'), nullable=True)  
-
+        
+    #field_exec: Mapped[Optional["Field_Exec"]] = relationship('Field_Exec', back_populates='asm')
     super_zone: Mapped[Optional["SuperZone"]] = relationship('SuperZone', back_populates='asms')

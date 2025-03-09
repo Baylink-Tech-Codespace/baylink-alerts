@@ -159,6 +159,3 @@ class Monitor:
                 self.cursor.close()
             if self.raw_connection:
                 self.raw_connection.close()
-                 
-monitor = Monitor()
-monitor.listen_triggers()
