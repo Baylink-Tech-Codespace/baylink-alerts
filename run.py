@@ -12,6 +12,8 @@ from database.models.DeliveryPerson import Delivery
 from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Order import Order
 from database.models.Product import Product
+from database.models.CreditNote import CreditNote , CreditNoteItems
+from database.models.ASM import ASM
 
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
@@ -62,3 +64,21 @@ from database.models.Product import Product
 #        product = stock.product
 #        batch_codes = product.batch_codes
 #        batch_codes.sort(key=lambda x: x.expiry_date)
+
+
+#credit_notes = db.get_session().query(CreditNote).all()
+
+#for credit_note in credit_notes:
+#    print(credit_note.cn_name , credit_note.retailer.name)
+
+#retailers = db.get_session().query(Retailer).all()
+
+#for retailer in retailers:
+#    print(retailer.recon , retailer.credit_notes , retailer.orders, retailer.sales)
+
+
+from sqlalchemy.orm import configure_mappers
+configure_mappers()
+
+asms = db.get_session().query(ASM).all()
+ 

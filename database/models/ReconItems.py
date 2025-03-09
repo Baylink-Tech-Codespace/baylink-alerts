@@ -8,15 +8,17 @@ import datetime
 
 if TYPE_CHECKING:
     from database.models.Recon import Recon
+    from database.models.Product import Product
 
 class ReconItem(Base):
     __tablename__ = 'Recon Items'
     
     _id = Column(PG_UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     recon_id = Column(PG_UUID(as_uuid=True), ForeignKey('Recon._id'), nullable=True, default=uuid.uuid4)
-    product_id = Column(PG_UUID(as_uuid=True), nullable=False)
+    product_id = Column(PG_UUID(as_uuid=True),ForeignKey('Product._id'), nullable=False)
     quantity = Column(Integer, nullable=False)
     createdAt = Column(DateTime, nullable=False, default=datetime.datetime.now)
     updatedAt = Column(DateTime, nullable=False, default=datetime.datetime.now, onupdate=datetime.datetime.now)
     
-    recon : Mapped[Optional["Recon"]] = relationship("Recon", back_populates="ReconItems")
+    recon : Mapped[Optional["Recon"]] = relationship("Recon", back_populates="recon_items")
+    product : Mapped[Optional["Product"]] = relationship("Product", back_populates="recon_items")
