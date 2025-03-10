@@ -295,3 +295,31 @@ def check_beatplans_for_today():
         })
     
     return fe_list
+
+
+# CASE 14 
+def expiring_products():
+        
+    messages = []
+
+    inventory_stocks = db.get_session().query(InventoryStockList).all()
+    
+    for stock in inventory_stocks:
+        if stock.inventory and stock.product:
+            retailer = stock.inventory.retailer
+            product = stock.product
+            
+            if retailer:    
+                sorted_batches = sorted(stock.product.batch_codes, key=lambda batch: batch.expiry_date)
+                
+                for batch in sorted_batches:
+                    expiry_date = batch.expiry_date
+                    days_left = (expiry_date.replace(tzinfo=None) - datetime.now()).days
+                    
+                    if days_left > 0 and days_left <= 30: 
+                        messages.append({
+                            "recepient" : retailer.asm.Contact_Number,
+                            "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
+                        })
+                        
+    return messages

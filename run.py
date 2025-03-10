@@ -11,10 +11,11 @@ from database.models.Warehouse import WarehouseItems, Warehouse
 from database.models.DeliveryPerson import Delivery
 from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Order import Order
-from database.models.Product import Product
+from database.models.Product import Product , BatchCodes
 from database.models.CreditNote import CreditNote , CreditNoteItems
 from database.models.ASM import ASM
-
+from database.models.Field_Exec import Field_Exec
+from datetime import datetime
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
 
@@ -80,5 +81,8 @@ from database.models.ASM import ASM
 from sqlalchemy.orm import configure_mappers
 configure_mappers()
 
-asms = db.get_session().query(ASM).all()
- 
+#batchcodes = db.get_session().query(BatchCodes).all() 
+
+#for batchcode in batchcodes:
+#    print(batchcode.product_id , batchcode.product.name)
+
