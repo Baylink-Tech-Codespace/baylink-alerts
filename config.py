@@ -1,13 +1,12 @@
-from sqlalchemy.orm import Session 
+import uuid
+from database.db import db
 from sqlalchemy import Date, cast
 from datetime import datetime, timedelta
-import uuid
 from database.models.Sales import Sales
 from database.models.Retailer import Retailer
 from database.models.Order import Order
-from database.db import db
 from database.models.DeliveryLogs import DeliveryLogs
-from database.models.WarehouseItems import WarehouseItems
+from database.models.Warehouse import WarehouseItems
 from database.models.Inventory import InventoryStockList, Inventory
 from database.models.Recon import Recon
 from database.models.BeatPlan import BeatPlan
@@ -164,6 +163,7 @@ def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_q
 
 # CASE 6 
 def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
+    messages = []
     warehouse_items = db.get_session().query(WarehouseItems).all()
     items = []
     
@@ -261,8 +261,6 @@ def nearly_expiring_stocks():
     return messages
 
 #CASE 20 
-from sqlalchemy import cast, Date
-
 def check_beatplans_for_today():
     today = datetime.today().date()
     
@@ -295,8 +293,5 @@ def check_beatplans_for_today():
             "recipient": recipient,
             "message": message
         })
-        
-    print(fe_list) 
-
-     
-check_beatplans_for_today()
+    
+    return fe_list
