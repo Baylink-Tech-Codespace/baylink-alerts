@@ -7,7 +7,7 @@ from database.models.Inventory import Inventory
 from database.models.Inventory import InventoryStockList
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.models.Sales import Sales
-from database.models.WarehouseItems import WarehouseItems, Warehouse
+from database.models.Warehouse import WarehouseItems, Warehouse
 from database.models.DeliveryPerson import Delivery
 from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Order import Order
