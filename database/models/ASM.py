@@ -8,6 +8,7 @@ import uuid
 if TYPE_CHECKING:
     from database.models.SuperZone import SuperZone
     from database.models.Field_Exec import Field_Exec
+    from database.models.Retailer import Retailer
 
 class ASM(Base):
     __tablename__ = 'ASMs'  
@@ -20,3 +21,4 @@ class ASM(Base):
         
     #field_exec: Mapped[Optional["Field_Exec"]] = relationship('Field_Exec', back_populates='asm')
     super_zone: Mapped[Optional["SuperZone"]] = relationship('SuperZone', back_populates='asms')
+    retailer : Mapped[Optional["Retailer"]] = relationship('Retailer', back_populates='asm') 
