@@ -7,6 +7,7 @@ from database.models.Sales import Sales
 from database.models.Retailer import Retailer
 from database.models.Order import Order
 from database.models.DeliveryLogs import DeliveryLogs
+from database.models.Task import Task
 from database.models.Warehouse import WarehouseItems
 from database.models.Inventory import InventoryStockList, Inventory
 from database.models.Recon import Recon
@@ -261,6 +262,48 @@ def nearly_expiring_stocks():
                     })
                     
     return messages
+
+# CASE 18
+def check_skipped_orders_alert():
+    today = datetime.today().date()
+    last_three_weeks = today - timedelta(weeks=3)
+
+    recent_beatplans = db.get_session().query(BeatPlan._id, BeatPlan.plan).filter(
+        cast(BeatPlan.date, Date) >= last_three_weeks
+    ).all()
+
+    retailer_task_counts = {}
+
+    beat_plan_ids = [bp._id for bp in recent_beatplans]
+    retailer_task_counts = {retailer_id: {"total_tasks": 0, "skipped_orders": 0} for bp in recent_beatplans for retailer_id in bp.plan}
+
+    total_order_tasks = db.get_session().query(Task.retailer_id, Task.status).filter(
+        Task.beat_plan_id.in_(beat_plan_ids), 
+        Task.type == "Order"
+    ).all()
+
+    for retailer_id, status in total_order_tasks:
+        retailer_id_str = str(retailer_id) 
+
+        if retailer_id_str in retailer_task_counts:  
+            retailer_task_counts[retailer_id_str]["total_tasks"] += 1
+
+            if status != "Completed":
+                retailer_task_counts[retailer_id_str]["skipped_orders"] += 1
+
+    alert_list = []
+    for retailer_id, counts in retailer_task_counts.items():
+        if counts["total_tasks"] > 0 and counts["skipped_orders"] == counts["total_tasks"]:
+            retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
+            if retailer:
+                message = f"Retailer {retailer.name} has skipped Orders in the last 3 weeks."
+                alert_list.append({
+                    "retailer_id": retailer_id,
+                    "retailer_name": retailer.name,
+                    "message": message
+                })
+
+    return alert_list
 
 #CASE 20 
 def check_beatplans_for_today():
