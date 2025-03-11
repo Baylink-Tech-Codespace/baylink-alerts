@@ -2,14 +2,10 @@ import schedule
 import time
 import threading
 from flask import Flask, render_template
-from flask_socketio import SocketIO
-from config import check_retailer_visits_for_month
-from pipeline import alert_system
-from event.Recon import process_latest_recon
-from event.Sales import process_latest_sales_drop
+from flask_socketio import SocketIO 
+from event.main import monitor
 import os 
-import dotenv
-from typing import List, Dict
+import dotenv 
 
 dotenv.load_dotenv()
 
@@ -27,11 +23,8 @@ db_config = {
 }
 
 def process_alerts():
-    events: List[Dict] = check_retailer_visits_for_month(db_config)
+    monitor.listen_triggers() 
     
-    for event in events:
-        alert_system.alert_pipeline(event['event_name'], event['event_data'])
-        
 schedule.every(1).seconds.do(process_alerts)
 
 def run_scheduler():

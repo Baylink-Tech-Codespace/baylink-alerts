@@ -30,8 +30,8 @@ class RetailerVisitedLog(Base):
         DateTime, nullable=False, server_default=func.now(), onupdate=func.now(), comment="Last update timestamp"
     )
 
-    field_exec = relationship("Field_Exec", back_populates="retailer_visits")
-    retailer = relationship("Retailer", back_populates="visit_logs")
+    #field_exec = relationship("Field_Exec", back_populates="retailer_visits")
+    #retailer = relationship("Retailer", back_populates="visit_logs")
 
-Field_Exec.retailer_visits = relationship("RetailerVisitedLog", back_populates="field_exec")
-Retailer.visit_logs = relationship("RetailerVisitedLog", back_populates="retailer")
+#Field_Exec.retailer_visits = relationship("RetailerVisitedLog", back_populates="field_exec")
+#Retailer.visit_logs = relationship("RetailerVisitedLog", back_populates="retailer")
