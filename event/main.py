@@ -1,12 +1,15 @@
 
 import select
 from database.db import db
+from config import event_config
+from pipeline import alert_system
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 
 class Monitor:
     def __init__(self):
         self.raw_connection = None
         self.cursor = None
+        self.alert_system = alert_system
         
     def setup_connection(self):
         self.raw_connection = db.engine.raw_connection()
@@ -138,10 +141,10 @@ class Monitor:
                 while self.raw_connection.notifies:
                     notify = self.raw_connection.notifies.pop(0)
                     print(f"Received notification on channel '{notify.channel}': {notify.payload}")
+                    self.alert_system.alert_pipeline(notify.channel, notify.payload)
         
         except Exception as e:
             print(f"Error while listening for triggers: {e}")
-
             
     def listen_triggers(self):
         try:
@@ -159,3 +162,7 @@ class Monitor:
                 self.cursor.close()
             if self.raw_connection:
                 self.raw_connection.close()
+                
+        
+monitor = Monitor() 
+

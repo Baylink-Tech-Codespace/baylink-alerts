@@ -18,6 +18,7 @@ from database.models.CreditNote import CreditNote
 
 # CASE 2 
 def compare_quantity_inventory_recon(recon_id):
+    print("Checking quantity in inventory and recon...")
     messages = []
     
     recon = db.get_session().query(Recon).filter(Recon._id == recon_id).first()
@@ -50,14 +51,19 @@ def compare_quantity_inventory_recon(recon_id):
             if recon_item["product_id"] == inventory_item["product_id"]:
                 if recon_item["quantity"] > inventory_item["quantity"]:
                     messages.append({
-                        "recepient": recepient,
                         "message": f"Inventory quantity for {recon_item['product_name']} is less than the recon quantity."
                     })                
-
-    return messages
+    context = {
+        "recepient": recepient,
+        "person_name" : field_exec.Name,
+        "role" : "Field Executive",
+        "messages" : messages
+    }
+    return context
 
 # CASE 4 
 def is_retailer_shelf_image_event(recon_id):
+    print("Checking if retailer shelf image is provided for the recon.")
     messages = []
     
     recon = db.get_session().query(Recon).filter(Recon._id == recon_id).first()
@@ -84,11 +90,16 @@ def is_retailer_shelf_image_event(recon_id):
         #response = llm.process_image_and_prompt(image)
         #return response
         messages.append({
-            "recepient": recepient,
             "message": "response"
         })
         
-    return messages
+    context = {
+        "recepient": recepient,
+        "person_name" : field_exec.Name,
+        "role" : "Field Executive",
+        "messages" : messages
+    }
+    return context
 
 # CASE 5 
 def detect_sales_drop():  
@@ -226,7 +237,11 @@ def delivery_not_out_on_expected_date():
                         "recepient": "ASM number here from order . retailer",
                         "message": f"Delivery for order {order.order_name} is not out on expected date"
                     })
-                else: return False
+                else: 
+                    messages.append({
+                        "recepient": "ASM number here from order . retailer",
+                        "message": f"Delivery for order {order.order_name} is out on expected date"
+                    })
             else:
                 messages.append({
                     "recepient": "ASM number here from order . retailer",
@@ -254,7 +269,7 @@ def nearly_expiring_stocks():
             for batch_code in batch_codes:
                 expiry_date = batch_code.expiry_date
                 
-                if expiry_date <= datetime.now() + timedelta(days=30):
+                if expiry_date.replace(tzinfo=None) <= datetime.now() + timedelta(days=30):
                     messages.append({
                         "recepient": asm.Contact_Number,
                         "message": f"Stock of {product.name} is expiring soon. Please take necessary action."
@@ -354,8 +369,7 @@ def check_retailer_visits_for_month():
 # CASE 14 
 def expiring_products():
         
-    messages = []
-
+    messages = [] 
     inventory_stocks = db.get_session().query(InventoryStockList).all()
     
     for stock in inventory_stocks:
@@ -377,3 +391,17 @@ def expiring_products():
                         })
                         
     return messages
+
+
+event_config = {
+    "recon_inserted" : [
+        lambda recon_id : compare_quantity_inventory_recon(recon_id),
+        lambda recon_id : is_retailer_shelf_image_event(recon_id)
+    ],
+    "sudden_sales_drop" : [
+        lambda x : detect_sales_drop(),
+    ],
+    "low_retailer_visits" : [
+        lambda x : check_retailer_visits_for_month(),    
+    ],
+}
