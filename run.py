@@ -16,6 +16,12 @@ from database.models.CreditNote import CreditNote , CreditNoteItems
 from database.models.ASM import ASM
 from database.models.Field_Exec import Field_Exec
 from datetime import datetime
+from database.models.BaylinkAlertLogs import BaylinkAlertLogs
+
+from sqlalchemy.orm import configure_mappers
+configure_mappers()
+
+
 #retailers = db.get_session().query(Retailer).all() 
 #recons = db.get_session().query(Recon).all()
 
@@ -77,12 +83,13 @@ from datetime import datetime
 #for retailer in retailers:
 #    print(retailer.recon , retailer.credit_notes , retailer.orders, retailer.sales)
 
-
-from sqlalchemy.orm import configure_mappers
-configure_mappers()
-
 #batchcodes = db.get_session().query(BatchCodes).all() 
 
 #for batchcode in batchcodes:
 #    print(batchcode.product_id , batchcode.product.name)
 
+
+logs = db.get_session().query(BaylinkAlertLogs).all()
+
+for log in logs:
+    print(log.data,log.message,log.message_type,log.person_name)
