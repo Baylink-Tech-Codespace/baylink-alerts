@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship, Mapped
 from sqlalchemy import Column, String, Date, JSON, ARRAY
 from sqlalchemy.dialects.postgresql import UUID as PG_UUID
 from sqlalchemy import ForeignKey
-from typing import List ,TYPE_CHECKING
+from typing import List , Optional , TYPE_CHECKING
 import uuid
 
 from database.models.ReconItems import ReconItem
@@ -22,5 +22,5 @@ class Recon(Base):
     merchandising_images = Column(ARRAY(String), nullable=True, default=[])
     updated_by = Column(String, nullable=False)
     
-    ReconItems : Mapped[List["ReconItem"]] = relationship("ReconItem", back_populates="recon")
-    # Retailer: Mapped[Optional["Retailer"]] = relationship("Retailer", back_populates="Recon")
+    recon_items : Mapped[List["ReconItem"]] = relationship("ReconItem", back_populates="recon")
+    retailer: Mapped[Optional["Retailer"]] = relationship("Retailer", back_populates="recon")
