@@ -2,38 +2,55 @@ from typing import Dict, Any, Callable
 from notification import send_alert
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.db import db
-import config
+from config import event_config
+import json
 
 class AlertSystem:
     def __init__(self):
-        pass
+        self.session = db.get_session()
 
     def send_log_to_db(self, message: str, data: Dict[str, Any]):
-        session = db.get_session()
-        retailer_id = data['retailer_id']
-    
         try:
             log_entry = BaylinkAlertLogs(
-                retailer_id=retailer_id,
-                message=message,
-                data=data, 
+                message=message, 
+                person_name=data['person_name'],
+                role=data['role']
             )
-            session.add(log_entry)
-            session.commit()
+            self.session.add(log_entry)
+            self.session.commit()
+            print(f"Alert logged to DB")
         except Exception as e:
-            session.rollback()
+            self.session.rollback()
             print(f"Failed to log alert to DB: {e}")
         finally:
-            session.close()
-
-    def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]): 
-        if event_name in config.ALERT_RULES: 
-            condition: Callable[[Dict[str, Any]], bool] = config.ALERT_RULES[event_name]
+            self.session.close()
         
-            if condition(event_data):
-                message = event_data['message']
-                recipient = event_data['recepient'] 
-                send_alert(message, recipient)
-                self.send_log_to_db(message, event_data)
-
-alert_system = AlertSystem()
+    def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]): 
+        alerts = []
+        if event_name in event_config.keys():  
+            conditions = event_config[event_name]
+            
+            if event_name == "recon_inserted":
+                for condition in conditions: 
+                    recon_id = json.loads(event_data)["_id"]
+                    print(f"Checking condition for recon_id: {recon_id}")
+                    alerts.append(condition(recon_id))
+                    
+            else:
+                for condition in conditions: 
+                    alerts.append(condition(event_data))
+                    
+        for alert in alerts:
+            recepient = alert["recepient"]
+            person_name = alert["person_name"]
+            role = alert["role"] 
+            messages = alert["messages"] 
+            
+            self.send_log_to_db(messages, {
+                "person_name": person_name,
+                "role": role
+            })
+            
+            # send_alert(messages, "7007555103")
+                
+alert_system = AlertSystem() 
