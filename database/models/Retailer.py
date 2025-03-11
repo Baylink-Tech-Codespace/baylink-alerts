@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, ForeignKey, JSON, DECIMAL, Enum, DateTime, UUID
+from sqlalchemy import Column, String, ForeignKey, JSON, Enum, DateTime, UUID
 from sqlalchemy.orm import relationship, Mapped
 from database.db import Base
 import uuid
@@ -9,6 +9,9 @@ if TYPE_CHECKING:
     from database.models.Order import Order
     from database.models.Inventory import Inventory
     from database.models.Sales import Sales
+    from database.models.CreditNote import CreditNote
+    from database.models.Recon import Recon
+    from database.models.ASM import ASM 
 
 class Retailer(Base):
     __tablename__ = "Retailer"
@@ -21,7 +24,7 @@ class Retailer(Base):
     address = Column(JSON, nullable=False)
     GSTIN = Column(String, nullable=True)
     FE_id = Column(UUID(as_uuid=True), ForeignKey("Field_Exec._id"), nullable=True)
-    ASM_id = Column(UUID(as_uuid=True), ForeignKey("ASM._id"), nullable=True)
+    ASM_id = Column(UUID(as_uuid=True), ForeignKey("ASMs._id"), nullable=True)
     #closing_balance = Column(DECIMAL(10, 2), nullable=True)
     image = Column(String, nullable=True)
     outsideImage = Column(String, nullable=True)
@@ -52,7 +55,9 @@ class Retailer(Base):
     createdAt = Column(DateTime, default=datetime.now, nullable=False)
     updatedAt = Column(DateTime, default=datetime.now, onupdate=datetime.now, nullable=False)
 
-    # Recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="Retailer")
+    recon: Mapped[List["Recon"]] = relationship("Recon", back_populates="retailer")
     sales: Mapped[List["Sales"]] = relationship('Sales', back_populates='retailer')
     orders : Mapped[List["Order"]] = relationship("Order", back_populates="retailer")
+    credit_notes: Mapped[List["CreditNote"]] = relationship("CreditNote", back_populates="retailer")
     inventory : Mapped[Optional["Inventory"]] = relationship("Inventory", back_populates="retailer")
+    asm : Mapped[Optional["ASM"]] = relationship("ASM", back_populates="retailer")

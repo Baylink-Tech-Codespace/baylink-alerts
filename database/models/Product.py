@@ -7,6 +7,8 @@ from typing import List, TYPE_CHECKING
 
 if TYPE_CHECKING:
     from database.models.Inventory import InventoryStockList
+    from database.models.Recon import ReconItem
+    from database.models.Sales import Sales
     
 class BatchCodes(Base):
     __tablename__ = 'BatchCodes'
@@ -19,7 +21,7 @@ class BatchCodes(Base):
     updatedAt = Column(DateTime, default=func.now(), onupdate=func.now(), nullable=False)
 
     product: Mapped["Product"] = relationship('Product', back_populates='batch_codes')
-
+    
     def __repr__(self):
         return f"<BatchCodes(batch_code={self.batch_code}, expiry_date={self.expiry_date})>"
 
@@ -45,7 +47,9 @@ class Product(Base):
 
     batch_codes: Mapped[List["BatchCodes"]] = relationship('BatchCodes', back_populates='product')
     inventory_stock_list: Mapped[List["InventoryStockList"]] = relationship('InventoryStockList', back_populates='product')
-
+    recon_items : Mapped[List["ReconItem"]] = relationship("ReconItem", back_populates="product")
+    sales : Mapped[List["Sales"]] = relationship('Sales', back_populates='product')
+    
     @property
     def margin(self):
         if self.MRP and self.price_to_retailer:

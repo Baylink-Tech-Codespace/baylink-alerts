@@ -35,3 +35,4 @@ def send_alert(message: str, recipient: str) -> None:
         logging.error(f"Error sending alert to {recipient}: {str(e)}")
         print(f"Error sending alert: {str(e)}")
            
+
