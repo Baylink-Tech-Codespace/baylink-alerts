@@ -305,22 +305,50 @@ def check_retailer_visits_for_month():
     current_month = datetime.today().month
 
     low_visit_retailers = db.get_session().query(
-        RetailerVisitedLog.retailer_id, 
+        RetailerVisitedLog.retailer_id,
+        RetailerVisitedLog.fe_id,
+        Retailer.name.label("retailer_name"),
+        Field_Exec.Name.label("fe_name"),
+        ASM.Contact_Number.label("asm_phone_number"),
         func.count(RetailerVisitedLog._id).label("visit_count")
+    ).join(
+        Retailer, Retailer._id == RetailerVisitedLog.retailer_id
+    ).join(
+        Field_Exec, Field_Exec._id == RetailerVisitedLog.fe_id
+    ).join(
+        ASM, ASM._id == Retailer.ASM_id
     ).filter(
         extract("year", RetailerVisitedLog.lastVisited) == current_year,
         extract("month", RetailerVisitedLog.lastVisited) == current_month
     ).group_by(
-        RetailerVisitedLog.retailer_id
+        RetailerVisitedLog.retailer_id,
+        RetailerVisitedLog.fe_id,
+        Retailer.name,
+        Field_Exec.Name,
+        ASM.Contact_Number
     ).having(
         func.count(RetailerVisitedLog._id) < 4
     ).all()
 
-    if low_visit_retailers:
-        print("ALERT: Some retailers were visited fewer than 4 times this month.", low_visit_retailers)
-        return {"alert": "Low visit retailers detected", "data": low_visit_retailers}
+    grouped_by_recipient = {}
     
-    return {"message": "All retailers have been visited sufficiently."}
+    for visit in low_visit_retailers:
+        recipient = visit.asm_phone_number
+        retailer_info = f"{visit.retailer_name} (FE: {visit.fe_name})"
+
+        if recipient not in grouped_by_recipient:
+            grouped_by_recipient[recipient] = []
+        grouped_by_recipient[recipient].append(retailer_info)
+    
+    retailer_list = []
+    for recipient, names in grouped_by_recipient.items():
+        names_str = ", ".join(names)
+        message = f"These retailers were visited less than 4 times this month: {names_str}."
+        retailer_list.append({
+            "recipient": recipient,
+            "message": message
+        })
+    return retailer_list
 
 
 # CASE 14 
