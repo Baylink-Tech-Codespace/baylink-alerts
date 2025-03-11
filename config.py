@@ -1,3 +1,4 @@
+from collections import defaultdict
 import uuid
 from database.db import db
 from sqlalchemy import Date, cast
@@ -280,6 +281,8 @@ def nearly_expiring_stocks():
 
 # CASE 18
 def check_skipped_orders_alert():
+    """Checks if a retailer is skipping to put orders on every beat plan for last 3 weeks """
+    messages = []
     today = datetime.today().date()
     last_three_weeks = today - timedelta(weeks=3)
 
@@ -306,22 +309,31 @@ def check_skipped_orders_alert():
             if status != "Completed":
                 retailer_task_counts[retailer_id_str]["skipped_orders"] += 1
 
-    alert_list = []
+    asm_retailers_map = defaultdict(lambda: {"contact": None, "retailers": []})
+
     for retailer_id, counts in retailer_task_counts.items():
         if counts["total_tasks"] > 0 and counts["skipped_orders"] == counts["total_tasks"]:
             retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
-            if retailer:
-                message = f"Retailer {retailer.name} has skipped Orders in the last 3 weeks."
-                alert_list.append({
-                    "retailer_id": retailer_id,
-                    "retailer_name": retailer.name,
-                    "message": message
-                })
+            asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
+            asm_retailers_map[asm._id]["contact"] = asm.Contact_Number 
+            asm_retailers_map[asm._id]["retailers"].append(retailer.name)
+            
+    for asm_id, data in asm_retailers_map.items():
+        if data["contact"] and data["retailers"]:
+            retailer_names = ", ".join(data["retailers"])
+            message = f"The following retailers have not ordered in the last 3 weeks: {retailer_names}."
+            messages.append({
+                "recipient": data["contact"],
+                "message": message
+            })
 
-    return alert_list
+    return messages
 
 #CASE 20 
 def check_beatplans_for_today():
+    """Checks whether BeatPlan is assigned to every fe or not"""
+    messages = []
+
     today = datetime.today().date()
     
     all_fes = db.get_session().query(Field_Exec).all()
@@ -344,20 +356,20 @@ def check_beatplans_for_today():
             if recipient not in grouped_by_recipient:
                 grouped_by_recipient[recipient] = []
             grouped_by_recipient[recipient].append(missing_fe[0])
-    
-    fe_list = []
+
     for recipient, names in grouped_by_recipient.items():
         names_str = ", ".join(names)
         message = f"BeatPlan not assigned to {names_str} for today."
-        fe_list.append({
+        messages.append({
             "recipient": recipient,
             "message": message
         })
-    
-    return fe_list
+
+    return messages
 
 # CASE 23
 def check_retailer_visits_for_month():
+    messages = []
     """Checks which retailers have been visited less than 4 times in the current month."""
     current_year = datetime.today().year
     current_month = datetime.today().month
@@ -397,16 +409,16 @@ def check_retailer_visits_for_month():
         if recipient not in grouped_by_recipient:
             grouped_by_recipient[recipient] = []
         grouped_by_recipient[recipient].append(retailer_info)
-    
-    retailer_list = []
+
     for recipient, names in grouped_by_recipient.items():
         names_str = ", ".join(names)
         message = f"These retailers were visited less than 4 times this month: {names_str}."
-        retailer_list.append({
+        messages.append({
             "recipient": recipient,
             "message": message
         })
-    return retailer_list
+
+    return messages
 
 
 # CASE 14 
