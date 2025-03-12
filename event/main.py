@@ -83,45 +83,6 @@ class Monitor:
         except Exception as e:
             print(e)
             
-    def retailer_visit_listener(self):
-        try:
-            self.cursor.execute("""
-                CREATE OR REPLACE FUNCTION notify_low_retailer_visits() RETURNS TRIGGER AS $$
-                DECLARE
-                    visit_count INTEGER;
-                BEGIN
-                    SELECT COUNT(*)
-                    INTO visit_count
-                    FROM "Retailer"
-                    WHERE _id = NEW._id
-                    AND EXTRACT(YEAR FROM "lastVisited") = EXTRACT(YEAR FROM NOW())
-                    AND EXTRACT(MONTH FROM "lastVisited") = EXTRACT(MONTH FROM NOW());
-
-                    IF visit_count < 4 THEN
-                        PERFORM pg_notify('low_retailer_visits', json_build_object(
-                            'retailer_id', NEW._id,
-                            'visit_count', visit_count,
-                            'alert_status', 'ALERT: Less than 4 visits this month'
-                        )::text);
-                    END IF;
-
-                    RETURN NEW;
-                END;
-                $$ LANGUAGE plpgsql;
-            """)
-
-            self.cursor.execute("""
-                DROP TRIGGER IF EXISTS retailer_visit_trigger ON "Retailer";
-                CREATE TRIGGER retailer_visit_trigger
-                AFTER UPDATE OF "lastVisited" ON "Retailer"
-                FOR EACH ROW
-                EXECUTE FUNCTION notify_low_retailer_visits();
-            """)
-            
-            self.raw_connection.commit()
-            
-        except Exception as e:
-            print(e)
         
     def daily_event_triggers(self):
         try:
@@ -136,7 +97,6 @@ class Monitor:
         try: 
             self.cursor.execute("LISTEN recon_inserted;")
             self.cursor.execute("LISTEN sudden_sales_drop;")
-            self.cursor.execute("LISTEN low_retailer_visits;")
             
             print("Listening for notifications...")
              

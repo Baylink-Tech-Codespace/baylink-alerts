@@ -1,11 +1,16 @@
+from collections import defaultdict
+import uuid
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta
+from database.models.Brand import Brand
+from database.models.Product import Product
 from database.models.Sales import Sales
 from database.models.Retailer import Retailer
 from database.models.Order import Order
 from database.models.DeliveryLogs import DeliveryLogs
+from database.models.Task import Task
 from database.models.Warehouse import WarehouseItems
 from database.models.Inventory import InventoryStockList, Inventory
 from database.models.Product import Product
@@ -293,8 +298,61 @@ def nearly_expiring_stocks():
                     
     return messages
 
+# CASE 18
+def check_skipped_orders_alert():
+    """Checks if a retailer is skipping to put orders on every beat plan for last 3 weeks """
+    messages = []
+    today = datetime.today().date()
+    last_three_weeks = today - timedelta(weeks=3)
+
+    recent_beatplans = db.get_session().query(BeatPlan._id, BeatPlan.plan).filter(
+        cast(BeatPlan.date, Date) >= last_three_weeks
+    ).all()
+
+    retailer_task_counts = {}
+
+    beat_plan_ids = [bp._id for bp in recent_beatplans]
+    retailer_task_counts = {retailer_id: {"total_tasks": 0, "skipped_orders": 0} for bp in recent_beatplans for retailer_id in bp.plan}
+
+    total_order_tasks = db.get_session().query(Task.retailer_id, Task.status).filter(
+        Task.beat_plan_id.in_(beat_plan_ids), 
+        Task.type == "Order"
+    ).all()
+
+    for retailer_id, status in total_order_tasks:
+        retailer_id_str = str(retailer_id) 
+
+        if retailer_id_str in retailer_task_counts:  
+            retailer_task_counts[retailer_id_str]["total_tasks"] += 1
+
+            if status != "Completed":
+                retailer_task_counts[retailer_id_str]["skipped_orders"] += 1
+
+    asm_retailers_map = defaultdict(lambda: {"contact": None, "retailers": []})
+
+    for retailer_id, counts in retailer_task_counts.items():
+        if counts["total_tasks"] > 0 and counts["skipped_orders"] == counts["total_tasks"]:
+            retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
+            asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
+            asm_retailers_map[asm._id]["contact"] = asm.Contact_Number 
+            asm_retailers_map[asm._id]["retailers"].append(retailer.name)
+            
+    for asm_id, data in asm_retailers_map.items():
+        if data["contact"] and data["retailers"]:
+            retailer_names = ", ".join(data["retailers"])
+            message = f"The following retailers have not ordered in the last 3 weeks: {retailer_names}."
+            messages.append({
+                "recipient": data["contact"],
+                "message": message
+            })
+
+    return messages
+
 #CASE 20 
 def check_beatplans_for_today():
+    """Checks whether BeatPlan is assigned to every fe or not"""
+    messages = []
+
     today = datetime.today().date()
     
     all_fes = db.get_session().query(Field_Exec).all()
@@ -317,20 +375,20 @@ def check_beatplans_for_today():
             if recipient not in grouped_by_recipient:
                 grouped_by_recipient[recipient] = []
             grouped_by_recipient[recipient].append(missing_fe[0])
-    
-    fe_list = []
+
     for recipient, names in grouped_by_recipient.items():
         names_str = ", ".join(names)
         message = f"BeatPlan not assigned to {names_str} for today."
-        fe_list.append({
+        messages.append({
             "recipient": recipient,
             "message": message
         })
-    
-    return fe_list
+
+    return messages
 
 # CASE 23
 def check_retailer_visits_for_month():
+    messages = []
     """Checks which retailers have been visited less than 4 times in the current month."""
     current_year = datetime.today().year
     current_month = datetime.today().month
@@ -370,17 +428,74 @@ def check_retailer_visits_for_month():
         if recipient not in grouped_by_recipient:
             grouped_by_recipient[recipient] = []
         grouped_by_recipient[recipient].append(retailer_info)
-    
-    retailer_list = []
+
     for recipient, names in grouped_by_recipient.items():
         names_str = ", ".join(names)
         message = f"These retailers were visited less than 4 times this month: {names_str}."
-        retailer_list.append({
+        messages.append({
             "recipient": recipient,
             "message": message
         })
-    return retailer_list
 
+    return messages
+
+# CASE 24
+def get_least_selling_brand_per_retailer():
+    """Finds the brand with the least sales for each retailer in the given month."""
+    messages = []
+    
+    start_date = datetime.now() - timedelta(days=30)
+    end_date = datetime.now()
+
+    sales_query = (
+        db.get_session().query(
+            Sales.retailer_id,
+            Retailer.name.label("retailer_name"),
+            Product.brand_id,
+            Brand.name.label("brand_name"),
+            Product.name.label("product_name"),
+            func.sum(Sales.quantity).label("total_sales"),
+            ASM.Contact_Number.label("asm_contact")
+        )
+        .join(Retailer, Sales.retailer_id == Retailer._id)
+        .join(Product, Sales.product_id == Product._id)
+        .join(Brand, Product.brand_id == Brand._id) 
+        .join(ASM, Retailer.ASM_id == ASM._id)
+        .filter(Sales.date >= start_date, Sales.date < end_date)
+        .group_by(Sales.retailer_id, Retailer.name, Product.brand_id, Brand.name, Product.name, ASM.Contact_Number)
+        .subquery()
+    )
+
+    min_sales_query = (
+        db.get_session().query(
+            sales_query.c.retailer_id,
+            sales_query.c.retailer_name,
+            sales_query.c.brand_id,
+            sales_query.c.brand_name,
+            sales_query.c.product_name,
+            sales_query.c.total_sales,
+            sales_query.c.asm_contact
+        )
+        .order_by(sales_query.c.retailer_id, sales_query.c.total_sales)
+        .distinct(sales_query.c.retailer_id)
+        .all()
+    )
+
+    messages_by_recipient = defaultdict(list)
+
+    for retailer_id, retailer_name, brand_id, brand_name, product_name, total_sales, asm_contact in min_sales_query:
+        message = (
+            f"Retailer '{retailer_name}' has the lowest sales in Brand '{brand_name}' "
+            f"for Product '{product_name}' with {total_sales} units sold."
+        )
+        messages_by_recipient[asm_contact].append(message)
+
+    messages = [
+        {"recipient": recipient, "message": " ".join(messages)}
+        for recipient, messages in messages_by_recipient.items()
+    ]
+
+    return messages
 
 # CASE 14 
 def expiring_products():
