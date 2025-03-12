@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 from collections import defaultdict
 import uuid
-=======
->>>>>>> 47d658317b8c8a9981cc1846f62795cf082f1ddd
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
