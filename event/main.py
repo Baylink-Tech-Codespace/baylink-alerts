@@ -1,9 +1,10 @@
-
+import schedule
+import time
+import threading
 import select
-from database.db import db
-from config import event_config
 from pipeline import alert_system
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+from database.db import db
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT 
 
 class Monitor:
     def __init__(self):
@@ -38,7 +39,6 @@ class Monitor:
 
         except Exception as e:
             print(e)
-            return 
             
     def sales_insert_listener(self):
         try:
@@ -82,14 +82,21 @@ class Monitor:
             
         except Exception as e:
             print(e)
-            return
-
             
+        
+    def daily_event_triggers(self):
+        try:
+            event_name = "daily_event_triggers"
+            event_data = ""
+            print(f"Running daily triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
+            self.alert_system.alert_pipeline(event_name, event_data)
+        except Exception as e:
+            print(f"Error In Daily Triggers : {e}")
+                
     def start_listening(self):
         try: 
             self.cursor.execute("LISTEN recon_inserted;")
             self.cursor.execute("LISTEN sudden_sales_drop;")
-            self.cursor.execute("LISTEN low_retailer_visits;")
             
             print("Listening for notifications...")
              
@@ -108,11 +115,20 @@ class Monitor:
             
     def listen_triggers(self):
         try:
+            schedule.every().day.at("12:52").do(self.daily_event_triggers)
+            
             self.setup_connection()
+            listener_thread = threading.Thread(target=self.start_listening)
+            listener_thread.start()
+         
             self.recon_insert_listener()
             self.sales_insert_listener()
-             
-            self.start_listening()
+            self.retailer_visit_listener()
+
+            # Keep checking the schedule
+            while True:
+                schedule.run_pending()
+                time.sleep(60)
             
         except Exception as e:
             print(e)
@@ -123,5 +139,5 @@ class Monitor:
                 self.raw_connection.close()
                 
         
-monitor = Monitor() 
-
+monitor = Monitor()
+monitor.listen_triggers()

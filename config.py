@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 from collections import defaultdict
 import uuid
+=======
+>>>>>>> 47d658317b8c8a9981cc1846f62795cf082f1ddd
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
@@ -13,6 +16,7 @@ from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Task import Task
 from database.models.Warehouse import WarehouseItems
 from database.models.Inventory import InventoryStockList, Inventory
+from database.models.Product import Product
 from database.models.Recon import Recon
 from database.models.BeatPlan import BeatPlan
 from database.models.Field_Exec import Field_Exec
@@ -112,27 +116,35 @@ def detect_sales_drop():
     sales = db.get_session().query(Sales).all()
     
     for sale in sales:
-        asm = db.get_session().query(ASM).filter(ASM._id == sale.retailer.ASM_id).first()
-        recepient = asm.Contact_Number
-        
-        current_quantity = sale.quantity
-        prev_quantity = db.get_session().query(Sales).filter(
-            Sales.retailer_id == sale.retailer_id,
-            Sales.product_id == sale.product_id,
-            Sales.date < sale.date
-        ).order_by(Sales.date.desc()).first().quantity
-        
-        if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
-            messages.append({
-                "recepient": recepient,
-                "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}."
-            })
+        if sale:
+            asm = db.get_session().query(ASM).filter(ASM._id == sale.retailer.asm._id).first()
+            recepient = asm.Contact_Number
+            
+            current_quantity = sale.quantity
+            prev_quantity = db.get_session().query(Sales).filter(
+                Sales.retailer_id == sale.retailer_id,
+                Sales.product_id == sale.product_id,
+                Sales.date < sale.date
+            ).order_by(Sales.date.desc()).first().quantity
+            
+            if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
+                messages.append({
+                    "recepient": recepient,
+                    "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}."
+                })
     
     return messages
  
  
 # CASE 3 
-def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_quantity: int, threshold: float):
+def check_sales_anomaly(data):
+    print("Checking for sales anomaly...")
+    
+    retailer_id = data['retailer_id'] 
+    product_id = data['product_id'] 
+    current_quantity = data['quantity']
+    threshold: float = 0.8
+    
     messages = []
     
     start_date = datetime.now() - timedelta(days=30)
@@ -141,6 +153,8 @@ def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_q
     retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
     field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
     recepient = field_exec.Contact_Number
+    
+    print(f"Checking sales anomaly for {retailer.name} and product {product_id} with threshold {threshold} and current quantity {current_quantity}")
 
     historical_sales = db.get_session().query(Sales).filter(
         Sales.retailer_id == retailer_id,
@@ -172,7 +186,7 @@ def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_q
     else:
         messages.append({
             "recepient": recepient,
-            "message": "✅ Sales are within normal historical range."
+            "message": "Sales are within normal historical range."
         })
         
     return messages
@@ -200,7 +214,7 @@ def notify_delivery_for_orders():
     for order in orders:
         if order.status == "In-Transit":
             delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
-            if delivery_log:
+            if delivery_log and delivery_log.delivery_person:
                 recepient = delivery_log.delivery_person.Contact_Number
                 message = f"Delivery for order {order.order_name} is in transit, please perform the delivery."
                 
@@ -212,7 +226,7 @@ def notify_delivery_for_orders():
     for credit_note in credit_notes:
         if credit_note.status == "In-Transit":
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs == order._id).first()
-                if delivery_log:
+                if delivery_log and delivery_log.delivery_person:
                     recepient = delivery_log.delivery_person.Contact_Number
                     message = f"Delivery for credit note {credit_note.cn_name} is in transit, please perform the delivery."
                     
@@ -502,10 +516,47 @@ def expiring_products():
                         messages.append({
                             "recepient" : retailer.asm.Contact_Number,
                             "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
-                        })
+                        })        
                         
     return messages
 
+# CASE 15 
+from datetime import datetime, timedelta, timezone
+
+def unsold_products():
+    print("Checking for unsold products ... ")
+    
+    messages = []
+    
+    threshold_days = 30
+    current_date = datetime.now(timezone.utc)  
+    threshold_date = current_date - timedelta(days=threshold_days)            
+        
+    sales = db.get_session().query(Sales).all()
+    
+    for sale in sales:
+        if sale.retailer and sale.retailer.fe:
+            last_sale_date = sale.date if sale.date else sale.product.createdAt
+            
+            if last_sale_date.tzinfo is None:
+                last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
+                
+            if last_sale_date <= threshold_date:
+                unsold_products.append({
+                    "recepient" : sale.retailer.fe.Name,
+                    "product_name" : sale.product.name,
+                    "last_sale_date": last_sale_date
+                })
+            
+    if len(unsold_products) > 0: 
+        for item in unsold_products:
+            print(f"- {item['product_name']} (Last Sale: {item['last_sale_date'].strftime('%Y-%m-%d')})")
+            messages.append({ 
+                "recepient" : "9999999999",
+                "message" : f"Product: {item['product_name']}, Last Sale: {item['last_sale_date'].strftime('%Y-%m-%d')}"
+            }) 
+        
+    return messages
 
 event_config = {
     "recon_inserted" : [
@@ -514,17 +565,19 @@ event_config = {
     ],
     "sudden_sales_drop" : [
         lambda x : detect_sales_drop(),
+        lambda x : check_sales_anomaly(x)
     ],
     "low_retailer_visits" : [
         lambda x : check_retailer_visits_for_month(),    
     ],
-    "order_skipped_by_Retailer": [
-        lambda x : check_skipped_orders_alert(),
-    ],
-    "beat_plan_assigned": [
+    "daily_event_triggers" : [
+        lambda x : notify_delivery_for_orders(),
+        lambda x : delivery_not_out_on_expected_date(),
+        lambda x : nearly_expiring_stocks(),
         lambda x : check_beatplans_for_today(),
-    ],
-    "least_selling_brand": [
-        lambda x : get_least_selling_brand_per_retailer(),
+        lambda x : expiring_products(),
     ]
 }
+
+
+unsold_products()
