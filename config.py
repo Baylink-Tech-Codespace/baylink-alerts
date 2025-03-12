@@ -4,6 +4,8 @@ from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta
+from database.models.Brand import Brand
+from database.models.Product import Product
 from database.models.Sales import Sales
 from database.models.Retailer import Retailer
 from database.models.Order import Order
@@ -420,6 +422,63 @@ def check_retailer_visits_for_month():
 
     return messages
 
+# CASE 24
+def get_least_selling_brand_per_retailer():
+    """Finds the brand with the least sales for each retailer in the given month."""
+    messages = []
+    
+    start_date = datetime.now() - timedelta(days=30)
+    end_date = datetime.now()
+
+    sales_query = (
+        db.get_session().query(
+            Sales.retailer_id,
+            Retailer.name.label("retailer_name"),
+            Product.brand_id,
+            Brand.name.label("brand_name"),
+            Product.name.label("product_name"),
+            func.sum(Sales.quantity).label("total_sales"),
+            ASM.Contact_Number.label("asm_contact")
+        )
+        .join(Retailer, Sales.retailer_id == Retailer._id)
+        .join(Product, Sales.product_id == Product._id)
+        .join(Brand, Product.brand_id == Brand._id) 
+        .join(ASM, Retailer.ASM_id == ASM._id)
+        .filter(Sales.date >= start_date, Sales.date < end_date)
+        .group_by(Sales.retailer_id, Retailer.name, Product.brand_id, Brand.name, Product.name, ASM.Contact_Number)
+        .subquery()
+    )
+
+    min_sales_query = (
+        db.get_session().query(
+            sales_query.c.retailer_id,
+            sales_query.c.retailer_name,
+            sales_query.c.brand_id,
+            sales_query.c.brand_name,
+            sales_query.c.product_name,
+            sales_query.c.total_sales,
+            sales_query.c.asm_contact
+        )
+        .order_by(sales_query.c.retailer_id, sales_query.c.total_sales)
+        .distinct(sales_query.c.retailer_id)
+        .all()
+    )
+
+    messages_by_recipient = defaultdict(list)
+
+    for retailer_id, retailer_name, brand_id, brand_name, product_name, total_sales, asm_contact in min_sales_query:
+        message = (
+            f"Retailer '{retailer_name}' has the lowest sales in Brand '{brand_name}' "
+            f"for Product '{product_name}' with {total_sales} units sold."
+        )
+        messages_by_recipient[asm_contact].append(message)
+
+    messages = [
+        {"recipient": recipient, "message": " ".join(messages)}
+        for recipient, messages in messages_by_recipient.items()
+    ]
+
+    return messages
 
 # CASE 14 
 def expiring_products():
@@ -459,4 +518,13 @@ event_config = {
     "low_retailer_visits" : [
         lambda x : check_retailer_visits_for_month(),    
     ],
+    "order_skipped_by_Retailer": [
+        lambda x : check_skipped_orders_alert(),
+    ],
+    "beat_plan_assigned": [
+        lambda x : check_beatplans_for_today(),
+    ],
+    "least_selling_brand": [
+        lambda x : get_least_selling_brand_per_retailer(),
+    ]
 }

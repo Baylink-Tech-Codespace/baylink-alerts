@@ -3,12 +3,13 @@ from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship, Mapped
 from database.base import Base
 import uuid
-from typing import List, TYPE_CHECKING
+from typing import List, TYPE_CHECKING, Optional
 
 if TYPE_CHECKING:
     from database.models.Inventory import InventoryStockList
     from database.models.Recon import ReconItem
     from database.models.Sales import Sales
+    from database.models.Brand import Brand
     
 class BatchCodes(Base):
     __tablename__ = 'BatchCodes'
@@ -29,7 +30,7 @@ class Product(Base):
     __tablename__ = 'Product'
 
     _id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    brand_id = Column(UUID(as_uuid=True), nullable=False)
+    brand_id = Column(UUID(as_uuid=True), ForeignKey("Brands._id"), nullable=False)
     name = Column(String, nullable=False)
     description = Column(String, nullable=False)
     price_to_retailer = Column(Float, nullable=False)
@@ -49,6 +50,7 @@ class Product(Base):
     inventory_stock_list: Mapped[List["InventoryStockList"]] = relationship('InventoryStockList', back_populates='product')
     recon_items : Mapped[List["ReconItem"]] = relationship("ReconItem", back_populates="product")
     sales : Mapped[List["Sales"]] = relationship('Sales', back_populates='product')
+    brand : Mapped[Optional["Brand"]] = relationship("Brand", back_populates="product")
     
     @property
     def margin(self):
