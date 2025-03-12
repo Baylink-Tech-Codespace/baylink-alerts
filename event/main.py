@@ -126,7 +126,7 @@ class Monitor:
     def daily_event_triggers(self):
         try:
             event_name = "daily_event_triggers"
-            event_data = {}
+            event_data = ""
             print(f"Running daily triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
             self.alert_system.alert_pipeline(event_name, event_data)
         except Exception as e:
@@ -155,15 +155,15 @@ class Monitor:
             
     def listen_triggers(self):
         try:
+            schedule.every().day.at("12:52").do(self.daily_event_triggers)
+            
             self.setup_connection()
+            listener_thread = threading.Thread(target=self.start_listening)
+            listener_thread.start()
+         
             self.recon_insert_listener()
             self.sales_insert_listener()
             self.retailer_visit_listener()
-              
-            schedule.every().day.at("00:00").do(self.daily_event_triggers)
-
-            listener_thread = threading.Thread(target=self.start_listening)
-            listener_thread.start()
 
             # Keep checking the schedule
             while True:

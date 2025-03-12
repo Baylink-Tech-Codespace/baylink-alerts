@@ -5940,3 +5940,53 @@ psycopg2.InterfaceError: connection already closed
 2025-03-12 12:11:19,264 -  * Restarting with watchdog (fsevents)
 2025-03-12 12:11:25,478 -  * Debugger is active!
 2025-03-12 12:11:25,488 -  * Debugger PIN: 533-908-980
+2025-03-12 12:29:39,359 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-12 12:29:39,360 - [33mPress CTRL+C to quit[0m
+2025-03-12 12:29:39,360 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:29:45,793 -  * Debugger is active!
+2025-03-12 12:29:45,803 -  * Debugger PIN: 533-908-980
+2025-03-12 12:41:34,628 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-12 12:41:34,629 - [33mPress CTRL+C to quit[0m
+2025-03-12 12:41:34,629 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:41:40,749 -  * Debugger is active!
+2025-03-12 12:41:40,765 -  * Debugger PIN: 533-908-980
+2025-03-12 12:43:05,052 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-12 12:43:05,052 - [33mPress CTRL+C to quit[0m
+2025-03-12 12:43:05,052 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:43:11,429 -  * Debugger is active!
+2025-03-12 12:43:11,440 -  * Debugger PIN: 533-908-980
+2025-03-12 12:45:09,036 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-12 12:45:09,346 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:45:16,139 -  * Debugger is active!
+2025-03-12 12:45:16,151 -  * Debugger PIN: 533-908-980
+2025-03-12 12:46:46,496 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
+2025-03-12 12:46:46,790 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:46:53,390 -  * Debugger is active!
+2025-03-12 12:46:53,404 -  * Debugger PIN: 533-908-980
+2025-03-12 12:48:24,579 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-12 12:48:24,579 - [33mPress CTRL+C to quit[0m
+2025-03-12 12:48:24,580 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:48:30,657 -  * Debugger is active!
+2025-03-12 12:48:30,667 -  * Debugger PIN: 533-908-980
+2025-03-12 12:50:43,709 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-12 12:50:43,710 - [33mPress CTRL+C to quit[0m
+2025-03-12 12:50:43,710 -  * Restarting with watchdog (fsevents)
+2025-03-12 12:50:49,936 -  * Debugger is active!
+2025-03-12 12:50:49,946 -  * Debugger PIN: 533-908-980
+2025-03-12 12:51:41,455 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-12 12:51:42,373 -  * Restarting with watchdog (fsevents)

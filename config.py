@@ -206,7 +206,7 @@ def notify_delivery_for_orders():
     for order in orders:
         if order.status == "In-Transit":
             delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
-            if delivery_log:
+            if delivery_log and delivery_log.delivery_person:
                 recepient = delivery_log.delivery_person.Contact_Number
                 message = f"Delivery for order {order.order_name} is in transit, please perform the delivery."
                 
@@ -218,7 +218,7 @@ def notify_delivery_for_orders():
     for credit_note in credit_notes:
         if credit_note.status == "In-Transit":
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs == order._id).first()
-                if delivery_log:
+                if delivery_log and delivery_log.delivery_person:
                     recepient = delivery_log.delivery_person.Contact_Number
                     message = f"Delivery for credit note {credit_note.cn_name} is in transit, please perform the delivery."
                     
