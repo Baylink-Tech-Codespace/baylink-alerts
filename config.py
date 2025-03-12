@@ -16,6 +16,12 @@ from database.models.RetailerVisitedLog import RetailerVisitedLog
 from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
 
+from datetime import datetime, timedelta, timezone
+
+from datetime import datetime, timedelta, timezone
+from collections import defaultdict
+
+
 # CASE 2 
 def compare_quantity_inventory_recon(recon_id):
     print("Checking quantity in inventory and recon...")
@@ -403,42 +409,40 @@ def expiring_products():
     return messages
 
 # CASE 15 
-from datetime import datetime, timedelta, timezone
-
 def unsold_products():
     print("Checking for unsold products ... ")
+
+    messages = defaultdict(list)
     
-    messages = []
+    threshold_days = 60
+    current_date = datetime.now(timezone.utc)
+    threshold_date = current_date - timedelta(days=threshold_days)
     
-    threshold_days = 30
-    current_date = datetime.now(timezone.utc)  
-    threshold_date = current_date - timedelta(days=threshold_days)            
-        
     sales = db.get_session().query(Sales).all()
-    
+
     for sale in sales:
         if sale.retailer and sale.retailer.fe:
             last_sale_date = sale.date if sale.date else sale.product.createdAt
-            
+
             if last_sale_date.tzinfo is None:
                 last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
-                
+
             if last_sale_date <= threshold_date:
-                unsold_products.append({
-                    "recepient" : sale.retailer.fe.Name,
-                    "product_name" : sale.product.name,
-                    "last_sale_date": last_sale_date
-                })
-            
-    if len(unsold_products) > 0: 
-        for item in unsold_products:
-            print(f"- {item['product_name']} (Last Sale: {item['last_sale_date'].strftime('%Y-%m-%d')})")
-            messages.append({ 
-                "recepient" : "9999999999",
-                "message" : f"Product: {item['product_name']}, Last Sale: {item['last_sale_date'].strftime('%Y-%m-%d')}"
-            }) 
-        
-    return messages
+                recepient = sale.retailer.fe.Contact_Number
+                product_info = (f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}")
+                messages[recepient].append(product_info)
+
+    if messages:
+        for recepient, product_list in messages.items():
+            print(f"Notifications for {recepient}:")
+            for product in product_list:
+                print(f"- {product}")
+
+    return [{
+        "recepient": recepient,
+        "message": "\n".join(product_list)
+    } for recepient, product_list in messages.items()]
+
 
 event_config = {
     "recon_inserted" : [
@@ -462,4 +466,4 @@ event_config = {
 }
 
 
-unsold_products()
+print(unsold_products())
