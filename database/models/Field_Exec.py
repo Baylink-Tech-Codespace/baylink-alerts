@@ -7,6 +7,7 @@ import uuid
 from sqlalchemy.orm import Mapped
 from typing import Optional
 from database.models.ASM import ASM
+from database.models.Retailer import Retailer
 
 class FeUser(Base):
     __tablename__ = 'FeUsers'
@@ -38,3 +39,4 @@ class Field_Exec(Base):
     
     #asm: Mapped[Optional["ASM"]] = relationship('ASM', back_populates='field_exec')
     feuser: Mapped[Optional["FeUser"]] = relationship('FeUser', back_populates='Field_Exec')
+    retailer : Mapped[Optional["Retailer"]] = relationship('Retailer', back_populates='fe') 
