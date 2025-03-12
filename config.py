@@ -108,27 +108,35 @@ def detect_sales_drop():
     sales = db.get_session().query(Sales).all()
     
     for sale in sales:
-        asm = db.get_session().query(ASM).filter(ASM._id == sale.retailer.ASM_id).first()
-        recepient = asm.Contact_Number
-        
-        current_quantity = sale.quantity
-        prev_quantity = db.get_session().query(Sales).filter(
-            Sales.retailer_id == sale.retailer_id,
-            Sales.product_id == sale.product_id,
-            Sales.date < sale.date
-        ).order_by(Sales.date.desc()).first().quantity
-        
-        if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
-            messages.append({
-                "recepient": recepient,
-                "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}."
-            })
+        if sale:
+            asm = db.get_session().query(ASM).filter(ASM._id == sale.retailer.asm._id).first()
+            recepient = asm.Contact_Number
+            
+            current_quantity = sale.quantity
+            prev_quantity = db.get_session().query(Sales).filter(
+                Sales.retailer_id == sale.retailer_id,
+                Sales.product_id == sale.product_id,
+                Sales.date < sale.date
+            ).order_by(Sales.date.desc()).first().quantity
+            
+            if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
+                messages.append({
+                    "recepient": recepient,
+                    "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}."
+                })
     
     return messages
  
  
 # CASE 3 
-def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_quantity: int, threshold: float):
+def check_sales_anomaly(data):
+    print("Checking for sales anomaly...")
+    
+    retailer_id = data['retailer_id'] 
+    product_id = data['product_id'] 
+    current_quantity = data['quantity']
+    threshold: float = 0.8
+    
     messages = []
     
     start_date = datetime.now() - timedelta(days=30)
@@ -137,6 +145,8 @@ def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_q
     retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
     field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
     recepient = field_exec.Contact_Number
+    
+    print(f"Checking sales anomaly for {retailer.name} and product {product_id} with threshold {threshold} and current quantity {current_quantity}")
 
     historical_sales = db.get_session().query(Sales).filter(
         Sales.retailer_id == retailer_id,
@@ -168,7 +178,7 @@ def check_sales_anomaly(retailer_id: uuid.UUID, product_id: uuid.UUID, current_q
     else:
         messages.append({
             "recepient": recepient,
-            "message": "✅ Sales are within normal historical range."
+            "message": "Sales are within normal historical range."
         })
         
     return messages
@@ -388,7 +398,7 @@ def expiring_products():
                         messages.append({
                             "recepient" : retailer.asm.Contact_Number,
                             "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
-                        })
+                        })        
                         
     return messages
 
@@ -400,8 +410,17 @@ event_config = {
     ],
     "sudden_sales_drop" : [
         lambda x : detect_sales_drop(),
+        lambda x : check_sales_anomaly(x)
     ],
     "low_retailer_visits" : [
         lambda x : check_retailer_visits_for_month(),    
     ],
+    "daily_event_triggers" : [
+        lambda x : notify_delivery_for_orders(),
+        lambda x : delivery_not_out_on_expected_date(),
+        lambda x : nearly_expiring_stocks(),
+        lambda x : check_beatplans_for_today(),
+        lambda x : expiring_products(),
+        
+    ]
 }

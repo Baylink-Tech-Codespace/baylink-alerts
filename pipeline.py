@@ -31,11 +31,16 @@ class AlertSystem:
             conditions = event_config[event_name]
             
             if event_name == "recon_inserted":
+                recon_id = json.loads(event_data)["_id"]
                 for condition in conditions: 
-                    recon_id = json.loads(event_data)["_id"]
-                    print(f"Checking condition for recon_id: {recon_id}")
                     alerts.append(condition(recon_id))
                     
+            elif event_name == "sudden_sales_drop":
+                event_data_json = json.loads(event_data)
+                
+                for condition in conditions: 
+                    alerts.append(condition(event_data_json))
+
             else:
                 for condition in conditions: 
                     alerts.append(condition(event_data))
@@ -51,6 +56,6 @@ class AlertSystem:
                 "role": role
             })
             
-            # send_alert(messages, "7007555103")
+            send_alert(messages, "7007555103") # recepient
                 
 alert_system = AlertSystem() 
