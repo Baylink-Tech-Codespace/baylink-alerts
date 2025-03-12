@@ -12,6 +12,7 @@ if TYPE_CHECKING:
     from database.models.CreditNote import CreditNote
     from database.models.Recon import Recon
     from database.models.ASM import ASM 
+    from database.models.Field_Exec import Field_Exec
 
 class Retailer(Base):
     __tablename__ = "Retailer"
@@ -61,3 +62,4 @@ class Retailer(Base):
     credit_notes: Mapped[List["CreditNote"]] = relationship("CreditNote", back_populates="retailer")
     inventory : Mapped[Optional["Inventory"]] = relationship("Inventory", back_populates="retailer")
     asm : Mapped[Optional["ASM"]] = relationship("ASM", back_populates="retailer")
+    fe : Mapped[Optional["Field_Exec"]] = relationship("Field_Exec", back_populates="retailer")

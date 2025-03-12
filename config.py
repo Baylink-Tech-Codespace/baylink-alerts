@@ -1,4 +1,3 @@
-import uuid
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
@@ -9,6 +8,7 @@ from database.models.Order import Order
 from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Warehouse import WarehouseItems
 from database.models.Inventory import InventoryStockList, Inventory
+from database.models.Product import Product
 from database.models.Recon import Recon
 from database.models.BeatPlan import BeatPlan
 from database.models.Field_Exec import Field_Exec
@@ -402,6 +402,43 @@ def expiring_products():
                         
     return messages
 
+# CASE 15 
+from datetime import datetime, timedelta, timezone
+
+def unsold_products():
+    print("Checking for unsold products ... ")
+    
+    messages = []
+    
+    threshold_days = 30
+    current_date = datetime.now(timezone.utc)  
+    threshold_date = current_date - timedelta(days=threshold_days)            
+        
+    sales = db.get_session().query(Sales).all()
+    
+    for sale in sales:
+        if sale.retailer and sale.retailer.fe:
+            last_sale_date = sale.date if sale.date else sale.product.createdAt
+            
+            if last_sale_date.tzinfo is None:
+                last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
+                
+            if last_sale_date <= threshold_date:
+                unsold_products.append({
+                    "recepient" : sale.retailer.fe.Name,
+                    "product_name" : sale.product.name,
+                    "last_sale_date": last_sale_date
+                })
+            
+    if len(unsold_products) > 0: 
+        for item in unsold_products:
+            print(f"- {item['product_name']} (Last Sale: {item['last_sale_date'].strftime('%Y-%m-%d')})")
+            messages.append({ 
+                "recepient" : "9999999999",
+                "message" : f"Product: {item['product_name']}, Last Sale: {item['last_sale_date'].strftime('%Y-%m-%d')}"
+            }) 
+        
+    return messages
 
 event_config = {
     "recon_inserted" : [
@@ -421,6 +458,8 @@ event_config = {
         lambda x : nearly_expiring_stocks(),
         lambda x : check_beatplans_for_today(),
         lambda x : expiring_products(),
-        
     ]
 }
+
+
+unsold_products()
