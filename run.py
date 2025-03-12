@@ -88,8 +88,8 @@ configure_mappers()
 #for batchcode in batchcodes:
 #    print(batchcode.product_id , batchcode.product.name)
 
+retailers = db.get_session().query(Retailer).all()
 
-logs = db.get_session().query(BaylinkAlertLogs).all()
-
-for log in logs:
-    print(log.data,log.message,log.message_type,log.person_name)
+for retailer in retailers:
+    if retailer and retailer.fe:
+        print(retailer.fe.Name)
