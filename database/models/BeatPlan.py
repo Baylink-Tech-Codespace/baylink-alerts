@@ -6,6 +6,7 @@ import uuid
 
 from database.base import Base
 from database.models.Field_Exec import Field_Exec
+from database.models.Task import Task
 
 
 class BeatPlan(Base):
@@ -20,8 +21,8 @@ class BeatPlan(Base):
     updated_at: Mapped[str] = Column(Date, nullable=False, server_default=func.now(), onupdate=func.now())
 
     field_exec = relationship("Field_Exec", back_populates="beat_plans")
-    # tasks = relationship("Task", back_populates="beat_plan")
+    tasks = relationship("Task", back_populates="beat_plan")
 
 
 Field_Exec.beat_plans = relationship("BeatPlan", back_populates="field_exec")
-# Task.beat_plan = relationship("BeatPlan", back_populates="tasks")
+Task.beat_plan = relationship("BeatPlan", back_populates="tasks")
