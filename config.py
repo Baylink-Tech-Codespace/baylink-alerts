@@ -1,5 +1,6 @@
 from collections import defaultdict
 import uuid
+import requests
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
@@ -20,6 +21,68 @@ from database.models.Field_Exec import Field_Exec
 from database.models.RetailerVisitedLog import RetailerVisitedLog
 from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
+from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
+
+
+#CASE 1
+def fetch_retailer_transactions(retailer_id, start_date, end_date):
+    """Fetch transactions for a specific retailer from the API. Only check once in a month"""
+    HEADERS = {
+    "Authorization": f"Bearer {SWIPE_TOKEN}"
+    }
+    querystring = {
+        "document_type": "invoice",
+        "start_date": start_date,
+        "end_date": end_date,
+        "payment_status": "pending",
+        "customer_id": retailer_id
+    }
+
+    response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
+    data = response.json()
+    if response.status_code == 200:
+        return data["data"]["transactions"] 
+    else:
+        print(f"Failed to fetch transactions for retailer {retailer_id}: {data.get("message", "No message found")}")
+        return []
+
+def check_all_retailers_pending_bills():
+    print("Checking for retailers if they have more than two pending bills")
+    alerts = []
+
+    start_date = "01-09-2024"
+    end_date = (datetime.now() - timedelta(days=60)).strftime("%d-%m-%Y")
+
+    retailers = db.get_session().query(Retailer).all()
+
+
+    alerts_dict = {}
+
+    for retailer in retailers:
+        field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
+
+        pending_transactions = fetch_retailer_transactions(retailer._id, start_date, end_date)
+
+        if len(pending_transactions) > 0:
+            recipient = field_exec.Contact_Number
+            retailer_name = retailer.name
+
+            if recipient not in alerts_dict:
+                alerts_dict[recipient] = []
+
+            alerts_dict[recipient].append(retailer_name)
+
+    alerts = []
+    for recipient, retailers_list in alerts_dict.items():
+        message = f"Retailers {', '.join(retailers_list)} have more than 2 pending bills."
+
+        alerts.append({
+            "recipient": recipient,
+            "message": message
+        })
+
+    return alerts
+
 
 # CASE 2 
 def compare_quantity_inventory_recon(recon_id):
@@ -624,5 +687,3 @@ event_config = {
     ]
 }
 
-
-unsold_products()
