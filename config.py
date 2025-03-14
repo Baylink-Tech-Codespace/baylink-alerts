@@ -294,7 +294,7 @@ def nearly_expiring_stocks():
 
 # CASE 18
 def check_skipped_orders_alert():
-    """Checks if a retailer is skipping to put orders on every beat plan for last 3 weeks """
+    print("Checking if a retailer is skipping giving orders on every beat plan for last 3 weeks.")
     messages = []
     today = datetime.today().date()
     last_three_weeks = today - timedelta(weeks=3)
@@ -344,7 +344,7 @@ def check_skipped_orders_alert():
 
 #CASE 20 
 def check_beatplans_for_today():
-    """Checks whether BeatPlan is assigned to every fe or not"""
+    print("Checking whether BeatPlan is assigned to every fe or not")
     messages = []
 
     today = datetime.today().date()
@@ -382,8 +382,8 @@ def check_beatplans_for_today():
 
 # CASE 23
 def check_retailer_visits_for_month():
+    print("Checking which retailers have been visited less than 4 times in the current month.")
     messages = []
-    """Checks which retailers have been visited less than 4 times in the current month."""
     current_year = datetime.today().year
     current_month = datetime.today().month
 
@@ -435,7 +435,7 @@ def check_retailer_visits_for_month():
 
 # CASE 24
 def get_least_selling_brand_per_retailer():
-    """Finds the brand with the least sales for each retailer in the given month."""
+    print("Finding the brand with the least sales for each retailer in the given month.")
     messages = []
     
     start_date = datetime.now() - timedelta(days=30)
@@ -490,6 +490,54 @@ def get_least_selling_brand_per_retailer():
     ]
 
     return messages
+
+# CASE 26
+def check_consistently_missed_retailers():
+    print("Identifing retailers who have been consistently missed in BeatPlans.")
+
+    start_date = datetime.now() - timedelta(days=30)
+    beatplans = db.get_session().query(BeatPlan).filter(BeatPlan.date >= start_date).all()
+
+    missed_retailers = {}
+
+    for beatplan in beatplans:
+        beatplan_date = beatplan.date.date()
+        plan_data = beatplan.plan
+
+        for retailer_id in plan_data:
+            visited = db.get_session().query(RetailerVisitedLog).filter(
+                RetailerVisitedLog.retailer_id == retailer_id,
+                func.date(RetailerVisitedLog.lastVisited) == beatplan_date
+            ).first()
+
+            if not visited:
+                if retailer_id not in missed_retailers:
+                    missed_retailers[retailer_id] = 1
+                else:
+                    missed_retailers[retailer_id] += 1
+
+    continuously_missed = [retailer_id for retailer_id, count in missed_retailers.items() if count == 2]
+
+    grouped_by_recipient = defaultdict(list)
+    
+    retailers = db.get_session().query(Retailer._id, Retailer.name, ASM.Contact_Number).join(
+        ASM, Retailer.ASM_id == ASM._id
+    ).filter(Retailer._id.in_(continuously_missed)).all()
+
+    for retailer_id, retailer_name, asm_phone in retailers:
+        grouped_by_recipient[asm_phone].append(retailer_name)
+
+    messages = []
+    for recipient, retailer_names in grouped_by_recipient.items():
+        names_str = ", ".join(retailer_names)
+        message = f"These retailers were skipped in last 4 beats: {names_str}."
+        messages.append({
+            "recipient": recipient,
+            "message": message
+        })
+
+    return messages
+
 
 # CASE 14 
 def expiring_products():
