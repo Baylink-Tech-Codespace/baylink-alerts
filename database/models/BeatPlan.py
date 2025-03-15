@@ -17,8 +17,8 @@ class BeatPlan(Base):
     date: Mapped[str] = Column(Date, nullable=False)
     plan: Mapped[List[uuid.UUID]] = Column(JSON, nullable=False, comment="Ordered list of retailer IDs for the beat plan")
     details: Mapped[Optional[dict]] = Column(JSON, nullable=True, comment="Any additional details for the beat plan")
-    created_at: Mapped[str] = Column(Date, nullable=False, server_default=func.now())
-    updated_at: Mapped[str] = Column(Date, nullable=False, server_default=func.now(), onupdate=func.now())
+    createdAt: Mapped[str] = Column(Date, nullable=False, server_default=func.now())
+    updatedAt: Mapped[str] = Column(Date, nullable=False, server_default=func.now(), onupdate=func.now())
 
     field_exec = relationship("Field_Exec", back_populates="beat_plans")
     tasks = relationship("Task", back_populates="beat_plan")
