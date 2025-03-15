@@ -1,5 +1,6 @@
 from collections import defaultdict
 import uuid
+import requests
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
@@ -25,6 +26,68 @@ from datetime import datetime, timedelta, timezone
 
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict
+
+from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
+
+
+#CASE 1
+def fetch_retailer_transactions(retailer_id, start_date, end_date):
+    """Fetch transactions for a specific retailer from the API. Only check once in a month"""
+    HEADERS = {
+    "Authorization": f"Bearer {SWIPE_TOKEN}"
+    }
+    querystring = {
+        "document_type": "invoice",
+        "start_date": start_date,
+        "end_date": end_date,
+        "payment_status": "pending",
+        "customer_id": retailer_id
+    }
+
+    response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
+    data = response.json()
+    if response.status_code == 200:
+        return data["data"]["transactions"] 
+    else:
+        print(f"Failed to fetch transactions for retailer {retailer_id}: {data.get("message", "No message found")}")
+        return []
+
+def check_all_retailers_pending_bills():
+    print("Checking for retailers if they have more than two pending bills")
+    alerts = []
+
+    start_date = "01-09-2024"
+    end_date = (datetime.now() - timedelta(days=60)).strftime("%d-%m-%Y")
+
+    retailers = db.get_session().query(Retailer).all()
+
+
+    alerts_dict = {}
+
+    for retailer in retailers:
+        field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
+
+        pending_transactions = fetch_retailer_transactions(retailer._id, start_date, end_date)
+
+        if len(pending_transactions) > 0:
+            recipient = field_exec.Contact_Number
+            retailer_name = retailer.name
+
+            if recipient not in alerts_dict:
+                alerts_dict[recipient] = []
+
+            alerts_dict[recipient].append(retailer_name)
+
+    alerts = []
+    for recipient, retailers_list in alerts_dict.items():
+        message = f"Retailers {', '.join(retailers_list)} have more than 2 pending bills."
+
+        alerts.append({
+            "recipient": recipient,
+            "message": message
+        })
+
+    return alerts
 
 
 # CASE 2 
@@ -300,7 +363,7 @@ def nearly_expiring_stocks():
 
 # CASE 18
 def check_skipped_orders_alert():
-    """Checks if a retailer is skipping to put orders on every beat plan for last 3 weeks """
+    print("Checking if a retailer is skipping giving orders on every beat plan for last 3 weeks.")
     messages = []
     today = datetime.today().date()
     last_three_weeks = today - timedelta(weeks=3)
@@ -350,7 +413,7 @@ def check_skipped_orders_alert():
 
 #CASE 20 
 def check_beatplans_for_today():
-    """Checks whether BeatPlan is assigned to every fe or not"""
+    print("Checking whether BeatPlan is assigned to every fe or not")
     messages = []
 
     today = datetime.today().date()
@@ -388,8 +451,8 @@ def check_beatplans_for_today():
 
 # CASE 23
 def check_retailer_visits_for_month():
+    print("Checking which retailers have been visited less than 4 times in the current month.")
     messages = []
-    """Checks which retailers have been visited less than 4 times in the current month."""
     current_year = datetime.today().year
     current_month = datetime.today().month
 
@@ -441,7 +504,7 @@ def check_retailer_visits_for_month():
 
 # CASE 24
 def get_least_selling_brand_per_retailer():
-    """Finds the brand with the least sales for each retailer in the given month."""
+    print("Finding the brand with the least sales for each retailer in the given month.")
     messages = []
     
     start_date = datetime.now() - timedelta(days=30)
@@ -496,6 +559,54 @@ def get_least_selling_brand_per_retailer():
     ]
 
     return messages
+
+# CASE 26
+def check_consistently_missed_retailers():
+    print("Identifing retailers who have been consistently missed in BeatPlans.")
+
+    start_date = datetime.now() - timedelta(days=30)
+    beatplans = db.get_session().query(BeatPlan).filter(BeatPlan.date >= start_date).all()
+
+    missed_retailers = {}
+
+    for beatplan in beatplans:
+        beatplan_date = beatplan.date.date()
+        plan_data = beatplan.plan
+
+        for retailer_id in plan_data:
+            visited = db.get_session().query(RetailerVisitedLog).filter(
+                RetailerVisitedLog.retailer_id == retailer_id,
+                func.date(RetailerVisitedLog.lastVisited) == beatplan_date
+            ).first()
+
+            if not visited:
+                if retailer_id not in missed_retailers:
+                    missed_retailers[retailer_id] = 1
+                else:
+                    missed_retailers[retailer_id] += 1
+
+    continuously_missed = [retailer_id for retailer_id, count in missed_retailers.items() if count == 2]
+
+    grouped_by_recipient = defaultdict(list)
+    
+    retailers = db.get_session().query(Retailer._id, Retailer.name, ASM.Contact_Number).join(
+        ASM, Retailer.ASM_id == ASM._id
+    ).filter(Retailer._id.in_(continuously_missed)).all()
+
+    for retailer_id, retailer_name, asm_phone in retailers:
+        grouped_by_recipient[asm_phone].append(retailer_name)
+
+    messages = []
+    for recipient, retailer_names in grouped_by_recipient.items():
+        names_str = ", ".join(retailer_names)
+        message = f"These retailers were skipped in last 4 beats: {names_str}."
+        messages.append({
+            "recipient": recipient,
+            "message": message
+        })
+
+    return messages
+
 
 # CASE 14 
 def expiring_products():
