@@ -115,8 +115,8 @@ class Monitor:
     def listen_triggers(self):
         try: 
             
-            schedule.every().day.at("12:52").do(self.event_triggers, "daily_event_triggers")
-            schedule.every(30).day.at("12:52").do(self.event_triggers, "monthly_event_triggers")
+            schedule.every().day.at("11:04").do(self.event_triggers, "daily_event_triggers")
+            schedule.every(30).day.at("11:04").do(self.event_triggers, "monthly_event_triggers")
             
             self.setup_connection()
             listener_thread = threading.Thread(target=self.start_listening)
