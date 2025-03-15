@@ -698,6 +698,3 @@ event_config = {
         lambda x : unsold_products(),
     ]
 }
-
-
-print(check_all_retailers_pending_bills())
