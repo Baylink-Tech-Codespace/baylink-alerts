@@ -84,9 +84,8 @@ class Monitor:
             print(e)
             
         
-    def daily_event_triggers(self):
-        try:
-            event_name = "daily_event_triggers"
+    def event_triggers(self,event_name):
+        try: 
             event_data = ""
             print(f"Running daily triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
             self.alert_system.alert_pipeline(event_name, event_data)
@@ -114,8 +113,10 @@ class Monitor:
             print(f"Error while listening for triggers: {e}")
             
     def listen_triggers(self):
-        try:
-            schedule.every().day.at("12:52").do(self.daily_event_triggers)
+        try: 
+            
+            schedule.every().day.at("12:52").do(self.event_triggers, "daily_event_triggers")
+            schedule.every(30).day.at("12:52").do(self.event_triggers, "monthly_event_triggers")
             
             self.setup_connection()
             listener_thread = threading.Thread(target=self.start_listening)

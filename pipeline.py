@@ -41,7 +41,7 @@ class AlertSystem:
                 for condition in conditions: 
                     alerts.append(condition(event_data_json))
 
-            elif event_name == "daily_event_triggers":
+            elif event_name in ["daily_event_triggers" , "monthly_event_triggers"]:
                 for condition in conditions: 
                     print("CONDITION",condition)
                     alerts.append(condition(event_data))
