@@ -200,7 +200,9 @@ def detect_sales_drop():
             if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
                 messages.append({
                     "recepient": recepient,
-                    "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}."
+                    "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}.",
+                    "person_name" : asm.name,
+                    "role" : "ASM"
                 })
     
     return messages
@@ -238,7 +240,9 @@ def check_sales_anomaly(data):
     if len(historical_sales) == 0:
         messages.append({
             "recepient": recepient,
-            "message": "No historical sales data available for this product and retailer."
+            "message": "No historical sales data available for this product and retailer.",
+            "person_name" : field_exec.Name,
+            "role" : "Field Executive"
         })
 
     avg_sales = sum(historical_sales) / len(historical_sales)
@@ -251,12 +255,16 @@ def check_sales_anomaly(data):
         deviation = ((current_quantity - avg_sales) / avg_sales) * 100
         messages.append({
             "recepient": recepient,
-            "message": f"Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average."
+            "message": f"Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average.",
+            "person_name" : field_exec.Name,
+            "role" : "Field Executive"
         })  
     else:
         messages.append({
             "recepient": recepient,
-            "message": "Sales are within normal historical range."
+            "message": "Sales are within normal historical range.",
+            "person_name" : field_exec.Name,
+            "role" : "Field Executive"
         })
         
     return messages
@@ -286,11 +294,14 @@ def notify_delivery_for_orders():
             delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
             if delivery_log and delivery_log.delivery_person:
                 recepient = delivery_log.delivery_person.Contact_Number
+                person_name = delivery_log.delivery_person.Name
                 message = f"Delivery for order {order.order_name} is in transit, please perform the delivery."
                 
                 messages.append({
                     "recepient": recepient,
-                    "message": message
+                    "message": message,
+                    "person_name": person_name,
+                    "role": "Delivery Person"
                 })
                 
     for credit_note in credit_notes:
@@ -298,11 +309,14 @@ def notify_delivery_for_orders():
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs == order._id).first()
                 if delivery_log and delivery_log.delivery_person:
                     recepient = delivery_log.delivery_person.Contact_Number
+                    person_name = delivery_log.delivery_person.Name 
                     message = f"Delivery for credit note {credit_note.cn_name} is in transit, please perform the delivery."
                     
                     messages.append({
                         "recepient": recepient,
-                        "message": message
+                        "message": message,
+                        "person_name": person_name,
+                        "role": "Delivery Person"
                 })
                     
     return messages
@@ -316,24 +330,32 @@ def delivery_not_out_on_expected_date():
     for order in orders:
         if order.status == "In-Transit" or order.status == "Scheduled":
             delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
+            recepient = delivery_log.delivery_person.Contact_Number
+
             if delivery_log:
                 delivery_date = delivery_log.date_of_delivery
                 expected_delivery_date = order.expected_delivery_date
                 
                 if delivery_date != expected_delivery_date:
                     messages.append({
-                        "recepient": "ASM number here from order . retailer",
-                        "message": f"Delivery for order {order.order_name} is not out on expected date"
+                        "recepient": recepient,
+                        "message": f"Delivery for order {order.order_name} is not out on expected date",
+                        "role" : "Delivery Person",
+                        "person_name" : delivery_log.delivery_person.Name
                     })
                 else: 
                     messages.append({
-                        "recepient": "ASM number here from order . retailer",
-                        "message": f"Delivery for order {order.order_name} is out on expected date"
+                        "recepient": recepient,
+                        "message": f"Delivery for order {order.order_name} is out on expected date",
+                        "role" : "Delivery Person",
+                        "person_name" : delivery_log.delivery_person.Name
                     })
             else:
                 messages.append({
-                    "recepient": "ASM number here from order . retailer",
-                    "message": f"Delivery for order {order.order_name} is not out on expected date"
+                    "recepient": recepient,
+                    "message": f"Delivery for order {order.order_name} is not out on expected date",
+                    "role" : "Delivery Person",
+                    "person_name" : delivery_log.delivery_person.Name
                 }) 
                 
     return messages
@@ -347,6 +369,7 @@ def nearly_expiring_stocks():
     for inventory in inventories:
         retailer = inventory.retailer
         asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
+        person_name = asm.name
         stock_lists = inventory.stock_lists
         
         for stock in stock_lists:
@@ -360,7 +383,9 @@ def nearly_expiring_stocks():
                 if expiry_date.replace(tzinfo=None) <= datetime.now() + timedelta(days=30):
                     messages.append({
                         "recepient": asm.Contact_Number,
-                        "message": f"Stock of {product.name} is expiring soon. Please take necessary action."
+                        "message": f"Stock of {product.name} is expiring soon. Please take necessary action.",
+                        "person_name" : person_name,
+                        "role" : "ASM"
                     })
                     
     return messages
@@ -438,6 +463,8 @@ def check_beatplans_for_today():
         if missing_fe[1] is not None:
             asm = db.get_session().query(ASM).filter(ASM._id == missing_fe[1]).first()
             recipient = asm.Contact_Number
+            person_name = asm.name
+            role = "ASM"
             
             if recipient not in grouped_by_recipient:
                 grouped_by_recipient[recipient] = []
@@ -465,6 +492,7 @@ def check_retailer_visits_for_month():
         RetailerVisitedLog.fe_id,
         Retailer.name.label("retailer_name"),
         Field_Exec.Name.label("fe_name"),
+        ASM.name,
         ASM.Contact_Number.label("asm_phone_number"),
         func.count(RetailerVisitedLog._id).label("visit_count")
     ).join(
@@ -490,6 +518,7 @@ def check_retailer_visits_for_month():
     
     for visit in low_visit_retailers:
         recipient = visit.asm_phone_number
+        person_name = visit.name
         retailer_info = f"{visit.retailer_name} (FE: {visit.fe_name})"
 
         if recipient not in grouped_by_recipient:
@@ -621,8 +650,9 @@ def expiring_products():
     for stock in inventory_stocks:
         if stock.inventory and stock.product:
             retailer = stock.inventory.retailer
+            person_name = retailer.asm.name
             product = stock.product
-            
+                        
             if retailer:    
                 sorted_batches = sorted(stock.product.batch_codes, key=lambda batch: batch.expiry_date)
                 
@@ -633,6 +663,8 @@ def expiring_products():
                     if days_left > 0 and days_left <= 30: 
                         messages.append({
                             "recepient" : retailer.asm.Contact_Number,
+                            "person_name" : person_name,
+                            "role" : "ASM",
                             "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
                         })        
                         
@@ -676,22 +708,22 @@ def unsold_products():
 
 event_config = {
     "recon_inserted" : [
-        lambda recon_id : compare_quantity_inventory_recon(recon_id),
-        lambda recon_id : is_retailer_shelf_image_event(recon_id)
+        lambda recon_id : compare_quantity_inventory_recon(recon_id), ## 
+        lambda recon_id : is_retailer_shelf_image_event(recon_id) ## 
     ],
     "sudden_sales_drop" : [
-        lambda x : detect_sales_drop(),
-        lambda x : check_sales_anomaly(x)
+        lambda x : detect_sales_drop(), ## 
+        lambda x : check_sales_anomaly(x) ## 
     ],
     "low_retailer_visits" : [
         lambda x : check_retailer_visits_for_month(),    
     ],
     "daily_event_triggers" : [
-        lambda x : notify_delivery_for_orders(),
-        lambda x : delivery_not_out_on_expected_date(),
-        lambda x : nearly_expiring_stocks(),
+        lambda x : notify_delivery_for_orders(), ## 
+        lambda x : delivery_not_out_on_expected_date(), ## 
+        lambda x : nearly_expiring_stocks(), ## 
         lambda x : check_beatplans_for_today(),
-        lambda x : expiring_products(),
+        lambda x : expiring_products(), ## 
     ],
     "monthly_event_triggers" : [
         lambda x : check_all_retailers_pending_bills(),

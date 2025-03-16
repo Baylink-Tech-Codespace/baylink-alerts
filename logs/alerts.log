@@ -5996,3 +5996,39 @@ psycopg2.InterfaceError: connection already closed
  * Running on http://192.168.1.5:4000
 2025-03-15 11:04:20,410 - [33mPress CTRL+C to quit[0m
 2025-03-15 11:04:20,411 -  * Restarting with watchdog (fsevents)
+2025-03-15 11:04:26,428 -  * Debugger is active!
+2025-03-15 11:04:26,442 -  * Debugger PIN: 533-908-980
+2025-03-15 11:04:31,641 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-15 11:04:32,604 -  * Restarting with watchdog (fsevents)
+2025-03-15 11:06:52,336 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-03-15 11:06:52,336 - [33mPress CTRL+C to quit[0m
+2025-03-15 11:06:52,337 -  * Restarting with watchdog (fsevents)
+2025-03-15 13:20:26,063 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-03-15 13:20:26,064 - [33mPress CTRL+C to quit[0m
+2025-03-15 13:20:26,064 -  * Restarting with watchdog (fsevents)
+2025-03-15 13:20:31,385 -  * Debugger is active!
+2025-03-15 13:20:31,398 -  * Debugger PIN: 533-908-980
+2025-03-15 13:20:47,992 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-15 13:20:48,650 -  * Restarting with watchdog (fsevents)
+2025-03-15 14:34:49,062 - Exception during reset or similar
+Traceback (most recent call last):
+  File "/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py", line 145, in listen_triggers
+    time.sleep(60)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/anshumantiwari/miniconda3/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 986, in _finalize_fairy
+    fairy._reset(
+  File "/Users/anshumantiwari/miniconda3/lib/python3.12/site-packages/sqlalchemy/pool/base.py", line 1432, in _reset
+    pool._dialect.do_rollback(self)
+  File "/Users/anshumantiwari/miniconda3/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 700, in do_rollback
+    dbapi_connection.rollback()
+psycopg2.InterfaceError: connection already closed

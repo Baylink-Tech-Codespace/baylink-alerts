@@ -83,14 +83,26 @@ class Monitor:
         except Exception as e:
             print(e)
             
+    def retailer_visit_listener(self):
+        pass
         
-    def event_triggers(self,event_name):
+    def daily_event_triggers(self):
         try: 
+            event_name = "daily_event_triggers"
             event_data = ""
             print(f"Running daily triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
             self.alert_system.alert_pipeline(event_name, event_data)
         except Exception as e:
             print(f"Error In Daily Triggers : {e}")
+            
+    def monthly_event_triggers(self):
+        try: 
+            event_name = "monthly_event_triggers"
+            event_data = ""
+            print(f"Running monthly triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
+            self.alert_system.alert_pipeline(event_name, event_data)
+        except Exception as e:
+            print(f"Error In Monthly Triggers : {e}")
                 
     def start_listening(self):
         try: 
@@ -114,10 +126,11 @@ class Monitor:
             
     def listen_triggers(self):
         try: 
-            
-            schedule.every().day.at("11:04").do(self.event_triggers, "daily_event_triggers")
-            schedule.every(30).day.at("11:04").do(self.event_triggers, "monthly_event_triggers")
-            
+            # daily / monthly triggers
+            print("Setting up daily / monthly triggers...")
+            schedule.every().day.at("15:33").do(self.daily_event_triggers)
+            schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
+             
             self.setup_connection()
             listener_thread = threading.Thread(target=self.start_listening)
             listener_thread.start()
