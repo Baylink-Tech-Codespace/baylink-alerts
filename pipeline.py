@@ -13,16 +13,8 @@ class AlertSystem:
     def __init__(self):
         self.session = db.get_session()
 
-    def group_alerts_by_recipient(self, alerts_data: List[List[Dict[str, str]]]) -> List[Dict[str, str]]:
-        """
-        Groups alerts by recipient phone number, removes duplicate messages, and formats the output.
 
-        Args:
-            alerts_data: Nested list of alert dictionaries containing 'recepient'/'recipient' and 'message'
-
-        Returns:
-            List of dictionaries with 'recipient' and 'message' fields.
-        """
+    def group_alerts_by_recipient(self,alerts_data: List[List[Dict[str, str]]]) -> List[Dict[str, str]]:
         grouped_alerts = {}
 
         for sublist in alerts_data:
@@ -30,17 +22,27 @@ class AlertSystem:
                 recipient_key = 'recepient' if 'recepient' in alert else 'recipient'
                 phone_number = alert[recipient_key]
                 message = alert['message']
+                person_name = alert['person_name']
+                role = alert['role']
 
                 if phone_number not in grouped_alerts:
-                    grouped_alerts[phone_number] = set()
+                    grouped_alerts[phone_number] = {
+                        "recipient": phone_number,
+                        "messages": set(),
+                        "person_name": person_name,
+                        "role": role
+                    }
                 
-                grouped_alerts[phone_number].add(message)  # Using a set to avoid duplicates
+                grouped_alerts[phone_number]["messages"].add(message)
 
-        # Convert the grouped data into the required format
         formatted_alerts = [
-            {"recipient": phone_number, "message": message}
-            for phone_number, messages in grouped_alerts.items()
-            for message in messages
+            {
+                "recipient": data["recipient"],
+                "messages": list(data["messages"]),
+                "person_name": data["person_name"],
+                "role": data["role"]
+            }
+            for data in grouped_alerts.values()
         ]
 
         return formatted_alerts
@@ -78,7 +80,7 @@ class AlertSystem:
                     alerts.append(condition(event_data_json))
 
             elif event_name in ["daily_event_triggers" , "monthly_event_triggers"]:
-                for condition in conditions:  
+                for condition in conditions:   
                     alerts.append(condition(event_data))
                     
         alerts = self.group_alerts_by_recipient(alerts)
