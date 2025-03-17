@@ -1,48 +1,66 @@
-import schedule
-import time
 import threading
+import time
+import schedule
 import select
+import psycopg2
+from psycopg2 import pool
 from pipeline import alert_system
-from database.db import db
-from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT 
+import os
+import dotenv
+
+dotenv.load_dotenv()
 
 class Monitor:
     def __init__(self):
-        self.raw_connection = None
-        self.cursor = None
         self.alert_system = alert_system
+        self.running = False
+        self.db_pool = None
+        self.db_thread = None
+        self.scheduler_thread = None
         
-    def setup_connection(self):
-        self.raw_connection = db.engine.raw_connection()
-        self.raw_connection.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
-        self.cursor = self.raw_connection.cursor()
-        
-    def recon_insert_listener(self):
         try:
-            self.cursor.execute("""
+            self.db_pool = psycopg2.pool.ThreadedConnectionPool(
+                minconn=1,
+                maxconn=10,
+                user=os.getenv("DB_USERNAME"),
+                password=os.getenv("DB_PASSWORD"),
+                host=os.getenv("DB_HOST"),
+                port=os.getenv("DB_PORT", "5432"),
+                database=os.getenv("DB_NAME"),
+                connect_timeout=10
+            )
+        except Exception as e:
+            print(f"Failed to initialize database pool: {e}")
+            raise
+
+    def setup_connection(self):
+        if not self.db_pool:
+            return None
+        try:
+            conn = self.db_pool.getconn()
+            conn.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
+            return conn
+        except Exception as e:
+            print(f"Error getting connection from pool: {e}")
+            return None
+
+    def setup_triggers(self, conn, cursor):
+        try:
+            cursor.execute("""
                 CREATE OR REPLACE FUNCTION notify_recon_insert() RETURNS TRIGGER AS $$
                 BEGIN
                     PERFORM pg_notify('recon_inserted', row_to_json(NEW)::text);
                     RETURN NEW;
                 END;
                 $$ LANGUAGE plpgsql;
-            """)
-            
-            self.cursor.execute("""
+                
                 DROP TRIGGER IF EXISTS recon_insert_trigger ON "Recon";
                 CREATE TRIGGER recon_insert_trigger
                 AFTER INSERT ON "Recon"
                 FOR EACH ROW EXECUTE FUNCTION notify_recon_insert();
             """)
-           
-            self.raw_connection.commit()
 
-        except Exception as e:
-            print(e)
-            
-    def sales_insert_listener(self):
-        try:
-            self.cursor.execute("""
+            cursor.execute("""
                 CREATE OR REPLACE FUNCTION notify_sudden_sales_drop() RETURNS TRIGGER AS $$
                 DECLARE
                     prev_quantity INTEGER;
@@ -64,91 +82,132 @@ class Monitor:
                             'alert_status', 'ALERT: Sudden Drop in Sales'
                         )::text);
                     END IF;
-
                     RETURN NEW;
                 END;
                 $$ LANGUAGE plpgsql;
-            """)
-            
-            self.cursor.execute("""
+                
                 DROP TRIGGER IF EXISTS sales_drop_trigger ON public.sales;
                 CREATE TRIGGER sales_drop_trigger
                 AFTER INSERT ON public.sales
-                FOR EACH ROW
-                EXECUTE FUNCTION notify_sudden_sales_drop();
+                FOR EACH ROW EXECUTE FUNCTION notify_sudden_sales_drop();
             """)
-            
-            self.raw_connection.commit()
-            
+            conn.commit()
         except Exception as e:
-            print(e)
-            
-    def retailer_visit_listener(self):
-        pass
-        
+            print(f"Error setting up triggers: {e}")
+            conn.rollback()
+
     def daily_event_triggers(self):
-        try: 
+        try:
             event_name = "daily_event_triggers"
             event_data = ""
-            print(f"Running daily triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
+            current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+            print(f"Executing daily triggers at {current_time}")
             self.alert_system.alert_pipeline(event_name, event_data)
         except Exception as e:
-            print(f"Error In Daily Triggers : {e}")
-            
+            print(f"Error in daily triggers: {e}")
+
     def monthly_event_triggers(self):
-        try: 
+        try:
             event_name = "monthly_event_triggers"
             event_data = ""
-            print(f"Running monthly triggers at {time.strftime('%Y-%m-%d %H:%M:%S')}")
+            current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+            print(f"Executing monthly triggers at {current_time}")
             self.alert_system.alert_pipeline(event_name, event_data)
         except Exception as e:
-            print(f"Error In Monthly Triggers : {e}")
-                
-    def start_listening(self):
-        try: 
-            self.cursor.execute("LISTEN recon_inserted;")
-            self.cursor.execute("LISTEN sudden_sales_drop;")
-            
-            print("Listening for notifications...")
-             
-            while True: 
-                if select.select([self.raw_connection], [], [], 10) == ([], [], []):
+            print(f"Error in monthly triggers: {e}")
+
+    def listen_database(self):
+        conn = self.setup_connection()
+        if not conn:
+            return
+
+        try:
+            cursor = conn.cursor()
+            self.setup_triggers(conn, cursor)
+            cursor.execute("LISTEN recon_inserted; LISTEN sudden_sales_drop;")
+            print("Listening for database notifications...")
+
+            while self.running:
+                if select.select([conn], [], [], 5) == ([], [], []):
                     continue
                 
-                self.raw_connection.poll()
-                while self.raw_connection.notifies:
-                    notify = self.raw_connection.notifies.pop(0)
+                conn.poll()
+                while conn.notifies:
+                    notify = conn.notifies.pop(0)
                     print(f"Received notification on channel '{notify.channel}': {notify.payload}")
                     self.alert_system.alert_pipeline(notify.channel, notify.payload)
-        
-        except Exception as e:
-            print(f"Error while listening for triggers: {e}")
-            
-    def listen_triggers(self):
-        try: 
-            # daily / monthly triggers
-            print("Setting up daily / monthly triggers...")
-            schedule.every().day.at("17:57").do(self.daily_event_triggers)
-            schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
-             
-            self.setup_connection()
-            listener_thread = threading.Thread(target=self.start_listening)
-            listener_thread.start()
-         
-            self.recon_insert_listener()
-            self.sales_insert_listener()
-            self.retailer_visit_listener()
+                
+                time.sleep(0.1)
 
-            # Keep checking the schedule
-            while True:
-                schedule.run_pending()
-                time.sleep(60)
-            
         except Exception as e:
-            print(e)
+            print(f"Error in database listener: {e}")
         finally:
-            if self.cursor:
-                self.cursor.close()
-            if self.raw_connection:
-                self.raw_connection.close()
-       
+            if 'cursor' in locals():
+                cursor.close()
+            if conn:
+                self.db_pool.putconn(conn)
+
+    def run_scheduler(self):
+        if not self.running:
+            return
+            
+        # Clear any existing jobs to prevent duplicates
+        schedule.clear()
+        
+        # Schedule jobs
+        schedule.every().day.at("19:48").do(self.daily_event_triggers)
+        schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
+        
+        print("Scheduler started for daily/monthly triggers...")
+        print(f"Next daily run scheduled for: {schedule.next_run()}")
+
+        while self.running:
+            try:
+                # Print current time and next scheduled run for debugging
+                current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+                next_run = schedule.next_run()
+                print(f"Current time: {current_time}, Next run: {next_run}")
+                
+                schedule.run_pending()
+                time.sleep(1)
+            except Exception as e:
+                print(f"Error in scheduler: {e}")
+                time.sleep(5)
+
+    def listen_triggers(self):
+        if self.running:
+            print("Monitor already running")
+            return
+
+        self.running = True
+
+        self.db_thread = threading.Thread(target=self.listen_database, name="DBListener")
+        self.db_thread.daemon = True
+        self.db_thread.start()
+
+        self.scheduler_thread = threading.Thread(target=self.run_scheduler, name="Scheduler")
+        self.scheduler_thread.daemon = True
+        self.scheduler_thread.start()
+
+        try:
+            while self.running and (self.db_thread.is_alive() or self.scheduler_thread.is_alive()):
+                time.sleep(1)
+        except KeyboardInterrupt:
+            self.stop()
+
+    def stop(self):
+        """Clean shutdown of monitor"""
+        self.running = False
+        schedule.clear()  # Clear scheduled jobs
+        if self.db_pool:
+            self.db_pool.closeall()
+        print("Monitor stopped")
+
+if __name__ == "__main__":
+    monitor = Monitor()
+    monitor.listen_triggers()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        monitor.stop()
