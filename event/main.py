@@ -128,7 +128,7 @@ class Monitor:
         try: 
             # daily / monthly triggers
             print("Setting up daily / monthly triggers...")
-            schedule.every().day.at("15:33").do(self.daily_event_triggers)
+            schedule.every().day.at("17:57").do(self.daily_event_triggers)
             schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
              
             self.setup_connection()
@@ -151,7 +151,4 @@ class Monitor:
                 self.cursor.close()
             if self.raw_connection:
                 self.raw_connection.close()
-                
-        
-monitor = Monitor()
-monitor.listen_triggers()
+       

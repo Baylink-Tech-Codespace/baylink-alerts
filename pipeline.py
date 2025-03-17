@@ -82,11 +82,16 @@ class AlertSystem:
                     alerts.append(condition(event_data))
                     
         alerts = self.group_alerts_by_recipient(alerts)
+        
+        with open("alerts.json", "w") as f:
+            json.dump(alerts, f)
+            
+        return
                     
         for alert in alerts:
             recepient = alert["recepient"]
-            #person_name = alert["person_name"]
-            #role = alert["role"] 
+            person_name = alert["person_name"]
+            role = alert["role"] 
             message = alert["message"] 
             
             self.send_log_to_db(message, {
@@ -94,6 +99,6 @@ class AlertSystem:
                 "role": role
             })
             
-            send_alert(messages, "7007555103") # recepient
+            #send_alert(messages, "7007555103") # recepient
                 
 alert_system = AlertSystem() 

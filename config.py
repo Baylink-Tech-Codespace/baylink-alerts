@@ -39,7 +39,7 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
         "start_date": start_date,
         "end_date": end_date,
         "payment_status": "pending",
-        "customer_id": retailer_id
+        "customer_id": "39c3cb4a-90e0-4539-ac9c-9be8f08c29a7"
     }
 
     response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
@@ -71,8 +71,8 @@ def check_all_retailers_pending_bills():
         field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
 
         pending_transactions = fetch_retailer_transactions(retailer._id, start_date, end_date)
-
-        if len(pending_transactions) > 0:
+        
+        if len(pending_transactions) > 2: 
             recipient = field_exec.Contact_Number
             retailer_name = retailer.name
 
