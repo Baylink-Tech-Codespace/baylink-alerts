@@ -3,7 +3,7 @@ import time
 import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO 
-from event.main import monitor
+from event.main import Monitor
 import os 
 import dotenv 
 
@@ -23,8 +23,9 @@ db_config = {
 }
 
 def process_alerts():
+    monitor = Monitor() 
     monitor.listen_triggers() 
-    
+
 schedule.every(1).seconds.do(process_alerts)
 
 def run_scheduler():
