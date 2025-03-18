@@ -6287,3 +6287,11 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 08:58:46,364 -  * Restarting with watchdog (fsevents)
 2025-03-18 08:58:51,505 -  * Debugger is active!
 2025-03-18 08:58:51,514 -  * Debugger PIN: 533-908-980
+2025-03-18 09:31:10,963 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-18 09:31:10,964 - [33mPress CTRL+C to quit[0m
+2025-03-18 09:31:10,964 -  * Restarting with watchdog (fsevents)
+2025-03-18 09:31:15,909 -  * Debugger is active!
+2025-03-18 09:31:15,923 -  * Debugger PIN: 533-908-980
