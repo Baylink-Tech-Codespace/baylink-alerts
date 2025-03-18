@@ -50,7 +50,6 @@ class AlertSystem:
     def send_log_to_db(self, messages: List[str], data: Dict[str, Any]):
         try: 
             for message in messages:
-                
                 log_entry = BaylinkAlertLogs(
                     message=message, 
                     person_name=data['person_name'],
@@ -59,7 +58,7 @@ class AlertSystem:
                 )
                 self.session.add(log_entry)
                 self.session.commit()
-                
+            
                 send_alert(message,"7007555103" ) # data['recepient'])
                 print(f"Alert logged to DB")
         except Exception as e:
@@ -70,7 +69,6 @@ class AlertSystem:
         
     def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]): 
         try:
-            '''
             alerts = []
             if event_name in event_config.keys():  
                 conditions = event_config[event_name]
@@ -91,34 +89,6 @@ class AlertSystem:
                         alerts.append(condition(event_data))
                         
             alerts = self.group_alerts_by_recipient(alerts)
-            
-            with open("alerts.json", "w") as f:
-                json.dump(alerts, f, indent=4)
-            '''
-                
-            alerts = [
-                    {
-                        "recipient": "8285027775",
-                        "messages": [
-                            "Stock of Jamun Masala- Discounted is expiring soon. Please take necessary action.",
-                            "Stock of Original Lemon Masala Juice is expiring soon. Please take necessary action.",
-                            "BeatPlan not assigned to Rohit, Raunak, Anish Kumar, Naina, Prakash Jha, Aneesh Singh, Anurag Tiwari, Asmit Agarwal, Manoj, Siddharth, Deepak, Sandeep singh, Sudhanshu Dixit, Aneesh Singh, Pranav, Goldy, Anil Kumar , Akash yadav, Aman, Sakshat, Sakina Khan, Arpit, Mukesh for today."
-                        ],
-                        "person_name": "Deepak",
-                        "role": "ASM"
-                    },
-                    {
-                        "recipient": "8447686869",
-                        "messages": [
-                            "Stock of LZB Product is expiring soon. Please take necessary action.",
-                            "Stock of Jamun Masala- Discounted is expiring soon. Please take necessary action.",
-                            "Stock of Original Lemon Masala Juice is expiring soon. Please take necessary action.",
-                            "BeatPlan not assigned to Vinay Singh for today."
-                        ],
-                        "person_name": "Siddharth Prakash",
-                        "role": "ASM"
-                    }
-                ]
                         
             for alert in alerts:
               recipient = alert['recipient']
