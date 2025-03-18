@@ -6332,3 +6332,9 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 16:27:35,727 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10c1f5ca0>: Failed to establish a new connection: [Errno 61] Connection refused'))
 2025-03-18 16:27:36,692 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10c1f47a0>: Failed to establish a new connection: [Errno 61] Connection refused'))
 2025-03-18 16:27:37,616 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10c1f6270>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 17:51:34,621 - Failed to send alert to 7007555103: None
+2025-03-18 17:51:37,144 - Failed to send alert to 7007555103: None
+2025-03-18 17:51:39,979 - Failed to send alert to 7007555103: None
+2025-03-18 17:51:41,978 - Failed to send alert to 7007555103: None
+2025-03-18 17:51:47,146 - Failed to send alert to 7007555103: None
+2025-03-18 17:51:48,980 - Failed to send alert to 7007555103: None
