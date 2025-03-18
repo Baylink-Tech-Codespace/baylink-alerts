@@ -59,7 +59,7 @@ class AlertSystem:
                 self.session.add(log_entry)
                 self.session.commit()
             
-                send_alert(message,"7007555103" ) # data['recepient'])
+                send_alert(message, data['recepient'])
                 print(f"Alert logged to DB")
         except Exception as e:
             self.session.rollback()
@@ -68,7 +68,7 @@ class AlertSystem:
             self.session.close()
         
     def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]): 
-        try:
+        try: 
             alerts = []
             if event_name in event_config.keys():  
                 conditions = event_config[event_name]
@@ -89,7 +89,7 @@ class AlertSystem:
                         alerts.append(condition(event_data))
                         
             alerts = self.group_alerts_by_recipient(alerts)
-                        
+           
             for alert in alerts:
               recipient = alert['recipient']
               messages = alert['messages']
