@@ -6295,3 +6295,32 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 09:31:10,964 -  * Restarting with watchdog (fsevents)
 2025-03-18 09:31:15,909 -  * Debugger is active!
 2025-03-18 09:31:15,923 -  * Debugger PIN: 533-908-980
+2025-03-18 15:50:31,565 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-18 15:50:31,566 - [33mPress CTRL+C to quit[0m
+2025-03-18 15:50:31,566 -  * Restarting with watchdog (fsevents)
+2025-03-18 15:50:36,724 -  * Debugger is active!
+2025-03-18 15:50:36,734 -  * Debugger PIN: 533-908-980
+2025-03-18 15:51:14,494 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-18 15:51:14,494 - [33mPress CTRL+C to quit[0m
+2025-03-18 15:51:14,495 -  * Restarting with watchdog (fsevents)
+2025-03-18 15:51:22,288 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-18 15:51:22,288 - [33mPress CTRL+C to quit[0m
+2025-03-18 15:51:22,288 -  * Restarting with watchdog (fsevents)
+2025-03-18 15:51:27,588 -  * Debugger is active!
+2025-03-18 15:51:27,596 -  * Debugger PIN: 533-908-980
+2025-03-18 16:23:18,078 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10380bcb0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 16:23:18,080 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1038480e0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 16:23:18,081 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103848680>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 16:23:18,082 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103848d70>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 16:23:18,083 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10380bfe0>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 16:23:18,084 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x103848d40>: Failed to establish a new connection: [Errno 61] Connection refused'))
+2025-03-18 16:23:18,084 - Error sending alert to 7007555103: HTTPConnectionPool(host='localhost', port=8080): Max retries exceeded with url: /send-message (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1038485c0>: Failed to establish a new connection: [Errno 61] Connection refused'))
