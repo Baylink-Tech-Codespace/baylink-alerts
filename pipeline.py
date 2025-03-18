@@ -64,43 +64,47 @@ class AlertSystem:
             self.session.close()
         
     def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]): 
-        alerts = []
-        if event_name in event_config.keys():  
-            conditions = event_config[event_name]
-            
-            if event_name == "recon_inserted":
-                recon_id = json.loads(event_data)["_id"]
-                for condition in conditions: 
-                    alerts.append(condition(recon_id))
-                    
-            elif event_name == "sudden_sales_drop":
-                event_data_json = json.loads(event_data)
+        try:
+            alerts = []
+            if event_name in event_config.keys():  
+                conditions = event_config[event_name]
                 
-                for condition in conditions: 
-                    alerts.append(condition(event_data_json))
+                if event_name == "recon_inserted":
+                    recon_id = json.loads(event_data)["_id"]
+                    for condition in conditions: 
+                        alerts.append(condition(recon_id))
+                        
+                elif event_name == "sudden_sales_drop":
+                    event_data_json = json.loads(event_data)
+                    
+                    for condition in conditions: 
+                        alerts.append(condition(event_data_json))
 
-            elif event_name in ["daily_event_triggers" , "monthly_event_triggers"]:
-                for condition in conditions:   
-                    alerts.append(condition(event_data))
-                    
-        alerts = self.group_alerts_by_recipient(alerts)
-        
-        with open("alerts.json", "w") as f:
-            json.dump(alerts, f)
+                elif event_name in ["daily_event_triggers" , "monthly_event_triggers"]:
+                    for condition in conditions:   
+                        alerts.append(condition(event_data))
+                        
+            alerts = self.group_alerts_by_recipient(alerts)
             
-        return
-                    
-        for alert in alerts:
-            recepient = alert["recepient"]
-            person_name = alert["person_name"]
-            role = alert["role"] 
-            message = alert["message"] 
-            
-            self.send_log_to_db(message, {
-                "person_name": person_name,
-                "role": role
-            })
-            
-            #send_alert(messages, "7007555103") # recepient
+            with open("alerts.json", "w") as f:
+                json.dump(alerts, f)
                 
+            return
+                        
+            for alert in alerts:
+                recepient = alert["recepient"]
+                person_name = alert["person_name"]
+                role = alert["role"] 
+                message = alert["message"] 
+                
+                self.send_log_to_db(message, {
+                    "person_name": person_name,
+                    "role": role
+                })
+                
+                #send_alert(messages, "7007555103") # recepient
+        
+        except Exception as e:
+            print(f"Alert Pipeline Failed: {e}")    
+            
 alert_system = AlertSystem() 
