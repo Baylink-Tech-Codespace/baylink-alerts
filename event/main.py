@@ -82,7 +82,34 @@ class Monitor:
             
         except Exception as e:
             print(e)
-            
+
+    def retailer_visit_insert_listener(self):
+        try:
+            self.cursor.execute("""
+                CREATE OR REPLACE FUNCTION notify_retailer_visit_complete() RETURNS TRIGGER AS $$
+                BEGIN
+                    IF NEW.visit_start IS NOT NULL 
+                    AND NEW.visit_end IS NOT NULL 
+                    AND (NEW.visit_start AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Kolkata')::DATE = CURRENT_DATE
+                    AND (NEW.visit_end AT TIME ZONE 'UTC' AT TIME ZONE 'Asia/Kolkata')::DATE = CURRENT_DATE THEN
+                        PERFORM pg_notify('retailer_visit_completed', row_to_json(NEW)::text);
+                    END IF;
+                    RETURN NEW;
+                END;
+                $$ LANGUAGE plpgsql;
+            """)
+
+            self.cursor.execute("""
+                DROP TRIGGER IF EXISTS retailer_visit_trigger ON "RetailerVisitedLog";
+                CREATE TRIGGER retailer_visit_trigger
+                AFTER INSERT ON "RetailerVisitedLog"
+                FOR EACH ROW EXECUTE FUNCTION notify_retailer_visit_complete();
+            """)
+
+            self.raw_connection.commit()
+
+        except Exception as e:
+            print(e)  
         
     def event_triggers(self,event_name):
         try: 
@@ -124,7 +151,6 @@ class Monitor:
          
             self.recon_insert_listener()
             self.sales_insert_listener()
-            self.retailer_visit_listener()
 
             # Keep checking the schedule
             while True:

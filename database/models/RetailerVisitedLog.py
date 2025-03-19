@@ -14,6 +14,8 @@ class RetailerVisitedLog(Base):
     fe_id = Column(UUID(as_uuid=True), ForeignKey("Field_Exec._id"), nullable=False, comment="Field Executive ID")
     retailer_id = Column(UUID(as_uuid=True), ForeignKey("Retailer._id"), nullable=False, comment="Retailer ID")
     lastVisited = Column(DateTime, nullable=True, comment="Last visit timestamp")
+    visit_start = Column(DateTime, nullable=True, comment="visit start timestamp")
+    visit_end = Column(DateTime, nullable=True, comment="visit end timestamp")
     createdAt = Column(DateTime, nullable=False, server_default=func.now(), comment="Record creation timestamp")
     updatedAt = Column(DateTime, nullable=False, server_default=func.now(), onupdate=func.now(), comment="Last update timestamp")
 
