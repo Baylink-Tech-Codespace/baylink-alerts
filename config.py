@@ -39,7 +39,7 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
         "start_date": start_date,
         "end_date": end_date,
         "payment_status": "pending",
-        "customer_id": retailer_id
+        "customer_id": "39c3cb4a-90e0-4539-ac9c-9be8f08c29a7"
     }
 
     response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
@@ -56,6 +56,8 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
 
 
 # CASE 1 
+from datetime import datetime, timedelta
+
 def check_all_retailers_pending_bills():
     print("Checking for retailers if they have more than two pending bills")
     alerts = []
@@ -71,24 +73,32 @@ def check_all_retailers_pending_bills():
         field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
 
         pending_transactions = fetch_retailer_transactions(retailer._id, start_date, end_date)
-
-        if len(pending_transactions) > 0:
+        
+        if len(pending_transactions) > 2: 
             recipient = field_exec.Contact_Number
             retailer_name = retailer.name
+            person_name = field_exec.Name
+            role = "Field Executive"
 
             if recipient not in alerts_dict:
-                alerts_dict[recipient] = []
+                alerts_dict[recipient] = {
+                    "retailers": [],
+                    "person_name": person_name,
+                    "role": role
+                }
 
-            alerts_dict[recipient].append(retailer_name)
+            alerts_dict[recipient]["retailers"].append(retailer_name)
 
     alerts = []
     
-    for recipient, retailers_list in alerts_dict.items():
-        message = f"Retailers {', '.join(retailers_list)} have more than 2 pending bills."
+    for recipient, data in alerts_dict.items():
+        message = f"Retailers {', '.join(data['retailers'])} have more than 2 pending bills."
 
         alerts.append({
             "recipient": recipient,
-            "message": message
+            "message": message,
+            "person_name": data["person_name"],
+            "role": data["role"]
         })
 
     return alerts
@@ -200,7 +210,9 @@ def detect_sales_drop():
             if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
                 messages.append({
                     "recepient": recepient,
-                    "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}."
+                    "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}.",
+                    "person_name" : asm.name,
+                    "role" : "ASM"
                 })
     
     return messages
@@ -238,7 +250,9 @@ def check_sales_anomaly(data):
     if len(historical_sales) == 0:
         messages.append({
             "recepient": recepient,
-            "message": "No historical sales data available for this product and retailer."
+            "message": "No historical sales data available for this product and retailer.",
+            "person_name" : field_exec.Name,
+            "role" : "Field Executive"
         })
 
     avg_sales = sum(historical_sales) / len(historical_sales)
@@ -251,12 +265,16 @@ def check_sales_anomaly(data):
         deviation = ((current_quantity - avg_sales) / avg_sales) * 100
         messages.append({
             "recepient": recepient,
-            "message": f"Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average."
+            "message": f"Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average.",
+            "person_name" : field_exec.Name,
+            "role" : "Field Executive"
         })  
     else:
         messages.append({
             "recepient": recepient,
-            "message": "Sales are within normal historical range."
+            "message": "Sales are within normal historical range.",
+            "person_name" : field_exec.Name,
+            "role" : "Field Executive"
         })
         
     return messages
@@ -277,93 +295,129 @@ def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
 
 # CASE 8
 def notify_delivery_for_orders():
-    messages = []
-    orders = db.get_session().query(Order).all()
-    credit_notes = db.get_session().query(CreditNote).all()
-    
-    for order in orders:
-        if order.status == "In-Transit":
-            delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
-            if delivery_log and delivery_log.delivery_person:
-                recepient = delivery_log.delivery_person.Contact_Number
-                message = f"Delivery for order {order.order_name} is in transit, please perform the delivery."
-                
-                messages.append({
-                    "recepient": recepient,
-                    "message": message
-                })
-                
-    for credit_note in credit_notes:
-        if credit_note.status == "In-Transit":
-                delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs == order._id).first()
+    try :    
+        print("Checking for delivery for orders...")
+        messages = []
+        orders = db.get_session().query(Order).all()
+        credit_notes = db.get_session().query(CreditNote).all()
+        
+        for order in orders:
+            if order.status == "In-Transit":
+                delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
                 if delivery_log and delivery_log.delivery_person:
                     recepient = delivery_log.delivery_person.Contact_Number
-                    message = f"Delivery for credit note {credit_note.cn_name} is in transit, please perform the delivery."
+                    person_name = delivery_log.delivery_person.Name
+                    message = f"Delivery for order {order.order_name} is in transit, please perform the delivery."
                     
                     messages.append({
                         "recepient": recepient,
-                        "message": message
-                })
+                        "message": message,
+                        "person_name": person_name,
+                        "role": "Delivery Person"
+                    })
                     
-    return messages
+        for credit_note in credit_notes:
+            if credit_note.status == "In-Transit":
+                    delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs == order._id).first()
+                    if delivery_log and delivery_log.delivery_person:
+                        recepient = delivery_log.delivery_person.Contact_Number
+                        person_name = delivery_log.delivery_person.Name 
+                        message = f"Delivery for credit note {credit_note.cn_name} is in transit, please perform the delivery."
+                        
+                        messages.append({
+                            "recepient": recepient,
+                            "message": message,
+                            "person_name": person_name,
+                            "role": "Delivery Person"
+                    })
+                        
+        return messages
+        
+    except Exception as e:
+        print(f"Error in notify_delivery_for_orders: {e}")
+        return []
 
 
 # CASE 9 
 def delivery_not_out_on_expected_date():
-    messages = []
-    orders = db.get_session().query(Order).all()
+    try :
+        print("Checking for delivery not out on expected date...")
+        messages = []
+        orders = db.get_session().query(Order).all()
+        
+        for order in orders:
+            if order.status == "In-Transit" or order.status == "Scheduled":
+                delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
+                if delivery_log and delivery_log.delivery_person:
+                    recepient = delivery_log.delivery_person.Contact_Number
+
+                    if delivery_log:
+                        delivery_date = delivery_log.date_of_delivery
+                        expected_delivery_date = order.expected_delivery_date
+                        
+                        if delivery_date != expected_delivery_date:
+                            messages.append({
+                                "recepient": recepient,
+                                "message": f"Delivery for order {order.order_name} is not out on expected date",
+                                "role" : "Delivery Person",
+                                "person_name" : delivery_log.delivery_person.Name
+                            })
+                        else: 
+                            messages.append({
+                                "recepient": recepient,
+                                "message": f"Delivery for order {order.order_name} is out on expected date",
+                                "role" : "Delivery Person",
+                                "person_name" : delivery_log.delivery_person.Name
+                            })
+                    else:
+                        messages.append({
+                            "recepient": recepient,
+                            "message": f"Delivery for order {order.order_name} is not out on expected date",
+                            "role" : "Delivery Person",
+                            "person_name" : delivery_log.delivery_person.Name
+                        }) 
+                    
+        return messages
     
-    for order in orders:
-        if order.status == "In-Transit" or order.status == "Scheduled":
-            delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
-            if delivery_log:
-                delivery_date = delivery_log.date_of_delivery
-                expected_delivery_date = order.expected_delivery_date
-                
-                if delivery_date != expected_delivery_date:
-                    messages.append({
-                        "recepient": "ASM number here from order . retailer",
-                        "message": f"Delivery for order {order.order_name} is not out on expected date"
-                    })
-                else: 
-                    messages.append({
-                        "recepient": "ASM number here from order . retailer",
-                        "message": f"Delivery for order {order.order_name} is out on expected date"
-                    })
-            else:
-                messages.append({
-                    "recepient": "ASM number here from order . retailer",
-                    "message": f"Delivery for order {order.order_name} is not out on expected date"
-                }) 
-                
-    return messages
+    except Exception as e:
+        print(f"Error in delivery_not_out_on_expected_date: {e}")
+        return []
 
 
 # CASE 13 
 def nearly_expiring_stocks():
-    messages = []
-    inventories = db.get_session().query(Inventory).all()
-    
-    for inventory in inventories:
-        retailer = inventory.retailer
-        asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
-        stock_lists = inventory.stock_lists
+    try:
+        print("Checking for nearly expiring stocks...")
+        messages = []
+        inventories = db.get_session().query(Inventory).all()
         
-        for stock in stock_lists:
-            product = stock.product
-            batch_codes = product.batch_codes
-            batch_codes.sort(key=lambda x: x.expiry_date)
+        for inventory in inventories:
+            retailer = inventory.retailer
+            asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
+            person_name = asm.name
+            stock_lists = inventory.stock_lists
             
-            for batch_code in batch_codes:
-                expiry_date = batch_code.expiry_date
+            for stock in stock_lists:
+                product = stock.product
+                batch_codes = product.batch_codes
+                batch_codes.sort(key=lambda x: x.expiry_date)
                 
-                if expiry_date.replace(tzinfo=None) <= datetime.now() + timedelta(days=30):
-                    messages.append({
-                        "recepient": asm.Contact_Number,
-                        "message": f"Stock of {product.name} is expiring soon. Please take necessary action."
-                    })
+                for batch_code in batch_codes:
+                    expiry_date = batch_code.expiry_date
                     
-    return messages
+                    if expiry_date.replace(tzinfo=None) <= datetime.now() + timedelta(days=30):
+                        messages.append({
+                            "recepient": asm.Contact_Number,
+                            "message": f"Stock of {product.name} is expiring soon. Please take necessary action.",
+                            "person_name" : person_name,
+                            "role" : "ASM"
+                        })
+                        
+        return messages
+    
+    except Exception as e:
+        print(f"Error in nearly_expiring_stocks: {e}")
+        return []
 
 # CASE 18
 def check_skipped_orders_alert():
@@ -416,42 +470,60 @@ def check_skipped_orders_alert():
     return messages
 
 #CASE 20 
+    from datetime import datetime
+from sqlalchemy import cast, Date
+
 def check_beatplans_for_today():
-    print("Checking whether BeatPlan is assigned to every fe or not")
-    messages = []
+    try:    
+        print("Checking whether BeatPlan is assigned to every FE or not")
+        messages = []
 
-    today = datetime.today().date()
+        today = datetime.today().date()
+        
+        all_fes = db.get_session().query(Field_Exec).all()
+
+        assigned_fes = db.get_session().query(BeatPlan.FE_id).filter(
+            cast(BeatPlan.date, Date) == today 
+        ).distinct().all()
+
+        assigned_fe_ids = {fe.FE_id for fe in assigned_fes}
+
+        missing_fes = [(fe.Name, fe.ASM_id) for fe in all_fes if fe._id not in assigned_fe_ids]
+        
+        grouped_by_recipient = {}
+        
+        for missing_fe in missing_fes:
+            if missing_fe[1] is not None:
+                asm = db.get_session().query(ASM).filter(ASM._id == missing_fe[1]).first()
+                recipient = asm.Contact_Number
+                person_name = asm.name
+                role = "ASM"
+                
+                if recipient not in grouped_by_recipient:
+                    grouped_by_recipient[recipient] = {
+                        "names": [],
+                        "person_name": person_name,
+                        "role": role
+                    }
+                
+                grouped_by_recipient[recipient]["names"].append(missing_fe[0])
+
+        for recipient, details in grouped_by_recipient.items():
+            names_str = ", ".join(details["names"])
+            message = f"BeatPlan not assigned to {names_str} for today."
+            messages.append({
+                "recipient": recipient,
+                "message": message,
+                "person_name": details["person_name"],
+                "role": details["role"]
+            })
+
+        return messages
     
-    all_fes = db.get_session().query(Field_Exec).all()
+    except Exception as e:
+        print(f"Error in check_beatplans_for_today: {e}")
+        return []
 
-    assigned_fes = db.get_session().query(BeatPlan.FE_id).filter(
-        cast(BeatPlan.date, Date) == today 
-    ).distinct().all()
-
-    assigned_fe_ids = {fe.FE_id for fe in assigned_fes}
-
-    missing_fes = [(fe.Name, fe.ASM_id) for fe in all_fes if fe._id not in assigned_fe_ids]
-    
-    grouped_by_recipient = {}
-    
-    for missing_fe in missing_fes:
-        if missing_fe[1] is not None:
-            asm = db.get_session().query(ASM).filter(ASM._id == missing_fe[1]).first()
-            recipient = asm.Contact_Number
-            
-            if recipient not in grouped_by_recipient:
-                grouped_by_recipient[recipient] = []
-            grouped_by_recipient[recipient].append(missing_fe[0])
-
-    for recipient, names in grouped_by_recipient.items():
-        names_str = ", ".join(names)
-        message = f"BeatPlan not assigned to {names_str} for today."
-        messages.append({
-            "recipient": recipient,
-            "message": message
-        })
-
-    return messages
 
 # CASE 23
 def check_retailer_visits_for_month():
@@ -465,6 +537,7 @@ def check_retailer_visits_for_month():
         RetailerVisitedLog.fe_id,
         Retailer.name.label("retailer_name"),
         Field_Exec.Name.label("fe_name"),
+        ASM.name,
         ASM.Contact_Number.label("asm_phone_number"),
         func.count(RetailerVisitedLog._id).label("visit_count")
     ).join(
@@ -490,6 +563,7 @@ def check_retailer_visits_for_month():
     
     for visit in low_visit_retailers:
         recipient = visit.asm_phone_number
+        person_name = visit.name
         retailer_info = f"{visit.retailer_name} (FE: {visit.fe_name})"
 
         if recipient not in grouped_by_recipient:
@@ -614,87 +688,107 @@ def check_consistently_missed_retailers():
 
 # CASE 14 
 def expiring_products():
+    try:
+        print("Checking for expiring products...")    
+        messages = [] 
+        inventory_stocks = db.get_session().query(InventoryStockList).all()
         
-    messages = [] 
-    inventory_stocks = db.get_session().query(InventoryStockList).all()
-    
-    for stock in inventory_stocks:
-        if stock.inventory and stock.product:
-            retailer = stock.inventory.retailer
-            product = stock.product
-            
-            if retailer:    
-                sorted_batches = sorted(stock.product.batch_codes, key=lambda batch: batch.expiry_date)
-                
-                for batch in sorted_batches:
-                    expiry_date = batch.expiry_date
-                    days_left = (expiry_date.replace(tzinfo=None) - datetime.now()).days
+        for stock in inventory_stocks:
+            if stock.inventory and stock.product:
+                retailer = stock.inventory.retailer
+                person_name = retailer.asm.name
+                product = stock.product
+                            
+                if retailer:    
+                    sorted_batches = sorted(stock.product.batch_codes, key=lambda batch: batch.expiry_date)
                     
-                    if days_left > 0 and days_left <= 30: 
-                        messages.append({
-                            "recepient" : retailer.asm.Contact_Number,
-                            "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
-                        })        
+                    for batch in sorted_batches:
+                        expiry_date = batch.expiry_date
+                        days_left = (expiry_date.replace(tzinfo=None) - datetime.now()).days
                         
-    return messages
+                        if days_left > 0 and days_left <= 30: 
+                            messages.append({
+                                "recepient" : retailer.asm.Contact_Number,
+                                "person_name" : person_name,
+                                "role" : "ASM",
+                                "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
+                            })        
+                            
+        return messages
+    except Exception as e:
+        print(f"Error in expiring products: {e}")
 
 # CASE 15 
+from datetime import datetime, timedelta, timezone
+from collections import defaultdict
+
 def unsold_products():
-    print("Checking for unsold products ... ")
+    try:
+        print("Checking for unsold products ... ")
 
-    messages = defaultdict(list)
-    
-    threshold_days = 60
-    current_date = datetime.now(timezone.utc)
-    threshold_date = current_date - timedelta(days=threshold_days)
-    
-    sales = db.get_session().query(Sales).all()
+        messages = defaultdict(lambda: {"products": [], "person_name": "", "role": "Field Executive"})
+        
+        threshold_days = 120
+        current_date = datetime.now(timezone.utc)
+        threshold_date = current_date - timedelta(days=threshold_days)
+        
+        sales = db.get_session().query(Sales).all()
 
-    for sale in sales:
-        if sale.retailer and sale.retailer.fe:
-            last_sale_date = sale.date if sale.date else sale.product.createdAt
+        for sale in sales:
+            if sale.retailer and sale.retailer.fe:
+                last_sale_date = sale.date if sale.date else sale.product.createdAt
 
-            if last_sale_date.tzinfo is None:
-                last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
+                if last_sale_date.tzinfo is None:
+                    last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
+                    
+                print("last_sale_date"  , last_sale_date , "threshold_date" , threshold_date)
 
-            if last_sale_date <= threshold_date:
-                recepient = sale.retailer.fe.Contact_Number
-                product_info = (f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}")
-                messages[recepient].append(product_info)
+                if last_sale_date <= threshold_date:
+                    recipient = sale.retailer.fe.Contact_Number
+                    person_name = sale.retailer.fe.Name
+                    product_info = f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}"
 
-    if messages:
-        for recepient, product_list in messages.items():
-            print(f"Notifications for {recepient}:")
-            for product in product_list:
-                print(f"- {product}")
+                    messages[recipient]["products"].append(product_info)
+                    messages[recipient]["person_name"] = person_name
 
-    return [{
-        "recepient": recepient,
-        "message": "\n".join(product_list)
-    } for recepient, product_list in messages.items()]
-
+        return [{
+            "recipient": recipient,
+            "message": "\n".join(data["products"]),
+            "person_name": data["person_name"],
+            "role": data["role"]
+        } for recipient, data in messages.items()]
+        
+    except Exception as e:
+        print(f"Error in unsold products: {e}")
 
 event_config = {
     "recon_inserted" : [
-        lambda recon_id : compare_quantity_inventory_recon(recon_id),
-        lambda recon_id : is_retailer_shelf_image_event(recon_id)
+        lambda recon_id : compare_quantity_inventory_recon(recon_id), ## 
+        lambda recon_id : is_retailer_shelf_image_event(recon_id) ## 
     ],
     "sudden_sales_drop" : [
-        lambda x : detect_sales_drop(),
-        lambda x : check_sales_anomaly(x)
+        lambda x : detect_sales_drop(), ## 
+        lambda x : check_sales_anomaly(x) ## 
     ],
     "low_retailer_visits" : [
         lambda x : check_retailer_visits_for_month(),    
     ],
     "daily_event_triggers" : [
-        lambda x : notify_delivery_for_orders(),
-        lambda x : delivery_not_out_on_expected_date(),
-        lambda x : nearly_expiring_stocks(),
+        lambda x : notify_delivery_for_orders(), ## 
+        lambda x : delivery_not_out_on_expected_date(), ## 
+        lambda x : nearly_expiring_stocks(), ## 
         lambda x : check_beatplans_for_today(),
-        lambda x : expiring_products(),
+        lambda x : expiring_products(), ## 
     ],
     "monthly_event_triggers" : [
-        lambda x : check_all_retailers_pending_bills(),
-        lambda x : unsold_products(),
+        lambda x : check_all_retailers_pending_bills(), ## 
+        lambda x : unsold_products(), ##
     ]
 }
+
+res = unsold_products()
+
+import json
+
+with open("output.json", "w") as f:
+    json.dump(res, f, indent=4)

@@ -17,7 +17,7 @@ class DB:
         if not all([user, password, host, database]):
             raise ValueError("Database credentials are missing in the .env file.")
 
-        self.db_url = f"postgresql://{user}:{password}@{host}:{port}/{database}"
+        self.db_url = f"postgresql://{user}:{password}@{host}:{port}/{database}?sslmode=disable"
         self.engine = create_engine(self.db_url, echo=False)
         self.SessionLocal = scoped_session(sessionmaker(bind=self.engine, autoflush=False, autocommit=False))
 

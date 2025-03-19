@@ -10,7 +10,7 @@ class BaylinkAlertLogs(Base):
     timestamp = Column(DateTime, default=datetime.now, nullable=False)
     person_name = Column(String(255), nullable=False) 
     role = Column(String(255), nullable=False) 
+    recepient = Column(String(255), nullable=False)
 
     def __repr__(self):
-        return (f"<BaylinkAlertLogs(id={self._id}, retailer_id='{self.retailer_id}', "
-                f"timestamp={self.timestamp})>")
+        return (f"BaylinkAlertLogs(message={self.message}, timestamp={self.timestamp}, person_name={self.person_name}, role={self.role}, recepient={self.recepient})")
