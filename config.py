@@ -56,6 +56,8 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
 
 
 # CASE 1 
+from datetime import datetime, timedelta
+
 def check_all_retailers_pending_bills():
     print("Checking for retailers if they have more than two pending bills")
     alerts = []
@@ -75,20 +77,28 @@ def check_all_retailers_pending_bills():
         if len(pending_transactions) > 2: 
             recipient = field_exec.Contact_Number
             retailer_name = retailer.name
+            person_name = field_exec.Name
+            role = "Field Executive"
 
             if recipient not in alerts_dict:
-                alerts_dict[recipient] = []
+                alerts_dict[recipient] = {
+                    "retailers": [],
+                    "person_name": person_name,
+                    "role": role
+                }
 
-            alerts_dict[recipient].append(retailer_name)
+            alerts_dict[recipient]["retailers"].append(retailer_name)
 
     alerts = []
     
-    for recipient, retailers_list in alerts_dict.items():
-        message = f"Retailers {', '.join(retailers_list)} have more than 2 pending bills."
+    for recipient, data in alerts_dict.items():
+        message = f"Retailers {', '.join(data['retailers'])} have more than 2 pending bills."
 
         alerts.append({
             "recipient": recipient,
-            "message": message
+            "message": message,
+            "person_name": data["person_name"],
+            "role": data["role"]
         })
 
     return alerts
@@ -709,12 +719,14 @@ def expiring_products():
         print(f"Error in expiring products: {e}")
 
 # CASE 15 
+from datetime import datetime, timedelta, timezone
+from collections import defaultdict
+
 def unsold_products():
     try:
         print("Checking for unsold products ... ")
-        print("Checking for unsold products ... ")
 
-        messages = defaultdict(list)
+        messages = defaultdict(lambda: {"products": [], "person_name": "", "role": "Field Executive"})
         
         threshold_days = 60
         current_date = datetime.now(timezone.utc)
@@ -730,20 +742,25 @@ def unsold_products():
                     last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
 
                 if last_sale_date <= threshold_date:
-                    recepient = sale.retailer.fe.Contact_Number
-                    product_info = (f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}")
-                    messages[recepient].append(product_info)
+                    recipient = sale.retailer.fe.Contact_Number
+                    person_name = sale.retailer.fe.Name
+                    product_info = f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}"
+
+                    messages[recipient]["products"].append(product_info)
+                    messages[recipient]["person_name"] = person_name
 
         if messages:
-            for recepient, product_list in messages.items():
-                print(f"Notifications for {recepient}:")
-                for product in product_list:
+            for recipient, data in messages.items():
+                print(f"Notifications for {recipient} ({data['person_name']}):")
+                for product in data["products"]:
                     print(f"- {product}")
 
         return [{
-            "recepient": recepient,
-            "message": "\n".join(product_list)
-        } for recepient, product_list in messages.items()]
+            "recipient": recipient,
+            "message": "\n".join(data["products"]),
+            "person_name": data["person_name"],
+            "role": data["role"]
+        } for recipient, data in messages.items()]
         
     except Exception as e:
         print(f"Error in unsold products: {e}")
@@ -769,7 +786,9 @@ event_config = {
         lambda x : expiring_products(), ## 
     ],
     "monthly_event_triggers" : [
-        lambda x : check_all_retailers_pending_bills(),
-        lambda x : unsold_products(),
+        lambda x : check_all_retailers_pending_bills(), ## 
+        lambda x : unsold_products(), ##
     ]
 }
+
+print(unsold_products())
