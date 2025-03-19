@@ -5996,3 +5996,43 @@ psycopg2.InterfaceError: connection already closed
  * Running on http://192.168.1.5:4000
 2025-03-15 11:04:20,410 - [33mPress CTRL+C to quit[0m
 2025-03-15 11:04:20,411 -  * Restarting with watchdog (fsevents)
+2025-03-16 11:37:16,371 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.39:4000
+2025-03-16 11:37:16,372 - [33mPress CTRL+C to quit[0m
+2025-03-16 11:37:16,372 -  * Restarting with watchdog (windowsapi)
+2025-03-16 11:37:23,300 -  * Debugger is active!
+2025-03-16 11:37:23,328 -  * Debugger PIN: 156-759-472
+2025-03-19 15:22:36,097 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 15:22:36,098 - [33mPress CTRL+C to quit[0m
+2025-03-19 15:22:36,098 -  * Restarting with watchdog (windowsapi)
+2025-03-19 15:22:42,945 -  * Debugger is active!
+2025-03-19 15:22:42,949 -  * Debugger PIN: 156-759-472
+2025-03-19 16:43:03,274 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 16:43:03,274 - [33mPress CTRL+C to quit[0m
+2025-03-19 16:43:03,275 -  * Restarting with watchdog (windowsapi)
+2025-03-19 16:43:10,612 -  * Debugger is active!
+2025-03-19 16:43:10,615 -  * Debugger PIN: 156-759-472
+2025-03-19 16:46:08,584 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 16:46:08,584 - [33mPress CTRL+C to quit[0m
+2025-03-19 16:46:08,584 -  * Restarting with watchdog (windowsapi)
+2025-03-19 16:46:15,658 -  * Debugger is active!
+2025-03-19 16:46:15,661 -  * Debugger PIN: 156-759-472
+2025-03-19 16:48:59,709 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 16:48:59,709 - [33mPress CTRL+C to quit[0m
+2025-03-19 16:48:59,710 -  * Restarting with watchdog (windowsapi)
+2025-03-19 16:49:06,874 -  * Debugger is active!
+2025-03-19 16:49:06,877 -  * Debugger PIN: 156-759-472
