@@ -728,7 +728,7 @@ def unsold_products():
 
         messages = defaultdict(lambda: {"products": [], "person_name": "", "role": "Field Executive"})
         
-        threshold_days = 60
+        threshold_days = 120
         current_date = datetime.now(timezone.utc)
         threshold_date = current_date - timedelta(days=threshold_days)
         
@@ -740,6 +740,8 @@ def unsold_products():
 
                 if last_sale_date.tzinfo is None:
                     last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
+                    
+                print("last_sale_date"  , last_sale_date , "threshold_date" , threshold_date)
 
                 if last_sale_date <= threshold_date:
                     recipient = sale.retailer.fe.Contact_Number
@@ -748,12 +750,6 @@ def unsold_products():
 
                     messages[recipient]["products"].append(product_info)
                     messages[recipient]["person_name"] = person_name
-
-        if messages:
-            for recipient, data in messages.items():
-                print(f"Notifications for {recipient} ({data['person_name']}):")
-                for product in data["products"]:
-                    print(f"- {product}")
 
         return [{
             "recipient": recipient,
@@ -764,7 +760,6 @@ def unsold_products():
         
     except Exception as e:
         print(f"Error in unsold products: {e}")
-
 
 event_config = {
     "recon_inserted" : [
@@ -791,4 +786,9 @@ event_config = {
     ]
 }
 
-print(unsold_products())
+res = unsold_products()
+
+import json
+
+with open("output.json", "w") as f:
+    json.dump(res, f, indent=4)
