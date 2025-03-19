@@ -3,7 +3,7 @@ import time
 import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO 
-from event.main import monitor
+from event.main import Monitor
 import os 
 import dotenv 
 
@@ -14,17 +14,10 @@ LOG_FILE = "logs/alerts.log"
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-db_config = { 
-    "user" : os.getenv("DB_USERNAME"),
-    "password" : os.getenv("DB_PASSWORD"),
-    "host" : os.getenv("DB_HOST"),
-    "port" : os.getenv("DB_PORT", "5432"),
-    "database" : os.getenv("DB_NAME"), 
-}
-
 def process_alerts():
+    monitor = Monitor() 
     monitor.listen_triggers() 
-    
+
 schedule.every(1).seconds.do(process_alerts)
 
 def run_scheduler():
