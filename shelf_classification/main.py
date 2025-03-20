@@ -17,7 +17,7 @@ class_names = open("/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-a
 data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
 
 # Replace this with the path to your image
-image = Image.open("/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/shelf_classification/image_1742468107525.jpg").convert("RGB")
+image = Image.open("/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/shelf_classification/non2.jpg").convert("RGB")
 
 # resizing the image to be at least 224x224 and then cropping from the center
 size = (224, 224)
