@@ -4,6 +4,8 @@ from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta
+
+from helper.s3 import get_recon_image_from_s3
 from database.models.Brand import Brand
 from database.models.Product import Product
 from database.models.Sales import Sales
@@ -20,12 +22,9 @@ from database.models.Field_Exec import Field_Exec
 from database.models.RetailerVisitedLog import RetailerVisitedLog
 from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
-
 from datetime import datetime, timedelta, timezone
-
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict
-
 from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
 
 #CASE 1
@@ -161,7 +160,9 @@ def is_retailer_shelf_image_event(recon_id):
   
     quantity = sum(item.quantity for item in recon.recon_items)
     image = recon.image[0] if recon.image else ""
- 
+    
+    s3_image_url = get_recon_image_from_s3(image)
+     
     if quantity == 0 and image == "":
         messages.append({
             "recepient": recepient,
@@ -785,10 +786,6 @@ event_config = {
         lambda x : unsold_products(), ##
     ]
 }
-
-res = unsold_products()
-
-import json
-
-with open("output.json", "w") as f:
-    json.dump(res, f, indent=4)
+ 
+    
+print(is_retailer_shelf_image_event(recon_id="000022d1-98d5-42ec-a5f6-20535d7f6113"))
