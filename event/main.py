@@ -164,9 +164,8 @@ class Monitor:
         while self.running:
             try:
                 # Print current time and next scheduled run for debugging
-                current_time = time.strftime('%Y-%m-%d %H:%M:%S')
-                next_run = schedule.next_run()
-                print(f"Current time: {current_time}, Next run: {next_run}")
+                # current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+                # next_run = schedule.next_run()
                 
                 schedule.run_pending()
                 time.sleep(1)

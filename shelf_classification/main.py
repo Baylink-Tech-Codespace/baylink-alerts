@@ -27,7 +27,7 @@ def is_shelf_image(image_url):
         prediction = model.predict(data)
         index = np.argmax(prediction)
         class_name = class_names[index].strip()
-        confidence_score = prediction[0][index]
+        # confidence_score = prediction[0][index]
         
         return class_name == "0 Class 1"
     

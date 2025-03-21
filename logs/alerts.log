@@ -6338,3 +6338,45 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 17:51:41,978 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:47,146 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:48,980 - Failed to send alert to 7007555103: None
+2025-03-21 15:15:24,433 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-21 15:15:24,433 - [33mPress CTRL+C to quit[0m
+2025-03-21 15:15:24,433 -  * Restarting with stat
+2025-03-21 15:15:31,900 -  * Debugger is active!
+2025-03-21 15:15:31,914 -  * Debugger PIN: 898-260-860
+2025-03-21 15:15:38,861 - 127.0.0.1 - - [21/Mar/2025 15:15:38] "GET / HTTP/1.1" 200 -
+2025-03-21 15:15:39,112 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60uY HTTP/1.1" 200 -
+2025-03-21 15:15:39,194 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "POST /socket.io/?EIO=4&transport=polling&t=PMu60vs&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,195 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60vu&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,210 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60w7&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,221 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-03-21 15:15:39,226 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60wM&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,227 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-03-21 15:15:39,333 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-21 15:15:40,024 - 127.0.0.1 - - [21/Mar/2025 15:15:40] "[35m[1mGET /fetch_logs HTTP/1.1[0m" 500 -
+2025-03-21 15:16:18,554 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-21 15:16:18,555 - [33mPress CTRL+C to quit[0m
+2025-03-21 15:16:18,555 -  * Restarting with stat
+2025-03-21 15:16:26,722 -  * Debugger is active!
+2025-03-21 15:16:26,734 -  * Debugger PIN: 898-260-860
+2025-03-21 15:16:26,743 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET / HTTP/1.1" 200 -
+2025-03-21 15:16:26,794 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET /socket.io/?EIO=4&transport=polling&t=PMu6CXb HTTP/1.1" 200 -
+2025-03-21 15:16:26,888 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "POST /socket.io/?EIO=4&transport=polling&t=PMu6CZ3&sid=kpBRDKaXllrHeuc6AAAA HTTP/1.1" 200 -
+2025-03-21 15:16:26,891 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET /socket.io/?EIO=4&transport=polling&t=PMu6CZ5&sid=kpBRDKaXllrHeuc6AAAA HTTP/1.1" 200 -
+2025-03-21 15:16:26,907 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET /socket.io/?EIO=4&transport=polling&t=PMu6CZP&sid=kpBRDKaXllrHeuc6AAAA HTTP/1.1" 200 -
+2025-03-21 15:16:27,987 - 127.0.0.1 - - [21/Mar/2025 15:16:27] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 15:25:30,964 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-21 15:25:31,420 -  * Restarting with stat
+2025-03-21 15:25:39,783 -  * Debugger is active!
+2025-03-21 15:25:39,797 -  * Debugger PIN: 898-260-860
+2025-03-21 15:25:39,804 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu8Hlk HTTP/1.1" 200 -
+2025-03-21 15:25:39,849 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "POST /socket.io/?EIO=4&transport=polling&t=PMu8JYp&sid=MA3AmsdNxkPWJ5jVAAAA HTTP/1.1" 200 -
+2025-03-21 15:25:39,857 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu8JZD&sid=MA3AmsdNxkPWJ5jVAAAA HTTP/1.1" 200 -
+2025-03-21 15:25:39,863 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu8JZL&sid=MA3AmsdNxkPWJ5jVAAAA HTTP/1.1" 200 -
+2025-03-21 15:25:40,812 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-21 15:25:41,233 -  * Restarting with stat

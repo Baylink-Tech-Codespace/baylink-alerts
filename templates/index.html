@@ -72,31 +72,39 @@
             </table>
         </div>
     </div>
-
     <script>
         const socket = io.connect("http://" + document.domain + ":" + location.port);
+        const table = document.getElementById("log-table");
 
-        socket.on("new_log", function (data) {
+        // Fetch all logs initially
+        async function fetchLogs() {
+            try {
+                let response = await fetch('/fetch_logs');
+                let logs = await response.json();
 
-            console.log(data)
-
-            let logMessage = data.message.trim();
-            let match = logMessage.match(/(\d+-\d+-\d+ \d+:\d+:\d+),\d+ - Alert sent to (.+?): Alert: (.+?) - (\{.+\})/);
-
-            if (match) {
-                let [_, timestamp, retailer, alertType, details] = match;
-                let table = document.getElementById("log-table");
-                let row = table.insertRow(0);
-
-                console.log(timestamp, retailer, alertType, details)
-
-                row.insertCell(0).innerText = timestamp;
-                row.insertCell(1).innerText = retailer;
-                row.insertCell(2).innerText = alertType;
-                row.insertCell(3).innerText = details;
+                logs.forEach(log => addLogToTable(log));
+            } catch (error) {
+                console.error("Error fetching logs:", error);
             }
+        }
+
+        // Add a log entry to the table
+        function addLogToTable(log) {
+            let row = table.insertRow(0);
+            row.insertCell(0).innerText = log.timestamp;
+            row.insertCell(1).innerText = log.retailer;
+            row.insertCell(2).innerText = log.alert_type;
+            row.insertCell(3).innerText = log.details;
+        }
+
+        // Listen for real-time logs
+        socket.on("new_log", function (data) {
+            console.log("New log received:", data);
+            addLogToTable(data);
         });
 
+        // Fetch logs on page load
+        fetchLogs();
     </script>
 
 </body>

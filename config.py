@@ -735,8 +735,6 @@ def unsold_products():
                 if last_sale_date.tzinfo is None:
                     last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
                     
-                print("last_sale_date"  , last_sale_date , "threshold_date" , threshold_date)
-
                 if last_sale_date <= threshold_date:
                     recipient = sale.retailer.fe.Contact_Number
                     person_name = sale.retailer.fe.Name
@@ -778,7 +776,4 @@ event_config = {
         lambda x : check_all_retailers_pending_bills(), ## 
         lambda x : unsold_products(), ##
     ]
-}
- 
-    
-print(is_retailer_shelf_image_event(recon_id="000022d1-98d5-42ec-a5f6-20535d7f6113"))
+} 
