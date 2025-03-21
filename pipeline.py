@@ -59,7 +59,7 @@ class AlertSystem:
                 self.session.add(log_entry)
                 self.session.commit()
             
-                send_alert(message, data['recepient'])
+                # send_alert(message, data['recepient'])
                 print(f"Alert logged to DB")
         except Exception as e:
             self.session.rollback()

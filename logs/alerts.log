@@ -6596,3 +6596,35 @@ psycopg2.InterfaceError: connection already closed
 2025-03-21 17:38:20,340 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET /socket.io/?EIO=4&transport=polling&t=PMuch1Z&sid=USUPIKMgwGxWhH-_AAAI HTTP/1.1" 200 -
 2025-03-21 17:38:20,369 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET /socket.io/?EIO=4&transport=polling&t=PMuch26&sid=USUPIKMgwGxWhH-_AAAI HTTP/1.1" 200 -
 2025-03-21 17:38:21,273 - 127.0.0.1 - - [21/Mar/2025 17:38:21] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:40:22,324 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-21 17:40:22,989 -  * Restarting with stat
+2025-03-21 17:40:39,666 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:40:39,666 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:40:39,666 -  * Restarting with stat
+2025-03-21 17:40:48,221 -  * Debugger is active!
+2025-03-21 17:40:48,231 -  * Debugger PIN: 898-260-860
+2025-03-21 17:40:48,239 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "GET /socket.io/?EIO=4&transport=polling&t=PMudD7r HTTP/1.1" 200 -
+2025-03-21 17:40:48,254 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "POST /socket.io/?EIO=4&transport=polling&t=PMudF8w&sid=K6H_dihIyjuTgxINAAAA HTTP/1.1" 200 -
+2025-03-21 17:40:48,257 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "GET /socket.io/?EIO=4&transport=polling&t=PMudF8z&sid=K6H_dihIyjuTgxINAAAA HTTP/1.1" 200 -
+2025-03-21 17:40:48,260 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "GET /socket.io/?EIO=4&transport=polling&t=PMudF93&sid=K6H_dihIyjuTgxINAAAA HTTP/1.1" 200 -
+2025-03-21 17:41:04,164 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:41:04,165 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:41:04,165 -  * Restarting with stat
+2025-03-21 17:41:13,682 -  * Debugger is active!
+2025-03-21 17:41:13,699 -  * Debugger PIN: 898-260-860
+2025-03-21 17:41:13,708 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "GET /socket.io/?EIO=4&transport=polling&t=PMudJfu HTTP/1.1" 200 -
+2025-03-21 17:41:13,713 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "POST /socket.io/?EIO=4&transport=polling&t=PMudLMl&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:41:13,715 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "GET /socket.io/?EIO=4&transport=polling&t=PMudLMm&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:41:13,717 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "GET /socket.io/?EIO=4&transport=polling&t=PMudLMq&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:47:34,983 - 127.0.0.1 - - [21/Mar/2025 17:47:34] "GET /socket.io/?EIO=4&transport=websocket&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:47:35,103 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET / HTTP/1.1" 200 -
+2025-03-21 17:47:35,166 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET /socket.io/?EIO=4&transport=polling&t=PMueoUS HTTP/1.1" 200 -
+2025-03-21 17:47:35,295 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "POST /socket.io/?EIO=4&transport=polling&t=PMueoW2&sid=ypTt4VuG4y3qdmNZAAAC HTTP/1.1" 200 -
+2025-03-21 17:47:35,356 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET /socket.io/?EIO=4&transport=polling&t=PMueoW4&sid=ypTt4VuG4y3qdmNZAAAC HTTP/1.1" 200 -
+2025-03-21 17:47:36,252 - 127.0.0.1 - - [21/Mar/2025 17:47:36] "GET /fetch_logs HTTP/1.1" 200 -
