@@ -1,11 +1,12 @@
-from sqlalchemy import Column, Integer, String, DateTime, JSON 
+from sqlalchemy import Column, UUID, String, DateTime, JSON 
 from datetime import datetime
 from database.db import Base
+import uuid
 
 class BaylinkAlertLogs(Base):
     __tablename__ = 'baylinkalertlogs'
 
-    _id = Column(Integer, primary_key=True, autoincrement=True)
+    _id = Column(UUID, primary_key=True, autoincrement=True,default=uuid.uuid4)
     message = Column(String(255), nullable=False)
     timestamp = Column(DateTime, default=datetime.now, nullable=False)
     person_name = Column(String(255), nullable=False) 

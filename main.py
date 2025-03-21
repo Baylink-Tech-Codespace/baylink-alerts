@@ -8,8 +8,10 @@ from database.db import db
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from sqlalchemy import event
 from flask import jsonify
-
+import psycopg2
+from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 import os 
+from datetime import datetime
 import dotenv 
 
 dotenv.load_dotenv()
@@ -29,7 +31,6 @@ def run_scheduler():
     while True:
         schedule.run_pending()
         time.sleep(1)
-        
 
 @app.route('/fetch_logs', methods=['GET'])
 def fetch_logs():
@@ -51,20 +52,47 @@ def fetch_logs():
     return jsonify(log_data)
 
 def notify_clients(new_log):
+    formatted_timestamp = datetime.fromisoformat(new_log["timestamp"]).strftime("%Y-%m-%d %H:%M:%S")
+
     socketio.emit("new_log", {
-        "timestamp": new_log.timestamp.strftime("%Y-%m-%d %H:%M:%S"),
-        "retailer": new_log.person_name,
-        "alert_type": new_log.role,
-        "details": new_log.message,
-    })
+        "timestamp":formatted_timestamp,
+        "retailer": new_log["person_name"],
+        "alert_type": new_log["role"],
+        "details": new_log["message"],
+    }) 
+
     
+def listen_to_db():
+    """Listen for new log inserts in PostgreSQL and notify clients."""
+    conn = psycopg2.connect(
+        user=os.getenv("DB_USERNAME"),
+        password=os.getenv("DB_PASSWORD"),
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT", "5432"),
+        database=os.getenv("DB_NAME"),
+    )
+    conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
+    cursor = conn.cursor()
+    cursor.execute("LISTEN new_log_channel;")
+
+    print("🔄 Listening for new logs...")
+    while True:
+        conn.poll()
+        while conn.notifies:
+            notify = conn.notifies.pop(0)
+            
+            print(notify.payload , notify.channel)
+            new_log = eval(notify.payload)  
+            notify_clients(new_log)   
+    
+
+'''
 @event.listens_for(BaylinkAlertLogs, "after_insert")
 def after_insert_listener(mapper, connection, target):
     """Trigger when a new log is inserted into the DB."""
     time.sleep(0.2)  
     notify_clients(target) 
-
-'''
+    
 def tail_log():
     print(f"Attempting to read from log file: {LOG_FILE}")  
     if not os.path.exists(LOG_FILE):
@@ -91,6 +119,7 @@ if __name__ == "__main__":
     print("🚀 Alert System & Dashboard Running...")
 
     threading.Thread(target=run_scheduler, daemon=True).start()
+    threading.Thread(target=listen_to_db, daemon=True).start()
     # threading.Thread(target=tail_log, daemon=True).start()
     print(f"Open URL : http://localhost:{4000} to access the dashboard.")
     socketio.run(app, host="0.0.0.0", port=4000, debug=True)
