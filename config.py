@@ -3,7 +3,8 @@ import requests
 from database.db import db
 from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from collections import defaultdict
 
 from helper.s3 import get_recon_image_from_s3
 from database.models.Brand import Brand
@@ -22,9 +23,9 @@ from database.models.Field_Exec import Field_Exec
 from database.models.RetailerVisitedLog import RetailerVisitedLog
 from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
-from datetime import datetime, timedelta, timezone
-from datetime import datetime, timedelta, timezone
-from collections import defaultdict
+
+from shelf_classification.main import is_shelf_image
+
 from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
 
 #CASE 1
@@ -50,7 +51,6 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
             return []
         return data["data"]["transactions"]
     else:
-        print(f"Failed to fetch transactions for retailer {retailer_id}: {data.get("message", "No message found")}")
         return []
 
 
@@ -162,6 +162,7 @@ def is_retailer_shelf_image_event(recon_id):
     image = recon.image[0] if recon.image else ""
     
     s3_image_url = get_recon_image_from_s3(image)
+    shelf_image = is_shelf_image(s3_image_url)
      
     if quantity == 0 and image == "":
         messages.append({
@@ -175,11 +176,10 @@ def is_retailer_shelf_image_event(recon_id):
             "message": "No image provided for the recon."
         })
         
-    if quantity == 0 and image != "":
-        #response = llm.process_image_and_prompt(image)
-        #return response
+    if quantity == 0 and image != "" and shelf_image == False: 
         messages.append({
-            "message": "response"
+            "message": "Shelf Image not provided for the recon.",
+            "recepient": recepient,
         })
         
     context = {
