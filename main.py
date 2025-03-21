@@ -124,3 +124,23 @@ if __name__ == "__main__":
     print(f"Open URL : http://localhost:{4000} to access the dashboard.")
     socketio.run(app, host="0.0.0.0", port=4000, debug=True)
     
+
+
+'''
+CREATE OR REPLACE FUNCTION notify_new_log() RETURNS TRIGGER AS $$
+DECLARE
+    new_log_data JSON;
+BEGIN
+    new_log_data := json_build_object(
+        'timestamp', NEW.timestamp,
+        'person_name', NEW.person_name,
+        'role', NEW.role,
+        'message', NEW.message
+    );
+
+    PERFORM pg_notify('new_log_channel', new_log_data::text);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+'''

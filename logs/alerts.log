@@ -6628,3 +6628,19 @@ psycopg2.InterfaceError: connection already closed
 2025-03-21 17:47:35,295 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "POST /socket.io/?EIO=4&transport=polling&t=PMueoW2&sid=ypTt4VuG4y3qdmNZAAAC HTTP/1.1" 200 -
 2025-03-21 17:47:35,356 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET /socket.io/?EIO=4&transport=polling&t=PMueoW4&sid=ypTt4VuG4y3qdmNZAAAC HTTP/1.1" 200 -
 2025-03-21 17:47:36,252 - 127.0.0.1 - - [21/Mar/2025 17:47:36] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 18:05:04,359 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 18:05:04,359 - [33mPress CTRL+C to quit[0m
+2025-03-21 18:05:04,359 -  * Restarting with stat
+2025-03-21 18:05:12,393 -  * Debugger is active!
+2025-03-21 18:05:12,405 -  * Debugger PIN: 898-260-860
+2025-03-21 18:05:45,370 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET / HTTP/1.1" 200 -
+2025-03-21 18:05:45,444 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET /socket.io/?EIO=4&transport=polling&t=PMuiyfq HTTP/1.1" 200 -
+2025-03-21 18:05:45,480 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "POST /socket.io/?EIO=4&transport=polling&t=PMuiygt&sid=2ZGlEQ3biTu4MPhAAAAA HTTP/1.1" 200 -
+2025-03-21 18:05:45,506 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET /socket.io/?EIO=4&transport=polling&t=PMuiygt.0&sid=2ZGlEQ3biTu4MPhAAAAA HTTP/1.1" 200 -
+2025-03-21 18:05:45,557 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET /socket.io/?EIO=4&transport=polling&t=PMuiyha&sid=2ZGlEQ3biTu4MPhAAAAA HTTP/1.1" 200 -
+2025-03-21 18:05:46,315 - 127.0.0.1 - - [21/Mar/2025 18:05:46] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 18:09:10,199 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 18:09:10,929 -  * Restarting with stat
