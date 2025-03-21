@@ -151,7 +151,7 @@ def compare_quantity_inventory_recon(recon_id):
 # CASE 4 
 def is_retailer_shelf_image_event(recon_id):
     print("Checking if retailer shelf image is provided for the recon.")
-    messages = []
+    message = ""
     
     recon = db.get_session().query(Recon).filter(Recon._id == recon_id).first()
     retailer = db.get_session().query(Retailer).filter(Retailer._id == recon.retailer_id).first()
@@ -163,30 +163,23 @@ def is_retailer_shelf_image_event(recon_id):
     
     s3_image_url = get_recon_image_from_s3(image)
     shelf_image = is_shelf_image(s3_image_url)
+    
+    print(quantity , shelf_image , image)
      
     if quantity == 0 and image == "":
-        messages.append({
-            "recepient": recepient,
-            "message": "No quantity and image provided for the recon."
-        })
+        message = "No quantity and image provided for the recon."
     
     if quantity > 0 and image == "":
-        messages.append({
-            "recepient": recepient,
-            "message": "No image provided for the recon."
-        })
+        message = "No image provided for the recon."
         
     if quantity == 0 and image != "" and shelf_image == False: 
-        messages.append({
-            "message": "Shelf Image not provided for the recon.",
-            "recepient": recepient,
-        })
+        message = "Shelf Image not provided for the recon."
         
     context = {
         "recepient": recepient,
         "person_name" : field_exec.Name,
         "role" : "Field Executive",
-        "messages" : messages
+        "messages" : [message]
     }
     return context
 
