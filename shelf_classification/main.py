@@ -5,7 +5,7 @@ import numpy as np
 import requests
 from io import BytesIO
 
-np.set_printoptions(suppress=True)
+np.set_printoptions(suppress=True) 
 
 model = load_model("shelf_classification/keras_model.h5", compile=False)
 class_names = open("shelf_classification/labels.txt", "r").readlines()
