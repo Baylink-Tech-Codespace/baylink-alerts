@@ -38,7 +38,7 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
         "start_date": start_date,
         "end_date": end_date,
         "payment_status": "pending",
-        "customer_id": "39c3cb4a-90e0-4539-ac9c-9be8f08c29a7"
+        "customer_id": retailer_id
     }
 
     response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
