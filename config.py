@@ -25,7 +25,6 @@ from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
 
 from shelf_classification.main import is_shelf_image
-
 from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
 
 #CASE 1
@@ -52,7 +51,6 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
         return data["data"]["transactions"]
     else:
         return []
-
 
 # CASE 1 
 from datetime import datetime, timedelta
@@ -101,7 +99,6 @@ def check_all_retailers_pending_bills():
         })
 
     return alerts
-
 
 # CASE 2 
 def compare_quantity_inventory_recon(recon_id):
@@ -211,7 +208,6 @@ def detect_sales_drop():
     
     return messages
  
- 
 # CASE 3 
 def check_sales_anomaly(data):
     print("Checking for sales anomaly...")
@@ -286,9 +282,9 @@ def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
     
     return items
 
-
 # CASE 8
 def notify_delivery_for_orders():
+    
     try :    
         print("Checking for delivery for orders...")
         messages = []
@@ -330,7 +326,6 @@ def notify_delivery_for_orders():
     except Exception as e:
         print(f"Error in notify_delivery_for_orders: {e}")
         return []
-
 
 # CASE 9 
 def delivery_not_out_on_expected_date():
@@ -463,10 +458,7 @@ def check_skipped_orders_alert():
 
     return messages
 
-#CASE 20 
-    from datetime import datetime
-from sqlalchemy import cast, Date
-
+#CASE 20  
 def check_beatplans_for_today():
     try:    
         print("Checking whether BeatPlan is assigned to every FE or not")
