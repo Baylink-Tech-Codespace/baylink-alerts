@@ -6644,3 +6644,11 @@ psycopg2.InterfaceError: connection already closed
 2025-03-21 18:05:46,315 - 127.0.0.1 - - [21/Mar/2025 18:05:46] "GET /fetch_logs HTTP/1.1" 200 -
 2025-03-21 18:09:10,199 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
 2025-03-21 18:09:10,929 -  * Restarting with stat
+2025-03-21 18:09:20,118 -  * Debugger is active!
+2025-03-21 18:09:20,136 -  * Debugger PIN: 898-260-860
+2025-03-21 18:09:20,146 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujkz_ HTTP/1.1" 200 -
+2025-03-21 18:09:20,153 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "POST /socket.io/?EIO=4&transport=polling&t=PMujn5K&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
+2025-03-21 18:09:20,153 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujn5L&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
+2025-03-21 18:09:20,158 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujn5S&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
+2025-03-21 18:09:41,974 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 18:09:42,473 -  * Restarting with stat

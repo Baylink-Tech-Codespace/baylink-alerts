@@ -6,7 +6,6 @@ from flask_socketio import SocketIO
 from event.main import Monitor
 from database.db import db
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
-from sqlalchemy import event
 from flask import jsonify
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
@@ -60,7 +59,6 @@ def notify_clients(new_log):
         "alert_type": new_log["role"],
         "details": new_log["message"],
     }) 
-
     
 def listen_to_db():
     """Listen for new log inserts in PostgreSQL and notify clients."""
@@ -84,32 +82,6 @@ def listen_to_db():
             print(notify.payload , notify.channel)
             new_log = eval(notify.payload)  
             notify_clients(new_log)   
-    
-
-'''
-@event.listens_for(BaylinkAlertLogs, "after_insert")
-def after_insert_listener(mapper, connection, target):
-    """Trigger when a new log is inserted into the DB."""
-    time.sleep(0.2)  
-    notify_clients(target) 
-    
-def tail_log():
-    print(f"Attempting to read from log file: {LOG_FILE}")  
-    if not os.path.exists(LOG_FILE):
-        print(f"Log file {LOG_FILE} does not exist - creating it")
-        open(LOG_FILE, 'a').close()
-    
-    with open(LOG_FILE, "r") as file:
-        file.seek(0, os.SEEK_END)  
-        while True:
-            line = file.readline()
-            if line:
-                print(f"Emitting log line: {line.strip()}")  
-                socketio.emit("new_log", {"message": line.strip()})
-            else:
-                time.sleep(0.1)
-                
-'''
 
 @app.route("/")
 def index():
@@ -123,24 +95,3 @@ if __name__ == "__main__":
     # threading.Thread(target=tail_log, daemon=True).start()
     print(f"Open URL : http://localhost:{4000} to access the dashboard.")
     socketio.run(app, host="0.0.0.0", port=4000, debug=True)
-    
-
-
-'''
-CREATE OR REPLACE FUNCTION notify_new_log() RETURNS TRIGGER AS $$
-DECLARE
-    new_log_data JSON;
-BEGIN
-    new_log_data := json_build_object(
-        'timestamp', NEW.timestamp,
-        'person_name', NEW.person_name,
-        'role', NEW.role,
-        'message', NEW.message
-    );
-
-    PERFORM pg_notify('new_log_channel', new_log_data::text);
-    RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-'''
