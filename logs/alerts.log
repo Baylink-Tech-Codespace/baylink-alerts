@@ -6652,3 +6652,11 @@ psycopg2.InterfaceError: connection already closed
 2025-03-21 18:09:20,158 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujn5S&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
 2025-03-21 18:09:41,974 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
 2025-03-21 18:09:42,473 -  * Restarting with stat
+2025-03-22 12:57:43,766 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-22 12:57:43,766 - [33mPress CTRL+C to quit[0m
+2025-03-22 12:57:43,766 -  * Restarting with stat
+2025-03-22 12:57:52,853 -  * Debugger is active!
+2025-03-22 12:57:52,866 -  * Debugger PIN: 898-260-860

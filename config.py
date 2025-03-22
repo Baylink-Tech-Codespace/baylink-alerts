@@ -712,10 +712,8 @@ def expiring_products():
     except Exception as e:
         print(f"Error in expiring products: {e}")
 
-# CASE 15 
-from datetime import datetime, timedelta, timezone
-from collections import defaultdict
 
+# CASE 15 
 def unsold_products():
     try:
         print("Checking for unsold products ... ")

@@ -4,14 +4,14 @@ import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO 
 from event.main import Monitor
-from database.db import db
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from flask import jsonify
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 import os 
-from datetime import datetime
 import dotenv 
+from datetime import datetime
+from database.db import db
 
 dotenv.load_dotenv()
 
@@ -73,7 +73,6 @@ def listen_to_db():
     cursor = conn.cursor()
     cursor.execute("LISTEN new_log_channel;")
 
-    print("🔄 Listening for new logs...")
     while True:
         conn.poll()
         while conn.notifies:
@@ -92,6 +91,6 @@ if __name__ == "__main__":
 
     threading.Thread(target=run_scheduler, daemon=True).start()
     threading.Thread(target=listen_to_db, daemon=True).start()
-    # threading.Thread(target=tail_log, daemon=True).start()
+
     print(f"Open URL : http://localhost:{4000} to access the dashboard.")
     socketio.run(app, host="0.0.0.0", port=4000, debug=True)
