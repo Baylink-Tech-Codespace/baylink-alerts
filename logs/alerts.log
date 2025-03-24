@@ -6660,3 +6660,19 @@ psycopg2.InterfaceError: connection already closed
 2025-03-22 12:57:43,766 -  * Restarting with stat
 2025-03-22 12:57:52,853 -  * Debugger is active!
 2025-03-22 12:57:52,866 -  * Debugger PIN: 898-260-860
+2025-03-22 13:01:02,744 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-22 13:01:02,745 - [33mPress CTRL+C to quit[0m
+2025-03-22 13:01:02,745 -  * Restarting with stat
+2025-03-22 13:01:11,086 -  * Debugger is active!
+2025-03-22 13:01:11,097 -  * Debugger PIN: 898-260-860
+2025-03-22 13:01:41,898 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-22 13:01:41,899 - [33mPress CTRL+C to quit[0m
+2025-03-22 13:01:41,899 -  * Restarting with stat
+2025-03-22 13:01:49,945 -  * Debugger is active!
+2025-03-22 13:01:49,958 -  * Debugger PIN: 898-260-860
