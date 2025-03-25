@@ -1,9 +1,12 @@
+import re
 from collections import defaultdict
+import uuid
 import requests
+import statistics
 from database.db import db
-from sqlalchemy import Date, cast
+from sqlalchemy import UUID, Date, cast
 from sqlalchemy.sql import func, extract
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from database.models.Brand import Brand
 from database.models.Product import Product
 from database.models.Sales import Sales
@@ -20,16 +23,15 @@ from database.models.Field_Exec import Field_Exec
 from database.models.RetailerVisitedLog import RetailerVisitedLog
 from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
-
-from datetime import datetime, timedelta, timezone
-
-from datetime import datetime, timedelta, timezone
 from collections import defaultdict
+from typing import TYPE_CHECKING
 
-from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
+if TYPE_CHECKING:
+    from event.main import Monitor
 
-#CASE 1
-def fetch_retailer_transactions(retailer_id, start_date, end_date):
+from constants import SWIPE_DOC_API_URL, SWIPE_PAYMENT_LIST_URL, SWIPE_TOKEN
+
+def fetch_retailer_transactions(retailer_id, start_date, end_date, payment_status):
     """Fetch transactions for a specific retailer from the API. Only check once in a month"""
     HEADERS = {
     "Authorization": f"Bearer {SWIPE_TOKEN}"
@@ -38,8 +40,8 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
         "document_type": "invoice",
         "start_date": start_date,
         "end_date": end_date,
-        "payment_status": "pending",
-        "customer_id": "39c3cb4a-90e0-4539-ac9c-9be8f08c29a7"
+        "payment_status": payment_status,
+        "customer_id": retailer_id,
     }
 
     response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
@@ -54,9 +56,32 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
         print(f"Failed to fetch transactions for retailer {retailer_id}: {data.get("message", "No message found")}")
         return []
 
+def list_of_retailers_payment(start_date, end_date):
+    """Fetch all payments record for given dates"""
+    HEADERS = {
+    "Authorization": f"Bearer {SWIPE_TOKEN}"
+    }
+    
+    querystring = {
+        "start_date": start_date,
+        "end_date": end_date,
+        "status": "success",
+        "num_records": "100",
+    }
+
+    response = requests.request("GET", SWIPE_PAYMENT_LIST_URL, headers=HEADERS, params=querystring)
+    
+    data = response.json()
+    
+    if response.status_code == 200:
+        if data['data']['transactions'] is None: 
+            return []
+        return data["data"]["transactions"]
+    else:
+        print(f"Failed to fetch payments list: {data.get("message", "No message found")}")
+        return []
 
 # CASE 1 
-from datetime import datetime, timedelta
 
 def check_all_retailers_pending_bills():
     print("Checking for retailers if they have more than two pending bills")
@@ -71,8 +96,9 @@ def check_all_retailers_pending_bills():
 
     for retailer in retailers:
         field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
+        payment_status = "pending"
 
-        pending_transactions = fetch_retailer_transactions(retailer._id, start_date, end_date)
+        pending_transactions = fetch_retailer_transactions(retailer._id, start_date, end_date, payment_status)
         
         if len(pending_transactions) > 2: 
             recipient = field_exec.Contact_Number
@@ -469,9 +495,38 @@ def check_skipped_orders_alert():
 
     return messages
 
+# CASE 19
+def check_short_visits(data):
+    retailer_id = data['_id'] 
+    messages = []
+
+
+    today = datetime.today().date()
+    visit = db.get_session().query(RetailerVisitedLog).filter(
+        (RetailerVisitedLog.retailer_id) == retailer_id
+    ).first()
+
+    if visit.visit_start and visit.visit_end:
+        time_spent = (visit.visit_end - visit.visit_start).total_seconds() / 60
+            
+        if time_spent < 10:
+            retailer = db.get_session().query(Retailer).filter(Retailer._id == visit.retailer_id).first()
+            
+            asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
+
+            fe = db.get_session().query(Field_Exec).filter(Field_Exec._id == visit.fe_id).first()
+                    
+            if asm and fe:
+                messages.append({
+                    "recipient": asm.Contact_Number,
+                    "message": f"Short visit alert: {fe.Name} spent only {time_spent:.2f} min at {retailer.name}.",
+                    "person_name": asm.name,
+                    "role": "ASM"
+                })
+    print(messages)
+    return messages
+
 #CASE 20 
-    from datetime import datetime
-from sqlalchemy import cast, Date
 
 def check_beatplans_for_today():
     try:    
@@ -685,6 +740,144 @@ def check_consistently_missed_retailers():
 
     return messages
 
+# CASE 27 
+
+def credit_score_for_Retailers(): 
+    
+    start_date = (datetime.now() - timedelta(days=60)).strftime("%d-%m-%Y") 
+    end_date = datetime.now().strftime("%d-%m-%Y")
+    payment_status = "paid"
+
+    payment_list = list_of_retailers_payment(start_date, end_date)
+
+    retailers = set() 
+
+    for record in payment_list:
+        customer_id_list = record["customer"]["id"]
+        pattern = r"'party_id':\s*'?([^',}]+)'?"
+        matches = re.findall(pattern, customer_id_list)
+
+        for party_id in matches:
+            if party_id: 
+                retailers.add(party_id) 
+
+    retailers = list(retailers)
+
+    credit_scores = []
+    
+    for retailer in retailers:
+        transactions = fetch_retailer_transactions(retailer, start_date, end_date, payment_status) 
+
+        if len(transactions) <=0:
+            continue
+        credit_score = calculate_credit_score(transactions)
+
+        credit_scores.append({"retailer": retailer, "credit_score": credit_score})
+
+    try:
+        for entry in credit_scores:
+            retailer_id = entry["retailer"]
+            credit_score = entry["credit_score"]
+            
+            if hasattr(retailer_id, "hex"):
+                retailer_id_str = retailer_id.hex
+            else:
+                uuid_match = re.search(r"'([0-9a-f-]+)'", str(retailer_id))
+                if uuid_match:
+                    retailer_id_str = uuid_match.group(1).replace('-', '')
+                else:
+                    retailer_id_str = str(retailer_id)
+            
+            try:
+                uuid_obj = uuid.UUID(retailer_id_str)
+                db.get_session().query(Retailer).filter(Retailer._id == uuid_obj).update(
+                    {Retailer.credit_score: credit_score}
+                )
+            except ValueError:
+                print(f"Failed to convert to UUID: {retailer_id}")
+
+        db.get_session().commit()
+
+    except Exception as e:
+        db.get_session().rollback() 
+        print(f"Error updating retailer credit scores: {e}")
+
+    finally:
+        db.get_session().close() 
+
+
+def calculate_credit_score(transactions):
+    """
+    Calculate the credit score for a retailer based on the last 3 paid invoices.
+    """
+    base_score = 100  
+    late_penalty_per_day = 0.2  #0.5
+    installment_penalty = 2  
+    early_payment_bonus = 5 
+    on_time_payment_bonus = 5  
+    low_on_time_penalty = 5  
+    extreme_late_penalty = 10 
+
+    recent_transactions = transactions[:3]
+
+    scores = []
+    
+    for transaction in recent_transactions:
+
+        # document_date = transaction["document_date"]
+        due_date_str = transaction["due_date"]
+        due_date = datetime.strptime(due_date_str, "%d-%m-%Y")
+        
+        total_amount = transaction["total_amount"]
+        payments = transaction["payments"]
+        
+        late_days_list = []
+        total_paid_on_time = 0
+        total_paid = 0
+        
+        for payment in payments:
+            payment_date_str = payment["payment_date"]
+            amount = payment["amount"]
+            payment_date = datetime.strptime(payment_date_str, "%d-%m-%Y")
+
+            total_paid += amount
+            if payment_date <= due_date:
+                total_paid_on_time += amount
+            else:
+                late_days = (payment_date - due_date).days
+                late_days_list.append(late_days)
+
+        on_time_payment_percentage = (total_paid_on_time / total_amount) * 100
+
+        late_days_penalty = sum([late_penalty_per_day * days for days in late_days_list])
+
+        installment_penalty_total = installment_penalty * (len(payments) - 2) if len(payments) > 2 else 0
+
+        early_bonus = early_payment_bonus if total_paid_on_time == total_amount else 0
+
+        if on_time_payment_percentage >= 80:
+            on_time_bonus = on_time_payment_bonus  
+        elif on_time_payment_percentage < 50:
+            on_time_bonus = -low_on_time_penalty 
+        elif on_time_payment_percentage < 20:
+            on_time_bonus -= extreme_late_penalty
+        else:
+            on_time_bonus = 0  
+        
+        final_score = (
+            base_score 
+            - late_days_penalty 
+            - installment_penalty_total 
+            + early_bonus 
+            + on_time_bonus
+        )
+
+        final_score = max(0, min(100, final_score))
+        
+        scores.append(final_score)
+    
+    return round(statistics.mean(scores), 2) if scores else 0
+
 
 # CASE 14 
 def expiring_products():
@@ -729,10 +922,16 @@ def unsold_products():
         messages = defaultdict(lambda: {"products": [], "person_name": "", "role": "Field Executive"})
         
         threshold_days = 120
+        # threshold_days = 10
         current_date = datetime.now(timezone.utc)
-        threshold_date = current_date - timedelta(days=threshold_days)
+        threshold_date_start = current_date - timedelta(days=threshold_days)
+        threshold_date_end = threshold_date_start - timedelta(days=threshold_days)
+
         
-        sales = db.get_session().query(Sales).all()
+        sales = db.get_session().query(Sales).filter(
+        Sales.date >= threshold_date_end,  
+        Sales.date <= threshold_date_start 
+        ).all()
 
         for sale in sales:
             if sale.retailer and sale.retailer.fe:
@@ -740,10 +939,8 @@ def unsold_products():
 
                 if last_sale_date.tzinfo is None:
                     last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
-                    
-                print("last_sale_date"  , last_sale_date , "threshold_date" , threshold_date)
 
-                if last_sale_date <= threshold_date:
+                if last_sale_date <= threshold_date_start and last_sale_date >= threshold_date_end:
                     recipient = sale.retailer.fe.Contact_Number
                     person_name = sale.retailer.fe.Name
                     product_info = f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}"
@@ -770,9 +967,13 @@ event_config = {
         lambda x : detect_sales_drop(), ## 
         lambda x : check_sales_anomaly(x) ## 
     ],
-    "low_retailer_visits" : [
-        lambda x : check_retailer_visits_for_month(),    
+    "retailer_visit_too_short": [
+        lambda x : check_short_visits(x),
     ],
+    # "order_insert": [
+    #     lambda x: order_limits(x),
+    # ],
+
     "daily_event_triggers" : [
         lambda x : notify_delivery_for_orders(), ## 
         lambda x : delivery_not_out_on_expected_date(), ## 
@@ -783,12 +984,7 @@ event_config = {
     "monthly_event_triggers" : [
         lambda x : check_all_retailers_pending_bills(), ## 
         lambda x : unsold_products(), ##
+        lambda x : credit_score_for_Retailers(),
+        lambda x : check_retailer_visits_for_month(), 
     ]
 }
-
-res = unsold_products()
-
-import json
-
-with open("output.json", "w") as f:
-    json.dump(res, f, indent=4)

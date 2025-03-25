@@ -1,4 +1,4 @@
-from sqlalchemy import Column, String, ForeignKey, JSON, Enum, DateTime, UUID
+from sqlalchemy import DECIMAL, Column, String, ForeignKey, JSON, Enum, DateTime, UUID
 from sqlalchemy.orm import relationship, Mapped
 from database.db import Base
 import uuid
@@ -26,7 +26,8 @@ class Retailer(Base):
     GSTIN = Column(String, nullable=True)
     FE_id = Column(UUID(as_uuid=True), ForeignKey("Field_Exec._id"), nullable=True)
     ASM_id = Column(UUID(as_uuid=True), ForeignKey("ASMs._id"), nullable=True)
-    #closing_balance = Column(DECIMAL(10, 2), nullable=True)
+    closing_balance = Column(DECIMAL(10, 2), nullable=True)
+    credit_score = Column(DECIMAL(10, 2), nullable=True)
     image = Column(String, nullable=True)
     outsideImage = Column(String, nullable=True)
     storeCategory = Column(Enum("null", "undefined", "Grocery", "Convenience store", "Bakery", "Pharmacy", "Paan Shop", "Other"), nullable=True)
