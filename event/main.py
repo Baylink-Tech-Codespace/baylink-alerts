@@ -91,6 +91,35 @@ class Monitor:
                 AFTER INSERT ON public.sales
                 FOR EACH ROW EXECUTE FUNCTION notify_sudden_sales_drop();
             """)
+
+            cursor.execute("""
+                CREATE OR REPLACE FUNCTION notify_retailer_visit_too_short() RETURNS TRIGGER AS $$
+                BEGIN
+                    PERFORM pg_notify('retailer_visit_too_short', row_to_json(NEW)::text);
+                    RETURN NEW;
+                END;
+                $$ LANGUAGE plpgsql;
+                
+                DROP TRIGGER IF EXISTS retailer_visit_too_short_trigger ON "RetailerVisitedLog";
+                CREATE TRIGGER retailer_visit_too_short_trigger
+                AFTER INSERT ON "RetailerVisitedLog"
+                FOR EACH ROW EXECUTE FUNCTION notify_retailer_visit_too_short();
+            """)
+
+            cursor.execute("""
+                CREATE OR REPLACE FUNCTION order_insert() RETURNS TRIGGER AS $$
+                BEGIN
+                    PERFORM pg_notify('order_inserted', row_to_json(NEW)::text);
+                    RETURN NEW;
+                END;
+                $$ LANGUAGE plpgsql;
+                
+                DROP TRIGGER IF EXISTS order_insert_trigger ON "Order";
+                CREATE TRIGGER order_insert_trigger
+                AFTER INSERT ON "Order"
+                FOR EACH ROW EXECUTE FUNCTION notify_order_insert();
+            """)
+
             conn.commit()
         except Exception as e:
             print(f"Error setting up triggers: {e}")
@@ -124,7 +153,7 @@ class Monitor:
         try:
             cursor = conn.cursor()
             self.setup_triggers(conn, cursor)
-            cursor.execute("LISTEN recon_inserted; LISTEN sudden_sales_drop;")
+            cursor.execute("LISTEN recon_inserted; LISTEN sudden_sales_drop; LISTEN retailer_visit_too_short; LISTEN order_insert")
             print("Listening for database notifications...")
 
             while self.running:

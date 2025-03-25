@@ -6338,3 +6338,615 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 17:51:41,978 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:47,146 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:48,980 - Failed to send alert to 7007555103: None
+2025-03-19 22:22:25,389 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:22:25,391 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:22:25,392 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:22:31,406 -  * Debugger is active!
+2025-03-19 22:22:31,437 -  * Debugger PIN: 156-759-472
+2025-03-19 22:25:59,282 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:25:59,282 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:25:59,282 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:26:05,250 -  * Debugger is active!
+2025-03-19 22:26:05,252 -  * Debugger PIN: 156-759-472
+2025-03-19 22:32:13,370 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:32:13,371 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:32:13,371 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:32:19,711 -  * Debugger is active!
+2025-03-19 22:32:19,715 -  * Debugger PIN: 156-759-472
+2025-03-19 22:35:26,800 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:35:26,800 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:35:26,800 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:35:32,834 -  * Debugger is active!
+2025-03-19 22:35:32,838 -  * Debugger PIN: 156-759-472
+2025-03-19 22:40:47,100 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:40:47,101 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:40:47,101 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:40:53,356 -  * Debugger is active!
+2025-03-19 22:40:53,358 -  * Debugger PIN: 156-759-472
+2025-03-19 22:41:04,563 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:41:04,564 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:41:04,802 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:41:11,171 -  * Debugger is active!
+2025-03-19 22:41:11,173 -  * Debugger PIN: 156-759-472
+2025-03-19 22:41:46,687 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:41:46,687 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:41:46,687 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:41:52,900 -  * Debugger is active!
+2025-03-19 22:41:52,904 -  * Debugger PIN: 156-759-472
+2025-03-19 22:43:29,432 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:43:29,433 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:43:29,433 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:43:30,602 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:43:36,974 -  * Debugger is active!
+2025-03-19 22:43:36,976 -  * Debugger PIN: 156-759-472
+2025-03-19 22:52:12,268 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:52:12,268 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:52:12,268 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:52:18,794 -  * Debugger is active!
+2025-03-19 22:52:18,797 -  * Debugger PIN: 156-759-472
+2025-03-19 22:52:48,464 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:52:48,493 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:52:48,494 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:52:48,751 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:52:55,188 -  * Debugger is active!
+2025-03-19 22:52:55,191 -  * Debugger PIN: 156-759-472
+2025-03-19 22:53:05,452 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:53:05,477 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:53:05,478 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:53:05,695 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:53:12,181 -  * Debugger is active!
+2025-03-19 22:53:12,184 -  * Debugger PIN: 156-759-472
+2025-03-19 22:53:25,978 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:53:26,003 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:53:26,786 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:53:33,057 -  * Debugger is active!
+2025-03-19 22:53:33,060 -  * Debugger PIN: 156-759-472
+2025-03-19 22:53:43,941 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:53:43,942 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:53:43,942 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:53:49,855 -  * Debugger is active!
+2025-03-19 22:53:49,859 -  * Debugger PIN: 156-759-472
+2025-03-19 22:55:26,339 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:55:26,339 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:55:26,339 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:55:32,784 -  * Debugger is active!
+2025-03-19 22:55:32,787 -  * Debugger PIN: 156-759-472
+2025-03-19 22:56:28,043 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-19 22:56:28,043 - [33mPress CTRL+C to quit[0m
+2025-03-19 22:56:28,043 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:56:34,084 -  * Debugger is active!
+2025-03-19 22:56:34,088 -  * Debugger PIN: 156-759-472
+2025-03-19 22:56:40,929 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:56:40,956 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:56:40,957 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:56:41,436 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:56:47,714 -  * Debugger is active!
+2025-03-19 22:56:47,716 -  * Debugger PIN: 156-759-472
+2025-03-19 22:56:49,220 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:56:49,221 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:56:49,221 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:56:50,004 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:56:56,215 -  * Debugger is active!
+2025-03-19 22:56:56,218 -  * Debugger PIN: 156-759-472
+2025-03-19 22:57:24,028 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:57:24,055 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:57:24,056 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-19 22:57:25,103 -  * Restarting with watchdog (windowsapi)
+2025-03-19 22:57:31,466 -  * Debugger is active!
+2025-03-19 22:57:31,468 -  * Debugger PIN: 156-759-472
+2025-03-20 10:35:54,635 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-20 10:35:54,635 - [33mPress CTRL+C to quit[0m
+2025-03-20 10:35:54,636 -  * Restarting with watchdog (windowsapi)
+2025-03-20 10:36:00,415 -  * Debugger is active!
+2025-03-20 10:36:00,430 -  * Debugger PIN: 156-759-472
+2025-03-20 11:05:41,426 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-20 11:05:41,426 - [33mPress CTRL+C to quit[0m
+2025-03-20 11:05:41,426 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:05:45,936 -  * Debugger is active!
+2025-03-20 11:05:45,939 -  * Debugger PIN: 156-759-472
+2025-03-20 11:06:27,783 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:06:27,783 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:06:27,783 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:06:27,997 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:06:49,072 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-20 11:06:49,072 - [33mPress CTRL+C to quit[0m
+2025-03-20 11:06:49,072 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:06:53,644 -  * Debugger is active!
+2025-03-20 11:06:53,645 -  * Debugger PIN: 156-759-472
+2025-03-20 11:08:14,541 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:14,544 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:15,096 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:08:19,882 -  * Debugger is active!
+2025-03-20 11:08:19,884 -  * Debugger PIN: 156-759-472
+2025-03-20 11:08:26,053 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:26,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:26,055 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:27,155 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:08:32,167 -  * Debugger is active!
+2025-03-20 11:08:32,170 -  * Debugger PIN: 156-759-472
+2025-03-20 11:08:55,845 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:55,846 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:08:56,815 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:09:01,752 -  * Debugger is active!
+2025-03-20 11:09:01,753 -  * Debugger PIN: 156-759-472
+2025-03-20 11:09:39,470 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\os.py', reloading
+2025-03-20 11:09:40,617 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:09:45,457 -  * Debugger is active!
+2025-03-20 11:09:45,459 -  * Debugger PIN: 156-759-472
+2025-03-20 11:09:58,006 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\datetime.py', reloading
+2025-03-20 11:09:58,035 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_pydatetime.py', reloading
+2025-03-20 11:09:58,858 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:10:03,429 -  * Debugger is active!
+2025-03-20 11:10:03,431 -  * Debugger PIN: 156-759-472
+2025-03-20 11:13:20,631 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:13:20,631 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:13:21,638 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:13:26,573 -  * Debugger is active!
+2025-03-20 11:13:26,575 -  * Debugger PIN: 156-759-472
+2025-03-20 11:19:53,616 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:19:53,988 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:19:58,709 -  * Debugger is active!
+2025-03-20 11:19:58,711 -  * Debugger PIN: 156-759-472
+2025-03-20 11:20:02,940 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:20:02,944 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:20:03,993 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:20:08,407 -  * Debugger is active!
+2025-03-20 11:20:08,410 -  * Debugger PIN: 156-759-472
+2025-03-20 11:20:12,670 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:20:12,670 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:20:12,671 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:20:13,633 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:20:18,158 -  * Debugger is active!
+2025-03-20 11:20:18,160 -  * Debugger PIN: 156-759-472
+2025-03-20 11:45:43,739 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:45:43,740 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:45:44,191 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:45:49,293 -  * Debugger is active!
+2025-03-20 11:45:49,295 -  * Debugger PIN: 156-759-472
+2025-03-20 11:45:50,911 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:45:50,912 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:45:50,912 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-20 11:45:51,501 -  * Restarting with watchdog (windowsapi)
+2025-03-20 11:45:56,514 -  * Debugger is active!
+2025-03-20 11:45:56,516 -  * Debugger PIN: 156-759-472
+2025-03-20 12:23:41,469 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-20 12:23:41,470 - [33mPress CTRL+C to quit[0m
+2025-03-20 12:23:41,470 -  * Restarting with watchdog (windowsapi)
+2025-03-20 12:23:45,943 -  * Debugger is active!
+2025-03-20 12:23:45,945 -  * Debugger PIN: 156-759-472
+2025-03-20 15:18:18,055 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-20 15:18:18,055 - [33mPress CTRL+C to quit[0m
+2025-03-20 15:18:18,055 -  * Restarting with watchdog (windowsapi)
+2025-03-21 13:32:03,917 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.31.181:4000
+2025-03-21 13:32:03,918 - [33mPress CTRL+C to quit[0m
+2025-03-21 13:32:03,918 -  * Restarting with watchdog (windowsapi)
+2025-03-21 13:32:10,596 -  * Debugger is active!
+2025-03-21 13:32:10,626 -  * Debugger PIN: 156-759-472
+2025-03-21 13:33:03,039 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.31.181:4000
+2025-03-21 13:33:03,039 - [33mPress CTRL+C to quit[0m
+2025-03-21 13:33:03,039 -  * Restarting with watchdog (windowsapi)
+2025-03-21 13:33:09,367 -  * Debugger is active!
+2025-03-21 13:33:09,369 -  * Debugger PIN: 156-759-472
+2025-03-21 13:47:33,979 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.31.181:4000
+2025-03-21 13:47:33,979 - [33mPress CTRL+C to quit[0m
+2025-03-21 13:47:33,980 -  * Restarting with watchdog (windowsapi)
+2025-03-21 13:53:53,189 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.31.181:4000
+2025-03-21 13:53:53,189 - [33mPress CTRL+C to quit[0m
+2025-03-21 13:53:53,189 -  * Restarting with watchdog (windowsapi)
+2025-03-22 14:17:37,762 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-22 14:17:37,762 - [33mPress CTRL+C to quit[0m
+2025-03-22 14:17:37,762 -  * Restarting with watchdog (windowsapi)
+2025-03-22 14:17:57,071 -  * Debugger is active!
+2025-03-22 14:17:57,102 -  * Debugger PIN: 156-759-472
+2025-03-22 14:18:07,635 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-22 14:18:07,663 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-22 14:18:07,664 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-22 14:18:08,596 -  * Restarting with watchdog (windowsapi)
+2025-03-22 14:18:53,010 -  * Debugger is active!
+2025-03-22 14:18:53,012 -  * Debugger PIN: 156-759-472
+2025-03-24 22:05:46,356 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-24 22:05:46,357 - [33mPress CTRL+C to quit[0m
+2025-03-24 22:05:46,357 -  * Restarting with watchdog (windowsapi)
+2025-03-24 22:05:51,702 -  * Debugger is active!
+2025-03-24 22:05:51,708 -  * Debugger PIN: 156-759-472
+2025-03-24 22:43:55,275 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-24 22:43:55,276 - [33mPress CTRL+C to quit[0m
+2025-03-24 22:43:55,276 -  * Restarting with watchdog (windowsapi)
+2025-03-24 22:44:01,788 -  * Debugger is active!
+2025-03-24 22:44:01,800 -  * Debugger PIN: 156-759-472
+2025-03-24 22:48:34,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-24 22:48:34,773 - [33mPress CTRL+C to quit[0m
+2025-03-24 22:48:34,773 -  * Restarting with watchdog (windowsapi)
+2025-03-24 22:48:40,546 -  * Debugger is active!
+2025-03-24 22:48:40,550 -  * Debugger PIN: 156-759-472
+2025-03-24 23:34:00,866 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:34:00,867 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:34:01,741 -  * Restarting with watchdog (windowsapi)
+2025-03-24 23:34:08,163 -  * Debugger is active!
+2025-03-24 23:34:08,165 -  * Debugger PIN: 156-759-472
+2025-03-24 23:35:32,396 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:35:32,397 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:35:32,398 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:35:32,736 -  * Restarting with watchdog (windowsapi)
+2025-03-24 23:35:38,702 -  * Debugger is active!
+2025-03-24 23:35:38,706 -  * Debugger PIN: 156-759-472
+2025-03-24 23:35:49,912 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:35:49,925 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:35:49,926 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:35:50,146 -  * Restarting with watchdog (windowsapi)
+2025-03-24 23:35:56,423 -  * Debugger is active!
+2025-03-24 23:35:56,427 -  * Debugger PIN: 156-759-472
+2025-03-24 23:44:54,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:44:54,290 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:44:54,290 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:44:54,525 -  * Restarting with watchdog (windowsapi)
+2025-03-24 23:45:02,082 -  * Debugger is active!
+2025-03-24 23:45:02,086 -  * Debugger PIN: 156-759-472
+2025-03-24 23:45:08,193 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:45:08,220 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:45:08,442 -  * Restarting with watchdog (windowsapi)
+2025-03-24 23:45:14,083 -  * Debugger is active!
+2025-03-24 23:45:14,086 -  * Debugger PIN: 156-759-472
+2025-03-24 23:47:31,938 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:47:31,965 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:47:31,966 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-24 23:47:32,424 -  * Restarting with watchdog (windowsapi)
+2025-03-24 23:47:38,416 -  * Debugger is active!
+2025-03-24 23:47:38,424 -  * Debugger PIN: 156-759-472
+2025-03-25 10:35:54,198 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 10:35:54,199 - [33mPress CTRL+C to quit[0m
+2025-03-25 10:35:54,200 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:36:00,108 -  * Debugger is active!
+2025-03-25 10:36:00,114 -  * Debugger PIN: 156-759-472
+2025-03-25 10:51:42,471 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\flask\\__init__.py', reloading
+2025-03-25 10:51:42,746 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:51:49,101 -  * Debugger is active!
+2025-03-25 10:51:49,104 -  * Debugger PIN: 156-759-472
+2025-03-25 10:51:55,839 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:51:55,840 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:51:56,514 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:52:01,988 -  * Debugger is active!
+2025-03-25 10:52:01,990 -  * Debugger PIN: 156-759-472
+2025-03-25 10:52:52,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:52:52,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:52:52,055 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:52:52,281 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:52:58,460 -  * Debugger is active!
+2025-03-25 10:52:58,463 -  * Debugger PIN: 156-759-472
+2025-03-25 10:53:00,395 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:53:00,396 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:53:00,668 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:53:06,564 -  * Debugger is active!
+2025-03-25 10:53:06,567 -  * Debugger PIN: 156-759-472
+2025-03-25 10:53:11,529 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:53:11,556 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:53:11,557 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:53:11,853 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:53:17,762 -  * Debugger is active!
+2025-03-25 10:53:17,765 -  * Debugger PIN: 156-759-472
+2025-03-25 10:54:21,885 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 10:54:21,886 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 10:54:21,886 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 10:54:22,559 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:54:28,497 -  * Debugger is active!
+2025-03-25 10:54:28,500 -  * Debugger PIN: 156-759-472
+2025-03-25 10:57:32,280 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 10:57:32,280 - [33mPress CTRL+C to quit[0m
+2025-03-25 10:57:32,280 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:57:38,907 -  * Debugger is active!
+2025-03-25 10:57:38,909 -  * Debugger PIN: 156-759-472
+2025-03-25 10:58:29,425 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:58:29,426 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 10:58:30,389 -  * Restarting with watchdog (windowsapi)
+2025-03-25 10:58:36,933 -  * Debugger is active!
+2025-03-25 10:58:36,936 -  * Debugger PIN: 156-759-472
+2025-03-25 11:02:09,471 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:02:09,497 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:02:09,498 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:02:10,000 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:04:04,955 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 11:04:04,955 - [33mPress CTRL+C to quit[0m
+2025-03-25 11:04:04,956 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:04:11,371 -  * Debugger is active!
+2025-03-25 11:04:11,376 -  * Debugger PIN: 156-759-472
+2025-03-25 11:04:38,435 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:04:38,463 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:04:39,252 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:04:45,060 -  * Debugger is active!
+2025-03-25 11:04:45,078 -  * Debugger PIN: 156-759-472
+2025-03-25 11:19:33,177 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 11:19:33,177 - [33mPress CTRL+C to quit[0m
+2025-03-25 11:19:33,178 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:19:37,756 -  * Debugger is active!
+2025-03-25 11:19:37,757 -  * Debugger PIN: 156-759-472
+2025-03-25 11:20:26,863 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:20:26,863 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:20:27,685 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:20:32,455 -  * Debugger is active!
+2025-03-25 11:20:32,458 -  * Debugger PIN: 156-759-472
+2025-03-25 11:34:28,496 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:34:28,496 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 11:34:29,230 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:34:34,170 -  * Debugger is active!
+2025-03-25 11:34:34,172 -  * Debugger PIN: 156-759-472
+2025-03-25 11:34:42,124 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 11:34:42,125 - [33mPress CTRL+C to quit[0m
+2025-03-25 11:34:42,125 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:34:46,777 -  * Debugger is active!
+2025-03-25 11:34:46,779 -  * Debugger PIN: 156-759-472
+2025-03-25 11:37:43,355 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:37:44,657 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:37:49,368 -  * Debugger is active!
+2025-03-25 11:37:49,369 -  * Debugger PIN: 156-759-472
+2025-03-25 11:37:49,620 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:37:49,623 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:37:49,623 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:37:50,537 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:37:55,194 -  * Debugger is active!
+2025-03-25 11:37:55,195 -  * Debugger PIN: 156-759-472
+2025-03-25 11:38:11,693 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:38:11,696 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:38:11,696 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 11:38:12,674 -  * Restarting with watchdog (windowsapi)
+2025-03-25 11:38:17,534 -  * Debugger is active!
+2025-03-25 11:38:17,536 -  * Debugger PIN: 156-759-472
+2025-03-25 12:00:14,797 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 12:00:14,798 - [33mPress CTRL+C to quit[0m
+2025-03-25 12:00:14,798 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:00:19,413 -  * Debugger is active!
+2025-03-25 12:00:19,416 -  * Debugger PIN: 156-759-472
+2025-03-25 12:12:53,491 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:12:53,492 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:12:53,760 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:12:58,351 -  * Debugger is active!
+2025-03-25 12:12:58,352 -  * Debugger PIN: 156-759-472
+2025-03-25 12:13:08,115 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:08,118 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:08,118 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:08,676 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:13:13,046 -  * Debugger is active!
+2025-03-25 12:13:13,048 -  * Debugger PIN: 156-759-472
+2025-03-25 12:13:14,844 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:14,844 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:14,844 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:15,234 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:13:19,935 -  * Debugger is active!
+2025-03-25 12:13:19,938 -  * Debugger PIN: 156-759-472
+2025-03-25 12:13:24,017 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:24,021 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:25,197 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:13:29,900 -  * Debugger is active!
+2025-03-25 12:13:29,903 -  * Debugger PIN: 156-759-472
+2025-03-25 12:13:38,806 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:38,809 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:38,809 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:39,186 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:13:43,712 -  * Debugger is active!
+2025-03-25 12:13:43,714 -  * Debugger PIN: 156-759-472
+2025-03-25 12:13:45,134 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:45,137 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:45,138 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:45,905 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:13:50,554 -  * Debugger is active!
+2025-03-25 12:13:50,555 -  * Debugger PIN: 156-759-472
+2025-03-25 12:13:56,948 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:56,949 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:13:57,875 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:14:02,346 -  * Debugger is active!
+2025-03-25 12:14:02,348 -  * Debugger PIN: 156-759-472
+2025-03-25 12:14:03,117 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:14:03,118 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:14:03,119 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:14:03,498 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:14:50,555 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 12:14:50,555 - [33mPress CTRL+C to quit[0m
+2025-03-25 12:14:50,555 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:14:55,179 -  * Debugger is active!
+2025-03-25 12:14:55,181 -  * Debugger PIN: 156-759-472
+2025-03-25 12:15:49,968 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:15:49,970 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:15:50,644 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:15:55,167 -  * Debugger is active!
+2025-03-25 12:15:55,168 -  * Debugger PIN: 156-759-472
+2025-03-25 12:15:56,565 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:15:56,565 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:15:56,566 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 12:15:57,357 -  * Restarting with watchdog (windowsapi)
+2025-03-25 12:16:02,266 -  * Debugger is active!
+2025-03-25 12:16:02,267 -  * Debugger PIN: 156-759-472
+2025-03-25 14:09:07,550 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
+2025-03-25 14:09:07,632 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 14:09:07,632 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 14:09:09,016 -  * Restarting with watchdog (windowsapi)
+2025-03-25 14:09:16,271 -  * Debugger is active!
+2025-03-25 14:09:16,274 -  * Debugger PIN: 156-759-472
+2025-03-25 14:22:38,544 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 14:22:39,343 -  * Restarting with watchdog (windowsapi)
+2025-03-25 14:22:45,115 -  * Debugger is active!
+2025-03-25 14:22:45,119 -  * Debugger PIN: 156-759-472
+2025-03-25 14:22:57,990 - Exception during reset or similar
+Traceback (most recent call last):
+  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 986, in _finalize_fairy
+    fairy._reset(
+    ~~~~~~~~~~~~^
+        pool,
+        ^^^^^
+    ...<2 lines>...
+        asyncio_safe=can_manipulate_connection,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1432, in _reset
+    pool._dialect.do_rollback(self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 700, in do_rollback
+    dbapi_connection.rollback()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+psycopg2.OperationalError: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2025-03-25 15:16:56,682 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:16:56,694 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:16:56,694 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:17:02,406 -  * Debugger is active!
+2025-03-25 15:17:02,409 -  * Debugger PIN: 156-759-472
+2025-03-25 15:18:14,735 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 15:18:14,736 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-25 15:18:15,705 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:18:21,841 -  * Debugger is active!
+2025-03-25 15:18:21,844 -  * Debugger PIN: 156-759-472
+2025-03-25 15:22:40,079 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:22:40,089 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:22:40,089 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:22:45,925 -  * Debugger is active!
+2025-03-25 15:22:45,929 -  * Debugger PIN: 156-759-472
+2025-03-25 15:23:24,017 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 15:23:24,018 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 15:23:24,018 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 15:23:25,057 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:23:31,362 -  * Debugger is active!
+2025-03-25 15:23:31,366 -  * Debugger PIN: 156-759-472
+2025-03-25 15:23:32,767 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 15:23:32,768 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-25 15:23:33,597 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:23:39,949 -  * Debugger is active!
+2025-03-25 15:23:39,953 -  * Debugger PIN: 156-759-472
+2025-03-25 15:24:39,559 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:24:39,559 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:24:39,559 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:24:45,423 -  * Debugger is active!
+2025-03-25 15:24:45,429 -  * Debugger PIN: 156-759-472
+2025-03-25 15:25:09,337 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:25:09,338 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:25:09,338 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:25:15,574 -  * Debugger is active!
+2025-03-25 15:25:15,578 -  * Debugger PIN: 156-759-472
+2025-03-25 15:29:10,201 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:29:10,202 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:29:10,202 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:29:16,104 -  * Debugger is active!
+2025-03-25 15:29:16,108 -  * Debugger PIN: 156-759-472
+2025-03-25 15:42:55,062 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:42:55,065 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:42:55,065 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:43:00,411 -  * Debugger is active!
+2025-03-25 15:43:00,415 -  * Debugger PIN: 156-759-472
+2025-03-25 15:43:30,505 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-25 15:43:30,535 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-25 15:44:32,131 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-25 15:44:32,131 - [33mPress CTRL+C to quit[0m
+2025-03-25 15:44:32,131 -  * Restarting with watchdog (windowsapi)
+2025-03-25 15:44:38,072 -  * Debugger is active!
+2025-03-25 15:44:38,076 -  * Debugger PIN: 156-759-472

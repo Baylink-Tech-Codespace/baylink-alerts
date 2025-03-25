@@ -84,6 +84,18 @@ class AlertSystem:
                     for condition in conditions: 
                         alerts.append(condition(event_data_json))
 
+                elif event_name == "retailer_visit_too_short":
+                    event_data_json = json.loads(event_data)
+                    
+                    for condition in conditions: 
+                        alerts.append(condition(event_data_json))
+
+                # elif event_name == "order_insert":
+                #     event_data_json = json.loads(event_data)
+                    
+                #     for condition in conditions: 
+                #         alerts.append(condition(event_data_json))
+
                 elif event_name in ["daily_event_triggers" , "monthly_event_triggers"]:
                     for condition in conditions:   
                         alerts.append(condition(event_data))
