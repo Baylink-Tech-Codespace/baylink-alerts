@@ -8,6 +8,7 @@ from sqlalchemy.orm import Mapped
 from typing import Optional
 from database.models.ASM import ASM
 from database.models.Retailer import Retailer
+from database.models.Warehouse import WarehouseManager
 
 class FeUser(Base):
     __tablename__ = 'FeUsers'
@@ -26,6 +27,8 @@ class FeUser(Base):
     updatedAt = Column(DateTime, nullable=False, default=func.now(), onupdate=func.now())
 
     Field_Exec : Mapped[Optional["Field_Exec"]] = relationship('Field_Exec', back_populates='feuser')
+    warehouse_manager : Mapped[Optional["WarehouseManager"]] = relationship('WarehouseManager', back_populates='fe_user')
+
 
 class Field_Exec(Base):
     __tablename__ = 'Field_Exec'

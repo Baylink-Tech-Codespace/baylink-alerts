@@ -1,0 +1,22 @@
+[
+    {
+        "recipient": "8285027775",
+        "messages": [
+            {
+                "message": "The following retailers have not ordered in the last 3 weeks: Cake Break, kamal enterprises , Amit General Store, Prabhas store, Shri Bikaner sweet  122, Chakna point , Mithla paan store , V M  traders 77, maa general store, Gujurati Delight, GHANAHYAM TEA STALL SEC 122, 6 Ten 74, Kondli Bazaar, Discount departmental 120 noida, SANJAY SWEETS  CONER , Balaji store Sector 75, The pan palace 119 noida, Noida grocery 123, Mangalam departmental 110, Gupta ji tea , Sanjay sweet , The taste bakery, New noida grocery 122, A B ENTERPRISES 121, Star Paan, TANDOOR STYLE , Prabhat mini mart 70, Aggarwal Mart , NOIDA GROCERY BAZAR, Aman Pan Shop, Madhubani stores, Ankit store , S b mart bisrakh , Deepak pan shop bisrakh .",
+                "role": "ASM",
+                "person_name": "Deepak"
+            }
+        ]
+    },
+    {
+        "recipient": "8447686869",
+        "messages": [
+            {
+                "message": "The following retailers have not ordered in the last 3 weeks: Sudhir Store.",
+                "role": "ASM",
+                "person_name": "Siddharth Prakash"
+            }
+        ]
+    }
+]
