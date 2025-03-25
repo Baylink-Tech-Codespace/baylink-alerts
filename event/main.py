@@ -47,6 +47,24 @@ class Monitor:
     def setup_triggers(self, conn, cursor):
         try:
             cursor.execute("""
+                CREATE OR REPLACE FUNCTION notify_new_log() RETURNS TRIGGER AS $$
+                DECLARE
+                    new_log_data JSON;
+                BEGIN
+                    new_log_data := json_build_object(
+                        'timestamp', NEW.timestamp,
+                        'person_name', NEW.person_name,
+                        'role', NEW.role,
+                        'message', NEW.message
+                    );
+
+                    PERFORM pg_notify('new_log_channel', new_log_data::text);
+                    RETURN NEW;
+                END;
+                $$ LANGUAGE plpgsql;
+            """)
+            
+            cursor.execute("""
                 CREATE OR REPLACE FUNCTION notify_recon_insert() RETURNS TRIGGER AS $$
                 BEGIN
                     PERFORM pg_notify('recon_inserted', row_to_json(NEW)::text);
@@ -184,7 +202,7 @@ class Monitor:
         schedule.clear()
         
         # Schedule jobs
-        schedule.every().day.at("15:52").do(self.daily_event_triggers)
+        schedule.every().day.at("13:02").do(self.daily_event_triggers)
         schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
         
         print("Scheduler started for daily/monthly triggers...")
@@ -193,9 +211,8 @@ class Monitor:
         while self.running:
             try:
                 # Print current time and next scheduled run for debugging
-                current_time = time.strftime('%Y-%m-%d %H:%M:%S')
-                next_run = schedule.next_run()
-                print(f"Current time: {current_time}, Next run: {next_run}")
+                # current_time = time.strftime('%Y-%m-%d %H:%M:%S')
+                # next_run = schedule.next_run()
                 
                 schedule.run_pending()
                 time.sleep(1)

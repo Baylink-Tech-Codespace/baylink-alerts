@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 from sqlalchemy import Column, Integer, String, Boolean, Date, Float, UUID, ForeignKey, ARRAY, func
+=======
+from sqlalchemy import Column, String, Boolean, Date, Float, UUID, ForeignKey, ARRAY, func
+>>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
 from sqlalchemy.dialects.postgresql import UUID as PGUUID
 from sqlalchemy.orm import relationship, Mapped
 from typing import Optional 
@@ -9,7 +13,10 @@ from typing import List , TYPE_CHECKING
 
 if TYPE_CHECKING:
     from database.models.DeliveryLogs import DeliveryLogs
+<<<<<<< HEAD
     from database.models.Product import Product
+=======
+>>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
 
 class Order(Base):
     __tablename__ = 'Order'

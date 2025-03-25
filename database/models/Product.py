@@ -10,7 +10,11 @@ if TYPE_CHECKING:
     from database.models.Recon import ReconItem
     from database.models.Sales import Sales
     from database.models.Brand import Brand
+<<<<<<< HEAD
     from database.models.Order import OrderItem
+=======
+    from database.models.Warehouse import WarehouseItems
+>>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
     
 class BatchCodes(Base):
     __tablename__ = 'BatchCodes'
@@ -53,6 +57,7 @@ class Product(Base):
     sales : Mapped[List["Sales"]] = relationship('Sales', back_populates='product')
     brand : Mapped[Optional["Brand"]] = relationship("Brand", back_populates="product")
     order_items : Mapped[List["OrderItem"]] = relationship("OrderItem", back_populates="product")
+    warehouse_items : Mapped[List["WarehouseItems"]] = relationship('WarehouseItems', back_populates='product')
     
     @property
     def margin(self):

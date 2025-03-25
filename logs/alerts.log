@@ -6338,6 +6338,7 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 17:51:41,978 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:47,146 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:48,980 - Failed to send alert to 7007555103: None
+<<<<<<< HEAD
 2025-03-19 22:22:25,389 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
@@ -6950,3 +6951,343 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-25 15:44:32,131 -  * Restarting with watchdog (windowsapi)
 2025-03-25 15:44:38,072 -  * Debugger is active!
 2025-03-25 15:44:38,076 -  * Debugger PIN: 156-759-472
+=======
+2025-03-21 15:15:24,433 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-21 15:15:24,433 - [33mPress CTRL+C to quit[0m
+2025-03-21 15:15:24,433 -  * Restarting with stat
+2025-03-21 15:15:31,900 -  * Debugger is active!
+2025-03-21 15:15:31,914 -  * Debugger PIN: 898-260-860
+2025-03-21 15:15:38,861 - 127.0.0.1 - - [21/Mar/2025 15:15:38] "GET / HTTP/1.1" 200 -
+2025-03-21 15:15:39,112 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60uY HTTP/1.1" 200 -
+2025-03-21 15:15:39,194 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "POST /socket.io/?EIO=4&transport=polling&t=PMu60vs&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,195 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60vu&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,210 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60w7&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,221 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-03-21 15:15:39,226 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu60wM&sid=8IxRGU-ExvhoFhNEAAAA HTTP/1.1" 200 -
+2025-03-21 15:15:39,227 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-03-21 15:15:39,333 - 127.0.0.1 - - [21/Mar/2025 15:15:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-21 15:15:40,024 - 127.0.0.1 - - [21/Mar/2025 15:15:40] "[35m[1mGET /fetch_logs HTTP/1.1[0m" 500 -
+2025-03-21 15:16:18,554 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-21 15:16:18,555 - [33mPress CTRL+C to quit[0m
+2025-03-21 15:16:18,555 -  * Restarting with stat
+2025-03-21 15:16:26,722 -  * Debugger is active!
+2025-03-21 15:16:26,734 -  * Debugger PIN: 898-260-860
+2025-03-21 15:16:26,743 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET / HTTP/1.1" 200 -
+2025-03-21 15:16:26,794 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET /socket.io/?EIO=4&transport=polling&t=PMu6CXb HTTP/1.1" 200 -
+2025-03-21 15:16:26,888 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "POST /socket.io/?EIO=4&transport=polling&t=PMu6CZ3&sid=kpBRDKaXllrHeuc6AAAA HTTP/1.1" 200 -
+2025-03-21 15:16:26,891 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET /socket.io/?EIO=4&transport=polling&t=PMu6CZ5&sid=kpBRDKaXllrHeuc6AAAA HTTP/1.1" 200 -
+2025-03-21 15:16:26,907 - 127.0.0.1 - - [21/Mar/2025 15:16:26] "GET /socket.io/?EIO=4&transport=polling&t=PMu6CZP&sid=kpBRDKaXllrHeuc6AAAA HTTP/1.1" 200 -
+2025-03-21 15:16:27,987 - 127.0.0.1 - - [21/Mar/2025 15:16:27] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 15:25:30,964 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-21 15:25:31,420 -  * Restarting with stat
+2025-03-21 15:25:39,783 -  * Debugger is active!
+2025-03-21 15:25:39,797 -  * Debugger PIN: 898-260-860
+2025-03-21 15:25:39,804 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu8Hlk HTTP/1.1" 200 -
+2025-03-21 15:25:39,849 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "POST /socket.io/?EIO=4&transport=polling&t=PMu8JYp&sid=MA3AmsdNxkPWJ5jVAAAA HTTP/1.1" 200 -
+2025-03-21 15:25:39,857 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu8JZD&sid=MA3AmsdNxkPWJ5jVAAAA HTTP/1.1" 200 -
+2025-03-21 15:25:39,863 - 127.0.0.1 - - [21/Mar/2025 15:25:39] "GET /socket.io/?EIO=4&transport=polling&t=PMu8JZL&sid=MA3AmsdNxkPWJ5jVAAAA HTTP/1.1" 200 -
+2025-03-21 15:25:40,812 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-21 15:25:41,233 -  * Restarting with stat
+2025-03-21 15:25:56,357 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-21 15:25:56,357 - [33mPress CTRL+C to quit[0m
+2025-03-21 15:25:56,357 -  * Restarting with stat
+2025-03-21 15:26:03,645 -  * Debugger is active!
+2025-03-21 15:26:03,655 -  * Debugger PIN: 898-260-860
+2025-03-21 15:26:03,662 - 127.0.0.1 - - [21/Mar/2025 15:26:03] "GET /socket.io/?EIO=4&transport=polling&t=PMu8O5l HTTP/1.1" 200 -
+2025-03-21 15:26:03,675 - 127.0.0.1 - - [21/Mar/2025 15:26:03] "POST /socket.io/?EIO=4&transport=polling&t=PMu8PNG&sid=2eKtT1fJTvkTFFK5AAAA HTTP/1.1" 200 -
+2025-03-21 15:26:03,675 - 127.0.0.1 - - [21/Mar/2025 15:26:03] "GET /socket.io/?EIO=4&transport=polling&t=PMu8PNI&sid=2eKtT1fJTvkTFFK5AAAA HTTP/1.1" 200 -
+2025-03-21 15:26:03,677 - 127.0.0.1 - - [21/Mar/2025 15:26:03] "GET /socket.io/?EIO=4&transport=polling&t=PMu8PNS&sid=2eKtT1fJTvkTFFK5AAAA HTTP/1.1" 200 -
+2025-03-21 15:26:17,988 - 127.0.0.1 - - [21/Mar/2025 15:26:17] "GET /socket.io/?EIO=4&transport=websocket&sid=2eKtT1fJTvkTFFK5AAAA HTTP/1.1" 200 -
+2025-03-21 15:26:18,006 - 127.0.0.1 - - [21/Mar/2025 15:26:18] "GET / HTTP/1.1" 200 -
+2025-03-21 15:26:18,093 - 127.0.0.1 - - [21/Mar/2025 15:26:18] "GET /socket.io/?EIO=4&transport=polling&t=PMu8Sug HTTP/1.1" 200 -
+2025-03-21 15:26:18,137 - 127.0.0.1 - - [21/Mar/2025 15:26:18] "POST /socket.io/?EIO=4&transport=polling&t=PMu8Suy&sid=V6OJXRfWTSLJ6L_iAAAC HTTP/1.1" 200 -
+2025-03-21 15:26:18,137 - 127.0.0.1 - - [21/Mar/2025 15:26:18] "GET /socket.io/?EIO=4&transport=polling&t=PMu8Suz&sid=V6OJXRfWTSLJ6L_iAAAC HTTP/1.1" 200 -
+2025-03-21 15:26:18,158 - 127.0.0.1 - - [21/Mar/2025 15:26:18] "GET /socket.io/?EIO=4&transport=polling&t=PMu8Svh&sid=V6OJXRfWTSLJ6L_iAAAC HTTP/1.1" 200 -
+2025-03-21 15:26:18,902 - 127.0.0.1 - - [21/Mar/2025 15:26:18] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 15:31:19,352 - 127.0.0.1 - - [21/Mar/2025 15:31:19] "GET /socket.io/?EIO=4&transport=websocket&sid=V6OJXRfWTSLJ6L_iAAAC HTTP/1.1" 200 -
+2025-03-21 17:09:41,106 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:09:41,106 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:09:41,107 -  * Restarting with stat
+2025-03-21 17:09:48,936 -  * Debugger is active!
+2025-03-21 17:09:48,948 -  * Debugger PIN: 898-260-860
+2025-03-21 17:09:50,530 - 127.0.0.1 - - [21/Mar/2025 17:09:50] "GET / HTTP/1.1" 200 -
+2025-03-21 17:09:50,669 - 127.0.0.1 - - [21/Mar/2025 17:09:50] "GET /socket.io/?EIO=4&transport=polling&t=PMuW9de HTTP/1.1" 200 -
+2025-03-21 17:09:50,670 - 127.0.0.1 - - [21/Mar/2025 17:09:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-21 17:09:50,673 - 127.0.0.1 - - [21/Mar/2025 17:09:50] "POST /socket.io/?EIO=4&transport=polling&t=PMuW9eG&sid=RawRn4HEuQZy199XAAAA HTTP/1.1" 200 -
+2025-03-21 17:09:50,676 - 127.0.0.1 - - [21/Mar/2025 17:09:50] "GET /socket.io/?EIO=4&transport=polling&t=PMuW9eH&sid=RawRn4HEuQZy199XAAAA HTTP/1.1" 200 -
+2025-03-21 17:09:50,678 - 127.0.0.1 - - [21/Mar/2025 17:09:50] "GET /socket.io/?EIO=4&transport=polling&t=PMuW9eL&sid=RawRn4HEuQZy199XAAAA HTTP/1.1" 200 -
+2025-03-21 17:09:51,483 - 127.0.0.1 - - [21/Mar/2025 17:09:51] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:12:14,439 - 127.0.0.1 - - [21/Mar/2025 17:12:14] "GET /socket.io/?EIO=4&transport=websocket&sid=RawRn4HEuQZy199XAAAA HTTP/1.1" 200 -
+2025-03-21 17:12:14,442 - 127.0.0.1 - - [21/Mar/2025 17:12:14] "GET / HTTP/1.1" 200 -
+2025-03-21 17:12:14,456 - 127.0.0.1 - - [21/Mar/2025 17:12:14] "GET /socket.io/?EIO=4&transport=polling&t=PMuWikr HTTP/1.1" 200 -
+2025-03-21 17:12:14,464 - 127.0.0.1 - - [21/Mar/2025 17:12:14] "POST /socket.io/?EIO=4&transport=polling&t=PMuWikz&sid=suER3uZw9HIZtDgiAAAC HTTP/1.1" 200 -
+2025-03-21 17:12:14,467 - 127.0.0.1 - - [21/Mar/2025 17:12:14] "GET /socket.io/?EIO=4&transport=polling&t=PMuWik-&sid=suER3uZw9HIZtDgiAAAC HTTP/1.1" 200 -
+2025-03-21 17:12:14,469 - 127.0.0.1 - - [21/Mar/2025 17:12:14] "GET /socket.io/?EIO=4&transport=polling&t=PMuWil4&sid=suER3uZw9HIZtDgiAAAC HTTP/1.1" 200 -
+2025-03-21 17:12:15,345 - 127.0.0.1 - - [21/Mar/2025 17:12:15] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:12:36,895 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:12:36,895 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:12:36,896 -  * Restarting with stat
+2025-03-21 17:12:45,036 -  * Debugger is active!
+2025-03-21 17:12:45,047 -  * Debugger PIN: 898-260-860
+2025-03-21 17:13:02,235 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/database/models/BaylinkAlertLogs.py', reloading
+2025-03-21 17:13:02,583 -  * Restarting with stat
+2025-03-21 17:14:25,320 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:14:25,320 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:14:25,320 -  * Restarting with stat
+2025-03-21 17:14:33,379 -  * Debugger is active!
+2025-03-21 17:14:33,391 -  * Debugger PIN: 898-260-860
+2025-03-21 17:14:33,399 - 127.0.0.1 - - [21/Mar/2025 17:14:33] "GET / HTTP/1.1" 200 -
+2025-03-21 17:14:33,441 - 127.0.0.1 - - [21/Mar/2025 17:14:33] "GET /socket.io/?EIO=4&transport=polling&t=PMuXEg8 HTTP/1.1" 200 -
+2025-03-21 17:14:33,449 - 127.0.0.1 - - [21/Mar/2025 17:14:33] "POST /socket.io/?EIO=4&transport=polling&t=PMuXEgd&sid=-LJ0Zf8Xg6xv4isLAAAA HTTP/1.1" 200 -
+2025-03-21 17:14:33,450 - 127.0.0.1 - - [21/Mar/2025 17:14:33] "GET /socket.io/?EIO=4&transport=polling&t=PMuXEge&sid=-LJ0Zf8Xg6xv4isLAAAA HTTP/1.1" 200 -
+2025-03-21 17:14:33,451 - 127.0.0.1 - - [21/Mar/2025 17:14:33] "GET /socket.io/?EIO=4&transport=polling&t=PMuXEgg&sid=-LJ0Zf8Xg6xv4isLAAAA HTTP/1.1" 200 -
+2025-03-21 17:14:34,422 - 127.0.0.1 - - [21/Mar/2025 17:14:34] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:15:11,432 - 127.0.0.1 - - [21/Mar/2025 17:15:11] "GET /socket.io/?EIO=4&transport=websocket&sid=-LJ0Zf8Xg6xv4isLAAAA HTTP/1.1" 200 -
+2025-03-21 17:15:11,436 - 127.0.0.1 - - [21/Mar/2025 17:15:11] "GET / HTTP/1.1" 200 -
+2025-03-21 17:15:11,458 - 127.0.0.1 - - [21/Mar/2025 17:15:11] "GET /socket.io/?EIO=4&transport=polling&t=PMuXNyL HTTP/1.1" 200 -
+2025-03-21 17:15:11,463 - 127.0.0.1 - - [21/Mar/2025 17:15:11] "POST /socket.io/?EIO=4&transport=polling&t=PMuXNya&sid=Rnf3F-Eflnt9eP_1AAAC HTTP/1.1" 200 -
+2025-03-21 17:15:11,464 - 127.0.0.1 - - [21/Mar/2025 17:15:11] "GET /socket.io/?EIO=4&transport=polling&t=PMuXNya.0&sid=Rnf3F-Eflnt9eP_1AAAC HTTP/1.1" 200 -
+2025-03-21 17:15:11,467 - 127.0.0.1 - - [21/Mar/2025 17:15:11] "GET /socket.io/?EIO=4&transport=polling&t=PMuXNyg&sid=Rnf3F-Eflnt9eP_1AAAC HTTP/1.1" 200 -
+2025-03-21 17:15:12,433 - 127.0.0.1 - - [21/Mar/2025 17:15:12] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:15:27,155 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:15:27,685 -  * Restarting with stat
+2025-03-21 17:15:35,664 -  * Debugger is active!
+2025-03-21 17:15:35,677 -  * Debugger PIN: 898-260-860
+2025-03-21 17:15:35,687 - 127.0.0.1 - - [21/Mar/2025 17:15:35] "GET /socket.io/?EIO=4&transport=polling&t=PMuXSR0 HTTP/1.1" 200 -
+2025-03-21 17:15:35,966 - 127.0.0.1 - - [21/Mar/2025 17:15:35] "POST /socket.io/?EIO=4&transport=polling&t=PMuXTxO&sid=lCNmx4jq-td5ICe7AAAA HTTP/1.1" 200 -
+2025-03-21 17:15:35,968 - 127.0.0.1 - - [21/Mar/2025 17:15:35] "GET /socket.io/?EIO=4&transport=polling&t=PMuXTxP&sid=lCNmx4jq-td5ICe7AAAA HTTP/1.1" 200 -
+2025-03-21 17:20:39,909 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:20:40,300 -  * Restarting with stat
+2025-03-21 17:20:48,799 -  * Debugger is active!
+2025-03-21 17:20:48,809 -  * Debugger PIN: 898-260-860
+2025-03-21 17:20:48,816 - 127.0.0.1 - - [21/Mar/2025 17:20:48] "GET /socket.io/?EIO=4&transport=polling&t=PMuYebt HTTP/1.1" 200 -
+2025-03-21 17:20:48,824 - 127.0.0.1 - - [21/Mar/2025 17:20:48] "POST /socket.io/?EIO=4&transport=polling&t=PMuYgJo&sid=Ya5wmSxL_xWCW07FAAAA HTTP/1.1" 200 -
+2025-03-21 17:20:48,825 - 127.0.0.1 - - [21/Mar/2025 17:20:48] "GET /socket.io/?EIO=4&transport=polling&t=PMuYgJs&sid=Ya5wmSxL_xWCW07FAAAA HTTP/1.1" 200 -
+2025-03-21 17:20:48,827 - 127.0.0.1 - - [21/Mar/2025 17:20:48] "GET /socket.io/?EIO=4&transport=polling&t=PMuYgJw&sid=Ya5wmSxL_xWCW07FAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:18,115 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:21:18,581 -  * Restarting with stat
+2025-03-21 17:21:26,669 -  * Debugger is active!
+2025-03-21 17:21:26,679 -  * Debugger PIN: 898-260-860
+2025-03-21 17:21:26,686 - 127.0.0.1 - - [21/Mar/2025 17:21:26] "GET /socket.io/?EIO=4&transport=polling&t=PMuYntb HTTP/1.1" 200 -
+2025-03-21 17:21:26,692 - 127.0.0.1 - - [21/Mar/2025 17:21:26] "POST /socket.io/?EIO=4&transport=polling&t=PMuYpZX&sid=MUa7ZOU9QdwvCTBpAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:26,693 - 127.0.0.1 - - [21/Mar/2025 17:21:26] "GET /socket.io/?EIO=4&transport=polling&t=PMuYpZZ&sid=MUa7ZOU9QdwvCTBpAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:28,706 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:21:29,057 -  * Restarting with stat
+2025-03-21 17:21:37,308 -  * Debugger is active!
+2025-03-21 17:21:37,322 -  * Debugger PIN: 898-260-860
+2025-03-21 17:21:37,330 - 127.0.0.1 - - [21/Mar/2025 17:21:37] "GET /socket.io/?EIO=4&transport=polling&t=PMuYqZS HTTP/1.1" 200 -
+2025-03-21 17:21:37,340 - 127.0.0.1 - - [21/Mar/2025 17:21:37] "POST /socket.io/?EIO=4&transport=polling&t=PMuYs9u&sid=a4UcgJ2vfn3HXErPAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:37,341 - 127.0.0.1 - - [21/Mar/2025 17:21:37] "GET /socket.io/?EIO=4&transport=polling&t=PMuYs9v&sid=a4UcgJ2vfn3HXErPAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:37,342 - 127.0.0.1 - - [21/Mar/2025 17:21:37] "GET /socket.io/?EIO=4&transport=polling&t=PMuYs9z&sid=a4UcgJ2vfn3HXErPAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:42,375 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:21:42,725 -  * Restarting with stat
+2025-03-21 17:21:51,080 -  * Debugger is active!
+2025-03-21 17:21:51,091 -  * Debugger PIN: 898-260-860
+2025-03-21 17:21:51,100 - 127.0.0.1 - - [21/Mar/2025 17:21:51] "GET /socket.io/?EIO=4&transport=polling&t=PMuYtka HTTP/1.1" 200 -
+2025-03-21 17:21:51,112 - 127.0.0.1 - - [21/Mar/2025 17:21:51] "POST /socket.io/?EIO=4&transport=polling&t=PMuYvX1&sid=nRHRCho6QjQ44HNtAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:51,112 - 127.0.0.1 - - [21/Mar/2025 17:21:51] "GET /socket.io/?EIO=4&transport=polling&t=PMuYvX3&sid=nRHRCho6QjQ44HNtAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:51,114 - 127.0.0.1 - - [21/Mar/2025 17:21:51] "GET /socket.io/?EIO=4&transport=polling&t=PMuYvX9&sid=nRHRCho6QjQ44HNtAAAA HTTP/1.1" 200 -
+2025-03-21 17:21:52,105 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:22:21,517 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:22:21,518 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:22:21,518 -  * Restarting with stat
+2025-03-21 17:22:29,594 -  * Debugger is active!
+2025-03-21 17:22:29,606 -  * Debugger PIN: 898-260-860
+2025-03-21 17:22:29,615 - 127.0.0.1 - - [21/Mar/2025 17:22:29] "GET /socket.io/?EIO=4&transport=polling&t=PMuZ1G0 HTTP/1.1" 200 -
+2025-03-21 17:22:29,617 - 127.0.0.1 - - [21/Mar/2025 17:22:29] "GET / HTTP/1.1" 200 -
+2025-03-21 17:22:29,674 - 127.0.0.1 - - [21/Mar/2025 17:22:29] "GET /socket.io/?EIO=4&transport=polling&t=PMuZ2x4 HTTP/1.1" 200 -
+2025-03-21 17:22:29,677 - 127.0.0.1 - - [21/Mar/2025 17:22:29] "POST /socket.io/?EIO=4&transport=polling&t=PMuZ2xh&sid=jAkySXdLV66PduIcAAAB HTTP/1.1" 200 -
+2025-03-21 17:22:29,678 - 127.0.0.1 - - [21/Mar/2025 17:22:29] "GET /socket.io/?EIO=4&transport=polling&t=PMuZ2xi&sid=jAkySXdLV66PduIcAAAB HTTP/1.1" 200 -
+2025-03-21 17:22:30,583 - 127.0.0.1 - - [21/Mar/2025 17:22:30] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:23:01,514 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:23:02,197 -  * Restarting with stat
+2025-03-21 17:27:15,854 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:27:15,854 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:27:15,854 -  * Restarting with stat
+2025-03-21 17:27:23,932 -  * Debugger is active!
+2025-03-21 17:27:23,944 -  * Debugger PIN: 898-260-860
+2025-03-21 17:27:23,953 - 127.0.0.1 - - [21/Mar/2025 17:27:23] "GET /socket.io/?EIO=4&transport=polling&t=PMua8wJ HTTP/1.1" 200 -
+2025-03-21 17:27:23,955 - 127.0.0.1 - - [21/Mar/2025 17:27:23] "GET / HTTP/1.1" 200 -
+2025-03-21 17:27:23,995 - 127.0.0.1 - - [21/Mar/2025 17:27:23] "GET /socket.io/?EIO=4&transport=polling&t=PMuaAo9 HTTP/1.1" 200 -
+2025-03-21 17:27:24,027 - 127.0.0.1 - - [21/Mar/2025 17:27:24] "POST /socket.io/?EIO=4&transport=polling&t=PMuaAor&sid=eUP5TQ1JXX5t1J2tAAAB HTTP/1.1" 200 -
+2025-03-21 17:27:24,028 - 127.0.0.1 - - [21/Mar/2025 17:27:24] "GET /socket.io/?EIO=4&transport=polling&t=PMuaAos&sid=eUP5TQ1JXX5t1J2tAAAB HTTP/1.1" 200 -
+2025-03-21 17:27:24,030 - 127.0.0.1 - - [21/Mar/2025 17:27:24] "GET /socket.io/?EIO=4&transport=polling&t=PMuaAoz&sid=eUP5TQ1JXX5t1J2tAAAB HTTP/1.1" 200 -
+2025-03-21 17:27:24,884 - 127.0.0.1 - - [21/Mar/2025 17:27:24] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:27:47,787 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:27:48,380 -  * Restarting with stat
+2025-03-21 17:28:26,694 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:28:26,695 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:28:26,695 -  * Restarting with stat
+2025-03-21 17:28:35,094 -  * Debugger is active!
+2025-03-21 17:28:35,130 -  * Debugger PIN: 898-260-860
+2025-03-21 17:28:35,137 - 127.0.0.1 - - [21/Mar/2025 17:28:35] "GET /socket.io/?EIO=4&transport=polling&t=PMuaR5n HTTP/1.1" 200 -
+2025-03-21 17:28:35,142 - 127.0.0.1 - - [21/Mar/2025 17:28:35] "POST /socket.io/?EIO=4&transport=polling&t=PMuaSA4&sid=2ad6c1GL8Xj1j-kjAAAA HTTP/1.1" 200 -
+2025-03-21 17:28:35,146 - 127.0.0.1 - - [21/Mar/2025 17:28:35] "GET /socket.io/?EIO=4&transport=polling&t=PMuaSA8&sid=2ad6c1GL8Xj1j-kjAAAA HTTP/1.1" 200 -
+2025-03-21 17:28:35,150 - 127.0.0.1 - - [21/Mar/2025 17:28:35] "GET /socket.io/?EIO=4&transport=polling&t=PMuaSAD&sid=2ad6c1GL8Xj1j-kjAAAA HTTP/1.1" 200 -
+2025-03-21 17:28:36,761 - 127.0.0.1 - - [21/Mar/2025 17:28:36] "GET /socket.io/?EIO=4&transport=websocket&sid=2ad6c1GL8Xj1j-kjAAAA HTTP/1.1" 200 -
+2025-03-21 17:28:36,783 - 127.0.0.1 - - [21/Mar/2025 17:28:36] "GET / HTTP/1.1" 200 -
+2025-03-21 17:28:36,809 - 127.0.0.1 - - [21/Mar/2025 17:28:36] "GET /socket.io/?EIO=4&transport=polling&t=PMuaSa6 HTTP/1.1" 200 -
+2025-03-21 17:28:36,841 - 127.0.0.1 - - [21/Mar/2025 17:28:36] "POST /socket.io/?EIO=4&transport=polling&t=PMuaSaZ&sid=wovvT67ErTobSonVAAAC HTTP/1.1" 200 -
+2025-03-21 17:28:36,842 - 127.0.0.1 - - [21/Mar/2025 17:28:36] "GET /socket.io/?EIO=4&transport=polling&t=PMuaSaa&sid=wovvT67ErTobSonVAAAC HTTP/1.1" 200 -
+2025-03-21 17:28:37,703 - 127.0.0.1 - - [21/Mar/2025 17:28:37] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:29:08,937 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:29:09,367 -  * Restarting with stat
+2025-03-21 17:29:29,031 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:29:29,031 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:29:29,031 -  * Restarting with stat
+2025-03-21 17:29:37,180 -  * Debugger is active!
+2025-03-21 17:29:37,193 -  * Debugger PIN: 898-260-860
+2025-03-21 17:29:37,201 - 127.0.0.1 - - [21/Mar/2025 17:29:37] "GET /socket.io/?EIO=4&transport=polling&t=PMuafqa HTTP/1.1" 200 -
+2025-03-21 17:29:37,203 - 127.0.0.1 - - [21/Mar/2025 17:29:37] "GET / HTTP/1.1" 200 -
+2025-03-21 17:29:37,226 - 127.0.0.1 - - [21/Mar/2025 17:29:37] "GET /socket.io/?EIO=4&transport=polling&t=PMuahK0 HTTP/1.1" 200 -
+2025-03-21 17:29:37,255 - 127.0.0.1 - - [21/Mar/2025 17:29:37] "POST /socket.io/?EIO=4&transport=polling&t=PMuahKU&sid=NSpR_2yGvraOpgBbAAAB HTTP/1.1" 200 -
+2025-03-21 17:29:37,257 - 127.0.0.1 - - [21/Mar/2025 17:29:37] "GET /socket.io/?EIO=4&transport=polling&t=PMuahKU.0&sid=NSpR_2yGvraOpgBbAAAB HTTP/1.1" 200 -
+2025-03-21 17:29:38,085 - 127.0.0.1 - - [21/Mar/2025 17:29:38] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:30:22,147 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 17:30:22,787 -  * Restarting with stat
+2025-03-21 17:30:44,909 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:30:44,909 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:30:44,909 -  * Restarting with stat
+2025-03-21 17:30:52,959 -  * Debugger is active!
+2025-03-21 17:30:52,973 -  * Debugger PIN: 898-260-860
+2025-03-21 17:30:52,982 - 127.0.0.1 - - [21/Mar/2025 17:30:52] "GET /socket.io/?EIO=4&transport=polling&t=PMuaz1l HTTP/1.1" 200 -
+2025-03-21 17:30:52,988 - 127.0.0.1 - - [21/Mar/2025 17:30:52] "POST /socket.io/?EIO=4&transport=polling&t=PMuazpv&sid=00oern7_oJVmK3nQAAAA HTTP/1.1" 200 -
+2025-03-21 17:30:52,993 - 127.0.0.1 - - [21/Mar/2025 17:30:52] "GET /socket.io/?EIO=4&transport=polling&t=PMuazpz&sid=00oern7_oJVmK3nQAAAA HTTP/1.1" 200 -
+2025-03-21 17:30:52,997 - 127.0.0.1 - - [21/Mar/2025 17:30:52] "GET /socket.io/?EIO=4&transport=polling&t=PMuazq3&sid=00oern7_oJVmK3nQAAAA HTTP/1.1" 200 -
+2025-03-21 17:30:56,650 - 127.0.0.1 - - [21/Mar/2025 17:30:56] "GET /socket.io/?EIO=4&transport=websocket&sid=00oern7_oJVmK3nQAAAA HTTP/1.1" 200 -
+2025-03-21 17:30:56,696 - 127.0.0.1 - - [21/Mar/2025 17:30:56] "GET / HTTP/1.1" 200 -
+2025-03-21 17:30:56,733 - 127.0.0.1 - - [21/Mar/2025 17:30:56] "GET /socket.io/?EIO=4&transport=polling&t=PMua-kE HTTP/1.1" 200 -
+2025-03-21 17:30:56,791 - 127.0.0.1 - - [21/Mar/2025 17:30:56] "POST /socket.io/?EIO=4&transport=polling&t=PMua-kb&sid=DwEFLhw6NSPYKV6PAAAC HTTP/1.1" 200 -
+2025-03-21 17:30:56,824 - 127.0.0.1 - - [21/Mar/2025 17:30:56] "GET /socket.io/?EIO=4&transport=polling&t=PMua-kb.0&sid=DwEFLhw6NSPYKV6PAAAC HTTP/1.1" 200 -
+2025-03-21 17:30:57,907 - 127.0.0.1 - - [21/Mar/2025 17:30:57] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:31:24,801 - 127.0.0.1 - - [21/Mar/2025 17:31:24] "GET /socket.io/?EIO=4&transport=websocket&sid=DwEFLhw6NSPYKV6PAAAC HTTP/1.1" 200 -
+2025-03-21 17:34:39,152 - 127.0.0.1 - - [21/Mar/2025 17:34:39] "GET /socket.io/?EIO=4&transport=polling&t=PMubr1M HTTP/1.1" 200 -
+2025-03-21 17:34:39,198 - 127.0.0.1 - - [21/Mar/2025 17:34:39] "POST /socket.io/?EIO=4&transport=polling&t=PMubr2N&sid=XdWhTPJqiDKh9AS_AAAE HTTP/1.1" 200 -
+2025-03-21 17:34:39,250 - 127.0.0.1 - - [21/Mar/2025 17:34:39] "GET /socket.io/?EIO=4&transport=polling&t=PMubr2O&sid=XdWhTPJqiDKh9AS_AAAE HTTP/1.1" 200 -
+2025-03-21 17:34:40,253 - 127.0.0.1 - - [21/Mar/2025 17:34:40] "GET / HTTP/1.1" 200 -
+2025-03-21 17:34:40,253 - 127.0.0.1 - - [21/Mar/2025 17:34:40] "GET /socket.io/?EIO=4&transport=websocket&sid=XdWhTPJqiDKh9AS_AAAE HTTP/1.1" 200 -
+2025-03-21 17:34:40,286 - 127.0.0.1 - - [21/Mar/2025 17:34:40] "GET /socket.io/?EIO=4&transport=polling&t=PMubrJG HTTP/1.1" 200 -
+2025-03-21 17:34:40,323 - 127.0.0.1 - - [21/Mar/2025 17:34:40] "POST /socket.io/?EIO=4&transport=polling&t=PMubrJs&sid=HoZbAOnCKPxuLujmAAAG HTTP/1.1" 200 -
+2025-03-21 17:34:40,354 - 127.0.0.1 - - [21/Mar/2025 17:34:40] "GET /socket.io/?EIO=4&transport=polling&t=PMubrJs.0&sid=HoZbAOnCKPxuLujmAAAG HTTP/1.1" 200 -
+2025-03-21 17:34:41,227 - 127.0.0.1 - - [21/Mar/2025 17:34:41] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:38:20,193 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET /socket.io/?EIO=4&transport=websocket&sid=HoZbAOnCKPxuLujmAAAG HTTP/1.1" 200 -
+2025-03-21 17:38:20,229 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET / HTTP/1.1" 200 -
+2025-03-21 17:38:20,268 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET /socket.io/?EIO=4&transport=polling&t=PMuch0R HTTP/1.1" 200 -
+2025-03-21 17:38:20,340 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "POST /socket.io/?EIO=4&transport=polling&t=PMuch1Y&sid=USUPIKMgwGxWhH-_AAAI HTTP/1.1" 200 -
+2025-03-21 17:38:20,340 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET /socket.io/?EIO=4&transport=polling&t=PMuch1Z&sid=USUPIKMgwGxWhH-_AAAI HTTP/1.1" 200 -
+2025-03-21 17:38:20,369 - 127.0.0.1 - - [21/Mar/2025 17:38:20] "GET /socket.io/?EIO=4&transport=polling&t=PMuch26&sid=USUPIKMgwGxWhH-_AAAI HTTP/1.1" 200 -
+2025-03-21 17:38:21,273 - 127.0.0.1 - - [21/Mar/2025 17:38:21] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 17:40:22,324 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-21 17:40:22,989 -  * Restarting with stat
+2025-03-21 17:40:39,666 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:40:39,666 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:40:39,666 -  * Restarting with stat
+2025-03-21 17:40:48,221 -  * Debugger is active!
+2025-03-21 17:40:48,231 -  * Debugger PIN: 898-260-860
+2025-03-21 17:40:48,239 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "GET /socket.io/?EIO=4&transport=polling&t=PMudD7r HTTP/1.1" 200 -
+2025-03-21 17:40:48,254 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "POST /socket.io/?EIO=4&transport=polling&t=PMudF8w&sid=K6H_dihIyjuTgxINAAAA HTTP/1.1" 200 -
+2025-03-21 17:40:48,257 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "GET /socket.io/?EIO=4&transport=polling&t=PMudF8z&sid=K6H_dihIyjuTgxINAAAA HTTP/1.1" 200 -
+2025-03-21 17:40:48,260 - 127.0.0.1 - - [21/Mar/2025 17:40:48] "GET /socket.io/?EIO=4&transport=polling&t=PMudF93&sid=K6H_dihIyjuTgxINAAAA HTTP/1.1" 200 -
+2025-03-21 17:41:04,164 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 17:41:04,165 - [33mPress CTRL+C to quit[0m
+2025-03-21 17:41:04,165 -  * Restarting with stat
+2025-03-21 17:41:13,682 -  * Debugger is active!
+2025-03-21 17:41:13,699 -  * Debugger PIN: 898-260-860
+2025-03-21 17:41:13,708 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "GET /socket.io/?EIO=4&transport=polling&t=PMudJfu HTTP/1.1" 200 -
+2025-03-21 17:41:13,713 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "POST /socket.io/?EIO=4&transport=polling&t=PMudLMl&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:41:13,715 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "GET /socket.io/?EIO=4&transport=polling&t=PMudLMm&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:41:13,717 - 127.0.0.1 - - [21/Mar/2025 17:41:13] "GET /socket.io/?EIO=4&transport=polling&t=PMudLMq&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:47:34,983 - 127.0.0.1 - - [21/Mar/2025 17:47:34] "GET /socket.io/?EIO=4&transport=websocket&sid=wcWE0_86-csfDU9vAAAA HTTP/1.1" 200 -
+2025-03-21 17:47:35,103 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET / HTTP/1.1" 200 -
+2025-03-21 17:47:35,166 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET /socket.io/?EIO=4&transport=polling&t=PMueoUS HTTP/1.1" 200 -
+2025-03-21 17:47:35,295 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "POST /socket.io/?EIO=4&transport=polling&t=PMueoW2&sid=ypTt4VuG4y3qdmNZAAAC HTTP/1.1" 200 -
+2025-03-21 17:47:35,356 - 127.0.0.1 - - [21/Mar/2025 17:47:35] "GET /socket.io/?EIO=4&transport=polling&t=PMueoW4&sid=ypTt4VuG4y3qdmNZAAAC HTTP/1.1" 200 -
+2025-03-21 17:47:36,252 - 127.0.0.1 - - [21/Mar/2025 17:47:36] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 18:05:04,359 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-21 18:05:04,359 - [33mPress CTRL+C to quit[0m
+2025-03-21 18:05:04,359 -  * Restarting with stat
+2025-03-21 18:05:12,393 -  * Debugger is active!
+2025-03-21 18:05:12,405 -  * Debugger PIN: 898-260-860
+2025-03-21 18:05:45,370 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET / HTTP/1.1" 200 -
+2025-03-21 18:05:45,444 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET /socket.io/?EIO=4&transport=polling&t=PMuiyfq HTTP/1.1" 200 -
+2025-03-21 18:05:45,480 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "POST /socket.io/?EIO=4&transport=polling&t=PMuiygt&sid=2ZGlEQ3biTu4MPhAAAAA HTTP/1.1" 200 -
+2025-03-21 18:05:45,506 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET /socket.io/?EIO=4&transport=polling&t=PMuiygt.0&sid=2ZGlEQ3biTu4MPhAAAAA HTTP/1.1" 200 -
+2025-03-21 18:05:45,557 - 127.0.0.1 - - [21/Mar/2025 18:05:45] "GET /socket.io/?EIO=4&transport=polling&t=PMuiyha&sid=2ZGlEQ3biTu4MPhAAAAA HTTP/1.1" 200 -
+2025-03-21 18:05:46,315 - 127.0.0.1 - - [21/Mar/2025 18:05:46] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-21 18:09:10,199 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 18:09:10,929 -  * Restarting with stat
+2025-03-21 18:09:20,118 -  * Debugger is active!
+2025-03-21 18:09:20,136 -  * Debugger PIN: 898-260-860
+2025-03-21 18:09:20,146 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujkz_ HTTP/1.1" 200 -
+2025-03-21 18:09:20,153 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "POST /socket.io/?EIO=4&transport=polling&t=PMujn5K&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
+2025-03-21 18:09:20,153 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujn5L&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
+2025-03-21 18:09:20,158 - 127.0.0.1 - - [21/Mar/2025 18:09:20] "GET /socket.io/?EIO=4&transport=polling&t=PMujn5S&sid=s8nftAWl5dPf7cRwAAAA HTTP/1.1" 200 -
+2025-03-21 18:09:41,974 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/main.py', reloading
+2025-03-21 18:09:42,473 -  * Restarting with stat
+2025-03-22 12:57:43,766 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-22 12:57:43,766 - [33mPress CTRL+C to quit[0m
+2025-03-22 12:57:43,766 -  * Restarting with stat
+2025-03-22 12:57:52,853 -  * Debugger is active!
+2025-03-22 12:57:52,866 -  * Debugger PIN: 898-260-860
+2025-03-22 13:01:02,744 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-22 13:01:02,745 - [33mPress CTRL+C to quit[0m
+2025-03-22 13:01:02,745 -  * Restarting with stat
+2025-03-22 13:01:11,086 -  * Debugger is active!
+2025-03-22 13:01:11,097 -  * Debugger PIN: 898-260-860
+2025-03-22 13:01:41,898 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.251.27.229:4000
+2025-03-22 13:01:41,899 - [33mPress CTRL+C to quit[0m
+2025-03-22 13:01:41,899 -  * Restarting with stat
+2025-03-22 13:01:49,945 -  * Debugger is active!
+2025-03-22 13:01:49,958 -  * Debugger PIN: 898-260-860
+>>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6

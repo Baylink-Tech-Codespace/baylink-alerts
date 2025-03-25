@@ -7,6 +7,9 @@ from database.db import db
 from sqlalchemy import UUID, Date, cast
 from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta, timezone
+from collections import defaultdict
+
+from helper.s3 import get_recon_image_from_s3
 from database.models.Brand import Brand
 from database.models.Product import Product
 from database.models.Sales import Sales
@@ -31,6 +34,10 @@ if TYPE_CHECKING:
 
 from constants import SWIPE_DOC_API_URL, SWIPE_PAYMENT_LIST_URL, SWIPE_TOKEN
 
+
+from shelf_classification.main import is_shelf_image
+
+#CASE 1
 def fetch_retailer_transactions(retailer_id, start_date, end_date, payment_status):
     """Fetch transactions for a specific retailer from the API. Only check once in a month"""
     HEADERS = {
@@ -129,7 +136,6 @@ def check_all_retailers_pending_bills():
 
     return alerts
 
-
 # CASE 2 
 def compare_quantity_inventory_recon(recon_id):
     print("Checking quantity in inventory and recon...")
@@ -178,7 +184,7 @@ def compare_quantity_inventory_recon(recon_id):
 # CASE 4 
 def is_retailer_shelf_image_event(recon_id):
     print("Checking if retailer shelf image is provided for the recon.")
-    messages = []
+    message = ""
     
     recon = db.get_session().query(Recon).filter(Recon._id == recon_id).first()
     retailer = db.get_session().query(Retailer).filter(Retailer._id == recon.retailer_id).first()
@@ -187,31 +193,26 @@ def is_retailer_shelf_image_event(recon_id):
   
     quantity = sum(item.quantity for item in recon.recon_items)
     image = recon.image[0] if recon.image else ""
- 
+    
+    s3_image_url = get_recon_image_from_s3(image)
+    shelf_image = is_shelf_image(s3_image_url)
+    
+    print(quantity , shelf_image , image)
+     
     if quantity == 0 and image == "":
-        messages.append({
-            "recepient": recepient,
-            "message": "No quantity and image provided for the recon."
-        })
+        message = "No quantity and image provided for the recon."
     
     if quantity > 0 and image == "":
-        messages.append({
-            "recepient": recepient,
-            "message": "No image provided for the recon."
-        })
+        message = "No image provided for the recon."
         
-    if quantity == 0 and image != "":
-        #response = llm.process_image_and_prompt(image)
-        #return response
-        messages.append({
-            "message": "response"
-        })
+    if quantity == 0 and image != "" and shelf_image == False: 
+        message = "Shelf Image not provided for the recon."
         
     context = {
         "recepient": recepient,
         "person_name" : field_exec.Name,
         "role" : "Field Executive",
-        "messages" : messages
+        "messages" : [message]
     }
     return context
 
@@ -242,7 +243,6 @@ def detect_sales_drop():
                 })
     
     return messages
- 
  
 # CASE 3 
 def check_sales_anomaly(data):
@@ -307,20 +307,103 @@ def check_sales_anomaly(data):
 
 
 # CASE 6 
-def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
+def check_warehouse_inventory(MIN_STOCK_LEVEL=200):
     messages = []
     warehouse_items = db.get_session().query(WarehouseItems).all()
     items = []
     
     for item in warehouse_items:
-        if item.quantity < MIN_STOCK_LEVEL:
-            items.append(item)
+        if item.warehouse.warehouse_manager:
+            if item.quantity < MIN_STOCK_LEVEL:
+                items.append({
+                    "product_name" : item.product.name,
+                    "quantity" : item.quantity,
+                    "recepient" : item.warehouse.warehouse_manager.fe_user.Field_Exec.Contact_Number
+                })            
     
-    return items
+    for item in items:
+        message = f"Alert: Warehouse inventory for {item['product_name']} is below the minimum stock level of {MIN_STOCK_LEVEL}. Current quantity: {item['quantity']}"
+        messages.append({
+            "recepient": item["recepient"],
+            "message": message,
+            "person_name" : item["recepient"],
+            "role" : "Warehouse Manager"
+        })
+    
+    return messages
 
+# case 7
+# Notify the warehouse manager to verify pending order deliveries and credit notes.
+def notify_pending_orders():
+    print("Checking for pending order deliveries and credit notes...")
+
+    messages = []
+    today = datetime.now().date()
+    
+    orders = db.get_session().query(Order).filter(Order.expected_delivery_date == today).all()
+    credit_notes = db.get_session().query(CreditNote).filter(CreditNote.pickup_date == today).all()
+    
+    for order in orders:
+        if order.status == "In-Transit" or order.status == "Scheduled": 
+            delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
+            if delivery_log and delivery_log.delivery_person:
+                recepient = delivery_log.delivery_person.Contact_Number
+                person_name = delivery_log.delivery_person.Name
+                message =  order.order_name 
+                
+                messages.append({
+                    "recepient": recepient,
+                    "message": message,
+                    "person_name": person_name,
+                    "role": "Delivery Person"
+                })
+                
+    for credit_note in credit_notes:
+        if credit_note.status == "In-Transit" or credit_note.status == "Scheduled":
+            delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.credit_note_id == credit_note._id).first()
+            if delivery_log and delivery_log.delivery_person:
+                recepient = delivery_log.delivery_person.Contact_Number
+                person_name = delivery_log.delivery_person.Name
+                message = credit_note.credit_note_name
+                
+                messages.append({
+                    "recepient": recepient,
+                    "message": message,
+                    "person_name": person_name,
+                    "role": "Delivery Person"
+                })
+                
+    grouped_messages = {}
+    for message in messages:
+        if message["recepient"] not in grouped_messages:
+            grouped_messages[message["recepient"]] = {
+                "recepient": message["recepient"],
+                "messages": [message["message"]],
+                "person_name": message["person_name"],
+                "role": message["role"]
+            }
+        else:
+            grouped_messages[message["recepient"]]["messages"].append(message["message"])
+
+    for recepient, data in grouped_messages.items():
+        messages = data["messages"]
+        person_name = data["person_name"]
+        role = data["role"]
+        message = "\n".join(messages)
+        
+        messages.append({
+            "recepient": recepient,
+            "message": f"Pending order deliveries and credit notes for today:\n{message}",
+            "person_name": person_name,
+            "role": role
+        })
+        
+    return messages
+            
 
 # CASE 8
 def notify_delivery_for_orders():
+    
     try :    
         print("Checking for delivery for orders...")
         messages = []
@@ -362,7 +445,6 @@ def notify_delivery_for_orders():
     except Exception as e:
         print(f"Error in notify_delivery_for_orders: {e}")
         return []
-
 
 # CASE 9 
 def delivery_not_out_on_expected_date():
@@ -410,7 +492,7 @@ def delivery_not_out_on_expected_date():
         return []
 
 
-# CASE 13 
+# CASE 10
 def nearly_expiring_stocks():
     try:
         print("Checking for nearly expiring stocks...")
@@ -495,11 +577,11 @@ def check_skipped_orders_alert():
 
     return messages
 
+
 # CASE 19
 def check_short_visits(data):
     retailer_id = data['_id'] 
     messages = []
-
 
     today = datetime.today().date()
     visit = db.get_session().query(RetailerVisitedLog).filter(
@@ -523,11 +605,10 @@ def check_short_visits(data):
                     "person_name": asm.name,
                     "role": "ASM"
                 })
-    print(messages)
+
     return messages
 
-#CASE 20 
-
+#CASE 20  
 def check_beatplans_for_today():
     try:    
         print("Checking whether BeatPlan is assigned to every FE or not")
@@ -911,10 +992,8 @@ def expiring_products():
     except Exception as e:
         print(f"Error in expiring products: {e}")
 
-# CASE 15 
-from datetime import datetime, timedelta, timezone
-from collections import defaultdict
 
+# CASE 15 
 def unsold_products():
     try:
         print("Checking for unsold products ... ")
@@ -922,16 +1001,10 @@ def unsold_products():
         messages = defaultdict(lambda: {"products": [], "person_name": "", "role": "Field Executive"})
         
         threshold_days = 120
-        # threshold_days = 10
         current_date = datetime.now(timezone.utc)
-        threshold_date_start = current_date - timedelta(days=threshold_days)
-        threshold_date_end = threshold_date_start - timedelta(days=threshold_days)
-
+        threshold_date = current_date - timedelta(days=threshold_days)
         
-        sales = db.get_session().query(Sales).filter(
-        Sales.date >= threshold_date_end,  
-        Sales.date <= threshold_date_start 
-        ).all()
+        sales = db.get_session().query(Sales).all()
 
         for sale in sales:
             if sale.retailer and sale.retailer.fe:
@@ -939,8 +1012,8 @@ def unsold_products():
 
                 if last_sale_date.tzinfo is None:
                     last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
-
-                if last_sale_date <= threshold_date_start and last_sale_date >= threshold_date_end:
+                    
+                if last_sale_date <= threshold_date:
                     recipient = sale.retailer.fe.Contact_Number
                     person_name = sale.retailer.fe.Name
                     product_info = f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}"
@@ -960,31 +1033,31 @@ def unsold_products():
 
 event_config = {
     "recon_inserted" : [
-        lambda recon_id : compare_quantity_inventory_recon(recon_id), ## 
-        lambda recon_id : is_retailer_shelf_image_event(recon_id) ## 
+        lambda recon_id : compare_quantity_inventory_recon(recon_id), #  CASE 2
+        lambda recon_id : is_retailer_shelf_image_event(recon_id) #  CASE 4
     ],
     "sudden_sales_drop" : [
-        lambda x : detect_sales_drop(), ## 
-        lambda x : check_sales_anomaly(x) ## 
+        lambda x : detect_sales_drop(), # CASE 5
+        lambda x : check_sales_anomaly(x) #  CASE 3 
     ],
+
     "retailer_visit_too_short": [
         lambda x : check_short_visits(x),
     ],
-    # "order_insert": [
-    #     lambda x: order_limits(x),
-    # ],
-
     "daily_event_triggers" : [
-        lambda x : notify_delivery_for_orders(), ## 
-        lambda x : delivery_not_out_on_expected_date(), ## 
-        lambda x : nearly_expiring_stocks(), ## 
-        lambda x : check_beatplans_for_today(),
-        lambda x : expiring_products(), ## 
+        lambda x : notify_delivery_for_orders(), # CASE 8 
+        lambda x : delivery_not_out_on_expected_date(), # CASE 9
+        lambda x : nearly_expiring_stocks(), # CASE 10
+        lambda x : check_beatplans_for_today(), # CASE 20
+        lambda x : expiring_products(), # CASE 14
+        lambda x : check_warehouse_inventory(), # CASE 6
+        lambda x : check_skipped_orders_alert(), # CASE 13
+        lambda x : notify_pending_orders(), # CASE 7
+        lambda x : check_skipped_orders_alert(), # CASE 18
     ],
     "monthly_event_triggers" : [
-        lambda x : check_all_retailers_pending_bills(), ## 
-        lambda x : unsold_products(), ##
-        lambda x : credit_score_for_Retailers(),
-        lambda x : check_retailer_visits_for_month(), 
+        lambda x : check_all_retailers_pending_bills(), #  CASE 1 
+        lambda x : unsold_products(), # CASE 15
+        lambda x : check_retailer_visits_for_month(), # CASE 23
     ]
 }
