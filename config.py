@@ -52,8 +52,7 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date):
     else:
         return []
 
-# CASE 1 
-from datetime import datetime, timedelta
+# CASE 1  
 
 def check_all_retailers_pending_bills():
     print("Checking for retailers if they have more than two pending bills")
@@ -271,16 +270,33 @@ def check_sales_anomaly(data):
 
 
 # CASE 6 
-def check_warehouse_inventory(MIN_STOCK_LEVEL=20):
+def check_warehouse_inventory(MIN_STOCK_LEVEL=200):
     messages = []
     warehouse_items = db.get_session().query(WarehouseItems).all()
     items = []
     
     for item in warehouse_items:
-        if item.quantity < MIN_STOCK_LEVEL:
-            items.append(item)
+        if item.warehouse.warehouse_manager:
+            if item.quantity < MIN_STOCK_LEVEL:
+                items.append({
+                    "product_name" : item.product.name,
+                    "quantity" : item.quantity,
+                    "recepient" : item.warehouse.warehouse_manager.fe_user.Field_Exec.Contact_Number
+                })            
     
-    return items
+    for item in items:
+        message = f"Alert: Warehouse inventory for {item['product_name']} is below the minimum stock level of {MIN_STOCK_LEVEL}. Current quantity: {item['quantity']}"
+        messages.append({
+            "recepient": item["recepient"],
+            "message": message,
+            "person_name" : item["recepient"],
+            "role" : "Warehouse Manager"
+        })
+    
+    return messages
+
+# case 7
+
 
 # CASE 8
 def notify_delivery_for_orders():
@@ -373,7 +389,7 @@ def delivery_not_out_on_expected_date():
         return []
 
 
-# CASE 13 
+# CASE 10
 def nearly_expiring_stocks():
     try:
         print("Checking for nearly expiring stocks...")
@@ -745,25 +761,33 @@ def unsold_products():
 
 event_config = {
     "recon_inserted" : [
-        lambda recon_id : compare_quantity_inventory_recon(recon_id), ## 
-        lambda recon_id : is_retailer_shelf_image_event(recon_id) ## 
+        lambda recon_id : compare_quantity_inventory_recon(recon_id), #  CASE 2
+        lambda recon_id : is_retailer_shelf_image_event(recon_id) #  CASE 4
     ],
     "sudden_sales_drop" : [
-        lambda x : detect_sales_drop(), ## 
-        lambda x : check_sales_anomaly(x) ## 
+        lambda x : detect_sales_drop(), # CASE 5
+        lambda x : check_sales_anomaly(x) #  CASE 3 
     ],
     "low_retailer_visits" : [
-        lambda x : check_retailer_visits_for_month(),    
+        lambda x : check_retailer_visits_for_month(), # CASE 23
     ],
     "daily_event_triggers" : [
-        lambda x : notify_delivery_for_orders(), ## 
-        lambda x : delivery_not_out_on_expected_date(), ## 
-        lambda x : nearly_expiring_stocks(), ## 
-        lambda x : check_beatplans_for_today(),
-        lambda x : expiring_products(), ## 
+        lambda x : notify_delivery_for_orders(), # CASE 8 
+        lambda x : delivery_not_out_on_expected_date(), # CASE 9
+        lambda x : nearly_expiring_stocks(), # CASE 10
+        lambda x : check_beatplans_for_today(), # CASE 20
+        lambda x : expiring_products(), # CASE 14
+        lambda x : check_warehouse_inventory(), # CASE 6
+        lambda x : check_skipped_orders_alert() # CASE 13 
     ],
     "monthly_event_triggers" : [
-        lambda x : check_all_retailers_pending_bills(), ## 
-        lambda x : unsold_products(), ##
+        lambda x : check_all_retailers_pending_bills(), #  CASE 1 
+        lambda x : unsold_products(), # CASE 15
     ]
-} 
+}
+
+
+
+# case 6 , 7 , 18 , 21 , 22
+
+print(check_warehouse_inventory())
