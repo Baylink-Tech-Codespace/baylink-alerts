@@ -4,10 +4,6 @@ import threading
 from flask import Flask, render_template
 from flask_socketio import SocketIO 
 from event.main import Monitor
-<<<<<<< HEAD
-import os 
-import dotenv 
-=======
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from flask import jsonify
 import psycopg2
@@ -16,7 +12,6 @@ import os
 import dotenv 
 from datetime import datetime
 from database.db import db
->>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
 
 dotenv.load_dotenv()
 
