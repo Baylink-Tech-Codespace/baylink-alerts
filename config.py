@@ -27,6 +27,8 @@ from database.models.CreditNote import CreditNote
 from shelf_classification.main import is_shelf_image
 from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
 
+from collections import defaultdict
+
 #CASE 1
 def fetch_retailer_transactions(retailer_id, start_date, end_date):
     """Fetch transactions for a specific retailer from the API. Only check once in a month"""
@@ -296,7 +298,73 @@ def check_warehouse_inventory(MIN_STOCK_LEVEL=200):
     return messages
 
 # case 7
+# Notify the warehouse manager to verify pending order deliveries and credit notes.
+def notify_pending_orders():
+    print("Checking for pending order deliveries and credit notes...")
 
+    messages = []
+    today = datetime.now().date()
+    
+    orders = db.get_session().query(Order).filter(Order.expected_delivery_date == today).all()
+    credit_notes = db.get_session().query(CreditNote).filter(CreditNote.pickup_date == today).all()
+    
+    for order in orders:
+        if order.status == "In-Transit" or order.status == "Scheduled": 
+            delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
+            if delivery_log and delivery_log.delivery_person:
+                recepient = delivery_log.delivery_person.Contact_Number
+                person_name = delivery_log.delivery_person.Name
+                message =  order.order_name 
+                
+                messages.append({
+                    "recepient": recepient,
+                    "message": message,
+                    "person_name": person_name,
+                    "role": "Delivery Person"
+                })
+                
+    for credit_note in credit_notes:
+        if credit_note.status == "In-Transit" or credit_note.status == "Scheduled":
+            delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.credit_note_id == credit_note._id).first()
+            if delivery_log and delivery_log.delivery_person:
+                recepient = delivery_log.delivery_person.Contact_Number
+                person_name = delivery_log.delivery_person.Name
+                message = credit_note.credit_note_name
+                
+                messages.append({
+                    "recepient": recepient,
+                    "message": message,
+                    "person_name": person_name,
+                    "role": "Delivery Person"
+                })
+                
+    grouped_messages = {}
+    for message in messages:
+        if message["recepient"] not in grouped_messages:
+            grouped_messages[message["recepient"]] = {
+                "recepient": message["recepient"],
+                "messages": [message["message"]],
+                "person_name": message["person_name"],
+                "role": message["role"]
+            }
+        else:
+            grouped_messages[message["recepient"]]["messages"].append(message["message"])
+
+    for recepient, data in grouped_messages.items():
+        messages = data["messages"]
+        person_name = data["person_name"]
+        role = data["role"]
+        message = "\n".join(messages)
+        
+        messages.append({
+            "recepient": recepient,
+            "message": f"Pending order deliveries and credit notes for today:\n{message}",
+            "person_name": person_name,
+            "role": role
+        })
+        
+    return messages
+            
 
 # CASE 8
 def notify_delivery_for_orders():
@@ -461,18 +529,29 @@ def check_skipped_orders_alert():
             retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
             asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
             asm_retailers_map[asm._id]["contact"] = asm.Contact_Number 
+            asm_retailers_map[asm._id]["person_name"] = asm.name
             asm_retailers_map[asm._id]["retailers"].append(retailer.name)
-            
+
+    grouped_messages = {}
+
     for asm_id, data in asm_retailers_map.items():
         if data["contact"] and data["retailers"]:
             retailer_names = ", ".join(data["retailers"])
-            message = f"The following retailers have not ordered in the last 3 weeks: {retailer_names}."
-            messages.append({
-                "recipient": data["contact"],
-                "message": message
-            })
+            message_part = f"The following retailers have not ordered in the last 3 weeks: {retailer_names}."
 
+            if data["contact"] in grouped_messages:
+                grouped_messages[data["contact"]]["message"] += " " + message_part
+            else:
+                grouped_messages[data["contact"]] = {
+                    "recipient": data["contact"],
+                    "message": message_part,
+                    "role": "ASM",
+                    "person_name": data["person_name"]
+                }
+    messages = list(grouped_messages.values())
+    
     return messages
+
 
 #CASE 20  
 def check_beatplans_for_today():
@@ -778,16 +857,12 @@ event_config = {
         lambda x : check_beatplans_for_today(), # CASE 20
         lambda x : expiring_products(), # CASE 14
         lambda x : check_warehouse_inventory(), # CASE 6
-        lambda x : check_skipped_orders_alert() # CASE 13 
+        lambda x : check_skipped_orders_alert(), # CASE 13
+        lambda x : notify_pending_orders(), # CASE 7
+        lambda x : check_skipped_orders_alert(), # CASE 18
     ],
     "monthly_event_triggers" : [
         lambda x : check_all_retailers_pending_bills(), #  CASE 1 
         lambda x : unsold_products(), # CASE 15
     ]
 }
-
-
-
-# case 6 , 7 , 18 , 21 , 22
-
-print(check_warehouse_inventory())
