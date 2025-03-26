@@ -1042,7 +1042,7 @@ event_config = {
     ],
 
     "retailer_visit_too_short": [
-        lambda x : check_short_visits(x),
+        lambda x : check_short_visits(x), # CASE 19
     ],
     "daily_event_triggers" : [
         lambda x : notify_delivery_for_orders(), # CASE 8 
