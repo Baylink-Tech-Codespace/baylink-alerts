@@ -7291,3 +7291,27 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-22 13:01:49,945 -  * Debugger is active!
 2025-03-22 13:01:49,958 -  * Debugger PIN: 898-260-860
 >>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
+2025-03-26 15:38:49,100 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-26 15:38:49,101 - [33mPress CTRL+C to quit[0m
+2025-03-26 15:38:49,101 -  * Restarting with stat
+2025-03-26 15:38:58,689 -  * Debugger is active!
+2025-03-26 15:38:58,709 -  * Debugger PIN: 262-103-667
+2025-03-26 15:39:15,478 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "GET / HTTP/1.1" 200 -
+2025-03-26 15:39:15,707 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "GET /socket.io/?EIO=4&transport=polling&t=PNHxNTW HTTP/1.1" 200 -
+2025-03-26 15:39:15,889 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "POST /socket.io/?EIO=4&transport=polling&t=PNHxNV_&sid=lOROzdh-qJBvN3wsAAAA HTTP/1.1" 200 -
+2025-03-26 15:39:15,919 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "GET /socket.io/?EIO=4&transport=polling&t=PNHxNW2&sid=lOROzdh-qJBvN3wsAAAA HTTP/1.1" 200 -
+2025-03-26 15:39:15,920 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-03-26 15:39:15,953 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-03-26 15:39:16,728 - 127.0.0.1 - - [26/Mar/2025 15:39:16] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-26 15:39:20,769 - 127.0.0.1 - - [26/Mar/2025 15:39:20] "GET /socket.io/?EIO=4&transport=websocket&sid=lOROzdh-qJBvN3wsAAAA HTTP/1.1" 200 -
+2025-03-26 15:42:32,913 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-26 15:42:32,913 - [33mPress CTRL+C to quit[0m
+2025-03-26 15:42:32,913 -  * Restarting with stat
+2025-03-26 15:42:42,236 -  * Debugger is active!
+2025-03-26 15:42:42,250 -  * Debugger PIN: 262-103-667
