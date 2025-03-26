@@ -13,7 +13,6 @@ class AlertSystem:
     def __init__(self):
         self.session = db.get_session()
 
-
     def group_alerts_by_recipient(self,alerts_data: List[List[Dict[str, str]]]) -> List[Dict[str, str]]:
         grouped_alerts = {}
 
