@@ -60,7 +60,7 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date, payment_statu
             return []
         return data["data"]["transactions"]
     else:
-        print(f"Failed to fetch transactions for retailer {retailer_id}: {data.get("message", "No message found")}")
+        print("Failed to fetch transactions")
         return []
 
 def list_of_retailers_payment(start_date, end_date):
@@ -85,7 +85,7 @@ def list_of_retailers_payment(start_date, end_date):
             return []
         return data["data"]["transactions"]
     else:
-        print(f"Failed to fetch payments list: {data.get("message", "No message found")}")
+        print("Failed to fetch payments list")
         return []
 
 # CASE 1 
