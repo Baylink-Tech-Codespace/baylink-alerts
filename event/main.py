@@ -171,7 +171,7 @@ class Monitor:
         try:
             cursor = conn.cursor()
             self.setup_triggers(conn, cursor)
-            cursor.execute("LISTEN recon_insert_trigger; LISTEN sudden_sales_drop; LISTEN retailer_visit_too_short; LISTEN order_insert")
+            cursor.execute("LISTEN recon_insert_trigger; LISTEN sales_drop_trigger; LISTEN retailer_visit_too_short_trigger; LISTEN order_insert_trigger")
             print("Listening for database notifications...")
 
             while self.running:
@@ -182,7 +182,7 @@ class Monitor:
                 while conn.notifies:
                     notify = conn.notifies.pop(0)
                     print(f"Received notification on channel '{notify.channel}': {notify.payload}")
-                    # self.alert_system.alert_pipeline(notify.channel, notify.payload)
+                    self.alert_system.alert_pipeline(notify.channel, notify.payload)
                 
                 time.sleep(0.1)
 
