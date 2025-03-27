@@ -7426,3 +7426,5 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-27 16:39:39,847 -  * Restarting with stat
 2025-03-27 16:39:49,199 -  * Debugger is active!
 2025-03-27 16:39:49,214 -  * Debugger PIN: 262-103-667
+2025-03-27 17:11:11,217 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/database/models/BaylinkAlertLogs.py', reloading
+2025-03-27 17:11:12,242 -  * Restarting with stat
