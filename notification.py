@@ -8,7 +8,7 @@ os.makedirs(log_dir, exist_ok=True)
 
 logging.basicConfig(filename=f"{log_dir}/alerts.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
-WA_MICROSERVICE_URL = "https://9530-2409-40f2-3051-9405-b00b-30e5-cee3-6506.ngrok-free.app/send-message"
+WA_MICROSERVICE_URL = "https://whatsapp.baylink.in/send-message"
 
 def formatted_phone(number):
     if not number : return None

@@ -100,6 +100,9 @@ class AlertSystem:
                         alerts.append(condition(event_data))
                         
             alerts = self.group_alerts_by_recipient(alerts)
+            
+            with open("alerts.json", "w") as f:
+                json.dump(alerts, f, indent=4)
            
             for alert in alerts:
               recipient = alert['recipient']

@@ -329,6 +329,8 @@ def check_warehouse_inventory(MIN_STOCK_LEVEL=200):
             "person_name" : item["recepient"],
             "role" : "Warehouse Manager"
         })
+   
+    print("333",messages)
     
     return messages
 
@@ -398,6 +400,8 @@ def notify_pending_orders():
             "role": role
         })
         
+    print("403",messages)
+        
     return messages
             
 
@@ -439,6 +443,8 @@ def notify_delivery_for_orders():
                             "person_name": person_name,
                             "role": "Delivery Person"
                     })
+                        
+        print("LINE 443",messages)
                         
         return messages
         
@@ -484,6 +490,8 @@ def delivery_not_out_on_expected_date():
                             "role" : "Delivery Person",
                             "person_name" : delivery_log.delivery_person.Name
                         }) 
+                        
+        print("490",messages)
                     
         return messages
     
@@ -520,7 +528,9 @@ def nearly_expiring_stocks():
                             "person_name" : person_name,
                             "role" : "ASM"
                         })
-                        
+                       
+        print("528",messages) 
+        
         return messages
     
     except Exception as e:
@@ -557,7 +567,7 @@ def check_skipped_orders_alert():
             if status != "Completed":
                 retailer_task_counts[retailer_id_str]["skipped_orders"] += 1
 
-    asm_retailers_map = defaultdict(lambda: {"contact": None, "retailers": []})
+    asm_retailers_map = defaultdict(lambda: {"contact": None, "retailers": [], "role": "ASM" , "person_name": ""})
 
     for retailer_id, counts in retailer_task_counts.items():
         if counts["total_tasks"] > 0 and counts["skipped_orders"] == counts["total_tasks"]:
@@ -565,6 +575,7 @@ def check_skipped_orders_alert():
             asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
             asm_retailers_map[asm._id]["contact"] = asm.Contact_Number 
             asm_retailers_map[asm._id]["retailers"].append(retailer.name)
+            asm_retailers_map[asm._id]["person_name"] = asm.name
             
     for asm_id, data in asm_retailers_map.items():
         if data["contact"] and data["retailers"]:
@@ -572,8 +583,12 @@ def check_skipped_orders_alert():
             message = f"The following retailers have not ordered in the last 3 weeks: {retailer_names}."
             messages.append({
                 "recipient": data["contact"],
-                "message": message
+                "message": message,
+                "role": data["role"],
+                "person_name": data["person_name"]
             })
+            
+    print("586",messages)
 
     return messages
 
@@ -653,6 +668,8 @@ def check_beatplans_for_today():
                 "person_name": details["person_name"],
                 "role": details["role"]
             })
+
+        print("663",messages)
 
         return messages
     
@@ -986,7 +1003,9 @@ def expiring_products():
                                 "person_name" : person_name,
                                 "role" : "ASM",
                                 "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
-                            })        
+                            })     
+                            
+        print("999",messages)   
                             
         return messages
     except Exception as e:
@@ -1032,16 +1051,16 @@ def unsold_products():
         print(f"Error in unsold products: {e}")
 
 event_config = {
-    "recon_inserted" : [
+    "recon_insert_trigger" : [
         lambda recon_id : compare_quantity_inventory_recon(recon_id), #  CASE 2
         lambda recon_id : is_retailer_shelf_image_event(recon_id) #  CASE 4
     ],
-    "sudden_sales_drop" : [
+    "sales_drop_trigger" : [
         lambda x : detect_sales_drop(), # CASE 5
         lambda x : check_sales_anomaly(x) #  CASE 3 
     ],
 
-    "retailer_visit_too_short": [
+    "retailer_visit_too_short_trigger": [
         lambda x : check_short_visits(x), # CASE 19
     ],
     "daily_event_triggers" : [
@@ -1051,9 +1070,8 @@ event_config = {
         lambda x : check_beatplans_for_today(), # CASE 20
         lambda x : expiring_products(), # CASE 14
         lambda x : check_warehouse_inventory(), # CASE 6
-        lambda x : check_skipped_orders_alert(), # CASE 13
-        lambda x : notify_pending_orders(), # CASE 7
         lambda x : check_skipped_orders_alert(), # CASE 18
+        lambda x : notify_pending_orders(), # CASE 7
     ],
     "monthly_event_triggers" : [
         lambda x : check_all_retailers_pending_bills(), #  CASE 1 

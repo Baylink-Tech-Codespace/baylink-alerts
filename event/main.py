@@ -202,7 +202,7 @@ class Monitor:
         schedule.clear()
         
         # Schedule jobs
-        schedule.every().day.at("13:02").do(self.daily_event_triggers)
+        schedule.every().day.at("16:40").do(self.daily_event_triggers)
         schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
         
         print("Scheduler started for daily/monthly triggers...")
@@ -231,9 +231,9 @@ class Monitor:
         self.db_thread.daemon = True
         self.db_thread.start()
 
-        #self.scheduler_thread = threading.Thread(target=self.run_scheduler, name="Scheduler")
-        #self.scheduler_thread.daemon = True
-        #self.scheduler_thread.start()
+        self.scheduler_thread = threading.Thread(target=self.run_scheduler, name="Scheduler")
+        self.scheduler_thread.daemon = True
+        self.scheduler_thread.start()
 
         try:
             while self.running and (self.db_thread.is_alive() or self.scheduler_thread.is_alive()):

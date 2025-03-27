@@ -7329,3 +7329,100 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-26 15:50:21,991 -  * Debugger PIN: 262-103-667
 2025-03-26 15:51:13,697 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
 2025-03-26 15:51:15,443 -  * Restarting with stat
+2025-03-27 15:02:42,401 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:02:42,401 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:02:42,401 -  * Restarting with stat
+2025-03-27 15:02:51,816 -  * Debugger is active!
+2025-03-27 15:02:51,837 -  * Debugger PIN: 262-103-667
+2025-03-27 15:03:37,029 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/notification.py', reloading
+2025-03-27 15:03:37,712 -  * Restarting with stat
+2025-03-27 15:03:48,170 -  * Debugger is active!
+2025-03-27 15:03:48,185 -  * Debugger PIN: 262-103-667
+2025-03-27 15:04:22,801 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:04:22,802 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:04:22,802 -  * Restarting with stat
+2025-03-27 15:04:33,660 -  * Debugger is active!
+2025-03-27 15:04:33,682 -  * Debugger PIN: 262-103-667
+2025-03-27 15:06:05,873 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:06:05,873 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:06:05,873 -  * Restarting with stat
+2025-03-27 15:06:15,190 -  * Debugger is active!
+2025-03-27 15:06:15,205 -  * Debugger PIN: 262-103-667
+2025-03-27 15:33:16,304 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/database/models/Warehouse.py', reloading
+2025-03-27 15:35:09,148 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:35:09,148 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:35:09,149 -  * Restarting with stat
+2025-03-27 15:35:19,198 -  * Debugger is active!
+2025-03-27 15:35:19,216 -  * Debugger PIN: 262-103-667
+2025-03-27 15:44:03,616 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:44:03,616 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:44:03,616 -  * Restarting with stat
+2025-03-27 15:44:13,980 -  * Debugger is active!
+2025-03-27 15:44:13,999 -  * Debugger PIN: 262-103-667
+2025-03-27 15:44:50,037 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:44:50,037 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:44:50,037 -  * Restarting with stat
+2025-03-27 15:44:58,983 -  * Debugger is active!
+2025-03-27 15:44:58,997 -  * Debugger PIN: 262-103-667
+2025-03-27 15:51:35,742 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-27 15:51:36,246 -  * Restarting with stat
+2025-03-27 15:55:48,356 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:55:48,356 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:55:48,356 -  * Restarting with stat
+2025-03-27 15:56:00,136 -  * Debugger is active!
+2025-03-27 15:56:00,175 -  * Debugger PIN: 262-103-667
+2025-03-27 16:09:49,441 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:09:50,330 -  * Restarting with stat
+2025-03-27 16:10:01,570 -  * Debugger is active!
+2025-03-27 16:10:01,589 -  * Debugger PIN: 262-103-667
+2025-03-27 16:10:22,611 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-27 16:10:23,183 -  * Restarting with stat
+2025-03-27 16:10:36,250 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 16:10:36,250 - [33mPress CTRL+C to quit[0m
+2025-03-27 16:10:36,250 -  * Restarting with stat
+2025-03-27 16:10:45,617 -  * Debugger is active!
+2025-03-27 16:10:45,631 -  * Debugger PIN: 262-103-667
+2025-03-27 16:37:55,105 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:37:56,285 -  * Restarting with stat
+2025-03-27 16:38:07,266 -  * Debugger is active!
+2025-03-27 16:38:07,281 -  * Debugger PIN: 262-103-667
+2025-03-27 16:38:19,261 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:38:19,792 -  * Restarting with stat
+2025-03-27 16:38:29,128 -  * Debugger is active!
+2025-03-27 16:38:29,142 -  * Debugger PIN: 262-103-667
+2025-03-27 16:38:32,880 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:38:33,500 -  * Restarting with stat
+2025-03-27 16:38:43,925 -  * Debugger is active!
+2025-03-27 16:38:43,940 -  * Debugger PIN: 262-103-667
+2025-03-27 16:39:39,846 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-27 16:39:39,847 - [33mPress CTRL+C to quit[0m
+2025-03-27 16:39:39,847 -  * Restarting with stat
+2025-03-27 16:39:49,199 -  * Debugger is active!
+2025-03-27 16:39:49,214 -  * Debugger PIN: 262-103-667
