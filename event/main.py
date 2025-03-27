@@ -202,7 +202,7 @@ class Monitor:
         schedule.clear()
         
         # Schedule jobs
-        schedule.every().day.at("16:40").do(self.daily_event_triggers)
+        schedule.every().day.at("17:14").do(self.daily_event_triggers)
         schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
         
         print("Scheduler started for daily/monthly triggers...")
