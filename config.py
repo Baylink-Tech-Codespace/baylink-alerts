@@ -1204,7 +1204,8 @@ event_config = {
         lambda x : check_skipped_orders_alert(), # CASE 18
         lambda x : notify_pending_orders(), # CASE 7
         
-        lambda x : check_all_retailers_pending_bills(), #  CASE 1 
+        # lambda x : check_all_retailers_pending_bills(), #  CASE 1 
+        # lambda x : credit_score_for_Retailers(),
         lambda x : unsold_products(), # CASE 15
         lambda x : check_retailer_visits_for_month(), # CASE 23        
     ],

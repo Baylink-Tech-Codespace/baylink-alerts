@@ -7495,3 +7495,39 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-28 14:35:58,074 -  * Restarting with stat
 2025-03-28 14:36:09,488 -  * Debugger is active!
 2025-03-28 14:36:09,509 -  * Debugger PIN: 898-260-860
+2025-03-28 14:44:55,046 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-28 14:44:55,046 - [33mPress CTRL+C to quit[0m
+2025-03-28 14:44:55,046 -  * Restarting with stat
+2025-03-28 14:45:04,820 -  * Debugger is active!
+2025-03-28 14:45:04,834 -  * Debugger PIN: 898-260-860
+2025-03-28 15:15:11,740 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 15:15:12,815 -  * Restarting with stat
+2025-03-28 15:15:26,511 -  * Debugger is active!
+2025-03-28 15:15:26,532 -  * Debugger PIN: 898-260-860
+2025-03-28 15:15:37,659 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 15:15:38,813 -  * Restarting with stat
+2025-03-28 15:16:08,597 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-28 15:16:08,597 - [33mPress CTRL+C to quit[0m
+2025-03-28 15:16:08,597 -  * Restarting with stat
+2025-03-28 15:16:18,759 -  * Debugger is active!
+2025-03-28 15:16:18,775 -  * Debugger PIN: 898-260-860
+2025-03-28 15:44:09,206 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:10,997 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:13,696 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:14,105 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:15,744 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:15,869 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:17,538 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:18,612 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:19,328 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:20,494 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:21,150 - Failed to send alert to 7007555103: None
+2025-03-28 15:44:22,352 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:24,251 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:26,126 - Failed to send alert to 7007555103: None
