@@ -7461,3 +7461,37 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-28 12:16:49,453 - Failed to send alert to 8447686869: None
 2025-03-28 12:16:51,056 - Failed to send alert to 8447686869: None
 2025-03-28 12:16:52,941 - Failed to send alert to 7007555103: None
+2025-03-28 13:09:35,766 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-28 13:09:35,767 - [33mPress CTRL+C to quit[0m
+2025-03-28 13:09:35,767 -  * Restarting with stat
+2025-03-28 13:09:45,914 -  * Debugger is active!
+2025-03-28 13:09:45,932 -  * Debugger PIN: 898-260-860
+2025-03-28 13:47:54,422 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:47:55,410 -  * Restarting with stat
+2025-03-28 13:48:08,555 -  * Debugger is active!
+2025-03-28 13:48:08,573 -  * Debugger PIN: 898-260-860
+2025-03-28 13:48:17,442 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:48:18,101 -  * Restarting with stat
+2025-03-28 13:48:28,544 -  * Debugger is active!
+2025-03-28 13:48:28,559 -  * Debugger PIN: 898-260-860
+2025-03-28 13:48:51,368 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:48:51,903 -  * Restarting with stat
+2025-03-28 13:49:01,856 -  * Debugger is active!
+2025-03-28 13:49:01,871 -  * Debugger PIN: 898-260-860
+2025-03-28 13:49:12,167 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
+2025-03-28 13:49:12,693 -  * Restarting with stat
+2025-03-28 13:49:22,562 -  * Debugger is active!
+2025-03-28 13:49:22,577 -  * Debugger PIN: 898-260-860
+2025-03-28 13:49:34,844 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:49:35,594 -  * Restarting with stat
+2025-03-28 14:35:58,073 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-28 14:35:58,074 - [33mPress CTRL+C to quit[0m
+2025-03-28 14:35:58,074 -  * Restarting with stat
+2025-03-28 14:36:09,488 -  * Debugger is active!
+2025-03-28 14:36:09,509 -  * Debugger PIN: 898-260-860

@@ -103,6 +103,7 @@ class AlertSystem:
                 json.dump(alerts, f, indent=4)
            
             for alert in alerts:
+            
               recipient = alert['recipient']
               messages = alert['messages']
               person_name = alert['person_name']
