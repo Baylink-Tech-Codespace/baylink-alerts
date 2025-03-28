@@ -111,17 +111,20 @@ class Monitor:
             """)
 
             cursor.execute("""
-                CREATE OR REPLACE FUNCTION notify_retailer_visit_too_short() RETURNS TRIGGER AS $$
+                CREATE OR REPLACE FUNCTION retailer_visit_too_short() RETURNS TRIGGER AS $$
                 BEGIN
                     PERFORM pg_notify('retailer_visit_too_short', row_to_json(NEW)::text);
                     RETURN NEW;
                 END;
                 $$ LANGUAGE plpgsql;
-                
+
                 DROP TRIGGER IF EXISTS retailer_visit_too_short_trigger ON "RetailerVisitedLog";
+
                 CREATE TRIGGER retailer_visit_too_short_trigger
-                AFTER INSERT ON "RetailerVisitedLog"
-                FOR EACH ROW EXECUTE FUNCTION notify_retailer_visit_too_short();
+                AFTER UPDATE ON "RetailerVisitedLog"
+                FOR EACH ROW
+                WHEN (NEW.visit_start IS NOT NULL AND NEW.visit_end IS NOT NULL)
+                EXECUTE FUNCTION notify_retailer_visit_too_short();
             """)
 
             cursor.execute("""
