@@ -6338,620 +6338,6 @@ psycopg2.InterfaceError: connection already closed
 2025-03-18 17:51:41,978 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:47,146 - Failed to send alert to 7007555103: None
 2025-03-18 17:51:48,980 - Failed to send alert to 7007555103: None
-<<<<<<< HEAD
-2025-03-19 22:22:25,389 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:22:25,391 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:22:25,392 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:22:31,406 -  * Debugger is active!
-2025-03-19 22:22:31,437 -  * Debugger PIN: 156-759-472
-2025-03-19 22:25:59,282 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:25:59,282 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:25:59,282 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:26:05,250 -  * Debugger is active!
-2025-03-19 22:26:05,252 -  * Debugger PIN: 156-759-472
-2025-03-19 22:32:13,370 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:32:13,371 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:32:13,371 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:32:19,711 -  * Debugger is active!
-2025-03-19 22:32:19,715 -  * Debugger PIN: 156-759-472
-2025-03-19 22:35:26,800 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:35:26,800 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:35:26,800 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:35:32,834 -  * Debugger is active!
-2025-03-19 22:35:32,838 -  * Debugger PIN: 156-759-472
-2025-03-19 22:40:47,100 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:40:47,101 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:40:47,101 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:40:53,356 -  * Debugger is active!
-2025-03-19 22:40:53,358 -  * Debugger PIN: 156-759-472
-2025-03-19 22:41:04,563 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:41:04,564 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:41:04,802 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:41:11,171 -  * Debugger is active!
-2025-03-19 22:41:11,173 -  * Debugger PIN: 156-759-472
-2025-03-19 22:41:46,687 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:41:46,687 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:41:46,687 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:41:52,900 -  * Debugger is active!
-2025-03-19 22:41:52,904 -  * Debugger PIN: 156-759-472
-2025-03-19 22:43:29,432 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:43:29,433 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:43:29,433 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:43:30,602 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:43:36,974 -  * Debugger is active!
-2025-03-19 22:43:36,976 -  * Debugger PIN: 156-759-472
-2025-03-19 22:52:12,268 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:52:12,268 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:52:12,268 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:52:18,794 -  * Debugger is active!
-2025-03-19 22:52:18,797 -  * Debugger PIN: 156-759-472
-2025-03-19 22:52:48,464 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:52:48,493 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:52:48,494 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:52:48,751 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:52:55,188 -  * Debugger is active!
-2025-03-19 22:52:55,191 -  * Debugger PIN: 156-759-472
-2025-03-19 22:53:05,452 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:53:05,477 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:53:05,478 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:53:05,695 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:53:12,181 -  * Debugger is active!
-2025-03-19 22:53:12,184 -  * Debugger PIN: 156-759-472
-2025-03-19 22:53:25,978 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:53:26,003 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:53:26,786 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:53:33,057 -  * Debugger is active!
-2025-03-19 22:53:33,060 -  * Debugger PIN: 156-759-472
-2025-03-19 22:53:43,941 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:53:43,942 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:53:43,942 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:53:49,855 -  * Debugger is active!
-2025-03-19 22:53:49,859 -  * Debugger PIN: 156-759-472
-2025-03-19 22:55:26,339 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:55:26,339 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:55:26,339 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:55:32,784 -  * Debugger is active!
-2025-03-19 22:55:32,787 -  * Debugger PIN: 156-759-472
-2025-03-19 22:56:28,043 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-19 22:56:28,043 - [33mPress CTRL+C to quit[0m
-2025-03-19 22:56:28,043 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:56:34,084 -  * Debugger is active!
-2025-03-19 22:56:34,088 -  * Debugger PIN: 156-759-472
-2025-03-19 22:56:40,929 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:56:40,956 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:56:40,957 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:56:41,436 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:56:47,714 -  * Debugger is active!
-2025-03-19 22:56:47,716 -  * Debugger PIN: 156-759-472
-2025-03-19 22:56:49,220 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:56:49,221 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:56:49,221 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:56:50,004 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:56:56,215 -  * Debugger is active!
-2025-03-19 22:56:56,218 -  * Debugger PIN: 156-759-472
-2025-03-19 22:57:24,028 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:57:24,055 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:57:24,056 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-19 22:57:25,103 -  * Restarting with watchdog (windowsapi)
-2025-03-19 22:57:31,466 -  * Debugger is active!
-2025-03-19 22:57:31,468 -  * Debugger PIN: 156-759-472
-2025-03-20 10:35:54,635 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-20 10:35:54,635 - [33mPress CTRL+C to quit[0m
-2025-03-20 10:35:54,636 -  * Restarting with watchdog (windowsapi)
-2025-03-20 10:36:00,415 -  * Debugger is active!
-2025-03-20 10:36:00,430 -  * Debugger PIN: 156-759-472
-2025-03-20 11:05:41,426 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-20 11:05:41,426 - [33mPress CTRL+C to quit[0m
-2025-03-20 11:05:41,426 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:05:45,936 -  * Debugger is active!
-2025-03-20 11:05:45,939 -  * Debugger PIN: 156-759-472
-2025-03-20 11:06:27,783 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:06:27,783 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:06:27,783 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:06:27,997 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:06:49,072 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-20 11:06:49,072 - [33mPress CTRL+C to quit[0m
-2025-03-20 11:06:49,072 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:06:53,644 -  * Debugger is active!
-2025-03-20 11:06:53,645 -  * Debugger PIN: 156-759-472
-2025-03-20 11:08:14,541 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:14,544 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:15,096 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:08:19,882 -  * Debugger is active!
-2025-03-20 11:08:19,884 -  * Debugger PIN: 156-759-472
-2025-03-20 11:08:26,053 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:26,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:26,055 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:27,155 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:08:32,167 -  * Debugger is active!
-2025-03-20 11:08:32,170 -  * Debugger PIN: 156-759-472
-2025-03-20 11:08:55,845 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:55,846 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:08:56,815 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:09:01,752 -  * Debugger is active!
-2025-03-20 11:09:01,753 -  * Debugger PIN: 156-759-472
-2025-03-20 11:09:39,470 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\os.py', reloading
-2025-03-20 11:09:40,617 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:09:45,457 -  * Debugger is active!
-2025-03-20 11:09:45,459 -  * Debugger PIN: 156-759-472
-2025-03-20 11:09:58,006 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\datetime.py', reloading
-2025-03-20 11:09:58,035 -  * Detected change in 'C:\\Users\\qlizb\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_pydatetime.py', reloading
-2025-03-20 11:09:58,858 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:10:03,429 -  * Debugger is active!
-2025-03-20 11:10:03,431 -  * Debugger PIN: 156-759-472
-2025-03-20 11:13:20,631 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:13:20,631 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:13:21,638 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:13:26,573 -  * Debugger is active!
-2025-03-20 11:13:26,575 -  * Debugger PIN: 156-759-472
-2025-03-20 11:19:53,616 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:19:53,988 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:19:58,709 -  * Debugger is active!
-2025-03-20 11:19:58,711 -  * Debugger PIN: 156-759-472
-2025-03-20 11:20:02,940 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:20:02,944 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:20:03,993 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:20:08,407 -  * Debugger is active!
-2025-03-20 11:20:08,410 -  * Debugger PIN: 156-759-472
-2025-03-20 11:20:12,670 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:20:12,670 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:20:12,671 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:20:13,633 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:20:18,158 -  * Debugger is active!
-2025-03-20 11:20:18,160 -  * Debugger PIN: 156-759-472
-2025-03-20 11:45:43,739 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:45:43,740 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:45:44,191 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:45:49,293 -  * Debugger is active!
-2025-03-20 11:45:49,295 -  * Debugger PIN: 156-759-472
-2025-03-20 11:45:50,911 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:45:50,912 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:45:50,912 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-20 11:45:51,501 -  * Restarting with watchdog (windowsapi)
-2025-03-20 11:45:56,514 -  * Debugger is active!
-2025-03-20 11:45:56,516 -  * Debugger PIN: 156-759-472
-2025-03-20 12:23:41,469 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-20 12:23:41,470 - [33mPress CTRL+C to quit[0m
-2025-03-20 12:23:41,470 -  * Restarting with watchdog (windowsapi)
-2025-03-20 12:23:45,943 -  * Debugger is active!
-2025-03-20 12:23:45,945 -  * Debugger PIN: 156-759-472
-2025-03-20 15:18:18,055 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-20 15:18:18,055 - [33mPress CTRL+C to quit[0m
-2025-03-20 15:18:18,055 -  * Restarting with watchdog (windowsapi)
-2025-03-21 13:32:03,917 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.31.181:4000
-2025-03-21 13:32:03,918 - [33mPress CTRL+C to quit[0m
-2025-03-21 13:32:03,918 -  * Restarting with watchdog (windowsapi)
-2025-03-21 13:32:10,596 -  * Debugger is active!
-2025-03-21 13:32:10,626 -  * Debugger PIN: 156-759-472
-2025-03-21 13:33:03,039 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.31.181:4000
-2025-03-21 13:33:03,039 - [33mPress CTRL+C to quit[0m
-2025-03-21 13:33:03,039 -  * Restarting with watchdog (windowsapi)
-2025-03-21 13:33:09,367 -  * Debugger is active!
-2025-03-21 13:33:09,369 -  * Debugger PIN: 156-759-472
-2025-03-21 13:47:33,979 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.31.181:4000
-2025-03-21 13:47:33,979 - [33mPress CTRL+C to quit[0m
-2025-03-21 13:47:33,980 -  * Restarting with watchdog (windowsapi)
-2025-03-21 13:53:53,189 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.31.181:4000
-2025-03-21 13:53:53,189 - [33mPress CTRL+C to quit[0m
-2025-03-21 13:53:53,189 -  * Restarting with watchdog (windowsapi)
-2025-03-22 14:17:37,762 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-22 14:17:37,762 - [33mPress CTRL+C to quit[0m
-2025-03-22 14:17:37,762 -  * Restarting with watchdog (windowsapi)
-2025-03-22 14:17:57,071 -  * Debugger is active!
-2025-03-22 14:17:57,102 -  * Debugger PIN: 156-759-472
-2025-03-22 14:18:07,635 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-22 14:18:07,663 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-22 14:18:07,664 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-22 14:18:08,596 -  * Restarting with watchdog (windowsapi)
-2025-03-22 14:18:53,010 -  * Debugger is active!
-2025-03-22 14:18:53,012 -  * Debugger PIN: 156-759-472
-2025-03-24 22:05:46,356 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-24 22:05:46,357 - [33mPress CTRL+C to quit[0m
-2025-03-24 22:05:46,357 -  * Restarting with watchdog (windowsapi)
-2025-03-24 22:05:51,702 -  * Debugger is active!
-2025-03-24 22:05:51,708 -  * Debugger PIN: 156-759-472
-2025-03-24 22:43:55,275 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-24 22:43:55,276 - [33mPress CTRL+C to quit[0m
-2025-03-24 22:43:55,276 -  * Restarting with watchdog (windowsapi)
-2025-03-24 22:44:01,788 -  * Debugger is active!
-2025-03-24 22:44:01,800 -  * Debugger PIN: 156-759-472
-2025-03-24 22:48:34,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-24 22:48:34,773 - [33mPress CTRL+C to quit[0m
-2025-03-24 22:48:34,773 -  * Restarting with watchdog (windowsapi)
-2025-03-24 22:48:40,546 -  * Debugger is active!
-2025-03-24 22:48:40,550 -  * Debugger PIN: 156-759-472
-2025-03-24 23:34:00,866 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:34:00,867 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:34:01,741 -  * Restarting with watchdog (windowsapi)
-2025-03-24 23:34:08,163 -  * Debugger is active!
-2025-03-24 23:34:08,165 -  * Debugger PIN: 156-759-472
-2025-03-24 23:35:32,396 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:35:32,397 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:35:32,398 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:35:32,736 -  * Restarting with watchdog (windowsapi)
-2025-03-24 23:35:38,702 -  * Debugger is active!
-2025-03-24 23:35:38,706 -  * Debugger PIN: 156-759-472
-2025-03-24 23:35:49,912 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:35:49,925 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:35:49,926 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:35:50,146 -  * Restarting with watchdog (windowsapi)
-2025-03-24 23:35:56,423 -  * Debugger is active!
-2025-03-24 23:35:56,427 -  * Debugger PIN: 156-759-472
-2025-03-24 23:44:54,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:44:54,290 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:44:54,290 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:44:54,525 -  * Restarting with watchdog (windowsapi)
-2025-03-24 23:45:02,082 -  * Debugger is active!
-2025-03-24 23:45:02,086 -  * Debugger PIN: 156-759-472
-2025-03-24 23:45:08,193 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:45:08,220 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:45:08,442 -  * Restarting with watchdog (windowsapi)
-2025-03-24 23:45:14,083 -  * Debugger is active!
-2025-03-24 23:45:14,086 -  * Debugger PIN: 156-759-472
-2025-03-24 23:47:31,938 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:47:31,965 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:47:31,966 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-24 23:47:32,424 -  * Restarting with watchdog (windowsapi)
-2025-03-24 23:47:38,416 -  * Debugger is active!
-2025-03-24 23:47:38,424 -  * Debugger PIN: 156-759-472
-2025-03-25 10:35:54,198 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 10:35:54,199 - [33mPress CTRL+C to quit[0m
-2025-03-25 10:35:54,200 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:36:00,108 -  * Debugger is active!
-2025-03-25 10:36:00,114 -  * Debugger PIN: 156-759-472
-2025-03-25 10:51:42,471 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\.venv\\Lib\\site-packages\\flask\\__init__.py', reloading
-2025-03-25 10:51:42,746 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:51:49,101 -  * Debugger is active!
-2025-03-25 10:51:49,104 -  * Debugger PIN: 156-759-472
-2025-03-25 10:51:55,839 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:51:55,840 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:51:56,514 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:52:01,988 -  * Debugger is active!
-2025-03-25 10:52:01,990 -  * Debugger PIN: 156-759-472
-2025-03-25 10:52:52,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:52:52,054 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:52:52,055 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:52:52,281 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:52:58,460 -  * Debugger is active!
-2025-03-25 10:52:58,463 -  * Debugger PIN: 156-759-472
-2025-03-25 10:53:00,395 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:53:00,396 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:53:00,668 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:53:06,564 -  * Debugger is active!
-2025-03-25 10:53:06,567 -  * Debugger PIN: 156-759-472
-2025-03-25 10:53:11,529 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:53:11,556 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:53:11,557 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:53:11,853 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:53:17,762 -  * Debugger is active!
-2025-03-25 10:53:17,765 -  * Debugger PIN: 156-759-472
-2025-03-25 10:54:21,885 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 10:54:21,886 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 10:54:21,886 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 10:54:22,559 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:54:28,497 -  * Debugger is active!
-2025-03-25 10:54:28,500 -  * Debugger PIN: 156-759-472
-2025-03-25 10:57:32,280 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 10:57:32,280 - [33mPress CTRL+C to quit[0m
-2025-03-25 10:57:32,280 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:57:38,907 -  * Debugger is active!
-2025-03-25 10:57:38,909 -  * Debugger PIN: 156-759-472
-2025-03-25 10:58:29,425 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:58:29,426 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 10:58:30,389 -  * Restarting with watchdog (windowsapi)
-2025-03-25 10:58:36,933 -  * Debugger is active!
-2025-03-25 10:58:36,936 -  * Debugger PIN: 156-759-472
-2025-03-25 11:02:09,471 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:02:09,497 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:02:09,498 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:02:10,000 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:04:04,955 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 11:04:04,955 - [33mPress CTRL+C to quit[0m
-2025-03-25 11:04:04,956 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:04:11,371 -  * Debugger is active!
-2025-03-25 11:04:11,376 -  * Debugger PIN: 156-759-472
-2025-03-25 11:04:38,435 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:04:38,463 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:04:39,252 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:04:45,060 -  * Debugger is active!
-2025-03-25 11:04:45,078 -  * Debugger PIN: 156-759-472
-2025-03-25 11:19:33,177 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 11:19:33,177 - [33mPress CTRL+C to quit[0m
-2025-03-25 11:19:33,178 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:19:37,756 -  * Debugger is active!
-2025-03-25 11:19:37,757 -  * Debugger PIN: 156-759-472
-2025-03-25 11:20:26,863 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:20:26,863 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:20:27,685 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:20:32,455 -  * Debugger is active!
-2025-03-25 11:20:32,458 -  * Debugger PIN: 156-759-472
-2025-03-25 11:34:28,496 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:34:28,496 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 11:34:29,230 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:34:34,170 -  * Debugger is active!
-2025-03-25 11:34:34,172 -  * Debugger PIN: 156-759-472
-2025-03-25 11:34:42,124 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 11:34:42,125 - [33mPress CTRL+C to quit[0m
-2025-03-25 11:34:42,125 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:34:46,777 -  * Debugger is active!
-2025-03-25 11:34:46,779 -  * Debugger PIN: 156-759-472
-2025-03-25 11:37:43,355 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:37:44,657 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:37:49,368 -  * Debugger is active!
-2025-03-25 11:37:49,369 -  * Debugger PIN: 156-759-472
-2025-03-25 11:37:49,620 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:37:49,623 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:37:49,623 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:37:50,537 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:37:55,194 -  * Debugger is active!
-2025-03-25 11:37:55,195 -  * Debugger PIN: 156-759-472
-2025-03-25 11:38:11,693 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:38:11,696 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:38:11,696 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 11:38:12,674 -  * Restarting with watchdog (windowsapi)
-2025-03-25 11:38:17,534 -  * Debugger is active!
-2025-03-25 11:38:17,536 -  * Debugger PIN: 156-759-472
-2025-03-25 12:00:14,797 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 12:00:14,798 - [33mPress CTRL+C to quit[0m
-2025-03-25 12:00:14,798 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:00:19,413 -  * Debugger is active!
-2025-03-25 12:00:19,416 -  * Debugger PIN: 156-759-472
-2025-03-25 12:12:53,491 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:12:53,492 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:12:53,760 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:12:58,351 -  * Debugger is active!
-2025-03-25 12:12:58,352 -  * Debugger PIN: 156-759-472
-2025-03-25 12:13:08,115 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:08,118 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:08,118 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:08,676 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:13:13,046 -  * Debugger is active!
-2025-03-25 12:13:13,048 -  * Debugger PIN: 156-759-472
-2025-03-25 12:13:14,844 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:14,844 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:14,844 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:15,234 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:13:19,935 -  * Debugger is active!
-2025-03-25 12:13:19,938 -  * Debugger PIN: 156-759-472
-2025-03-25 12:13:24,017 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:24,021 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:25,197 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:13:29,900 -  * Debugger is active!
-2025-03-25 12:13:29,903 -  * Debugger PIN: 156-759-472
-2025-03-25 12:13:38,806 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:38,809 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:38,809 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:39,186 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:13:43,712 -  * Debugger is active!
-2025-03-25 12:13:43,714 -  * Debugger PIN: 156-759-472
-2025-03-25 12:13:45,134 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:45,137 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:45,138 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:45,905 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:13:50,554 -  * Debugger is active!
-2025-03-25 12:13:50,555 -  * Debugger PIN: 156-759-472
-2025-03-25 12:13:56,948 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:56,949 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:13:57,875 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:14:02,346 -  * Debugger is active!
-2025-03-25 12:14:02,348 -  * Debugger PIN: 156-759-472
-2025-03-25 12:14:03,117 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:14:03,118 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:14:03,119 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:14:03,498 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:14:50,555 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 12:14:50,555 - [33mPress CTRL+C to quit[0m
-2025-03-25 12:14:50,555 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:14:55,179 -  * Debugger is active!
-2025-03-25 12:14:55,181 -  * Debugger PIN: 156-759-472
-2025-03-25 12:15:49,968 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:15:49,970 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:15:50,644 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:15:55,167 -  * Debugger is active!
-2025-03-25 12:15:55,168 -  * Debugger PIN: 156-759-472
-2025-03-25 12:15:56,565 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:15:56,565 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:15:56,566 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 12:15:57,357 -  * Restarting with watchdog (windowsapi)
-2025-03-25 12:16:02,266 -  * Debugger is active!
-2025-03-25 12:16:02,267 -  * Debugger PIN: 156-759-472
-2025-03-25 14:09:07,550 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\main.py', reloading
-2025-03-25 14:09:07,632 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 14:09:07,632 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 14:09:09,016 -  * Restarting with watchdog (windowsapi)
-2025-03-25 14:09:16,271 -  * Debugger is active!
-2025-03-25 14:09:16,274 -  * Debugger PIN: 156-759-472
-2025-03-25 14:22:38,544 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 14:22:39,343 -  * Restarting with watchdog (windowsapi)
-2025-03-25 14:22:45,115 -  * Debugger is active!
-2025-03-25 14:22:45,119 -  * Debugger PIN: 156-759-472
-2025-03-25 14:22:57,990 - Exception during reset or similar
-Traceback (most recent call last):
-  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 986, in _finalize_fairy
-    fairy._reset(
-    ~~~~~~~~~~~~^
-        pool,
-        ^^^^^
-    ...<2 lines>...
-        asyncio_safe=can_manipulate_connection,
-        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    )
-    ^
-  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\pool\base.py", line 1432, in _reset
-    pool._dialect.do_rollback(self)
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
-  File "C:\Users\qlizb\Documents\baylink\bay-link-alerts\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 700, in do_rollback
-    dbapi_connection.rollback()
-    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
-psycopg2.OperationalError: server closed the connection unexpectedly
-	This probably means the server terminated abnormally
-	before or while processing the request.
-
-2025-03-25 15:16:56,682 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:16:56,694 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:16:56,694 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:17:02,406 -  * Debugger is active!
-2025-03-25 15:17:02,409 -  * Debugger PIN: 156-759-472
-2025-03-25 15:18:14,735 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 15:18:14,736 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-25 15:18:15,705 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:18:21,841 -  * Debugger is active!
-2025-03-25 15:18:21,844 -  * Debugger PIN: 156-759-472
-2025-03-25 15:22:40,079 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:22:40,089 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:22:40,089 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:22:45,925 -  * Debugger is active!
-2025-03-25 15:22:45,929 -  * Debugger PIN: 156-759-472
-2025-03-25 15:23:24,017 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 15:23:24,018 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 15:23:24,018 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 15:23:25,057 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:23:31,362 -  * Debugger is active!
-2025-03-25 15:23:31,366 -  * Debugger PIN: 156-759-472
-2025-03-25 15:23:32,767 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 15:23:32,768 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-25 15:23:33,597 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:23:39,949 -  * Debugger is active!
-2025-03-25 15:23:39,953 -  * Debugger PIN: 156-759-472
-2025-03-25 15:24:39,559 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:24:39,559 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:24:39,559 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:24:45,423 -  * Debugger is active!
-2025-03-25 15:24:45,429 -  * Debugger PIN: 156-759-472
-2025-03-25 15:25:09,337 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:25:09,338 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:25:09,338 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:25:15,574 -  * Debugger is active!
-2025-03-25 15:25:15,578 -  * Debugger PIN: 156-759-472
-2025-03-25 15:29:10,201 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:29:10,202 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:29:10,202 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:29:16,104 -  * Debugger is active!
-2025-03-25 15:29:16,108 -  * Debugger PIN: 156-759-472
-2025-03-25 15:42:55,062 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:42:55,065 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:42:55,065 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:43:00,411 -  * Debugger is active!
-2025-03-25 15:43:00,415 -  * Debugger PIN: 156-759-472
-2025-03-25 15:43:30,505 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
-2025-03-25 15:43:30,535 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
-2025-03-25 15:44:32,131 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-25 15:44:32,131 - [33mPress CTRL+C to quit[0m
-2025-03-25 15:44:32,131 -  * Restarting with watchdog (windowsapi)
-2025-03-25 15:44:38,072 -  * Debugger is active!
-2025-03-25 15:44:38,076 -  * Debugger PIN: 156-759-472
-=======
 2025-03-21 15:15:24,433 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
@@ -7290,729 +6676,243 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-22 13:01:41,899 -  * Restarting with stat
 2025-03-22 13:01:49,945 -  * Debugger is active!
 2025-03-22 13:01:49,958 -  * Debugger PIN: 898-260-860
->>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
-2025-03-27 13:33:48,998 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:33:49,744 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:33:50,090 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:34:21,608 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:34:22,367 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:34:22,752 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:34:24,776 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-03-26 15:38:49,100 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 13:34:24,776 - [33mPress CTRL+C to quit[0m
-2025-03-27 13:34:24,776 -  * Restarting with stat
-2025-03-27 13:34:34,054 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:34:34,582 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:34:34,904 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:38:21,107 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:38:22,061 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:38:22,565 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:38:26,668 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-26 15:38:49,101 - [33mPress CTRL+C to quit[0m
+2025-03-26 15:38:49,101 -  * Restarting with stat
+2025-03-26 15:38:58,689 -  * Debugger is active!
+2025-03-26 15:38:58,709 -  * Debugger PIN: 262-103-667
+2025-03-26 15:39:15,478 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "GET / HTTP/1.1" 200 -
+2025-03-26 15:39:15,707 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "GET /socket.io/?EIO=4&transport=polling&t=PNHxNTW HTTP/1.1" 200 -
+2025-03-26 15:39:15,889 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "POST /socket.io/?EIO=4&transport=polling&t=PNHxNV_&sid=lOROzdh-qJBvN3wsAAAA HTTP/1.1" 200 -
+2025-03-26 15:39:15,919 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "GET /socket.io/?EIO=4&transport=polling&t=PNHxNW2&sid=lOROzdh-qJBvN3wsAAAA HTTP/1.1" 200 -
+2025-03-26 15:39:15,920 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2025-03-26 15:39:15,953 - 127.0.0.1 - - [26/Mar/2025 15:39:15] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2025-03-26 15:39:16,728 - 127.0.0.1 - - [26/Mar/2025 15:39:16] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-26 15:39:20,769 - 127.0.0.1 - - [26/Mar/2025 15:39:20] "GET /socket.io/?EIO=4&transport=websocket&sid=lOROzdh-qJBvN3wsAAAA HTTP/1.1" 200 -
+2025-03-26 15:42:32,913 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 13:38:26,668 - [33mPress CTRL+C to quit[0m
-2025-03-27 13:38:26,668 -  * Restarting with stat
-2025-03-27 13:54:05,459 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:54:06,547 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:54:07,214 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:54:58,368 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:54:58,861 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:54:59,205 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:55:23,988 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:55:24,502 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:55:24,832 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:55:26,740 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-26 15:42:32,913 - [33mPress CTRL+C to quit[0m
+2025-03-26 15:42:32,913 -  * Restarting with stat
+2025-03-26 15:42:42,236 -  * Debugger is active!
+2025-03-26 15:42:42,250 -  * Debugger PIN: 262-103-667
+2025-03-26 15:45:55,542 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-26 15:45:56,247 -  * Restarting with stat
+2025-03-26 15:46:08,015 -  * Debugger is active!
+2025-03-26 15:46:08,036 -  * Debugger PIN: 262-103-667
+2025-03-26 15:50:12,647 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 13:55:26,740 - [33mPress CTRL+C to quit[0m
-2025-03-27 13:55:26,740 -  * Restarting with stat
-2025-03-27 13:55:36,368 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:55:36,962 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:55:37,280 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:55:38,999 -  * Debugger is active!
-2025-03-27 13:55:39,044 -  * Debugger PIN: 143-786-213
-2025-03-27 13:56:53,908 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
-2025-03-27 13:56:55,408 -  * Restarting with stat
-2025-03-27 13:57:06,886 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:57:07,577 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:57:07,980 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:57:09,912 -  * Debugger is active!
-2025-03-27 13:57:09,926 -  * Debugger PIN: 143-786-213
-2025-03-27 13:58:19,032 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 13:58:19,946 -  * Restarting with stat
-2025-03-27 13:58:31,148 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 13:58:32,707 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 13:58:33,699 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 13:58:39,175 -  * Debugger is active!
-2025-03-27 13:58:39,175 -  * Debugger PIN: 143-786-213
-2025-03-27 14:06:51,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 14:06:52,244 -  * Restarting with stat
-2025-03-27 15:10:04,374 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:10:04,990 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:10:05,322 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:10:07,149 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-26 15:50:12,647 - [33mPress CTRL+C to quit[0m
+2025-03-26 15:50:12,647 -  * Restarting with stat
+2025-03-26 15:50:21,975 -  * Debugger is active!
+2025-03-26 15:50:21,991 -  * Debugger PIN: 262-103-667
+2025-03-26 15:51:13,697 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-26 15:51:15,443 -  * Restarting with stat
+2025-03-27 15:02:42,401 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.80.236:4000
-2025-03-27 15:10:07,149 - [33mPress CTRL+C to quit[0m
-2025-03-27 15:10:07,149 -  * Restarting with stat
-2025-03-27 15:10:18,425 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:10:18,979 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:10:19,343 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:10:21,170 -  * Debugger is active!
-2025-03-27 15:10:21,172 -  * Debugger PIN: 143-786-213
-2025-03-27 15:32:56,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:32:57,157 -  * Restarting with stat
-2025-03-27 15:33:12,939 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:33:13,567 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:33:13,908 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:33:15,778 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:02:42,401 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:02:42,401 -  * Restarting with stat
+2025-03-27 15:02:51,816 -  * Debugger is active!
+2025-03-27 15:02:51,837 -  * Debugger PIN: 262-103-667
+2025-03-27 15:03:37,029 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/notification.py', reloading
+2025-03-27 15:03:37,712 -  * Restarting with stat
+2025-03-27 15:03:48,170 -  * Debugger is active!
+2025-03-27 15:03:48,185 -  * Debugger PIN: 262-103-667
+2025-03-27 15:04:22,801 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 15:33:15,778 - [33mPress CTRL+C to quit[0m
-2025-03-27 15:33:15,778 -  * Restarting with stat
-2025-03-27 15:33:25,246 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:33:26,128 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:33:26,531 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:33:28,698 -  * Debugger is active!
-2025-03-27 15:33:28,698 -  * Debugger PIN: 143-786-213
-2025-03-27 15:34:27,771 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:34:28,781 -  * Restarting with stat
-2025-03-27 15:34:39,723 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:34:40,343 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:34:40,840 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:34:42,987 -  * Debugger is active!
-2025-03-27 15:34:42,989 -  * Debugger PIN: 143-786-213
-2025-03-27 15:34:44,492 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:34:45,106 -  * Restarting with stat
-2025-03-27 15:34:54,269 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:34:54,826 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:34:55,253 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:34:57,545 -  * Debugger is active!
-2025-03-27 15:34:57,545 -  * Debugger PIN: 143-786-213
-2025-03-27 15:37:25,575 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:37:26,495 -  * Restarting with stat
-2025-03-27 15:37:35,488 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:37:36,022 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:37:36,363 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:37:38,462 -  * Debugger is active!
-2025-03-27 15:37:38,462 -  * Debugger PIN: 143-786-213
-2025-03-27 15:38:44,322 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:38:45,040 -  * Restarting with stat
-2025-03-27 15:38:56,277 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:38:57,182 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:38:57,734 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:39:00,735 -  * Debugger is active!
-2025-03-27 15:39:00,735 -  * Debugger PIN: 143-786-213
-2025-03-27 15:39:02,415 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:39:03,209 -  * Restarting with stat
-2025-03-27 15:39:15,455 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:39:16,387 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:39:17,068 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:39:20,138 -  * Debugger is active!
-2025-03-27 15:39:20,145 -  * Debugger PIN: 143-786-213
-2025-03-27 15:40:22,219 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:40:23,571 -  * Restarting with stat
-2025-03-27 15:40:33,351 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:40:33,864 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:40:34,267 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:40:36,060 -  * Debugger is active!
-2025-03-27 15:40:36,060 -  * Debugger PIN: 143-786-213
-2025-03-27 15:42:54,289 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 15:42:55,436 -  * Restarting with stat
-2025-03-27 15:43:14,338 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:43:19,109 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:43:20,116 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:43:25,079 -  * Debugger is active!
-2025-03-27 15:43:25,084 -  * Debugger PIN: 143-786-213
-2025-03-27 15:48:10,211 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:48:10,801 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:48:11,136 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:48:12,905 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:04:22,802 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:04:22,802 -  * Restarting with stat
+2025-03-27 15:04:33,660 -  * Debugger is active!
+2025-03-27 15:04:33,682 -  * Debugger PIN: 262-103-667
+2025-03-27 15:06:05,873 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 15:48:12,905 - [33mPress CTRL+C to quit[0m
-2025-03-27 15:48:12,905 -  * Restarting with stat
-2025-03-27 15:48:22,243 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:48:22,789 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:48:23,213 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:48:25,088 -  * Debugger is active!
-2025-03-27 15:48:25,088 -  * Debugger PIN: 143-786-213
-2025-03-27 15:56:47,220 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:56:47,729 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:56:48,075 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:56:49,972 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:06:05,873 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:06:05,873 -  * Restarting with stat
+2025-03-27 15:06:15,190 -  * Debugger is active!
+2025-03-27 15:06:15,205 -  * Debugger PIN: 262-103-667
+2025-03-27 15:33:16,304 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/database/models/Warehouse.py', reloading
+2025-03-27 15:35:09,148 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 15:56:49,975 - [33mPress CTRL+C to quit[0m
-2025-03-27 15:56:49,975 -  * Restarting with stat
-2025-03-27 15:56:59,983 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 15:57:00,606 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 15:57:00,983 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 15:57:02,889 -  * Debugger is active!
-2025-03-27 15:57:02,889 -  * Debugger PIN: 143-786-213
-2025-03-27 16:15:01,552 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:15:02,262 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:15:02,617 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:15:04,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:35:09,148 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:35:09,149 -  * Restarting with stat
+2025-03-27 15:35:19,198 -  * Debugger is active!
+2025-03-27 15:35:19,216 -  * Debugger PIN: 262-103-667
+2025-03-27 15:44:03,616 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 16:15:04,773 - [33mPress CTRL+C to quit[0m
-2025-03-27 16:15:04,773 -  * Restarting with stat
-2025-03-27 16:15:13,925 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:15:14,538 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:15:14,933 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:15:16,970 -  * Debugger is active!
-2025-03-27 16:15:16,970 -  * Debugger PIN: 143-786-213
-2025-03-27 16:19:34,206 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:19:34,798 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:19:35,124 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:24:42,738 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:24:43,409 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:24:43,731 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:34:54,257 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:34:54,890 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:34:55,244 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:49:06,758 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:49:07,276 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:49:07,638 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:49:10,992 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:44:03,616 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:44:03,616 -  * Restarting with stat
+2025-03-27 15:44:13,980 -  * Debugger is active!
+2025-03-27 15:44:13,999 -  * Debugger PIN: 262-103-667
+2025-03-27 15:44:50,037 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 16:49:10,992 - [33mPress CTRL+C to quit[0m
-2025-03-27 16:49:10,992 -  * Restarting with stat
-2025-03-27 16:49:19,924 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:49:20,444 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:49:20,786 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:52:12,300 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:52:12,698 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:52:12,943 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 16:59:27,611 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 16:59:27,982 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 16:59:28,335 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:01:04,102 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:01:04,463 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:01:04,733 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:01:06,033 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:44:50,037 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:44:50,037 -  * Restarting with stat
+2025-03-27 15:44:58,983 -  * Debugger is active!
+2025-03-27 15:44:58,997 -  * Debugger PIN: 262-103-667
+2025-03-27 15:51:35,742 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-27 15:51:36,246 -  * Restarting with stat
+2025-03-27 15:55:48,356 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 17:01:06,033 - [33mPress CTRL+C to quit[0m
-2025-03-27 17:01:06,033 -  * Restarting with stat
-2025-03-27 17:01:12,890 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:01:13,239 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:01:13,452 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:01:14,766 -  * Debugger is active!
-2025-03-27 17:01:14,768 -  * Debugger PIN: 143-786-213
-2025-03-27 17:16:54,875 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:16:55,307 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:16:55,592 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:16:56,854 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 15:55:48,356 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:55:48,356 -  * Restarting with stat
+2025-03-27 15:56:00,136 -  * Debugger is active!
+2025-03-27 15:56:00,175 -  * Debugger PIN: 262-103-667
+2025-03-27 16:09:49,441 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:09:50,330 -  * Restarting with stat
+2025-03-27 16:10:01,570 -  * Debugger is active!
+2025-03-27 16:10:01,589 -  * Debugger PIN: 262-103-667
+2025-03-27 16:10:22,611 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-27 16:10:23,183 -  * Restarting with stat
+2025-03-27 16:10:36,250 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 17:16:56,854 - [33mPress CTRL+C to quit[0m
-2025-03-27 17:16:56,854 -  * Restarting with stat
-2025-03-27 17:17:04,187 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:17:04,602 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:17:04,824 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:17:06,068 -  * Debugger is active!
-2025-03-27 17:17:06,075 -  * Debugger PIN: 143-786-213
-2025-03-27 17:41:53,052 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:41:53,985 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:41:54,468 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:41:55,837 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 16:10:36,250 - [33mPress CTRL+C to quit[0m
+2025-03-27 16:10:36,250 -  * Restarting with stat
+2025-03-27 16:10:45,617 -  * Debugger is active!
+2025-03-27 16:10:45,631 -  * Debugger PIN: 262-103-667
+2025-03-27 16:37:55,105 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:37:56,285 -  * Restarting with stat
+2025-03-27 16:38:07,266 -  * Debugger is active!
+2025-03-27 16:38:07,281 -  * Debugger PIN: 262-103-667
+2025-03-27 16:38:19,261 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:38:19,792 -  * Restarting with stat
+2025-03-27 16:38:29,128 -  * Debugger is active!
+2025-03-27 16:38:29,142 -  * Debugger PIN: 262-103-667
+2025-03-27 16:38:32,880 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-27 16:38:33,500 -  * Restarting with stat
+2025-03-27 16:38:43,925 -  * Debugger is active!
+2025-03-27 16:38:43,940 -  * Debugger PIN: 262-103-667
+2025-03-27 16:39:39,846 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 17:41:55,837 - [33mPress CTRL+C to quit[0m
-2025-03-27 17:41:55,837 -  * Restarting with stat
-2025-03-27 17:42:03,068 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:42:03,445 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:42:03,731 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:42:05,091 -  * Debugger is active!
-2025-03-27 17:42:05,091 -  * Debugger PIN: 143-786-213
-2025-03-27 17:51:52,171 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-27 17:52:22,990 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:52:23,417 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:52:23,644 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:52:25,086 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 16:39:39,847 - [33mPress CTRL+C to quit[0m
+2025-03-27 16:39:39,847 -  * Restarting with stat
+2025-03-27 16:39:49,199 -  * Debugger is active!
+2025-03-27 16:39:49,214 -  * Debugger PIN: 262-103-667
+2025-03-27 17:11:11,217 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/database/models/BaylinkAlertLogs.py', reloading
+2025-03-27 17:11:12,242 -  * Restarting with stat
+2025-03-27 17:11:22,871 -  * Debugger is active!
+2025-03-27 17:11:22,887 -  * Debugger PIN: 262-103-667
+2025-03-27 17:11:59,971 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/event/main.py', reloading
+2025-03-27 17:12:00,669 -  * Restarting with stat
+2025-03-27 17:13:13,868 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 17:52:25,086 - [33mPress CTRL+C to quit[0m
-2025-03-27 17:52:25,086 -  * Restarting with stat
-2025-03-27 17:52:31,831 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:52:32,160 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:52:32,364 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:52:33,685 -  * Debugger is active!
-2025-03-27 17:52:33,685 -  * Debugger PIN: 143-786-213
-2025-03-27 17:55:49,413 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-27 17:55:50,111 -  * Restarting with stat
-2025-03-27 17:55:59,336 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 17:56:01,228 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 17:56:02,287 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 17:56:04,426 -  * Debugger is active!
-2025-03-27 17:56:04,426 -  * Debugger PIN: 143-786-213
-2025-03-27 18:14:17,300 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-27 18:14:18,354 -  * Restarting with stat
-2025-03-27 18:15:04,654 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:15:05,050 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:15:05,298 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:15:06,779 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-27 17:13:13,869 - [33mPress CTRL+C to quit[0m
+2025-03-27 17:13:13,869 -  * Restarting with stat
+2025-03-27 17:13:23,031 -  * Debugger is active!
+2025-03-27 17:13:23,045 -  * Debugger PIN: 262-103-667
+2025-03-27 17:54:50,704 - 127.0.0.1 - - [27/Mar/2025 17:54:50] "GET / HTTP/1.1" 200 -
+2025-03-27 17:54:50,884 - 127.0.0.1 - - [27/Mar/2025 17:54:50] "GET /socket.io/?EIO=4&transport=polling&t=PNNZ_Ll HTTP/1.1" 200 -
+2025-03-27 17:54:50,957 - 127.0.0.1 - - [27/Mar/2025 17:54:50] "POST /socket.io/?EIO=4&transport=polling&t=PNNZ_Ni&sid=XYyBJRKbhzpV6z4TAAAA HTTP/1.1" 200 -
+2025-03-27 17:54:50,968 - 127.0.0.1 - - [27/Mar/2025 17:54:50] "GET /socket.io/?EIO=4&transport=polling&t=PNNZ_Nj&sid=XYyBJRKbhzpV6z4TAAAA HTTP/1.1" 200 -
+2025-03-27 17:54:51,198 - 127.0.0.1 - - [27/Mar/2025 17:54:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 17:54:51,244 - 127.0.0.1 - - [27/Mar/2025 17:54:51] "GET /socket.io/?EIO=4&transport=polling&t=PNNZ_On&sid=XYyBJRKbhzpV6z4TAAAA HTTP/1.1" 200 -
+2025-03-27 17:54:51,812 - 127.0.0.1 - - [27/Mar/2025 17:54:51] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-28 11:52:53,027 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 18:15:06,779 - [33mPress CTRL+C to quit[0m
-2025-03-27 18:15:06,779 -  * Restarting with stat
-2025-03-27 18:15:13,711 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:15:14,054 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:15:14,266 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:15:17,160 -  * Debugger is active!
-2025-03-27 18:15:17,166 -  * Debugger PIN: 143-786-213
-2025-03-27 18:17:04,812 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:17:05,684 -  * Restarting with stat
-2025-03-27 18:17:14,345 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:17:14,940 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:17:15,325 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:17:17,524 -  * Debugger is active!
-2025-03-27 18:17:17,526 -  * Debugger PIN: 143-786-213
-2025-03-27 18:18:07,966 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:18:08,615 -  * Restarting with stat
-2025-03-27 18:18:17,841 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:18:19,925 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:18:20,726 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:18:24,877 -  * Debugger is active!
-2025-03-27 18:18:24,877 -  * Debugger PIN: 143-786-213
-2025-03-27 18:19:39,486 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:19:40,278 -  * Restarting with stat
-2025-03-27 18:19:51,287 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:19:52,130 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:19:52,682 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:19:55,671 -  * Debugger is active!
-2025-03-27 18:19:55,674 -  * Debugger PIN: 143-786-213
-2025-03-27 18:21:11,922 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:21:12,572 -  * Restarting with stat
-2025-03-27 18:21:21,153 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:21:21,919 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:21:22,403 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:21:24,568 -  * Debugger is active!
-2025-03-27 18:21:24,568 -  * Debugger PIN: 143-786-213
-2025-03-27 18:27:25,537 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:27:26,885 -  * Restarting with stat
-2025-03-27 18:27:34,017 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:27:34,417 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:27:34,683 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:27:38,748 -  * Debugger is active!
-2025-03-27 18:27:38,748 -  * Debugger PIN: 143-786-213
-2025-03-27 18:40:34,554 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:40:34,942 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:40:35,204 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:40:36,891 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-28 11:52:53,028 - [33mPress CTRL+C to quit[0m
+2025-03-28 11:52:53,028 -  * Restarting with stat
+2025-03-28 11:53:02,229 -  * Debugger is active!
+2025-03-28 11:53:02,250 -  * Debugger PIN: 898-260-860
+2025-03-28 12:16:43,244 - Failed to send alert to 8285027775: None
+2025-03-28 12:16:46,083 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:47,822 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:49,453 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:51,056 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:52,941 - Failed to send alert to 7007555103: None
+2025-03-28 13:09:35,766 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 18:40:36,891 - [33mPress CTRL+C to quit[0m
-2025-03-27 18:40:36,891 -  * Restarting with stat
-2025-03-27 18:40:44,386 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:40:44,987 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:40:45,539 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:40:49,274 -  * Debugger is active!
-2025-03-27 18:40:49,274 -  * Debugger PIN: 143-786-213
-2025-03-27 18:41:18,017 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:41:18,620 -  * Restarting with stat
-2025-03-27 18:41:28,397 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:41:29,057 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:41:29,481 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:41:31,733 -  * Debugger is active!
-2025-03-27 18:41:31,733 -  * Debugger PIN: 143-786-213
-2025-03-27 18:43:17,347 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:43:18,439 -  * Restarting with stat
-2025-03-27 18:43:25,240 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:43:25,624 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:43:25,857 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:43:29,087 -  * Debugger is active!
-2025-03-27 18:43:29,108 -  * Debugger PIN: 143-786-213
-2025-03-27 18:47:32,733 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
-2025-03-27 18:47:33,982 -  * Restarting with stat
-2025-03-27 18:47:40,808 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:47:41,145 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:47:41,362 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:47:44,245 -  * Debugger is active!
-2025-03-27 18:47:44,245 -  * Debugger PIN: 143-786-213
-2025-03-27 18:50:06,558 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:50:07,182 -  * Restarting with stat
-2025-03-27 18:50:16,137 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:50:16,814 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:50:17,201 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:50:19,792 -  * Debugger is active!
-2025-03-27 18:50:19,795 -  * Debugger PIN: 143-786-213
-2025-03-27 18:51:14,074 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:51:15,439 -  * Restarting with stat
-2025-03-27 18:51:23,266 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:51:23,924 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:51:24,744 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:51:28,885 -  * Debugger is active!
-2025-03-27 18:51:28,891 -  * Debugger PIN: 143-786-213
-2025-03-27 18:53:02,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 18:53:02,850 -  * Restarting with stat
-2025-03-27 18:53:10,857 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 18:53:13,875 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 18:53:14,722 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 18:53:18,700 -  * Debugger is active!
-2025-03-27 18:53:18,706 -  * Debugger PIN: 143-786-213
-2025-03-27 19:00:34,491 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 19:00:35,671 -  * Restarting with stat
-2025-03-27 19:00:47,296 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 19:00:49,403 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 19:00:50,435 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 19:00:53,643 -  * Debugger is active!
-2025-03-27 19:00:53,648 -  * Debugger PIN: 143-786-213
-2025-03-27 19:02:10,969 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 19:02:12,513 -  * Restarting with stat
-2025-03-27 19:02:24,411 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 19:02:25,405 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 19:02:25,938 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 19:02:29,445 -  * Debugger is active!
-2025-03-27 19:02:29,455 -  * Debugger PIN: 143-786-213
-2025-03-27 19:06:25,895 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 19:06:27,187 -  * Restarting with stat
-2025-03-27 19:06:35,607 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 19:06:36,341 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 19:06:36,761 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 19:06:39,301 -  * Debugger is active!
-2025-03-27 19:06:39,304 -  * Debugger PIN: 143-786-213
-2025-03-27 21:14:24,014 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:14:24,766 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:14:25,156 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:14:27,125 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-28 13:09:35,767 - [33mPress CTRL+C to quit[0m
+2025-03-28 13:09:35,767 -  * Restarting with stat
+2025-03-28 13:09:45,914 -  * Debugger is active!
+2025-03-28 13:09:45,932 -  * Debugger PIN: 898-260-860
+2025-03-28 13:47:54,422 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:47:55,410 -  * Restarting with stat
+2025-03-28 13:48:08,555 -  * Debugger is active!
+2025-03-28 13:48:08,573 -  * Debugger PIN: 898-260-860
+2025-03-28 13:48:17,442 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:48:18,101 -  * Restarting with stat
+2025-03-28 13:48:28,544 -  * Debugger is active!
+2025-03-28 13:48:28,559 -  * Debugger PIN: 898-260-860
+2025-03-28 13:48:51,368 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:48:51,903 -  * Restarting with stat
+2025-03-28 13:49:01,856 -  * Debugger is active!
+2025-03-28 13:49:01,871 -  * Debugger PIN: 898-260-860
+2025-03-28 13:49:12,167 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
+2025-03-28 13:49:12,693 -  * Restarting with stat
+2025-03-28 13:49:22,562 -  * Debugger is active!
+2025-03-28 13:49:22,577 -  * Debugger PIN: 898-260-860
+2025-03-28 13:49:34,844 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 13:49:35,594 -  * Restarting with stat
+2025-03-28 14:35:58,073 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 21:14:27,125 - [33mPress CTRL+C to quit[0m
-2025-03-27 21:14:27,125 -  * Restarting with stat
-2025-03-27 21:14:41,631 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:14:42,301 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:14:42,681 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:14:44,703 -  * Debugger is active!
-2025-03-27 21:14:44,706 -  * Debugger PIN: 143-786-213
-2025-03-27 21:15:44,680 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 21:15:45,341 -  * Restarting with stat
-2025-03-27 21:21:40,885 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:21:41,574 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:21:41,988 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:21:47,465 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-28 14:35:58,074 - [33mPress CTRL+C to quit[0m
+2025-03-28 14:35:58,074 -  * Restarting with stat
+2025-03-28 14:36:09,488 -  * Debugger is active!
+2025-03-28 14:36:09,509 -  * Debugger PIN: 898-260-860
+2025-03-28 14:44:55,046 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-27 21:21:47,465 - [33mPress CTRL+C to quit[0m
-2025-03-27 21:21:47,465 -  * Restarting with stat
-2025-03-27 21:21:56,588 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:21:57,146 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:21:57,498 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:21:59,363 -  * Debugger is active!
-2025-03-27 21:21:59,368 -  * Debugger PIN: 143-786-213
-2025-03-27 21:23:08,235 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 21:23:09,269 -  * Restarting with stat
-2025-03-27 21:23:18,703 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:23:19,295 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:23:19,714 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:23:21,711 -  * Debugger is active!
-2025-03-27 21:23:21,720 -  * Debugger PIN: 143-786-213
-2025-03-27 21:24:10,252 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 21:24:11,191 -  * Restarting with stat
-2025-03-27 21:24:21,612 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:24:22,491 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:24:22,822 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:24:24,913 -  * Debugger is active!
-2025-03-27 21:24:24,921 -  * Debugger PIN: 143-786-213
-2025-03-27 21:27:45,778 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
-2025-03-27 21:27:46,564 -  * Restarting with stat
-2025-03-27 21:28:01,866 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 21:28:06,153 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 21:28:07,126 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 21:28:12,114 -  * Debugger is active!
-2025-03-27 21:28:12,114 -  * Debugger PIN: 143-786-213
-2025-03-27 22:07:37,087 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
-2025-03-27 22:07:37,804 -  * Restarting with stat
-2025-03-27 22:07:46,972 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 22:07:47,561 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 22:07:47,887 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 22:07:49,852 -  * Debugger is active!
-2025-03-27 22:07:49,852 -  * Debugger PIN: 143-786-213
-2025-03-27 22:09:09,459 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 22:09:10,093 -  * Restarting with stat
-2025-03-27 22:09:20,071 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 22:09:20,677 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 22:09:21,021 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 22:09:22,846 -  * Debugger is active!
-2025-03-27 22:09:22,852 -  * Debugger PIN: 143-786-213
-2025-03-27 22:13:02,763 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-27 22:13:04,257 -  * Restarting with stat
-2025-03-27 22:13:19,156 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-27 22:13:23,676 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-27 22:13:24,587 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-27 22:13:29,687 -  * Debugger is active!
-2025-03-27 22:13:29,703 -  * Debugger PIN: 143-786-213
-2025-03-28 11:07:43,170 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-28 11:07:44,400 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-28 11:07:44,955 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-28 11:07:46,409 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://192.168.1.6:4000
+2025-03-28 14:44:55,046 - [33mPress CTRL+C to quit[0m
+2025-03-28 14:44:55,046 -  * Restarting with stat
+2025-03-28 14:45:04,820 -  * Debugger is active!
+2025-03-28 14:45:04,834 -  * Debugger PIN: 898-260-860
+2025-03-28 15:15:11,740 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 15:15:12,815 -  * Restarting with stat
+2025-03-28 15:15:26,511 -  * Debugger is active!
+2025-03-28 15:15:26,532 -  * Debugger PIN: 898-260-860
+2025-03-28 15:15:37,659 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/config.py', reloading
+2025-03-28 15:15:38,813 -  * Restarting with stat
+2025-03-28 15:16:08,597 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
- * Running on http://192.168.1.34:4000
-2025-03-28 11:07:46,409 - [33mPress CTRL+C to quit[0m
-2025-03-28 11:07:46,409 -  * Restarting with stat
-2025-03-28 11:07:53,454 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-28 11:07:53,870 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-28 11:07:54,123 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-28 11:07:55,709 -  * Debugger is active!
-2025-03-28 11:07:55,709 -  * Debugger PIN: 143-786-213
-2025-03-28 11:11:34,439 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-28 11:11:35,343 -  * Restarting with stat
-2025-03-28 11:11:44,480 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-28 11:11:45,085 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-28 11:11:45,523 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-28 11:11:47,671 -  * Debugger is active!
-2025-03-28 11:11:47,674 -  * Debugger PIN: 143-786-213
-2025-03-28 11:12:45,025 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
-2025-03-28 11:12:45,808 -  * Restarting with stat
-2025-03-28 11:12:56,206 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
-
-2025-03-28 11:12:56,770 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
-
-2025-03-28 11:12:57,203 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
-
-2025-03-28 11:12:59,315 -  * Debugger is active!
-2025-03-28 11:12:59,315 -  * Debugger PIN: 143-786-213
+ * Running on http://192.168.1.6:4000
+2025-03-28 15:16:08,597 - [33mPress CTRL+C to quit[0m
+2025-03-28 15:16:08,597 -  * Restarting with stat
+2025-03-28 15:16:18,759 -  * Debugger is active!
+2025-03-28 15:16:18,775 -  * Debugger PIN: 898-260-860
+2025-03-28 15:44:09,206 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:10,997 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:13,696 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:14,105 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:15,744 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:15,869 - Failed to send alert to 8285027775: None
+2025-03-28 15:44:17,538 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:18,612 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:19,328 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:20,494 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:21,150 - Failed to send alert to 7007555103: None
+2025-03-28 15:44:22,352 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:24,251 - Failed to send alert to 8447686869: None
+2025-03-28 15:44:26,126 - Failed to send alert to 7007555103: None

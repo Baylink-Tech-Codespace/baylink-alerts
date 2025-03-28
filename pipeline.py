@@ -1,4 +1,4 @@
-from typing import Dict, Any, Callable
+from typing import Dict, Any
 from notification import send_alert
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.db import db
@@ -6,13 +6,10 @@ from config import event_config
 import json
         
 from typing import List, Dict
-from typing import List, Dict
-
 
 class AlertSystem:
     def __init__(self):
         self.session = db.get_session()
-
 
     def group_alerts_by_recipient(self,alerts_data: List[List[Dict[str, str]]]) -> List[Dict[str, str]]:
         grouped_alerts = {}
@@ -59,7 +56,7 @@ class AlertSystem:
                 self.session.add(log_entry)
                 self.session.commit()
             
-                # send_alert(message, data['recepient'])
+                send_alert(message, data['recepient'])
                 print(f"Alert logged to DB")
         except Exception as e:
             self.session.rollback()
@@ -73,7 +70,7 @@ class AlertSystem:
             if event_name in event_config.keys():  
                 conditions = event_config[event_name]
                 
-                if event_name == "recon_inserted":
+                if event_name == "recon_insert":
                     recon_id = json.loads(event_data)["_id"]
                     for condition in conditions: 
                         alerts.append(condition(recon_id))
@@ -101,8 +98,12 @@ class AlertSystem:
                         alerts.append(condition(event_data))
                         
             alerts = self.group_alerts_by_recipient(alerts)
+            
+            with open("alerts.json", "w") as f:
+                json.dump(alerts, f, indent=4)
            
             for alert in alerts:
+            
               recipient = alert['recipient']
               messages = alert['messages']
               person_name = alert['person_name']
