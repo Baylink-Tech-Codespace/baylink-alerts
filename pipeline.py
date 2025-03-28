@@ -1,4 +1,4 @@
-from typing import Dict, Any, Callable
+from typing import Dict, Any
 from notification import send_alert
 from database.models.BaylinkAlertLogs import BaylinkAlertLogs
 from database.db import db
@@ -6,8 +6,6 @@ from config import event_config
 import json
         
 from typing import List, Dict
-from typing import List, Dict
-
 
 class AlertSystem:
     def __init__(self):
@@ -58,7 +56,7 @@ class AlertSystem:
                 self.session.add(log_entry)
                 self.session.commit()
             
-                # send_alert(message, data['recepient'])
+                send_alert(message, data['recepient'])
                 print(f"Alert logged to DB")
         except Exception as e:
             self.session.rollback()
