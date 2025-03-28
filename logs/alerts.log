@@ -7447,3 +7447,17 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-27 17:54:51,198 - 127.0.0.1 - - [27/Mar/2025 17:54:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
 2025-03-27 17:54:51,244 - 127.0.0.1 - - [27/Mar/2025 17:54:51] "GET /socket.io/?EIO=4&transport=polling&t=PNNZ_On&sid=XYyBJRKbhzpV6z4TAAAA HTTP/1.1" 200 -
 2025-03-27 17:54:51,812 - 127.0.0.1 - - [27/Mar/2025 17:54:51] "GET /fetch_logs HTTP/1.1" 200 -
+2025-03-28 11:52:53,027 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-28 11:52:53,028 - [33mPress CTRL+C to quit[0m
+2025-03-28 11:52:53,028 -  * Restarting with stat
+2025-03-28 11:53:02,229 -  * Debugger is active!
+2025-03-28 11:53:02,250 -  * Debugger PIN: 898-260-860
+2025-03-28 12:16:43,244 - Failed to send alert to 8285027775: None
+2025-03-28 12:16:46,083 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:47,822 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:49,453 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:51,056 - Failed to send alert to 8447686869: None
+2025-03-28 12:16:52,941 - Failed to send alert to 7007555103: None
