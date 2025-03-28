@@ -14,7 +14,7 @@ from database.models.Brand import Brand
 from database.models.Product import Product
 from database.models.Sales import Sales
 from database.models.Retailer import Retailer
-from database.models.Order import Order
+from database.models.Order import Order, OrderItem
 from database.models.DeliveryLogs import DeliveryLogs
 from database.models.Task import Task
 from database.models.Warehouse import WarehouseItems
@@ -54,13 +54,13 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date, payment_statu
     response = requests.request("GET", SWIPE_DOC_API_URL, headers=HEADERS, params=querystring)
     
     data = response.json()
-    
+
     if response.status_code == 200:
         if data['data']['transactions'] is None: 
             return []
         return data["data"]["transactions"]
     else:
-        print(f"Failed to fetch transactions for retailer {retailer_id}: {data.get("message", "No message found")}")
+        print(f"Failed to fetch transactions for retailer {retailer_id}: No record found")
         return []
 
 def list_of_retailers_payment(start_date, end_date):
@@ -79,13 +79,14 @@ def list_of_retailers_payment(start_date, end_date):
     response = requests.request("GET", SWIPE_PAYMENT_LIST_URL, headers=HEADERS, params=querystring)
     
     data = response.json()
+    print(data)
     
     if response.status_code == 200:
         if data['data']['transactions'] is None: 
             return []
         return data["data"]["transactions"]
     else:
-        print(f"Failed to fetch payments list: {data.get("message", "No message found")}")
+        print(f"Failed to fetch payments list: No record found")
         return []
 
 # CASE 1 
@@ -97,7 +98,8 @@ def check_all_retailers_pending_bills():
     start_date = "01-09-2024"
     end_date = (datetime.now() - timedelta(days=60)).strftime("%d-%m-%Y")
 
-    retailers = db.get_session().query(Retailer).all()
+    # retailers = db.get_session().query(Retailer).all()
+    retailers = db.get_session().query(Retailer).limit(10)
 
     alerts_dict = {}
 
@@ -580,28 +582,27 @@ def check_skipped_orders_alert():
 
 # CASE 19
 def check_short_visits(data):
-    retailer_id = data['_id'] 
+    retailer_id = data['retailer_id']
+    fe_id = data['fe_id']
+    visit_start = datetime.fromisoformat(data['visit_start'])
+    visit_end = datetime.fromisoformat(data['visit_end'])
+
     messages = []
 
-    today = datetime.today().date()
-    visit = db.get_session().query(RetailerVisitedLog).filter(
-        (RetailerVisitedLog.retailer_id) == retailer_id
-    ).first()
+    if visit_start and visit_end:
+        time_spent = (visit_end - visit_start).total_seconds() / 60
 
-    if visit.visit_start and visit.visit_end:
-        time_spent = (visit.visit_end - visit.visit_start).total_seconds() / 60
-            
         if time_spent < 10:
-            retailer = db.get_session().query(Retailer).filter(Retailer._id == visit.retailer_id).first()
+            retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
             
             asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
 
-            fe = db.get_session().query(Field_Exec).filter(Field_Exec._id == visit.fe_id).first()
+            fe = db.get_session().query(Field_Exec).filter(Field_Exec._id == fe_id).first()
                     
             if asm and fe:
                 messages.append({
                     "recipient": asm.Contact_Number,
-                    "message": f"Short visit alert: {fe.Name} spent only {time_spent:.2f} min at {retailer.name}.",
+                    "message": f"Short visit by {fe.Name}, spent only {time_spent:.2f} min at {retailer.name}.",
                     "person_name": asm.name,
                     "role": "ASM"
                 })
@@ -690,6 +691,7 @@ def check_retailer_visits_for_month():
         RetailerVisitedLog.fe_id,
         Retailer.name,
         Field_Exec.Name,
+        ASM.name, 
         ASM.Contact_Number
     ).having(
         func.count(RetailerVisitedLog._id) < 4
@@ -703,15 +705,20 @@ def check_retailer_visits_for_month():
         retailer_info = f"{visit.retailer_name} (FE: {visit.fe_name})"
 
         if recipient not in grouped_by_recipient:
-            grouped_by_recipient[recipient] = []
-        grouped_by_recipient[recipient].append(retailer_info)
+            grouped_by_recipient[recipient] = {
+                "person_name": person_name,
+                "retailers": []
+            }
+        grouped_by_recipient[recipient]["retailers"].append(retailer_info)
 
-    for recipient, names in grouped_by_recipient.items():
-        names_str = ", ".join(names)
+    for recipient, data in grouped_by_recipient.items():
+        names_str = ", ".join(data["retailers"])
         message = f"These retailers were visited less than 4 times this month: {names_str}."
         messages.append({
             "recipient": recipient,
-            "message": message
+            "message": message,
+            "person_name": data["person_name"], 
+            "role": "ASM",
         })
 
     return messages
@@ -801,22 +808,31 @@ def check_consistently_missed_retailers():
 
     continuously_missed = [retailer_id for retailer_id, count in missed_retailers.items() if count == 2]
 
-    grouped_by_recipient = defaultdict(list)
+    grouped_by_recipient = {}
     
-    retailers = db.get_session().query(Retailer._id, Retailer.name, ASM.Contact_Number).join(
+    retailers = db.get_session().query(Retailer._id, Retailer.name, ASM.name.label("asm_name"), ASM.Contact_Number).join(
         ASM, Retailer.ASM_id == ASM._id
     ).filter(Retailer._id.in_(continuously_missed)).all()
 
-    for retailer_id, retailer_name, asm_phone in retailers:
-        grouped_by_recipient[asm_phone].append(retailer_name)
+    for retailer_id, retailer_name, asm_name, asm_phone in retailers:
+        if asm_phone not in grouped_by_recipient:
+            grouped_by_recipient[asm_phone] = {
+                "person_name": asm_name, 
+                "retailers": []
+            }
+    
+        grouped_by_recipient[asm_phone]["retailers"].append(retailer_name)
 
     messages = []
-    for recipient, retailer_names in grouped_by_recipient.items():
-        names_str = ", ".join(retailer_names)
+    for recipient, data in grouped_by_recipient.items():
+        names_str = ", ".join(data["retailers"])
         message = f"These retailers were skipped in last 4 beats: {names_str}."
+        
         messages.append({
             "recipient": recipient,
-            "message": message
+            "message": message,
+            "person_name": data["person_name"], 
+            "role": "ASM", 
         })
 
     return messages
@@ -888,9 +904,7 @@ def credit_score_for_Retailers():
 
 
 def calculate_credit_score(transactions):
-    """
-    Calculate the credit score for a retailer based on the last 3 paid invoices.
-    """
+    print("Calculate the credit score for a retailer based on the last 3 paid invoices.")
     base_score = 100  
     late_penalty_per_day = 0.2  #0.5
     installment_penalty = 2  
@@ -905,7 +919,6 @@ def calculate_credit_score(transactions):
     
     for transaction in recent_transactions:
 
-        # document_date = transaction["document_date"]
         due_date_str = transaction["due_date"]
         due_date = datetime.strptime(due_date_str, "%d-%m-%Y")
         
@@ -959,6 +972,58 @@ def calculate_credit_score(transactions):
     
     return round(statistics.mean(scores), 2) if scores else 0
 
+
+
+# CASE 27 
+def order_limits(data):
+    print("Checking the limits on order")
+    order_ids = data["order_ids"]
+   
+    order_items = db.get_session().query(OrderItem).join(Product).filter(
+        OrderItem.order_id.in_(order_ids)
+    ).all()
+
+    total_amount = sum(item.quantity * item.product.price_to_retailer for item in order_items)
+
+    order = db.get_session().query(Order).filter(Order._id == order_ids[0]).first() 
+    
+    retailer_id = order.retailer_id
+
+    retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
+    credit_score = retailer.credit_score
+
+    messages = [] 
+    if not credit_score:
+        return messages
+    
+    fe_id = retailer.FE_id
+
+    if 80 <= credit_score <= 100:
+        order_limit = 100000
+    elif 60 <= credit_score <= 79:
+        order_limit = 75000  
+    elif 40 <= credit_score <= 59:
+        order_limit = 50000 
+    elif 20 <= credit_score <= 39:
+        order_limit = 25000 
+    else:
+        order_limit = 10000  
+
+    if(order_limit < total_amount):
+        fe = db.get_session().query(Field_Exec.Name, Field_Exec.Contact_Number).filter(Field_Exec._id == fe_id).first()
+        fe_name, fe_contact = (fe.Name, fe.Contact_Number)
+
+        message = (
+            f"Alert: Retailer {retailer.name} placed order of Rs. {total_amount} which is above Rs. {order_limit}. "
+        )
+        messages.append({
+            "recipient": fe_contact,
+            "message": message,
+            "person_name": fe_name,
+            "role": "Field Executive"
+        })
+
+    return messages
 
 # CASE 14 
 def expiring_products():
@@ -1040,9 +1105,11 @@ event_config = {
         lambda x : detect_sales_drop(), # CASE 5
         lambda x : check_sales_anomaly(x) #  CASE 3 
     ],
-
     "retailer_visit_too_short": [
-        lambda x : check_short_visits(x),
+        lambda x : check_short_visits(x), #CASE 19
+    ],
+    "order_insert": [
+        lambda x : order_limits(x), #CASE 27
     ],
     "daily_event_triggers" : [
         lambda x : notify_delivery_for_orders(), # CASE 8 
