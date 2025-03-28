@@ -1041,6 +1041,10 @@ def unsold_products():
         
     except Exception as e:
         print(f"Error in unsold products: {e}")
+        
+        
+        
+
 
 event_config = {
     "recon_insert_trigger" : [
@@ -1071,13 +1075,3 @@ event_config = {
         lambda x : check_retailer_visits_for_month(), # CASE 23
     ]
 }
-
-
-data = {
-    "retailer_id" : "16318cc7-2296-48ac-a452-da3a1ab72200",
-    "fe_id" : "e9a5a0a8-0793-48d5-8caf-c296275307f6",
-    "visit_start" : "2025-03-27T13:21:43+00:00",
-    "visit_end" : "2025-03-27T13:21:51+00:00"
-}
-
-print(check_short_visits(data))
