@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory and Sales Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .recipient-section {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .recipient-header {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+
+        .recipient-header h2 {
+            margin: 0;
+            color: #333;
+            font-size: 18px;
+        }
+
+        .recipient-info {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+
+        .messages-list {
+            margin-left: 20px;
+        }
+
+        .message-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .products-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        .products-table th,
+        .products-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .products-table th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        .alert {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+
+        @media print {
+            .recipient-section {
+                break-inside: avoid;
+            }
+
+            body {
+                margin: 10mm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Inventory and Sales Report</h1>
+            <p>Date: March 28, 2025</p>
+        </div>
+
+        <div id="recipients-container">
+            <!-- Recipient sections will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsonpath@1.1.1/jsonpath.min.js"></script>
+    <script>
+        // Your JSON data (you could also fetch this from a file)
+        const jsonData = [
+            {
+                "recipient": "8285027775",
+                "messages": [
+                    "Stock of Jamun Masala- Discounted is expiring soon. Please take necessary action.",
+                    "The following retailers have not ordered in the last 3 weeks: Aman Pan Shop, Ankit store , Cake Break, Krishna general Store , Royal spoon cafe , Harish Bakery, The pan palace 119 noida, Majidul pan, S b mart bisrakh , Deepak pan shop bisrakh .",
+                    "These retailers were visited less than 4 times this month: The pan palace 119 noida (FE: Anil Kumar ), Majidul pan (FE: Anil Kumar ), Royal spoon cafe  (FE: Anil Kumar ), Deepak pan shop bisrakh  (FE: Anil Kumar ), Harish Bakery (FE: Anil Kumar ), Aman Pan Shop (FE: Anil Kumar ).",
+                    "Stock of Original Lemon Masala Juice is expiring soon. Please take necessary action.",
+                    "BeatPlan not assigned to Rohit, Raunak, Anish Kumar, Naina, Prakash Jha, Aneesh Singh, Anurag Tiwari, Asmit Agarwal, Manoj, Siddharth, Deepak, Sandeep singh, Sudhanshu Dixit, Aneesh Singh, Pranav, Goldy, Akash yadav, Aman, Sakshat, Sakina Khan, Arpit, Mukesh for today."
+                ],
+                "person_name": "Deepak",
+                "role": "ASM"
+            },
+            {
+                "recipient": "9916317375",
+                "messages": [
+                    "Product: Headshot Classic Energy Drink 250ml, Last Sale: 2024-07-28\nProduct: Original Cummin Masala Juice, Last Sale: 2024-08-04\nProduct: FOMO Peach Iced Tea Premix 125ml, Last Sale: 2024-07-07\nProduct: Sour Cream Onion - 30G, Last Sale: 2024-03-08"
+                ],
+                "person_name": "Aneesh Singh",
+                "role": "Field Executive"
+            }
+            // Add more recipients as needed...
+        ];
+
+        // Function to parse product messages
+        function parseProductMessage(message) {
+            if (message.includes('Product:') && message.includes('Last Sale:')) {
+                const products = message.split('\n');
+                return products.map(product => {
+                    const [namePart, datePart] = product.split(', Last Sale:');
+                    return {
+                        product_name: namePart.replace('Product:', '').trim(),
+                        last_sale_date: datePart?.trim()
+                    };
+                }).filter(p => p.product_name && p.last_sale_date);
+            }
+            return null;
+        }
+
+        // Function to generate HTML for a single recipient
+        function generateRecipientHTML(recipient) {
+            let messagesHTML = '';
+            const messages = jsonpath.query(recipient, '$.messages[*]');
+
+            messages.forEach(message => {
+                const products = parseProductMessage(message);
+                if (products) {
+                    messagesHTML += `
+                        <table class="products-table">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Last Sale Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${products.map(p => `
+                                    <tr>
+                                        <td>${p.product_name}</td>
+                                        <td>${p.last_sale_date}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    `;
+                } else {
+                    messagesHTML += `
+                        <div class="message-item ${message.includes('Alert:') ? 'alert' : ''}">
+                            ${message}
+                        </div>
+                    `;
+                }
+            });
+
+            return `
+                <div class="recipient-section">
+                    <div class="recipient-header">
+                        <h2>Recipient: ${recipient.recipient}</h2>
+                        <div class="recipient-info">Name: ${recipient.person_name}</div>
+                        <div class="recipient-info">Role: ${recipient.role}</div>
+                    </div>
+                    <div class="messages-list">
+                        ${messagesHTML}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Populate the container with all recipients
+        const container = document.getElementById('recipients-container');
+        jsonData.forEach(recipient => {
+            container.innerHTML += generateRecipientHTML(recipient);
+        });
+
+        // Optional: For PDF generation in browser (using jsPDF)
+        /*
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            doc.html(document.body, {
+                callback: function (doc) {
+                    doc.save('report.pdf');
+                },
+                x: 10,
+                y: 10
+            });
+        }
+        // Call generatePDF() when ready
+        */
+    </script>
+</body>
+
+</html>
