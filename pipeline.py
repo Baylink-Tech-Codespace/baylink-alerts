@@ -70,18 +70,18 @@ class AlertSystem:
             if event_name in event_config.keys():  
                 conditions = event_config[event_name]
                 
-                if event_name == "recon_insert_trigger":
+                if event_name == "recon_insert":
                     recon_id = json.loads(event_data)["_id"]
                     for condition in conditions: 
                         alerts.append(condition(recon_id))
                         
-                elif event_name == "sales_drop_trigger":
+                elif event_name == "sudden_sales_drop":
                     event_data_json = json.loads(event_data)
                     
                     for condition in conditions: 
                         alerts.append(condition(event_data_json))
 
-                elif event_name == "retailer_visit_too_short_trigger":
+                elif event_name == "retailer_visit_too_short":
                     event_data_json = json.loads(event_data)
                     
                     for condition in conditions: 
