@@ -28,8 +28,7 @@ class Warehouse(Base):
     __tablename__ = 'Warehouses'
     
     _id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    location = Column(String, nullable=True)
-    address = Column(JSON, nullable=True)
+    location = Column(String, nullable=True) 
     createdAt = Column(DateTime, nullable=False, default=func.now())
     updatedAt = Column(DateTime, nullable=False, default=func.now(), onupdate=func.now())
 

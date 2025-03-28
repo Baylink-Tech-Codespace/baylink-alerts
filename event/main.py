@@ -174,7 +174,7 @@ class Monitor:
         try:
             cursor = conn.cursor()
             self.setup_triggers(conn, cursor)
-            cursor.execute("LISTEN recon_inserted; LISTEN sudden_sales_drop; LISTEN retailer_visit_too_short; LISTEN order_insert")
+            cursor.execute("LISTEN recon_insert_trigger; LISTEN sales_drop_trigger; LISTEN retailer_visit_too_short_trigger; LISTEN order_insert_trigger")
             print("Listening for database notifications...")
 
             while self.running:
@@ -205,7 +205,7 @@ class Monitor:
         schedule.clear()
         
         # Schedule jobs
-        schedule.every().day.at("13:02").do(self.daily_event_triggers)
+        schedule.every().day.at("15:17").do(self.daily_event_triggers)
         schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
         
         print("Scheduler started for daily/monthly triggers...")
