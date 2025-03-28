@@ -4,7 +4,7 @@ import uuid
 import requests
 import statistics
 from database.db import db
-from sqlalchemy import Date, cast
+from sqlalchemy import Date, and_, cast, join
 from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict
@@ -27,10 +27,6 @@ from database.models.RetailerVisitedLog import RetailerVisitedLog
 from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
 from collections import defaultdict
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    from event.main import Monitor
 
 from constants import SWIPE_DOC_API_URL, SWIPE_PAYMENT_LIST_URL, SWIPE_TOKEN
 from shelf_classification.main import is_shelf_image
@@ -1140,43 +1136,70 @@ def expiring_products():
 # CASE 15 
 def unsold_products():
     try:
-        print("Checking for unsold products ... ")
+        print("Checking for unsold products for all retailers ...")
 
-        messages = defaultdict(lambda: {"products": [], "person_name": "", "role": "Field Executive"})
-        
-        threshold_days = 120
+        stale_days = 21
         current_date = datetime.now(timezone.utc)
-        threshold_date = current_date - timedelta(days=threshold_days)
-        
-        sales = db.get_session().query(Sales).all()
+        stale_threshold = current_date - timedelta(days=stale_days)
 
-        for sale in sales:
-            if sale.retailer and sale.retailer.fe:
-                last_sale_date = sale.date if sale.date else sale.product.createdAt
+        inventories = (
+            db.get_session().query(
+                Inventory.retailer_id,
+                Retailer.name.label("retailer_name"),
+                Retailer.FE_id,
+                Field_Exec.Name.label("fe_name"),
+                Field_Exec.Contact_Number.label("fe_contact"),
+                InventoryStockList.product_id,
+                InventoryStockList.quantity,
+                Product.name.label("product_name"),
+                func.count(Sales._id).label("sales_count")
+            )
+            .join(Retailer, Inventory.retailer_id == Retailer._id)
+            .join(Field_Exec, Retailer.FE_id == Field_Exec._id)
+            .join(InventoryStockList, Inventory._id == InventoryStockList.inventory_id)
+            .join(Product, InventoryStockList.product_id == Product._id)
+            .outerjoin(Sales, and_(Product._id == Sales.product_id, Sales.date >= stale_threshold))
+            .group_by(Inventory.retailer_id, Retailer.name, Retailer.FE_id, Field_Exec.Name, Field_Exec.Contact_Number, InventoryStockList.product_id, InventoryStockList.quantity, Product.name)
+            .all()
+        )
 
-                if last_sale_date.tzinfo is None:
-                    last_sale_date = last_sale_date.replace(tzinfo=timezone.utc)
-                    
-                if last_sale_date <= threshold_date:
-                    recipient = sale.retailer.fe.Contact_Number
-                    person_name = sale.retailer.fe.Name
-                    product_info = f"Product: {sale.product.name}, Last Sale: {last_sale_date.strftime('%Y-%m-%d')}"
+        messages = []
 
-                    messages[recipient]["products"].append(product_info)
-                    messages[recipient]["person_name"] = person_name
+        unsold_products_list = defaultdict(lambda: {
+            "retailer_name": "",
+            "details": {"products": []}
+        })
 
-        return [{
-            "recipient": recipient,
-            "message": "\n".join(data["products"]),
-            "person_name": data["person_name"],
-            "role": data["role"]
-        } for recipient, data in messages.items()]
+        for inventory in inventories:
+            if inventory.sales_count == 0 and inventory.quantity > 0:
+                retailer_entry = unsold_products_list[inventory.retailer_id]
+                retailer_entry["retailer_id"] = inventory.retailer_id
+                retailer_entry["retailer_name"] = inventory.retailer_name
+                retailer_entry["details"]["products"].append({
+                    "product_name": inventory.product_name,
+                    "quantity": inventory.quantity
+                })
         
-    except Exception as e:
-        print(f"Error in unsold products: {e}")
+        for retailer_id, data in unsold_products_list.items():
+            fe_contact = inventories[0].fe_contact
+            fe_name = inventories[0].fe_name
+            
+            product_details = ", ".join([f"{p['product_name']} ({p['quantity']})" for p in data["details"]["products"]])
+            message = f"Alert: Retailer {data['retailer_name']} has these products remained unsold: {product_details}" 
+            
+            messages.append({
+                "recipient": fe_contact,
+                "message": message,
+                "person_name": fe_name,
+                "role": "Field Executive"
+            })
         
-        
-        
+        return messages
+    
+    except Exception as error:
+        print("Error fetching unsold products list:", error)
+        raise
+
 
 
 event_config = {
