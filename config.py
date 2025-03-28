@@ -4,7 +4,7 @@ import uuid
 import requests
 import statistics
 from database.db import db
-from sqlalchemy import UUID, Date, cast
+from sqlalchemy import Date, cast
 from sqlalchemy.sql import func, extract
 from datetime import datetime, timedelta, timezone
 from collections import defaultdict
@@ -33,8 +33,6 @@ if TYPE_CHECKING:
     from event.main import Monitor
 
 from constants import SWIPE_DOC_API_URL, SWIPE_PAYMENT_LIST_URL, SWIPE_TOKEN
-
-
 from shelf_classification.main import is_shelf_image
 
 #CASE 1
@@ -594,25 +592,21 @@ def check_skipped_orders_alert():
 
 
 # CASE 19
-def check_short_visits(data):
-    retailer_id = data['_id'] 
+def check_short_visits(data): 
+    retailer_id = data['retailer_id']
+    fe_id = data['fe_id']
+    
+    visit_start = datetime.fromisoformat(data['visit_start'])
+    visit_end = datetime.fromisoformat(data['visit_end'])
     messages = []
-
-    today = datetime.today().date()
-    visit = db.get_session().query(RetailerVisitedLog).filter(
-        (RetailerVisitedLog.retailer_id) == retailer_id
-    ).first()
-
-    if visit.visit_start and visit.visit_end:
-        time_spent = (visit.visit_end - visit.visit_start).total_seconds() / 60
-            
+    
+    if visit_start and visit_end:
+        time_spent = (visit_end - visit_start).total_seconds() / 60
+        print("time spent", time_spent)
         if time_spent < 10:
-            retailer = db.get_session().query(Retailer).filter(Retailer._id == visit.retailer_id).first()
-            
+            retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
             asm = db.get_session().query(ASM).filter(ASM._id == retailer.ASM_id).first()
-
-            fe = db.get_session().query(Field_Exec).filter(Field_Exec._id == visit.fe_id).first()
-                    
+            fe = db.get_session().query(Field_Exec).filter(Field_Exec._id == fe_id).first()
             if asm and fe:
                 messages.append({
                     "recipient": asm.Contact_Number,
@@ -620,7 +614,6 @@ def check_short_visits(data):
                     "person_name": asm.name,
                     "role": "ASM"
                 })
-
     return messages
 
 #CASE 20  
@@ -676,7 +669,6 @@ def check_beatplans_for_today():
     except Exception as e:
         print(f"Error in check_beatplans_for_today: {e}")
         return []
-
 
 # CASE 23
 def check_retailer_visits_for_month():
@@ -1079,3 +1071,13 @@ event_config = {
         lambda x : check_retailer_visits_for_month(), # CASE 23
     ]
 }
+
+
+data = {
+    "retailer_id" : "16318cc7-2296-48ac-a452-da3a1ab72200",
+    "fe_id" : "e9a5a0a8-0793-48d5-8caf-c296275307f6",
+    "visit_start" : "2025-03-27T13:21:43+00:00",
+    "visit_end" : "2025-03-27T13:21:51+00:00"
+}
+
+print(check_short_visits(data))
