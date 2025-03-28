@@ -1115,11 +1115,11 @@ def unsold_products():
 
 
 event_config = {
-    "recon_insert_trigger" : [
+    "recon_insert" : [
         lambda recon_id : compare_quantity_inventory_recon(recon_id), #  CASE 2
         lambda recon_id : is_retailer_shelf_image_event(recon_id) #  CASE 4
     ],
-    "sales_drop_trigger" : [
+    "sudden_sales_drop" : [
         lambda x : detect_sales_drop(), # CASE 5
         lambda x : check_sales_anomaly(x) #  CASE 3 
     ],
