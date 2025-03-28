@@ -98,8 +98,7 @@ def check_all_retailers_pending_bills():
     start_date = "01-09-2024"
     end_date = (datetime.now() - timedelta(days=60)).strftime("%d-%m-%Y")
 
-    # retailers = db.get_session().query(Retailer).all()
-    retailers = db.get_session().query(Retailer).limit(10)
+    retailers = db.get_session().query(Retailer).all()
 
     alerts_dict = {}
 
