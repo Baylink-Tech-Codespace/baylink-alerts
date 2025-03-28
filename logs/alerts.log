@@ -7291,3 +7291,728 @@ psycopg2.OperationalError: server closed the connection unexpectedly
 2025-03-22 13:01:49,945 -  * Debugger is active!
 2025-03-22 13:01:49,958 -  * Debugger PIN: 898-260-860
 >>>>>>> 351d5defc0fa81deb6d233611b1dcfef507330d6
+2025-03-27 13:33:48,998 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:33:49,744 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:33:50,090 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:34:21,608 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:34:22,367 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:34:22,752 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:34:24,776 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 13:34:24,776 - [33mPress CTRL+C to quit[0m
+2025-03-27 13:34:24,776 -  * Restarting with stat
+2025-03-27 13:34:34,054 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:34:34,582 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:34:34,904 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:38:21,107 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:38:22,061 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:38:22,565 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:38:26,668 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 13:38:26,668 - [33mPress CTRL+C to quit[0m
+2025-03-27 13:38:26,668 -  * Restarting with stat
+2025-03-27 13:54:05,459 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:54:06,547 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:54:07,214 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:54:58,368 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:54:58,861 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:54:59,205 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:55:23,988 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:55:24,502 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:55:24,832 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:55:26,740 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 13:55:26,740 - [33mPress CTRL+C to quit[0m
+2025-03-27 13:55:26,740 -  * Restarting with stat
+2025-03-27 13:55:36,368 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:55:36,962 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:55:37,280 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:55:38,999 -  * Debugger is active!
+2025-03-27 13:55:39,044 -  * Debugger PIN: 143-786-213
+2025-03-27 13:56:53,908 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-27 13:56:55,408 -  * Restarting with stat
+2025-03-27 13:57:06,886 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:57:07,577 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:57:07,980 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:57:09,912 -  * Debugger is active!
+2025-03-27 13:57:09,926 -  * Debugger PIN: 143-786-213
+2025-03-27 13:58:19,032 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 13:58:19,946 -  * Restarting with stat
+2025-03-27 13:58:31,148 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 13:58:32,707 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 13:58:33,699 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 13:58:39,175 -  * Debugger is active!
+2025-03-27 13:58:39,175 -  * Debugger PIN: 143-786-213
+2025-03-27 14:06:51,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 14:06:52,244 -  * Restarting with stat
+2025-03-27 15:10:04,374 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:10:04,990 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:10:05,322 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:10:07,149 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.80.236:4000
+2025-03-27 15:10:07,149 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:10:07,149 -  * Restarting with stat
+2025-03-27 15:10:18,425 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:10:18,979 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:10:19,343 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:10:21,170 -  * Debugger is active!
+2025-03-27 15:10:21,172 -  * Debugger PIN: 143-786-213
+2025-03-27 15:32:56,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:32:57,157 -  * Restarting with stat
+2025-03-27 15:33:12,939 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:33:13,567 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:33:13,908 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:33:15,778 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 15:33:15,778 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:33:15,778 -  * Restarting with stat
+2025-03-27 15:33:25,246 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:33:26,128 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:33:26,531 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:33:28,698 -  * Debugger is active!
+2025-03-27 15:33:28,698 -  * Debugger PIN: 143-786-213
+2025-03-27 15:34:27,771 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:34:28,781 -  * Restarting with stat
+2025-03-27 15:34:39,723 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:34:40,343 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:34:40,840 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:34:42,987 -  * Debugger is active!
+2025-03-27 15:34:42,989 -  * Debugger PIN: 143-786-213
+2025-03-27 15:34:44,492 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:34:45,106 -  * Restarting with stat
+2025-03-27 15:34:54,269 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:34:54,826 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:34:55,253 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:34:57,545 -  * Debugger is active!
+2025-03-27 15:34:57,545 -  * Debugger PIN: 143-786-213
+2025-03-27 15:37:25,575 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:37:26,495 -  * Restarting with stat
+2025-03-27 15:37:35,488 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:37:36,022 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:37:36,363 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:37:38,462 -  * Debugger is active!
+2025-03-27 15:37:38,462 -  * Debugger PIN: 143-786-213
+2025-03-27 15:38:44,322 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:38:45,040 -  * Restarting with stat
+2025-03-27 15:38:56,277 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:38:57,182 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:38:57,734 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:39:00,735 -  * Debugger is active!
+2025-03-27 15:39:00,735 -  * Debugger PIN: 143-786-213
+2025-03-27 15:39:02,415 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:39:03,209 -  * Restarting with stat
+2025-03-27 15:39:15,455 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:39:16,387 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:39:17,068 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:39:20,138 -  * Debugger is active!
+2025-03-27 15:39:20,145 -  * Debugger PIN: 143-786-213
+2025-03-27 15:40:22,219 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:40:23,571 -  * Restarting with stat
+2025-03-27 15:40:33,351 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:40:33,864 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:40:34,267 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:40:36,060 -  * Debugger is active!
+2025-03-27 15:40:36,060 -  * Debugger PIN: 143-786-213
+2025-03-27 15:42:54,289 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 15:42:55,436 -  * Restarting with stat
+2025-03-27 15:43:14,338 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:43:19,109 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:43:20,116 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:43:25,079 -  * Debugger is active!
+2025-03-27 15:43:25,084 -  * Debugger PIN: 143-786-213
+2025-03-27 15:48:10,211 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:48:10,801 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:48:11,136 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:48:12,905 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 15:48:12,905 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:48:12,905 -  * Restarting with stat
+2025-03-27 15:48:22,243 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:48:22,789 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:48:23,213 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:48:25,088 -  * Debugger is active!
+2025-03-27 15:48:25,088 -  * Debugger PIN: 143-786-213
+2025-03-27 15:56:47,220 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:56:47,729 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:56:48,075 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:56:49,972 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 15:56:49,975 - [33mPress CTRL+C to quit[0m
+2025-03-27 15:56:49,975 -  * Restarting with stat
+2025-03-27 15:56:59,983 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 15:57:00,606 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 15:57:00,983 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 15:57:02,889 -  * Debugger is active!
+2025-03-27 15:57:02,889 -  * Debugger PIN: 143-786-213
+2025-03-27 16:15:01,552 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:15:02,262 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:15:02,617 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:15:04,773 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 16:15:04,773 - [33mPress CTRL+C to quit[0m
+2025-03-27 16:15:04,773 -  * Restarting with stat
+2025-03-27 16:15:13,925 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:15:14,538 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:15:14,933 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:15:16,970 -  * Debugger is active!
+2025-03-27 16:15:16,970 -  * Debugger PIN: 143-786-213
+2025-03-27 16:19:34,206 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:19:34,798 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:19:35,124 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:24:42,738 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:24:43,409 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:24:43,731 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:34:54,257 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:34:54,890 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:34:55,244 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:49:06,758 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:49:07,276 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:49:07,638 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:49:10,992 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 16:49:10,992 - [33mPress CTRL+C to quit[0m
+2025-03-27 16:49:10,992 -  * Restarting with stat
+2025-03-27 16:49:19,924 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:49:20,444 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:49:20,786 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:52:12,300 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:52:12,698 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:52:12,943 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 16:59:27,611 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 16:59:27,982 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 16:59:28,335 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:01:04,102 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:01:04,463 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:01:04,733 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:01:06,033 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 17:01:06,033 - [33mPress CTRL+C to quit[0m
+2025-03-27 17:01:06,033 -  * Restarting with stat
+2025-03-27 17:01:12,890 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:01:13,239 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:01:13,452 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:01:14,766 -  * Debugger is active!
+2025-03-27 17:01:14,768 -  * Debugger PIN: 143-786-213
+2025-03-27 17:16:54,875 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:16:55,307 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:16:55,592 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:16:56,854 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 17:16:56,854 - [33mPress CTRL+C to quit[0m
+2025-03-27 17:16:56,854 -  * Restarting with stat
+2025-03-27 17:17:04,187 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:17:04,602 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:17:04,824 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:17:06,068 -  * Debugger is active!
+2025-03-27 17:17:06,075 -  * Debugger PIN: 143-786-213
+2025-03-27 17:41:53,052 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:41:53,985 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:41:54,468 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:41:55,837 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 17:41:55,837 - [33mPress CTRL+C to quit[0m
+2025-03-27 17:41:55,837 -  * Restarting with stat
+2025-03-27 17:42:03,068 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:42:03,445 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:42:03,731 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:42:05,091 -  * Debugger is active!
+2025-03-27 17:42:05,091 -  * Debugger PIN: 143-786-213
+2025-03-27 17:51:52,171 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-27 17:52:22,990 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:52:23,417 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:52:23,644 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:52:25,086 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 17:52:25,086 - [33mPress CTRL+C to quit[0m
+2025-03-27 17:52:25,086 -  * Restarting with stat
+2025-03-27 17:52:31,831 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:52:32,160 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:52:32,364 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:52:33,685 -  * Debugger is active!
+2025-03-27 17:52:33,685 -  * Debugger PIN: 143-786-213
+2025-03-27 17:55:49,413 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-27 17:55:50,111 -  * Restarting with stat
+2025-03-27 17:55:59,336 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 17:56:01,228 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 17:56:02,287 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 17:56:04,426 -  * Debugger is active!
+2025-03-27 17:56:04,426 -  * Debugger PIN: 143-786-213
+2025-03-27 18:14:17,300 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-27 18:14:18,354 -  * Restarting with stat
+2025-03-27 18:15:04,654 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:15:05,050 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:15:05,298 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:15:06,779 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 18:15:06,779 - [33mPress CTRL+C to quit[0m
+2025-03-27 18:15:06,779 -  * Restarting with stat
+2025-03-27 18:15:13,711 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:15:14,054 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:15:14,266 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:15:17,160 -  * Debugger is active!
+2025-03-27 18:15:17,166 -  * Debugger PIN: 143-786-213
+2025-03-27 18:17:04,812 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:17:05,684 -  * Restarting with stat
+2025-03-27 18:17:14,345 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:17:14,940 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:17:15,325 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:17:17,524 -  * Debugger is active!
+2025-03-27 18:17:17,526 -  * Debugger PIN: 143-786-213
+2025-03-27 18:18:07,966 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:18:08,615 -  * Restarting with stat
+2025-03-27 18:18:17,841 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:18:19,925 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:18:20,726 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:18:24,877 -  * Debugger is active!
+2025-03-27 18:18:24,877 -  * Debugger PIN: 143-786-213
+2025-03-27 18:19:39,486 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:19:40,278 -  * Restarting with stat
+2025-03-27 18:19:51,287 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:19:52,130 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:19:52,682 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:19:55,671 -  * Debugger is active!
+2025-03-27 18:19:55,674 -  * Debugger PIN: 143-786-213
+2025-03-27 18:21:11,922 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:21:12,572 -  * Restarting with stat
+2025-03-27 18:21:21,153 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:21:21,919 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:21:22,403 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:21:24,568 -  * Debugger is active!
+2025-03-27 18:21:24,568 -  * Debugger PIN: 143-786-213
+2025-03-27 18:27:25,537 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:27:26,885 -  * Restarting with stat
+2025-03-27 18:27:34,017 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:27:34,417 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:27:34,683 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:27:38,748 -  * Debugger is active!
+2025-03-27 18:27:38,748 -  * Debugger PIN: 143-786-213
+2025-03-27 18:40:34,554 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:40:34,942 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:40:35,204 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:40:36,891 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 18:40:36,891 - [33mPress CTRL+C to quit[0m
+2025-03-27 18:40:36,891 -  * Restarting with stat
+2025-03-27 18:40:44,386 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:40:44,987 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:40:45,539 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:40:49,274 -  * Debugger is active!
+2025-03-27 18:40:49,274 -  * Debugger PIN: 143-786-213
+2025-03-27 18:41:18,017 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:41:18,620 -  * Restarting with stat
+2025-03-27 18:41:28,397 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:41:29,057 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:41:29,481 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:41:31,733 -  * Debugger is active!
+2025-03-27 18:41:31,733 -  * Debugger PIN: 143-786-213
+2025-03-27 18:43:17,347 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:43:18,439 -  * Restarting with stat
+2025-03-27 18:43:25,240 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:43:25,624 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:43:25,857 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:43:29,087 -  * Debugger is active!
+2025-03-27 18:43:29,108 -  * Debugger PIN: 143-786-213
+2025-03-27 18:47:32,733 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-27 18:47:33,982 -  * Restarting with stat
+2025-03-27 18:47:40,808 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:47:41,145 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:47:41,362 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:47:44,245 -  * Debugger is active!
+2025-03-27 18:47:44,245 -  * Debugger PIN: 143-786-213
+2025-03-27 18:50:06,558 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:50:07,182 -  * Restarting with stat
+2025-03-27 18:50:16,137 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:50:16,814 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:50:17,201 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:50:19,792 -  * Debugger is active!
+2025-03-27 18:50:19,795 -  * Debugger PIN: 143-786-213
+2025-03-27 18:51:14,074 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:51:15,439 -  * Restarting with stat
+2025-03-27 18:51:23,266 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:51:23,924 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:51:24,744 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:51:28,885 -  * Debugger is active!
+2025-03-27 18:51:28,891 -  * Debugger PIN: 143-786-213
+2025-03-27 18:53:02,262 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 18:53:02,850 -  * Restarting with stat
+2025-03-27 18:53:10,857 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 18:53:13,875 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 18:53:14,722 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 18:53:18,700 -  * Debugger is active!
+2025-03-27 18:53:18,706 -  * Debugger PIN: 143-786-213
+2025-03-27 19:00:34,491 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 19:00:35,671 -  * Restarting with stat
+2025-03-27 19:00:47,296 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 19:00:49,403 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 19:00:50,435 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 19:00:53,643 -  * Debugger is active!
+2025-03-27 19:00:53,648 -  * Debugger PIN: 143-786-213
+2025-03-27 19:02:10,969 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 19:02:12,513 -  * Restarting with stat
+2025-03-27 19:02:24,411 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 19:02:25,405 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 19:02:25,938 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 19:02:29,445 -  * Debugger is active!
+2025-03-27 19:02:29,455 -  * Debugger PIN: 143-786-213
+2025-03-27 19:06:25,895 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 19:06:27,187 -  * Restarting with stat
+2025-03-27 19:06:35,607 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 19:06:36,341 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 19:06:36,761 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 19:06:39,301 -  * Debugger is active!
+2025-03-27 19:06:39,304 -  * Debugger PIN: 143-786-213
+2025-03-27 21:14:24,014 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:14:24,766 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:14:25,156 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:14:27,125 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 21:14:27,125 - [33mPress CTRL+C to quit[0m
+2025-03-27 21:14:27,125 -  * Restarting with stat
+2025-03-27 21:14:41,631 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:14:42,301 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:14:42,681 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:14:44,703 -  * Debugger is active!
+2025-03-27 21:14:44,706 -  * Debugger PIN: 143-786-213
+2025-03-27 21:15:44,680 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 21:15:45,341 -  * Restarting with stat
+2025-03-27 21:21:40,885 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:21:41,574 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:21:41,988 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:21:47,465 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-27 21:21:47,465 - [33mPress CTRL+C to quit[0m
+2025-03-27 21:21:47,465 -  * Restarting with stat
+2025-03-27 21:21:56,588 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:21:57,146 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:21:57,498 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:21:59,363 -  * Debugger is active!
+2025-03-27 21:21:59,368 -  * Debugger PIN: 143-786-213
+2025-03-27 21:23:08,235 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 21:23:09,269 -  * Restarting with stat
+2025-03-27 21:23:18,703 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:23:19,295 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:23:19,714 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:23:21,711 -  * Debugger is active!
+2025-03-27 21:23:21,720 -  * Debugger PIN: 143-786-213
+2025-03-27 21:24:10,252 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 21:24:11,191 -  * Restarting with stat
+2025-03-27 21:24:21,612 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:24:22,491 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:24:22,822 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:24:24,913 -  * Debugger is active!
+2025-03-27 21:24:24,921 -  * Debugger PIN: 143-786-213
+2025-03-27 21:27:45,778 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\event\\main.py', reloading
+2025-03-27 21:27:46,564 -  * Restarting with stat
+2025-03-27 21:28:01,866 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 21:28:06,153 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 21:28:07,126 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 21:28:12,114 -  * Debugger is active!
+2025-03-27 21:28:12,114 -  * Debugger PIN: 143-786-213
+2025-03-27 22:07:37,087 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\pipeline.py', reloading
+2025-03-27 22:07:37,804 -  * Restarting with stat
+2025-03-27 22:07:46,972 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 22:07:47,561 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 22:07:47,887 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 22:07:49,852 -  * Debugger is active!
+2025-03-27 22:07:49,852 -  * Debugger PIN: 143-786-213
+2025-03-27 22:09:09,459 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 22:09:10,093 -  * Restarting with stat
+2025-03-27 22:09:20,071 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 22:09:20,677 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 22:09:21,021 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 22:09:22,846 -  * Debugger is active!
+2025-03-27 22:09:22,852 -  * Debugger PIN: 143-786-213
+2025-03-27 22:13:02,763 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-27 22:13:04,257 -  * Restarting with stat
+2025-03-27 22:13:19,156 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-27 22:13:23,676 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-27 22:13:24,587 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-27 22:13:29,687 -  * Debugger is active!
+2025-03-27 22:13:29,703 -  * Debugger PIN: 143-786-213
+2025-03-28 11:07:43,170 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-28 11:07:44,400 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-28 11:07:44,955 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-28 11:07:46,409 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.34:4000
+2025-03-28 11:07:46,409 - [33mPress CTRL+C to quit[0m
+2025-03-28 11:07:46,409 -  * Restarting with stat
+2025-03-28 11:07:53,454 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-28 11:07:53,870 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-28 11:07:54,123 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-28 11:07:55,709 -  * Debugger is active!
+2025-03-28 11:07:55,709 -  * Debugger PIN: 143-786-213
+2025-03-28 11:11:34,439 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-28 11:11:35,343 -  * Restarting with stat
+2025-03-28 11:11:44,480 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-28 11:11:45,085 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-28 11:11:45,523 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-28 11:11:47,671 -  * Debugger is active!
+2025-03-28 11:11:47,674 -  * Debugger PIN: 143-786-213
+2025-03-28 11:12:45,025 -  * Detected change in 'C:\\Users\\qlizb\\Documents\\baylink\\bay-link-alerts\\config.py', reloading
+2025-03-28 11:12:45,808 -  * Restarting with stat
+2025-03-28 11:12:56,206 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2025-03-28 11:12:56,770 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+2025-03-28 11:12:57,203 - From C:\Users\qlizb\Documents\baylink\bay-link-alerts\myenv\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+2025-03-28 11:12:59,315 -  * Debugger is active!
+2025-03-28 11:12:59,315 -  * Debugger PIN: 143-786-213
