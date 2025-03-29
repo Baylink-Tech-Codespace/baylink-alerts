@@ -6916,3 +6916,33 @@ psycopg2.InterfaceError: connection already closed
 2025-03-28 15:44:22,352 - Failed to send alert to 8447686869: None
 2025-03-28 15:44:24,251 - Failed to send alert to 8447686869: None
 2025-03-28 15:44:26,126 - Failed to send alert to 7007555103: None
+2025-03-28 19:17:36,976 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.6:4000
+2025-03-28 19:17:36,976 - [33mPress CTRL+C to quit[0m
+2025-03-28 19:17:36,977 -  * Restarting with stat
+2025-03-28 19:17:46,736 -  * Debugger is active!
+2025-03-28 19:17:46,754 -  * Debugger PIN: 898-260-860
+2025-03-28 19:42:59,832 - Failed to send alert to 8285027775: None
+2025-03-28 19:42:59,929 - Failed to send alert to 8285027775: None
+2025-03-28 19:43:02,596 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:02,603 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:04,344 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:04,371 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:06,695 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:06,699 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:08,462 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:08,490 - Failed to send alert to 8447686869: None
+2025-03-28 19:43:10,283 - Failed to send alert to 7007555103: None
+2025-03-28 19:43:10,288 - Failed to send alert to 7007555103: None
+2025-03-28 19:43:12,331 - Failed to send alert to 9953930600: None
+2025-03-28 19:43:14,277 - Failed to send alert to 9953930600: None
+2025-03-29 11:28:51,157 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-29 11:28:51,157 - [33mPress CTRL+C to quit[0m
+2025-03-29 11:28:51,157 -  * Restarting with stat
+2025-03-29 11:29:00,611 -  * Debugger is active!
+2025-03-29 11:29:00,628 -  * Debugger PIN: 898-260-860

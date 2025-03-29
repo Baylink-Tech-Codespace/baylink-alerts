@@ -498,7 +498,7 @@ def delivery_not_out_on_expected_date():
         return []
 
 
-# CASE 10
+# CASE 13
 def nearly_expiring_stocks():
     try:
         print("Checking for nearly expiring stocks...")
@@ -1050,21 +1050,18 @@ event_config = {
     "daily_event_triggers" : [
         lambda x : notify_delivery_for_orders(), # CASE 8 
         lambda x : delivery_not_out_on_expected_date(), # CASE 9
-        lambda x : nearly_expiring_stocks(), # CASE 10
+        lambda x : nearly_expiring_stocks(), # CASE 13
         lambda x : check_beatplans_for_today(), # CASE 20
         lambda x : expiring_products(), # CASE 14
         lambda x : check_warehouse_inventory(), # CASE 6
         lambda x : check_skipped_orders_alert(), # CASE 18
-        lambda x : notify_pending_orders(), # CASE 7
-        
-        # lambda x : check_all_retailers_pending_bills(), #  CASE 1 
-        # lambda x : credit_score_for_Retailers(),
-        lambda x : unsold_products(), # CASE 15
-        lambda x : check_retailer_visits_for_month(), # CASE 23        
+        lambda x : notify_pending_orders(), # CASE 7  
     ],
     "monthly_event_triggers" : [
         lambda x : check_all_retailers_pending_bills(), #  CASE 1 
         lambda x : unsold_products(), # CASE 15
         lambda x : check_retailer_visits_for_month(), # CASE 23
+        lambda x : check_consistently_missed_retailers(), #CASE 26
+        lambda x : get_least_selling_brand_per_retailer() #CASE 24
     ]
 }
