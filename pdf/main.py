@@ -20,7 +20,7 @@ class PDFGenerator:
         self.output_dir = output_dir
         self.env = Environment(loader=FileSystemLoader('.'))
         self.template = self._load_template()
-        self.s3_client = s3_client = boto3.client(
+        self.s3_client = boto3.client(
             "s3",
             aws_access_key_id=S3_ACCESS_KEY,
             aws_secret_access_key=S3_SECRET_ACCESS_KEY,
@@ -34,7 +34,6 @@ class PDFGenerator:
 
         # Environment variables
         self.WA_MICROSERVICE_URL = os.getenv('WA_MICROSERVICE_URL')
-        self.S3_BUCKET = os.getenv('S3_BUCKET_NAME_WA_PDF')
 
     def _load_json_data(self):
         with open(self.json_path, 'r') as f:
@@ -123,9 +122,8 @@ class PDFGenerator:
     def _upload_to_s3(self, pdf_content, key):
         """Upload PDF content to S3 and return the signed URL"""
         try:
-            '''
-            self.s3_client.(
-                Bucket=self.S3_BUCKET,
+            self.s3_client.put_object(
+                Bucket=S3_BUCKET_NAME,
                 Key=key,
                 Body=pdf_content,
                 ContentType='application/pdf'
@@ -133,12 +131,11 @@ class PDFGenerator:
 
             signed_url = self.s3_client.generate_presigned_url(
                 'get_object',
-                Params={'Bucket': self.S3_BUCKET, 'Key': key},
-                ExpiresIn=3600  # 1 hour
+                Params={'Bucket': S3_BUCKET_NAME, 'Key': key},
+                ExpiresIn=3600  
             )
-            '''
 
-            return "signed_url"
+            return signed_url
         except ClientError as e:
             print(f"Error uploading to S3: {e}")
             raise
