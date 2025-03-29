@@ -9,6 +9,9 @@ from botocore.exceptions import ClientError
 import asyncio
 from pyppeteer import launch
 from constants import get_wa_alert_pdf_template
+from dotenv import load_dotenv
+
+load_dotenv()
 
 S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
 S3_SECRET_ACCESS_KEY = os.getenv("S3_SECRET_ACCESS_KEY")
@@ -17,7 +20,7 @@ S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME_WA_PDF")
 
 class PDFGenerator:
     def __init__(self, output_dir: str = "pdf"):
-        self.json_path = "/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/alerts.json"
+        self.json_path = "alerts.json"
         self.output_dir = output_dir
         self.env = Environment(loader=FileSystemLoader('.'))
         self.template = self._load_template()
@@ -89,8 +92,8 @@ class PDFGenerator:
         browser = await launch()
         page = await browser.newPage()
         
-        await page.setContent(html_content)  # Removed 'waitUntil'
-        await page.waitForSelector("body")  # Ensures page is rendered before generating PDF
+        await page.setContent(html_content)  
+        await page.waitForSelector("body")  
         
         await page.pdf({'path': output_path, 'format': 'A4'})
         await browser.close()
@@ -123,6 +126,10 @@ class PDFGenerator:
     def _upload_to_s3(self, pdf_content, key):
         """Upload PDF content to S3 and return the signed URL"""
         try:
+            
+            print(S3_BUCKET_REGION , S3_BUCKET_NAME , key)
+            return
+            
             self.s3_client.put_object(
                 Bucket=S3_BUCKET_NAME,
                 Key=key,
@@ -144,7 +151,6 @@ class PDFGenerator:
     def _send_to_whatsapp_service(self, whatsapp_data, attempt=1):
         """Send PDF URL to WhatsApp service with retry logic"""
         try:
-            
             WA_MICROSERVICE_URL = "https://whatsapp.baylink.in/send-message"
             template = get_wa_alert_pdf_template(whatsapp_data['recipient'], whatsapp_data['pdfUrl'])
 
