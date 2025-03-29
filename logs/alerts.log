@@ -6946,3 +6946,13 @@ psycopg2.InterfaceError: connection already closed
 2025-03-29 11:28:51,157 -  * Restarting with stat
 2025-03-29 11:29:00,611 -  * Debugger is active!
 2025-03-29 11:29:00,628 -  * Debugger PIN: 898-260-860
+2025-03-29 18:53:33,591 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-29 18:53:33,592 - [33mPress CTRL+C to quit[0m
+2025-03-29 18:53:33,592 -  * Restarting with stat
+2025-03-29 18:53:44,841 -  * Debugger is active!
+2025-03-29 18:53:44,864 -  * Debugger PIN: 898-260-860
+2025-03-29 19:24:17,492 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
+2025-03-29 19:24:18,659 -  * Restarting with stat
