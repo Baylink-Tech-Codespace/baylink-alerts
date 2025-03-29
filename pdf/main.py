@@ -202,7 +202,3 @@ class PDFGenerator:
                 print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
 
         print("PDF generation and WhatsApp sending process completed!")
-
-if __name__ == "__main__":
-    generator = PDFGenerator()
-    generator.generate_and_send_pdfs()
