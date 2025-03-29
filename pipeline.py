@@ -104,7 +104,7 @@ class AlertSystem:
             
             if os.path.exists(self.alert_file_name) and os.path.getsize(self.alert_file_name) > 0:
                 print("Generating PDFs for scheduled alerts...")
-                self.pdf_generator.generate_pdfs()
+                self.pdf_generator.generate_and_send_pdfs()
         except Exception as e:
             print(f"Alert Pipeline Failed: {e}")
             

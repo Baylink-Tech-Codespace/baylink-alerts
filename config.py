@@ -1030,8 +1030,6 @@ def unsold_products():
         print("Error fetching unsold products list:", error)
         raise
 
-
-
 event_config = {
     "recon_insert" : [
         lambda recon_id : compare_quantity_inventory_recon(recon_id), #  CASE 2
