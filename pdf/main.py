@@ -8,6 +8,7 @@ from jinja2 import Environment, FileSystemLoader
 from botocore.exceptions import ClientError
 import asyncio
 from pyppeteer import launch
+from constants import get_wa_alert_pdf_template
 
 S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
 S3_SECRET_ACCESS_KEY = os.getenv("S3_SECRET_ACCESS_KEY")
@@ -143,12 +144,15 @@ class PDFGenerator:
     def _send_to_whatsapp_service(self, whatsapp_data, attempt=1):
         """Send PDF URL to WhatsApp service with retry logic"""
         try:
+            
+            WA_MICROSERVICE_URL = "https://whatsapp.baylink.in/send-message"
+            template = get_wa_alert_pdf_template(whatsapp_data['recipient'], whatsapp_data['pdfUrl'])
+
             print(f"Attempting to send to WhatsApp service (attempt {attempt}/{self.MAX_RETRIES})")
             response = requests.post(
-                f"{self.WA_MICROSERVICE_URL}/orders/upload-pdf",
-                json=whatsapp_data,
-                headers={'Content-Type': 'application/json'},
-                timeout=self.TIMEOUT_MS / 1000  # Convert to seconds
+                WA_MICROSERVICE_URL,
+                json=template,
+                timeout=10
             )
             response.raise_for_status()
             print(f"WhatsApp service response: {response.json()}")
@@ -183,16 +187,11 @@ class PDFGenerator:
             key = f"reports/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
 
             pdf_url = self._upload_to_s3(pdf_content, key)
-            print(f"Uploaded PDF to S3: {pdf_url}")
-
+            print(f"Uploaded PDF to S3")
+        
             whatsapp_data = {
                 "pdfUrl": pdf_url,
-                "retailer_name": recipient['person_name'],
-                "retailer_number": "7007555103" , # recipient['recipient'],
-                "order_id": f"{recipient['recipient']}_{formatted_date}",
-                "retailer_id": recipient['recipient'],
-                "order_date": formatted_date,
-                "amount": "0.00"
+                "recipient": "7007555103" , # recipient['recipient'],
             }
 
             try:
@@ -202,3 +201,8 @@ class PDFGenerator:
                 print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
 
         print("PDF generation and WhatsApp sending process completed!")
+        
+        
+        
+pdf_generator = PDFGenerator()
+pdf_generator.generate_and_send_pdfs()

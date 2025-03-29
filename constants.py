@@ -27,3 +27,40 @@ get_wa_alert_template = lambda to, msg : {
       ]
     }
 }
+
+get_wa_alert_pdf_template = lambda to , url : { 
+  "messaging_product": "whatsapp",
+  "recipient_type": "individual",
+  "to": "91" + to,
+  "type": "template",
+  "template": {
+    "name": "baylink_pdf_alert",
+    "language": {
+      "code": "en"
+    },
+    "components": [
+      {
+        "type": "header",
+        "parameters": [
+          {
+            "type": "document",
+            "document": {
+              "link": url,
+              "filename": "Baylink_Alert.pdf"
+            }
+          }
+        ]
+      },
+      {
+        "type": "body",
+        "parameters": [
+          {
+            "type": "text",
+            "parameter_name": "company",
+            "text": "Baylink"
+          }
+        ]
+      }
+    ]
+  }
+}
