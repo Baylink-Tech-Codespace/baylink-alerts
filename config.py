@@ -898,15 +898,13 @@ def order_limits(data):
         fe_id = retailer.FE_id
 
         if 80 <= credit_score <= 100:
-            order_limit = 100000
+            order_limit = 5000
         elif 60 <= credit_score <= 79:
-            order_limit = 75000  
+            order_limit = 3500  
         elif 40 <= credit_score <= 59:
-            order_limit = 50000 
-        elif 20 <= credit_score <= 39:
-            order_limit = 25000 
+            order_limit = 1500 
         else:
-            order_limit = 10000  
+            order_limit = 0  
 
         if(order_limit < total_amount):
             fe = db.get_session().query(Field_Exec.Name, Field_Exec.Contact_Number).filter(Field_Exec._id == fe_id).first()
