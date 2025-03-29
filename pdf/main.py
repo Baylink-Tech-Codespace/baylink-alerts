@@ -169,7 +169,6 @@ class PDFGenerator:
         loop = asyncio.get_event_loop()
 
         for recipient in self.json_data:
-            # Generate HTML content
             messages_html = self._generate_messages_html(recipient['messages'])
             html_content = self.template.render(
                 recipient_phone=recipient['recipient'],
@@ -178,22 +177,17 @@ class PDFGenerator:
                 messages_html=messages_html
             )
 
-            # Generate unique file path
             timestamp = int(time.time())
             formatted_date = datetime.now().strftime('%Y-%m-%d')
             output_path = f"{self.output_dir}/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
 
-            # Convert HTML to PDF using Pyppeteer
             pdf_content = loop.run_until_complete(self._generate_pdf(html_content, output_path))
 
-            # Generate unique S3 key
             key = f"reports/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
 
-            # Upload to S3
             pdf_url = self._upload_to_s3(pdf_content, key)
             print(f"Uploaded PDF to S3: {pdf_url}")
 
-            # Prepare WhatsApp data
             whatsapp_data = {
                 "pdfUrl": pdf_url,
                 "retailer_name": recipient['person_name'],
@@ -204,7 +198,6 @@ class PDFGenerator:
                 "amount": "0.00"
             }
 
-            # Send to WhatsApp
             try:
                 whatsapp_response = self._send_to_whatsapp_service(whatsapp_data)
                 print(f"Successfully sent to WhatsApp for {recipient['recipient']}: {whatsapp_response}")
@@ -213,7 +206,6 @@ class PDFGenerator:
 
         print("PDF generation and WhatsApp sending process completed!")
 
-# Usage
 if __name__ == "__main__":
     generator = PDFGenerator()
     generator.generate_and_send_pdfs()
