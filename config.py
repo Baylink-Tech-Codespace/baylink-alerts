@@ -28,7 +28,7 @@ from database.models.ASM import ASM
 from database.models.CreditNote import CreditNote
 from collections import defaultdict
 
-from constants import SWIPE_DOC_API_URL, SWIPE_PAYMENT_LIST_URL, SWIPE_TOKEN
+from constants import SWIPE_DOC_API_URL, SWIPE_TOKEN
 from shelf_classification.main import is_shelf_image
 
 #CASE 1
@@ -60,37 +60,6 @@ def fetch_retailer_transactions(retailer_id, start_date, end_date, payment_statu
         
     except Exception as e:
         print(f"Failed to fetch transactions: {e}")
-        return []
-
-def list_of_retailers_payment(start_date, end_date):
-    try:
-        """Fetch all payments record for given dates"""
-        HEADERS = {
-        "Authorization": f"Bearer {SWIPE_TOKEN}"
-        }
-        
-        querystring = {
-            "start_date": start_date,
-            "end_date": end_date,
-            "status": "success",
-            "num_records": "100",
-        }
-
-        response = requests.request("GET", SWIPE_PAYMENT_LIST_URL, headers=HEADERS, params=querystring)
-        
-        data = response.json()
-        print(data)
-        
-        if response.status_code == 200:
-            if data['data']['transactions'] is None: 
-                return []
-            return data["data"]["transactions"]
-        else:
-            print("Failed to fetch payments list")
-            return []
-        
-    except Exception as e:    
-        print(f"Failed to fetch payments list: {e}")
         return []
 
 # CASE 1 
@@ -901,145 +870,6 @@ def check_consistently_missed_retailers():
     except Exception as e:
         print(f"Error in check_consistently_missed_retailers: {e}")
         return []
-
-# CASE 27 
-
-def credit_score_for_Retailers(): 
-    start_date = (datetime.now() - timedelta(days=60)).strftime("%d-%m-%Y") 
-    end_date = datetime.now().strftime("%d-%m-%Y")
-    payment_status = "paid"
-
-    payment_list = list_of_retailers_payment(start_date, end_date)
-
-    retailers = set() 
-
-    for record in payment_list:
-        customer_id_list = record["customer"]["id"]
-        pattern = r"'party_id':\s*'?([^',}]+)'?"
-        matches = re.findall(pattern, customer_id_list)
-
-        for party_id in matches:
-            if party_id: 
-                retailers.add(party_id) 
-
-    retailers = list(retailers)
-
-    credit_scores = []
-    
-    for retailer in retailers:
-        transactions = fetch_retailer_transactions(retailer, start_date, end_date, payment_status) 
-
-        if len(transactions) <=0:
-            continue
-        credit_score = calculate_credit_score(transactions)
-
-        credit_scores.append({"retailer": retailer, "credit_score": credit_score})
-
-    try:
-        for entry in credit_scores:
-            retailer_id = entry["retailer"]
-            credit_score = entry["credit_score"]
-            
-            if hasattr(retailer_id, "hex"):
-                retailer_id_str = retailer_id.hex
-            else:
-                uuid_match = re.search(r"'([0-9a-f-]+)'", str(retailer_id))
-                if uuid_match:
-                    retailer_id_str = uuid_match.group(1).replace('-', '')
-                else:
-                    retailer_id_str = str(retailer_id)
-            
-            try:
-                uuid_obj = uuid.UUID(retailer_id_str)
-                db.get_session().query(Retailer).filter(Retailer._id == uuid_obj).update(
-                    {Retailer.credit_score: credit_score}
-                )
-            except ValueError:
-                print(f"Failed to convert to UUID: {retailer_id}")
-
-        db.get_session().commit()
-
-    except Exception as e:
-        db.get_session().rollback() 
-        print(f"Error updating retailer credit scores: {e}")
-
-    finally:
-        db.get_session().close() 
-
-
-def calculate_credit_score(transactions):
-    try:
-        print("Calculate the credit score for a retailer based on the last 3 paid invoices.")
-        base_score = 100  
-        late_penalty_per_day = 0.2  #0.5
-        installment_penalty = 2  
-        early_payment_bonus = 5 
-        on_time_payment_bonus = 5  
-        low_on_time_penalty = 5  
-        extreme_late_penalty = 10 
-
-        recent_transactions = transactions[:3]
-
-        scores = []
-        
-        for transaction in recent_transactions:
-
-            due_date_str = transaction["due_date"]
-            due_date = datetime.strptime(due_date_str, "%d-%m-%Y")
-            
-            total_amount = transaction["total_amount"]
-            payments = transaction["payments"]
-            
-            late_days_list = []
-            total_paid_on_time = 0
-            total_paid = 0
-            
-            for payment in payments:
-                payment_date_str = payment["payment_date"]
-                amount = payment["amount"]
-                payment_date = datetime.strptime(payment_date_str, "%d-%m-%Y")
-
-                total_paid += amount
-                if payment_date <= due_date:
-                    total_paid_on_time += amount
-                else:
-                    late_days = (payment_date - due_date).days
-                    late_days_list.append(late_days)
-
-            on_time_payment_percentage = (total_paid_on_time / total_amount) * 100
-
-            late_days_penalty = sum([late_penalty_per_day * days for days in late_days_list])
-
-            installment_penalty_total = installment_penalty * (len(payments) - 2) if len(payments) > 2 else 0
-
-            early_bonus = early_payment_bonus if total_paid_on_time == total_amount else 0
-
-            if on_time_payment_percentage >= 80:
-                on_time_bonus = on_time_payment_bonus  
-            elif on_time_payment_percentage < 50:
-                on_time_bonus = -low_on_time_penalty 
-            elif on_time_payment_percentage < 20:
-                on_time_bonus -= extreme_late_penalty
-            else:
-                on_time_bonus = 0  
-            
-            final_score = (
-                base_score 
-                - late_days_penalty 
-                - installment_penalty_total 
-                + early_bonus 
-                + on_time_bonus
-            )
-
-            final_score = max(0, min(100, final_score))
-            
-            scores.append(final_score)
-        
-        return round(statistics.mean(scores), 2) if scores else 0
-
-    except Exception as e:
-        print(f"Error calculating credit score: {e}")
-        return 0
 
 
 # CASE 27 
