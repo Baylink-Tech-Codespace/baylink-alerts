@@ -1,174 +1,219 @@
 import json
+import os
+import boto3
+import requests
+import time
+from datetime import datetime
 from jinja2 import Environment, FileSystemLoader
-import os 
+from botocore.exceptions import ClientError
+import asyncio
+from pyppeteer import launch
 
-# Load JSON data (replace with your actual file path or data)
-json_data = [
-    {
-        "recipient": "8285027775",
-        "messages": [
-            "Stock of Jamun Masala- Discounted is expiring soon. Please take necessary action.",
-            "The following retailers have not ordered in the last 3 weeks: Aman Pan Shop, Ankit store , Cake Break, Krishna general Store , Royal spoon cafe , Harish Bakery, The pan palace 119 noida, Majidul pan, S b mart bisrakh , Deepak pan shop bisrakh .",
-            "These retailers were visited less than 4 times this month: The pan palace 119 noida (FE: Anil Kumar ), Majidul pan (FE: Anil Kumar ), Royal spoon cafe  (FE: Anil Kumar ), Deepak pan shop bisrakh  (FE: Anil Kumar ), Harish Bakery (FE: Anil Kumar ), Aman Pan Shop (FE: Anil Kumar ).",
-            "Stock of Original Lemon Masala Juice is expiring soon. Please take necessary action.",
-            "BeatPlan not assigned to Rohit, Raunak, Anish Kumar, Naina, Prakash Jha, Aneesh Singh, Anurag Tiwari, Asmit Agarwal, Manoj, Siddharth, Deepak, Sandeep singh, Sudhanshu Dixit, Aneesh Singh, Pranav, Goldy, Akash yadav, Aman, Sakshat, Sakina Khan, Arpit, Mukesh for today."
-        ],
-        "person_name": "Deepak",
-        "role": "ASM"
-    },
-    {
-        "recipient": "8447686869",
-        "messages": [
-            "Stock of Jamun Masala- Discounted is expiring soon. Please take necessary action.",
-            "Stock of LZB Product is expiring soon. Please take necessary action.",
-            "Stock of Original Lemon Masala Juice is expiring soon. Please take necessary action.",
-            "BeatPlan not assigned to Vinay Singh, Anshuman for today."
-        ],
-        "person_name": "Siddharth Prakash",
-        "role": "ASM"
-    },
-    {
-        "recipient": "9916317375",
-        "messages": [
-            "Product: Headshot Classic Energy Drink 250ml, Last Sale: 2024-07-28\nProduct: Original Cummin Masala Juice, Last Sale: 2024-08-04\nProduct: FOMO Peach Iced Tea Premix 125ml, Last Sale: 2024-07-07\nProduct: Sour Cream Onion - 30G, Last Sale: 2024-03-08"
-        ],
-        "person_name": "Aneesh Singh",
-        "role": "Field Executive"
-    }
-    # Add more recipients as per your full JSON data
-]
+S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
+S3_SECRET_ACCESS_KEY = os.getenv("S3_SECRET_ACCESS_KEY")
+S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION")
+S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME_WA_PDF")
 
-# Set up Jinja2 environment
-env = Environment(loader=FileSystemLoader('.'))
-template = env.from_string("""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Inventory and Sales Report - {{person_name}}</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        .recipient-section {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-        }
-        .recipient-header {
-            background-color: #f5f5f5;
-            padding: 10px;
-            border-radius: 3px;
-            margin-bottom: 15px;
-        }
-        .recipient-header h2 {
-            margin: 0;
-            color: #333;
-            font-size: 18px;
-        }
-        .recipient-info {
-            font-size: 14px;
-            color: #666;
-            margin: 5px 0;
-        }
-        .messages-list {
-            margin-left: 20px;
-        }
-        .message-item {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        .products-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 15px;
-        }
-        .products-table th,
-        .products-table td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        .products-table th {
-            background-color: #f0f0f0;
-            font-weight: bold;
-        }
-        .alert {
-            color: #d32f2f;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Inventory and Sales Report</h1>
-            <p>Date: March 28, 2025</p>
-        </div>
-        <div class="recipient-section">
-            <div class="recipient-header">
-                <h2>Recipient: {{recipient_phone}}</h2>
-                <div class="recipient-info">Name: {{person_name}}</div>
-                <div class="recipient-info">Role: {{role}}</div>
+class PDFGenerator:
+    def __init__(self, output_dir: str = "pdf"):
+        self.json_path = "/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/alerts.json"
+        self.output_dir = output_dir
+        self.env = Environment(loader=FileSystemLoader('.'))
+        self.template = self._load_template()
+        self.s3_client = s3_client = boto3.client(
+            "s3",
+            aws_access_key_id=S3_ACCESS_KEY,
+            aws_secret_access_key=S3_SECRET_ACCESS_KEY,
+            region_name=S3_BUCKET_REGION
+        )
+
+        # Configuration constants
+        self.MAX_RETRIES = 5
+        self.TIMEOUT_MS = 30000  # 30 seconds
+        self.RETRY_DELAY_MS = 3000  # 3 seconds
+
+        # Environment variables
+        self.WA_MICROSERVICE_URL = os.getenv('WA_MICROSERVICE_URL')
+        self.S3_BUCKET = os.getenv('S3_BUCKET_NAME_WA_PDF')
+
+    def _load_json_data(self):
+        with open(self.json_path, 'r') as f:
+            self.json_data = json.load(f)
+
+    def _load_template(self):
+        return self.env.from_string("""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>Inventory and Sales Report - {{person_name}}</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; }
+                .container { max-width: 1000px; margin: 0 auto; }
+                .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+                .recipient-section { border: 1px solid #ddd; border-radius: 5px; padding: 15px; }
+                .recipient-header { background-color: #f5f5f5; padding: 10px; border-radius: 3px; margin-bottom: 15px; }
+                .recipient-header h2 { margin: 0; color: #333; font-size: 18px; }
+                .recipient-info { font-size: 14px; color: #666; margin: 5px 0; }
+                .messages-list { margin-left: 20px; }
+                .message-item { margin-bottom: 10px; font-size: 14px; }
+                .products-table { width: 100%; border-collapse: collapse; margin-bottom: 15px; }
+                .products-table th, .products-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+                .products-table th { background-color: #f0f0f0; font-weight: bold; }
+                .alert { color: #d32f2f; font-weight: bold; }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                    <h1>Inventory and Sales Report</h1>
+                    <p>Date: March 28, 2025</p>
+                </div>
+                <div class="recipient-section">
+                    <div class="recipient-header">
+                        <h2>Recipient: {{recipient_phone}}</h2>
+                        <div class="recipient-info">Name: {{person_name}}</div>
+                        <div class="recipient-info">Role: {{role}}</div>
+                    </div>
+                    <div class="messages-list">
+                        {{messages_html | safe}}
+                    </div>
+                </div>
             </div>
-            <div class="messages-list">
-                {{messages_html | safe}}
-            </div>
-        </div>
-    </div>
-</body>
-</html>
-""")
+        </body>
+        </html>
+        """)
 
-# Function to generate messages HTML
-def generate_messages_html(messages):
-    messages_html = ""
-    for message in messages:
-        if "Product:" in message and "Last Sale:" in message:
-            products = [line.split(', Last Sale:') for line in message.split('\n')]
-            products_data = [{'product_name': p[0].replace('Product:', '').strip(), 
-                            'last_sale_date': p[1].strip()} for p in products if len(p) == 2]
-            messages_html += env.from_string("""
-                <table class="products-table">
-                    <thead><tr><th>Product Name</th><th>Last Sale Date</th></tr></thead>
-                    <tbody>
-                        {% for product in products %}
-                        <tr><td>{{product.product_name}}</td><td>{{product.last_sale_date}}</td></tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            """).render(products=products_data)
-        else:
-            messages_html += f'<div class="message-item {"alert" if "Alert:" in message else ""}">{message}</div>'
-    return messages_html
+    async def _generate_pdf(self, html_content, output_path):
+        """Generate a PDF from HTML using Pyppeteer."""
+        browser = await launch()
+        page = await browser.newPage()
+        
+        await page.setContent(html_content)  # Removed 'waitUntil'
+        await page.waitForSelector("body")  # Ensures page is rendered before generating PDF
+        
+        await page.pdf({'path': output_path, 'format': 'A4'})
+        await browser.close()
 
-# Generate separate HTML files for each recipient
-for recipient in json_data:
-    messages_html = generate_messages_html(recipient['messages'])
-    html_content = template.render(
-        recipient_phone=recipient['recipient'],
-        person_name=recipient['person_name'],
-        role=recipient['role'],
-        messages_html=messages_html
-    )
-    
-    pdf_parent_folder_path = "pdf" 
-    output_filename = f"pdf/report_{recipient['recipient']}.html"
-    
-    with open(output_filename, 'w', encoding='utf-8') as f:
-        f.write(html_content)
-    print(f"Generated HTML: {output_filename}")
+        with open(output_path, "rb") as pdf_file:
+            pdf_binary = pdf_file.read()
+        return pdf_binary
 
-print("All HTML files generated successfully!")
+    def _generate_messages_html(self, messages):
+        messages_html = ""
+        for message in messages:
+            if "Product:" in message and "Last Sale:" in message:
+                products = [line.split(', Last Sale:') for line in message.split('\n')]
+                products_data = [{'product_name': p[0].replace('Product:', '').strip(), 
+                                'last_sale_date': p[1].strip()} for p in products if len(p) == 2]
+                messages_html += self.env.from_string("""
+                    <table class="products-table">
+                        <thead><tr><th>Product Name</th><th>Last Sale Date</th></tr></thead>
+                        <tbody>
+                            {% for product in products %}
+                            <tr><td>{{product.product_name}}</td><td>{{product.last_sale_date}}</td></tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                """).render(products=products_data)
+            else:
+                messages_html += f'<div class="message-item {"alert" if "Alert:" in message else ""}">{message}</div>'
+        return messages_html 
+
+    def _upload_to_s3(self, pdf_content, key):
+        """Upload PDF content to S3 and return the signed URL"""
+        try:
+            '''
+            self.s3_client.(
+                Bucket=self.S3_BUCKET,
+                Key=key,
+                Body=pdf_content,
+                ContentType='application/pdf'
+            )
+
+            signed_url = self.s3_client.generate_presigned_url(
+                'get_object',
+                Params={'Bucket': self.S3_BUCKET, 'Key': key},
+                ExpiresIn=3600  # 1 hour
+            )
+            '''
+
+            return "signed_url"
+        except ClientError as e:
+            print(f"Error uploading to S3: {e}")
+            raise
+
+    def _send_to_whatsapp_service(self, whatsapp_data, attempt=1):
+        """Send PDF URL to WhatsApp service with retry logic"""
+        try:
+            print(f"Attempting to send to WhatsApp service (attempt {attempt}/{self.MAX_RETRIES})")
+            response = requests.post(
+                f"{self.WA_MICROSERVICE_URL}/orders/upload-pdf",
+                json=whatsapp_data,
+                headers={'Content-Type': 'application/json'},
+                timeout=self.TIMEOUT_MS / 1000  # Convert to seconds
+            )
+            response.raise_for_status()
+            print(f"WhatsApp service response: {response.json()}")
+            return response.json()
+        except (requests.RequestException, requests.Timeout) as error:
+            print(f"Error in attempt {attempt}/{self.MAX_RETRIES}: {error}")
+            if attempt < self.MAX_RETRIES:
+                print(f"Retrying in {self.RETRY_DELAY_MS/1000} seconds...")
+                time.sleep(self.RETRY_DELAY_MS / 1000)
+                return self._send_to_whatsapp_service(whatsapp_data, attempt + 1)
+            raise error
+
+    def generate_and_send_pdfs(self):
+        self._load_json_data()
+        loop = asyncio.get_event_loop()
+
+        for recipient in self.json_data:
+            # Generate HTML content
+            messages_html = self._generate_messages_html(recipient['messages'])
+            html_content = self.template.render(
+                recipient_phone=recipient['recipient'],
+                person_name=recipient['person_name'],
+                role=recipient['role'],
+                messages_html=messages_html
+            )
+
+            # Generate unique file path
+            timestamp = int(time.time())
+            formatted_date = datetime.now().strftime('%Y-%m-%d')
+            output_path = f"{self.output_dir}/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
+
+            # Convert HTML to PDF using Pyppeteer
+            pdf_content = loop.run_until_complete(self._generate_pdf(html_content, output_path))
+
+            # Generate unique S3 key
+            key = f"reports/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
+
+            # Upload to S3
+            pdf_url = self._upload_to_s3(pdf_content, key)
+            print(f"Uploaded PDF to S3: {pdf_url}")
+
+            # Prepare WhatsApp data
+            whatsapp_data = {
+                "pdfUrl": pdf_url,
+                "retailer_name": recipient['person_name'],
+                "retailer_number": "7007555103" , # recipient['recipient'],
+                "order_id": f"{recipient['recipient']}_{formatted_date}",
+                "retailer_id": recipient['recipient'],
+                "order_date": formatted_date,
+                "amount": "0.00"
+            }
+
+            # Send to WhatsApp
+            try:
+                whatsapp_response = self._send_to_whatsapp_service(whatsapp_data)
+                print(f"Successfully sent to WhatsApp for {recipient['recipient']}: {whatsapp_response}")
+            except Exception as e:
+                print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
+
+        print("PDF generation and WhatsApp sending process completed!")
+
+# Usage
+if __name__ == "__main__":
+    generator = PDFGenerator()
+    generator.generate_and_send_pdfs()
