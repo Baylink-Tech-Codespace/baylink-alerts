@@ -10,6 +10,7 @@ import asyncio
 from pyppeteer import launch
 from constants import get_wa_alert_pdf_template
 from dotenv import load_dotenv
+from xhtml2pdf import pisa
 
 load_dotenv()
 
@@ -87,35 +88,25 @@ class PDFGenerator:
         </html>
         """)
     
-    def _get_chromium_executable(self):
-        if os.name == "nt":  # Windows
-            return "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
-        elif os.name == "posix":  # macOS/Linux
-            return "/opt/homebrew/bin/chromium" if os.path.exists("/opt/homebrew/bin/chromium") else None
-        return None
+    def _generate_pdf(self, html_content, output_path):
+        """Generate a PDF from HTML using xhtml2pdf."""
+        try:
+            with open(output_path, "wb") as pdf_file:
+                pisa_status = pisa.CreatePDF(html_content, dest=pdf_file)
+            
+            if pisa_status.err:
+                print("Error generating PDF")
+                return None
 
-    async def _generate_pdf(self, html_content, output_path):
-        """Generate a PDF from HTML using Pyppeteer."""
+            with open(output_path, "rb") as pdf_file:
+                pdf_binary = pdf_file.read()
 
-        chromium_path = self._get_chromium_executable()
-
-        browser = await launch(
-            executablePath=chromium_path,
-            headless=True,
-            args=["--no-sandbox", "--disable-setuid-sandbox"]
-        )
-
-        page = await browser.newPage()
-        
-        await page.setContent(html_content)  
-        await page.waitForSelector("body")  
-        
-        await page.pdf({'path': output_path, 'format': 'A4'})
-        await browser.close()
-
-        with open(output_path, "rb") as pdf_file:
-            pdf_binary = pdf_file.read()
-        return pdf_binary
+            print("Done with PDF")
+            return pdf_binary
+        except Exception as e:
+            print(f"Error creating PDF: {e}")
+            return None
+    
 
     def _generate_messages_html(self, messages):
         messages_html = ""
@@ -208,7 +199,7 @@ class PDFGenerator:
             formatted_date = datetime.now().strftime('%Y-%m-%d')
             output_path = f"{self.output_dir}/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
 
-            pdf_content = loop.run_until_complete(self._generate_pdf(html_content, output_path))
+            pdf_content = self._generate_pdf(html_content, output_path)
 
             key = f"reports/report_{recipient['recipient']}_{formatted_date}_{timestamp}.pdf"
 
