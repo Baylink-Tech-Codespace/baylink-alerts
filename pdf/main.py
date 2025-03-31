@@ -89,7 +89,13 @@ class PDFGenerator:
 
     async def _generate_pdf(self, html_content, output_path):
         """Generate a PDF from HTML using Pyppeteer."""
-        browser = await launch()
+
+        browser = await launch(
+            executablePath="/opt/homebrew/bin/chromium",
+            headless=True,
+            args=["--no-sandbox", "--disable-setuid-sandbox"]
+        )
+
         page = await browser.newPage()
         
         await page.setContent(html_content)  
@@ -169,7 +175,12 @@ class PDFGenerator:
 
     def generate_and_send_pdfs(self):
         self._load_json_data()
-        loop = asyncio.get_event_loop()
+
+        try:
+            loop = asyncio.get_running_loop()   
+        except RuntimeError:
+            loop = asyncio.new_event_loop()   
+            asyncio.set_event_loop(loop)
 
         for recipient in self.json_data:
             messages_html = self._generate_messages_html(recipient['messages'])
@@ -190,10 +201,10 @@ class PDFGenerator:
 
             pdf_url = self._upload_to_s3(pdf_content, key)
             print(f"Uploaded PDF to S3")
-        
+
             whatsapp_data = {
                 "pdfUrl": pdf_url,
-                "recipient": "7007555103" , # recipient['recipient'],
+                "recipient": "7007555103",  # recipient['recipient'],
             }
 
             try:

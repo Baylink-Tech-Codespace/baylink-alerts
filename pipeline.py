@@ -97,11 +97,11 @@ class AlertSystem:
 
     def alert_pipeline(self, event_name: str, event_data: Dict[str, Any]):
         try:
-            if event_name in ["daily_event_triggers", "monthly_event_triggers"]:
+            ''' if event_name in ["daily_event_triggers", "monthly_event_triggers"]:
                 self.process_scheduled_alerts(event_name, event_data)
             else:
                 self.process_event_alerts(event_name, event_data)
-            
+            '''
             if os.path.exists(self.alert_file_name) and os.path.getsize(self.alert_file_name) > 0:
                 print("Generating PDFs for scheduled alerts...")
                 self.pdf_generator.generate_and_send_pdfs()
@@ -110,8 +110,5 @@ class AlertSystem:
             
             
 alert_system = AlertSystem()
-
-
-
 
 # changed the number on notification'

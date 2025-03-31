@@ -6988,3 +6988,17 @@ psycopg2.InterfaceError: connection already closed
 2025-03-31 13:19:51,624 -  * Restarting with stat
 2025-03-31 13:20:05,410 -  * Debugger is active!
 2025-03-31 13:20:05,424 -  * Debugger PIN: 944-821-499
+2025-03-31 14:07:06,475 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.3:4000
+2025-03-31 14:07:06,475 - [33mPress CTRL+C to quit[0m
+2025-03-31 14:07:06,476 -  * Restarting with stat
+2025-03-31 14:07:16,090 -  * Debugger is active!
+2025-03-31 14:07:16,107 -  * Debugger PIN: 944-821-499
+2025-03-31 14:43:15,701 - Browser listening on: ws://127.0.0.1:64321/devtools/browser/26e16935-bfe8-41c7-8b07-b13212c6359c
+2025-03-31 14:43:15,992 - terminate chrome process...
+2025-03-31 14:43:18,676 - Browser listening on: ws://127.0.0.1:64450/devtools/browser/cc31a58a-6359-4726-bd96-e3eb07b0f8e3
+2025-03-31 14:43:21,960 - terminate chrome process...
+2025-03-31 14:43:23,949 - Browser listening on: ws://127.0.0.1:64524/devtools/browser/530ccbb8-d52f-4944-9d68-36b7308a309b
+2025-03-31 14:43:24,439 - terminate chrome process...
