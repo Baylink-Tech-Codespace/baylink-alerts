@@ -6956,6 +6956,8 @@ psycopg2.InterfaceError: connection already closed
 2025-03-29 18:53:44,864 -  * Debugger PIN: 898-260-860
 2025-03-29 19:24:17,492 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
 2025-03-29 19:24:18,659 -  * Restarting with stat
+<<<<<<< HEAD
+=======
 2025-03-31 12:09:42,953 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
@@ -7002,3 +7004,4 @@ psycopg2.InterfaceError: connection already closed
 2025-03-31 14:43:21,960 - terminate chrome process...
 2025-03-31 14:43:23,949 - Browser listening on: ws://127.0.0.1:64524/devtools/browser/530ccbb8-d52f-4944-9d68-36b7308a309b
 2025-03-31 14:43:24,439 - terminate chrome process...
+>>>>>>> 306a86cc0dfe9650938e4dbf489c272dcabf60c1
