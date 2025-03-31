@@ -7005,3 +7005,45 @@ psycopg2.InterfaceError: connection already closed
 2025-03-31 14:43:23,949 - Browser listening on: ws://127.0.0.1:64524/devtools/browser/530ccbb8-d52f-4944-9d68-36b7308a309b
 2025-03-31 14:43:24,439 - terminate chrome process...
 >>>>>>> 306a86cc0dfe9650938e4dbf489c272dcabf60c1
+2025-03-31 17:50:23,407 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.95.61.72:4000
+2025-03-31 17:50:23,407 - [33mPress CTRL+C to quit[0m
+2025-03-31 17:50:23,407 -  * Restarting with stat
+2025-03-31 17:50:38,664 -  * Debugger is active!
+2025-03-31 17:50:38,684 -  * Debugger PIN: 944-821-499
+2025-03-31 18:30:44,011 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-31 18:30:44,012 - [33mPress CTRL+C to quit[0m
+2025-03-31 18:30:44,012 -  * Restarting with stat
+2025-03-31 18:36:48,171 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-31 18:36:48,171 - [33mPress CTRL+C to quit[0m
+2025-03-31 18:36:48,171 -  * Restarting with stat
+2025-03-31 18:43:08,669 -  * Debugger is active!
+2025-03-31 18:43:08,698 -  * Debugger PIN: 944-821-499
+2025-03-31 18:43:27,340 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-31 18:43:27,340 - [33mPress CTRL+C to quit[0m
+2025-03-31 18:43:27,340 -  * Restarting with stat
+2025-03-31 18:43:52,024 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-31 18:43:52,024 - [33mPress CTRL+C to quit[0m
+2025-03-31 18:43:52,024 -  * Restarting with stat
+2025-03-31 18:44:25,863 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.7:4000
+2025-03-31 18:44:25,863 - [33mPress CTRL+C to quit[0m
+2025-03-31 18:44:25,863 -  * Restarting with stat
+2025-03-31 18:44:38,737 -  * Debugger is active!
+2025-03-31 18:44:38,755 -  * Debugger PIN: 944-821-499
