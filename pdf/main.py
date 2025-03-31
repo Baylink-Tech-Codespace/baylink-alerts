@@ -126,10 +126,6 @@ class PDFGenerator:
     def _upload_to_s3(self, pdf_content, key):
         """Upload PDF content to S3 and return the signed URL"""
         try:
-            
-            print(S3_BUCKET_REGION , S3_BUCKET_NAME , key)
-            return
-            
             self.s3_client.put_object(
                 Bucket=S3_BUCKET_NAME,
                 Key=key,

@@ -64,7 +64,7 @@ class AlertSystem:
 
     def send_notification(self, messages: List[str], data: Dict[str, Any]):
         for message in messages:
-            send_alert(message, data['recepient'])
+            send_alert(message, "7007555103" ) # data['recepient'])
             print(f"Alert sent to {data['recepient']}")
 
     def process_event_alerts(self, event_name: str, event_data: Dict[str, Any]):
@@ -110,3 +110,8 @@ class AlertSystem:
             
             
 alert_system = AlertSystem()
+
+
+
+
+# changed the number on notification'
