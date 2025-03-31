@@ -86,12 +86,21 @@ class PDFGenerator:
         </body>
         </html>
         """)
+    
+    def _get_chromium_executable(self):
+        if os.name == "nt":  # Windows
+            return "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+        elif os.name == "posix":  # macOS/Linux
+            return "/usr/bin/chromium" if os.path.exists("/usr/bin/chromium") else None
+        return None
 
     async def _generate_pdf(self, html_content, output_path):
         """Generate a PDF from HTML using Pyppeteer."""
 
+        chromium_path = self._get_chromium_executable()
+
         browser = await launch(
-            executablePath="/opt/homebrew/bin/chromium",
+            executablePath=chromium_path,
             headless=True,
             args=["--no-sandbox", "--disable-setuid-sandbox"]
         )
