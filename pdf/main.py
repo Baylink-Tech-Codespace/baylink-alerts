@@ -175,7 +175,7 @@ class PDFGenerator:
 
     def generate_and_send_pdfs(self):
         self._load_json_data()
-
+ 
         try:
             loop = asyncio.get_running_loop()   
         except RuntimeError:
