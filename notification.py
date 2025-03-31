@@ -16,6 +16,8 @@ def formatted_phone(number):
 
 def send_alert(message: str, recipient: str) -> None:
     template = get_wa_alert_template(recipient, message)
+
+    print("Sending alert...")
     
     try:
         response = requests.post(
