@@ -86,10 +86,25 @@ class PDFGenerator:
         </body>
         </html>
         """)
+    
+    def _get_chromium_executable(self):
+        if os.name == "nt":  # Windows
+            return "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+        elif os.name == "posix":  # macOS/Linux
+            return "/opt/homebrew/bin/chromium" if os.path.exists("/opt/homebrew/bin/chromium") else None
+        return None
 
     async def _generate_pdf(self, html_content, output_path):
         """Generate a PDF from HTML using Pyppeteer."""
-        browser = await launch()
+
+        chromium_path = self._get_chromium_executable()
+
+        browser = await launch(
+            executablePath=chromium_path,
+            headless=True,
+            args=["--no-sandbox", "--disable-setuid-sandbox"]
+        )
+
         page = await browser.newPage()
         
         await page.setContent(html_content)  
@@ -173,7 +188,12 @@ class PDFGenerator:
 
     def generate_and_send_pdfs(self):
         self._load_json_data()
-        loop = asyncio.get_event_loop()
+ 
+        try:
+            loop = asyncio.get_running_loop()   
+        except RuntimeError:
+            loop = asyncio.new_event_loop()   
+            asyncio.set_event_loop(loop)
 
         for recipient in self.json_data:
             messages_html = self._generate_messages_html(recipient['messages'])
@@ -194,10 +214,10 @@ class PDFGenerator:
 
             pdf_url = self._upload_to_s3(pdf_content, key)
             print(f"Uploaded PDF to S3")
-        
+
             whatsapp_data = {
                 "pdfUrl": pdf_url,
-                "recipient": "7007555103" , # recipient['recipient'],
+                "recipient": "7007555103",  # recipient['recipient'],
             }
 
             try:
@@ -207,3 +227,7 @@ class PDFGenerator:
                 print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
 
         print("PDF generation and WhatsApp sending process completed!")
+
+
+pdf_generator = PDFGenerator()
+pdf_generator.generate_and_send_pdfs()

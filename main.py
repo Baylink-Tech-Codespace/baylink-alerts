@@ -1,4 +1,4 @@
-import schedule  
+import schedule
 import time
 import threading
 from flask import Flask, render_template

@@ -1,2 +1,4 @@
 .env
 .conda.env
+.env # Ignore .env from future commits
+.env
