@@ -91,7 +91,7 @@ class PDFGenerator:
         if os.name == "nt":  # Windows
             return "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
         elif os.name == "posix":  # macOS/Linux
-            return "/usr/bin/chromium" if os.path.exists("/usr/bin/chromium") else None
+            return "/opt/homebrew/bin/chromium" if os.path.exists("/opt/homebrew/bin/chromium") else None
         return None
 
     async def _generate_pdf(self, html_content, output_path):
