@@ -152,13 +152,12 @@ class PDFGenerator:
 
     def _send_to_whatsapp_service(self, whatsapp_data, attempt=1):
         """Send PDF URL to WhatsApp service with retry logic"""
-        try:
-            WA_MICROSERVICE_URL = "https://whatsapp.baylink.in/send-message"
+        try: 
             template = get_wa_alert_pdf_template(whatsapp_data['recipient'], whatsapp_data['pdfUrl'])
 
             print(f"Attempting to send to WhatsApp service (attempt {attempt}/{self.MAX_RETRIES})")
             response = requests.post(
-                WA_MICROSERVICE_URL,
+                self.WA_MICROSERVICE_URL,
                 json=template,
                 timeout=10
             )
@@ -216,3 +215,7 @@ class PDFGenerator:
                 print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
 
         print("PDF generation and WhatsApp sending process completed!")
+
+
+pdf_generator = PDFGenerator()
+pdf_generator.generate_and_send_pdfs()

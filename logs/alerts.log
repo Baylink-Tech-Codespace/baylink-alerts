@@ -7055,3 +7055,27 @@ psycopg2.InterfaceError: connection already closed
 2025-03-31 19:23:57,334 -  * Restarting with stat
 2025-03-31 19:24:07,618 -  * Debugger is active!
 2025-03-31 19:24:07,644 -  * Debugger PIN: 944-821-499
+2025-04-01 11:35:04,530 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 11:35:04,531 - [33mPress CTRL+C to quit[0m
+2025-04-01 11:35:04,531 -  * Restarting with stat
+2025-04-01 11:35:15,703 -  * Debugger is active!
+2025-04-01 11:35:15,718 -  * Debugger PIN: 944-821-499
+2025-04-01 12:25:05,275 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 12:25:05,275 - [33mPress CTRL+C to quit[0m
+2025-04-01 12:25:05,275 -  * Restarting with stat
+2025-04-01 12:25:15,517 -  * Debugger is active!
+2025-04-01 12:25:15,536 -  * Debugger PIN: 944-821-499
+2025-04-01 12:47:49,128 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 12:47:49,128 - [33mPress CTRL+C to quit[0m
+2025-04-01 12:47:49,129 -  * Restarting with stat
+2025-04-01 12:47:59,843 -  * Debugger is active!
+2025-04-01 12:47:59,861 -  * Debugger PIN: 944-821-499

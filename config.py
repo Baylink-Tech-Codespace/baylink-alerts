@@ -1048,7 +1048,7 @@ event_config = {
         lambda x : delivery_not_out_on_expected_date(), # CASE 9
         lambda x : nearly_expiring_stocks(), # CASE 13
         lambda x : check_beatplans_for_today(), # CASE 20
-        lambda x : expiring_products(), # CASE 14
+        # lambda x : expiring_products(), # CASE 14
         lambda x : check_warehouse_inventory(), # CASE 6
         lambda x : check_skipped_orders_alert(), # CASE 18
         lambda x : notify_pending_orders(), # CASE 7  
