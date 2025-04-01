@@ -203,6 +203,7 @@ class PDFGenerator:
 
             print(f"PDF URL: {pdf_url}")
 
+            '''
             whatsapp_data = {
                 "pdfUrl": pdf_url,
                 "recipient": "7007555103",  # recipient['recipient'],
@@ -213,5 +214,6 @@ class PDFGenerator:
                 print(f"Successfully sent to WhatsApp for {recipient['recipient']}: {whatsapp_response}")
             except Exception as e:
                 print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
-
+            '''
         print("PDF generation and WhatsApp sending process completed!")
+        
