@@ -3,12 +3,16 @@ import os
 import requests
 from constants import get_wa_alert_template
 
+import dotenv
+
+dotenv.load_dotenv()
+
 log_dir = "logs"
 os.makedirs(log_dir, exist_ok=True)
 
 logging.basicConfig(filename=f"{log_dir}/alerts.log", level=logging.INFO, format="%(asctime)s - %(message)s")
 
-WA_MICROSERVICE_URL = "https://whatsapp.baylink.in/send-message"
+WA_MICROSERVICE_URL = os.getenv("WA_MICROSERVICE_URL")
 
 def formatted_phone(number):
     if not number : return None

@@ -18,6 +18,7 @@ S3_ACCESS_KEY = os.getenv("S3_ACCESS_KEY")
 S3_SECRET_ACCESS_KEY = os.getenv("S3_SECRET_ACCESS_KEY")
 S3_BUCKET_REGION = os.getenv("S3_BUCKET_REGION")
 S3_BUCKET_NAME = os.getenv("S3_BUCKET_NAME_WA_PDF")
+WA_MICROSERVICE_URL= os.getenv("WA_MICROSERVICE_URL")
 
 class PDFGenerator:
     def __init__(self, output_dir: str = "pdf"):
@@ -38,7 +39,7 @@ class PDFGenerator:
         self.RETRY_DELAY_MS = 3000  # 3 seconds
 
         # Environment variables
-        self.WA_MICROSERVICE_URL = os.getenv('WA_MICROSERVICE_URL')
+        self.WA_MICROSERVICE_URL = WA_MICROSERVICE_URL
 
     def _load_json_data(self):
         with open(self.json_path, 'r') as f:
@@ -107,7 +108,6 @@ class PDFGenerator:
             print(f"Error creating PDF: {e}")
             return None
     
-
     def _generate_messages_html(self, messages):
         messages_html = ""
         for message in messages:
@@ -203,7 +203,6 @@ class PDFGenerator:
 
             print(f"PDF URL: {pdf_url}")
 
-            '''
             whatsapp_data = {
                 "pdfUrl": pdf_url,
                 "recipient": "7007555103",  # recipient['recipient'],
@@ -214,6 +213,6 @@ class PDFGenerator:
                 print(f"Successfully sent to WhatsApp for {recipient['recipient']}: {whatsapp_response}")
             except Exception as e:
                 print(f"Failed to send WhatsApp message for {recipient['recipient']}: {e}")
-            '''
+            
         print("PDF generation and WhatsApp sending process completed!")
         

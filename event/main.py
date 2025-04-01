@@ -211,7 +211,7 @@ class Monitor:
         # Schedule jobs
         with self.scheduler_lock:
             if not self.daily_job_scheduled:  # Only schedule if not already done
-                schedule.every().day.at("17:22:30").do(self.daily_event_triggers)
+                schedule.every().day.at("21:17:30").do(self.daily_event_triggers)
                 self.daily_job_scheduled = True  # Mark as scheduled
                 print("Scheduled daily_event_triggers at 16:03:30")
             else:
