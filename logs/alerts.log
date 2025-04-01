@@ -7079,3 +7079,11 @@ psycopg2.InterfaceError: connection already closed
 2025-04-01 12:47:49,129 -  * Restarting with stat
 2025-04-01 12:47:59,843 -  * Debugger is active!
 2025-04-01 12:47:59,861 -  * Debugger PIN: 944-821-499
+2025-04-01 13:32:07,241 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 13:32:07,241 - [33mPress CTRL+C to quit[0m
+2025-04-01 13:32:07,242 -  * Restarting with stat
+2025-04-01 13:32:17,743 -  * Debugger is active!
+2025-04-01 13:32:17,775 -  * Debugger PIN: 944-821-499
