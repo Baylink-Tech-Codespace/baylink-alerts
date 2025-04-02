@@ -116,15 +116,23 @@ def check_all_retailers_pending_bills():
         return []
 
 # CASE 2 
-def compare_quantity_inventory_recon(recon_id):
+def compare_quantity_inventory_recon(recon_obj):
     try:
         print("Checking quantity in inventory and recon...")
+        
+        recon_id =  recon_obj['_id']
+        
         messages = []
         
         recon = db.get_session().query(Recon).filter(Recon._id == recon_id).first()
         retailer = db.get_session().query(Retailer).filter(Retailer._id == recon.retailer_id).first()
         field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
-        recepient = field_exec.Contact_Number
+        if field_exec is None:
+            return [{
+                "message": "No field executive found for the retailer",
+            }]
+            
+        recipient = field_exec.Contact_Number
         
         recon_items = []
         inventory_items = []
@@ -135,7 +143,7 @@ def compare_quantity_inventory_recon(recon_id):
                 "quantity": item.quantity,
                 "product_name": item.product.name
             })
-                    
+            
         inventory_stock_lists = db.get_session().query(InventoryStockList).all()
         
         for recon_item in recon_items:                 
@@ -149,38 +157,54 @@ def compare_quantity_inventory_recon(recon_id):
         for recon_item in recon_items:
             for inventory_item in inventory_items:
                 if recon_item["product_id"] == inventory_item["product_id"]:
+                    print("recon_item[quantity]",recon_item["quantity"], inventory_item["quantity"])
                     if recon_item["quantity"] > inventory_item["quantity"]:
                         messages.append({
                             "message": f"Inventory quantity for {recon_item['product_name']} is less than the recon quantity."
-                        })                
+                        })        
+        
+        if len(messages) == 0:
+            messages = ["No quantity mismatch found in inventory and recon"]
+                
         context = {
-            "recepient": recepient,
+            "recipient": recipient,
             "person_name" : field_exec.Name,
             "role" : "Field Executive",
             "messages" : messages
         }
-        
+            
         return context
 
     except Exception as e:
         print(f"Failed to check quantity in inventory and recon: {e}")
         return []
     
+import json
+    
 # CASE 4 
-def is_retailer_shelf_image_event(recon_id):
-    try:
+def is_retailer_shelf_image_event(recon_id_obj):
+    try: 
+        
+        recon_id =  recon_id_obj['_id']
+        
         print("Checking if retailer shelf image is provided for the recon.")
         message = ""
         
         recon = db.get_session().query(Recon).filter(Recon._id == recon_id).first()
         retailer = db.get_session().query(Retailer).filter(Retailer._id == recon.retailer_id).first()
         field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
-        recepient = field_exec.Contact_Number
+        if field_exec is None:
+            return [{
+                "message": "No field executive found for the retailer",
+            }]
+        
+        recipient = field_exec.Contact_Number
+        
     
         quantity = sum(item.quantity for item in recon.recon_items)
         image = recon.image[0] if recon.image else ""
-        
-        s3_image_url = get_recon_image_from_s3(image)
+                        
+        s3_image_url = get_recon_image_from_s3(image)        
         shelf_image = is_shelf_image(s3_image_url)
         
         if quantity == 0 and image == "":
@@ -193,11 +217,12 @@ def is_retailer_shelf_image_event(recon_id):
             message = "Shelf Image not provided for the recon."
             
         context = {
-            "recepient": recepient,
+            "recipient": recipient,
             "person_name" : field_exec.Name,
             "role" : "Field Executive",
             "messages" : [message]
         }
+        
         return context
     
     except Exception as e:
@@ -214,7 +239,7 @@ def detect_sales_drop():
         for sale in sales:
             if sale:
                 asm = db.get_session().query(ASM).filter(ASM._id == sale.retailer.asm._id).first()
-                recepient = asm.Contact_Number
+                recipient = asm.Contact_Number
                 
                 current_quantity = sale.quantity
                 prev_quantity = db.get_session().query(Sales).filter(
@@ -225,7 +250,7 @@ def detect_sales_drop():
                 
                 if prev_quantity is not None and current_quantity < 0.8 * prev_quantity:
                     messages.append({
-                        "recepient": recepient,
+                        "recipient": recipient,
                         "message": f"Sales drop detected for {sale.product.name} at {sale.retailer.name}.",
                         "person_name" : asm.name,
                         "role" : "ASM"
@@ -254,7 +279,7 @@ def check_sales_anomaly(data):
         
         retailer = db.get_session().query(Retailer).filter(Retailer._id == retailer_id).first()
         field_exec = db.get_session().query(Field_Exec).filter(Field_Exec._id == retailer.FE_id).first()
-        recepient = field_exec.Contact_Number
+        recipient = field_exec.Contact_Number
         
         print(f"Checking sales anomaly for {retailer.name} and product {product_id} with threshold {threshold} and current quantity {current_quantity}")
 
@@ -269,7 +294,7 @@ def check_sales_anomaly(data):
         
         if len(historical_sales) == 0:
             messages.append({
-                "recepient": recepient,
+                "recipient": recipient,
                 "message": "No historical sales data available for this product and retailer.",
                 "person_name" : field_exec.Name,
                 "role" : "Field Executive"
@@ -284,14 +309,14 @@ def check_sales_anomaly(data):
         if current_quantity < lower_bound or current_quantity > upper_bound:
             deviation = ((current_quantity - avg_sales) / avg_sales) * 100
             messages.append({
-                "recepient": recepient,
+                "recipient": recipient,
                 "message": f"Alert: Sales deviation detected! Current sales deviate by {deviation:.2f}% from historical average.",
                 "person_name" : field_exec.Name,
                 "role" : "Field Executive"
             })  
         else:
             messages.append({
-                "recepient": recepient,
+                "recipient": recipient,
                 "message": "Sales are within normal historical range.",
                 "person_name" : field_exec.Name,
                 "role" : "Field Executive"
@@ -317,15 +342,15 @@ def check_warehouse_inventory(MIN_STOCK_LEVEL=200):
                     items.append({
                         "product_name" : item.product.name,
                         "quantity" : item.quantity,
-                        "recepient" : item.warehouse.warehouse_manager.fe_user.Field_Exec.Contact_Number
+                        "recipient" : item.warehouse.warehouse_manager.fe_user.Field_Exec.Contact_Number
                     })            
         
         for item in items:
             message = f"Alert: Warehouse inventory for {item['product_name']} is below the minimum stock level of {MIN_STOCK_LEVEL}. Current quantity: {item['quantity']}"
             messages.append({
-                "recepient": item["recepient"],
+                "recipient": item["recipient"],
                 "message": message,
-                "person_name" : item["recepient"],
+                "person_name" : item["recipient"],
                 "role" : "Warehouse Manager"
             })
         
@@ -350,12 +375,12 @@ def notify_pending_orders():
             if order.status == "In-Transit" or order.status == "Scheduled": 
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
                 if delivery_log and delivery_log.delivery_person:
-                    recepient = delivery_log.delivery_person.Contact_Number
+                    recipient = delivery_log.delivery_person.Contact_Number
                     person_name = delivery_log.delivery_person.Name
                     message =  order.order_name 
                     
                     messages.append({
-                        "recepient": recepient,
+                        "recipient": recipient,
                         "message": message,
                         "person_name": person_name,
                         "role": "Delivery Person"
@@ -365,12 +390,12 @@ def notify_pending_orders():
             if credit_note.status == "In-Transit" or credit_note.status == "Scheduled":
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.credit_note_id == credit_note._id).first()
                 if delivery_log and delivery_log.delivery_person:
-                    recepient = delivery_log.delivery_person.Contact_Number
+                    recipient = delivery_log.delivery_person.Contact_Number
                     person_name = delivery_log.delivery_person.Name
                     message = credit_note.credit_note_name
                     
                     messages.append({
-                        "recepient": recepient,
+                        "recipient": recipient,
                         "message": message,
                         "person_name": person_name,
                         "role": "Delivery Person"
@@ -378,24 +403,24 @@ def notify_pending_orders():
                     
         grouped_messages = {}
         for message in messages:
-            if message["recepient"] not in grouped_messages:
-                grouped_messages[message["recepient"]] = {
-                    "recepient": message["recepient"],
+            if message["recipient"] not in grouped_messages:
+                grouped_messages[message["recipient"]] = {
+                    "recipient": message["recipient"],
                     "messages": [message["message"]],
                     "person_name": message["person_name"],
                     "role": message["role"]
                 }
             else:
-                grouped_messages[message["recepient"]]["messages"].append(message["message"])
+                grouped_messages[message["recipient"]]["messages"].append(message["message"])
 
-        for recepient, data in grouped_messages.items():
+        for recipient, data in grouped_messages.items():
             messages = data["messages"]
             person_name = data["person_name"]
             role = data["role"]
             message = "\n".join(messages)
             
             messages.append({
-                "recepient": recepient,
+                "recipient": recipient,
                 "message": f"Pending order deliveries and credit notes for today:\n{message}",
                 "person_name": person_name,
                 "role": role
@@ -418,12 +443,12 @@ def notify_delivery_for_orders():
             if order.status == "In-Transit":
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
                 if delivery_log and delivery_log.delivery_person:
-                    recepient = delivery_log.delivery_person.Contact_Number
+                    recipient = delivery_log.delivery_person.Contact_Number
                     person_name = delivery_log.delivery_person.Name
                     message = f"Delivery for order {order.order_name} is in transit, please perform the delivery."
                     
                     messages.append({
-                        "recepient": recepient,
+                        "recipient": recipient,
                         "message": message,
                         "person_name": person_name,
                         "role": "Delivery Person"
@@ -433,12 +458,12 @@ def notify_delivery_for_orders():
             if credit_note.status == "In-Transit":
                     delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs == order._id).first()
                     if delivery_log and delivery_log.delivery_person:
-                        recepient = delivery_log.delivery_person.Contact_Number
+                        recipient = delivery_log.delivery_person.Contact_Number
                         person_name = delivery_log.delivery_person.Name 
                         message = f"Delivery for credit note {credit_note.cn_name} is in transit, please perform the delivery."
                         
                         messages.append({
-                            "recepient": recepient,
+                            "recipient": recipient,
                             "message": message,
                             "person_name": person_name,
                             "role": "Delivery Person"
@@ -461,7 +486,7 @@ def delivery_not_out_on_expected_date():
             if order.status == "In-Transit" or order.status == "Scheduled":
                 delivery_log = db.get_session().query(DeliveryLogs).filter(DeliveryLogs.order_id == order._id).first()
                 if delivery_log and delivery_log.delivery_person:
-                    recepient = delivery_log.delivery_person.Contact_Number
+                    recipient = delivery_log.delivery_person.Contact_Number
 
                     if delivery_log:
                         delivery_date = delivery_log.date_of_delivery
@@ -469,21 +494,21 @@ def delivery_not_out_on_expected_date():
                         
                         if delivery_date != expected_delivery_date:
                             messages.append({
-                                "recepient": recepient,
+                                "recipient": recipient,
                                 "message": f"Delivery for order {order.order_name} is not out on expected date",
                                 "role" : "Delivery Person",
                                 "person_name" : delivery_log.delivery_person.Name
                             })
                         else: 
                             messages.append({
-                                "recepient": recepient,
+                                "recipient": recipient,
                                 "message": f"Delivery for order {order.order_name} is out on expected date",
                                 "role" : "Delivery Person",
                                 "person_name" : delivery_log.delivery_person.Name
                             })
                     else:
                         messages.append({
-                            "recepient": recepient,
+                            "recipient": recipient,
                             "message": f"Delivery for order {order.order_name} is not out on expected date",
                             "role" : "Delivery Person",
                             "person_name" : delivery_log.delivery_person.Name
@@ -519,7 +544,7 @@ def nearly_expiring_stocks():
                     
                     if expiry_date.replace(tzinfo=None) <= datetime.now() + timedelta(days=30):
                         messages.append({
-                            "recepient": asm.Contact_Number,
+                            "recipient": asm.Contact_Number,
                             "message": f"Stock of {product.name} is expiring soon. Please take necessary action.",
                             "person_name" : person_name,
                             "role" : "ASM"
@@ -870,15 +895,13 @@ def check_consistently_missed_retailers():
 def order_limits(data):
     try:
         print("Checking the limits on order")
-        order_ids = data["order_ids"]
-    
-        order_items = db.get_session().query(OrderItem).join(Product).filter(
-            OrderItem.order_id.in_(order_ids)
-        ).all()
-
+        order_id = data["_id"]
+        
+        order = db.get_session().query(Order).filter(Order._id == order_id).first() 
+        
+        order_items = order.order_items
+        
         total_amount = sum(item.quantity * item.product.price_to_retailer for item in order_items)
-
-        order = db.get_session().query(Order).filter(Order._id == order_ids[0]).first() 
         
         retailer_id = order.retailer_id
 
@@ -913,6 +936,9 @@ def order_limits(data):
                 "person_name": fe_name,
                 "role": "Field Executive"
             })
+            
+        print(messages , "messages")
+        return []
 
         return messages
     
@@ -942,7 +968,7 @@ def expiring_products():
                         
                         if days_left > 0 and days_left <= 30: 
                             messages.append({
-                                "recepient" : retailer.asm.Contact_Number,
+                                "recipient" : retailer.asm.Contact_Number,
                                 "person_name" : person_name,
                                 "role" : "ASM",
                                 "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
@@ -1021,9 +1047,9 @@ def unsold_products():
         raise
 
 event_config = {
-    "recon_insert" : [
-        lambda recon_id : compare_quantity_inventory_recon(recon_id), #  CASE 2
-        lambda recon_id : is_retailer_shelf_image_event(recon_id) #  CASE 4
+    "recon_inserted" : [
+        lambda x : compare_quantity_inventory_recon(x), #  CASE 2
+        lambda x : is_retailer_shelf_image_event(x) #  CASE 4
     ],
     "sudden_sales_drop" : [
         lambda x : detect_sales_drop(), # CASE 5
@@ -1032,7 +1058,7 @@ event_config = {
     "retailer_visit_too_short": [
         lambda x : check_short_visits(x), #CASE 19
     ],
-    "order_insert": [
+    "order_inserted": [
         lambda x : order_limits(x), #CASE 27
     ],
     "daily_event_triggers" : [

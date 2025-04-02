@@ -176,7 +176,11 @@ class Monitor:
         try:
             cursor = conn.cursor()
             self.setup_triggers(conn, cursor)
-            cursor.execute("LISTEN recon_insert_trigger; LISTEN sales_drop_trigger; LISTEN retailer_visit_too_short_trigger; LISTEN order_insert_trigger")
+            cursor.execute("LISTEN recon_inserted;") #; LISTEN sales_drop_trigger; LISTEN retailer_visit_too_short_trigger; LISTEN order_insert_trigger")
+            cursor.execute("LISTEN sudden_sales_drop;")
+            cursor.execute("LISTEN retailer_visit_too_short;")
+            cursor.execute("LISTEN order_inserted;")
+            
             print("Listening for database notifications...")
 
             while self.running:
@@ -211,7 +215,7 @@ class Monitor:
         # Schedule jobs
         with self.scheduler_lock:
             if not self.daily_job_scheduled:  # Only schedule if not already done
-                schedule.every().day.at("09:39:00").do(self.daily_event_triggers)
+                schedule.every().day.at("20:44:00").do(self.daily_event_triggers)
                 self.daily_job_scheduled = True  # Mark as scheduled
                 print("Scheduled daily_event_triggers at 16:03:30")
             else:

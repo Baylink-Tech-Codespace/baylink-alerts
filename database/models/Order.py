@@ -35,7 +35,7 @@ class Order(Base):
     #fe_user = relationship('FeUser', back_populates='orders')
     retailer: Mapped[Optional["Retailer"]] = relationship('Retailer', back_populates='orders') 
     delivery_logs: Mapped[List["DeliveryLogs"]]  = relationship('DeliveryLogs', back_populates='order')
-    order_items = relationship("OrderItem", back_populates="order")
+    order_items : Mapped[List["OrderItem"]] = relationship("OrderItem", back_populates="order")
     
     #order_items_rel = relationship('OrderItem', back_populates='order')
     

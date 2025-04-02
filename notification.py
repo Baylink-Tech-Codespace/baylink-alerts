@@ -19,9 +19,12 @@ def formatted_phone(number):
     return "91" + number
 
 def send_alert(message: str, recipient: str) -> None:
-    template = get_wa_alert_template(recipient, message)
-
+    
     print("Sending alert...")
+   
+    return
+    
+    template = get_wa_alert_template(recipient, message)
     
     try:
         response = requests.post(

@@ -22,7 +22,7 @@ WA_MICROSERVICE_URL= os.getenv("WA_MICROSERVICE_URL")
 
 class PDFGenerator:
     def __init__(self, output_dir: str = "pdf"):
-        self.json_path = "alerts.json"
+        self.json_path = "grouped_scheduled_alerts.json"
         self.output_dir = output_dir
         self.env = Environment(loader=FileSystemLoader('.'))
         self.template = self._load_template()
