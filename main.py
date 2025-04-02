@@ -21,12 +21,17 @@ app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
 def process_alerts():
+    print("Processing alerts...")
     monitor = Monitor() 
     monitor.listen_triggers() 
+    
 
-schedule.every(1).seconds.do(process_alerts)
+# schedule.every(90).seconds.do(process_alerts)
 
 def run_scheduler():
+    
+    process_alerts()
+    
     while True:
         schedule.run_pending()
         time.sleep(1)
@@ -88,8 +93,10 @@ def index():
 
 if __name__ == "__main__":
     print("🚀 Alert System & Dashboard Running...")
+    
+    run_scheduler()
 
-    threading.Thread(target=run_scheduler, daemon=True).start()
+    # threading.Thread(target=run_scheduler, daemon=True).start()
     threading.Thread(target=listen_to_db, daemon=True).start()
 
     print(f"Open URL : http://localhost:{4000} to access the dashboard.")

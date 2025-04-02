@@ -40,3 +40,4 @@ def send_alert(message: str, recipient: str) -> None:
     except requests.exceptions.RequestException as e:
         logging.error(f"Error sending alert to {recipient}: {str(e)}")
         print(f"Error sending alert: {str(e)}")
+        
