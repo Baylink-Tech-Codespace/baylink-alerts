@@ -488,9 +488,7 @@ def delivery_not_out_on_expected_date():
                             "role" : "Delivery Person",
                             "person_name" : delivery_log.delivery_person.Name
                         }) 
-                        
-        print("490",messages)
-                    
+                                        
         return messages
     
     except Exception as e:
@@ -526,9 +524,7 @@ def nearly_expiring_stocks():
                             "person_name" : person_name,
                             "role" : "ASM"
                         })
-                       
-        print("528",messages) 
-        
+                            
         return messages
     
     except Exception as e:
@@ -672,8 +668,6 @@ def check_beatplans_for_today():
                 "person_name": details["person_name"],
                 "role": details["role"]
             })
-
-        print("663",messages)
 
         return messages
     
@@ -954,8 +948,6 @@ def expiring_products():
                                 "message" : f"Product: {product.name}, Expiry Date: {expiry_date}, Days Left: {days_left}"
                             })     
                             
-        print("999",messages)   
-                            
         return messages
     except Exception as e:
         print(f"Error in expiring products: {e}")
@@ -1046,9 +1038,9 @@ event_config = {
     "daily_event_triggers" : [
         lambda x : notify_delivery_for_orders(), # CASE 8 
         lambda x : delivery_not_out_on_expected_date(), # CASE 9
-        lambda x : nearly_expiring_stocks(), # CASE 13
+        # lambda x : nearly_expiring_stocks(), # CASE 13
         lambda x : check_beatplans_for_today(), # CASE 20
-        lambda x : expiring_products(), # CASE 14
+       # lambda x : expiring_products(), # CASE 14
         lambda x : check_warehouse_inventory(), # CASE 6
         lambda x : check_skipped_orders_alert(), # CASE 18
         lambda x : notify_pending_orders(), # CASE 7  

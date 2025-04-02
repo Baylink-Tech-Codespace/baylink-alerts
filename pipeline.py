@@ -84,10 +84,9 @@ class AlertSystem:
 
     def process_scheduled_alerts(self, event_name: str, event_data: Dict[str, Any]):
         alerts = []
-        if event_name in ["daily_event_triggers", "monthly_event_triggers"]:
-            conditions = event_config.get(event_name, [])
-            for condition in conditions:
-                alerts.append(condition(event_data))
+        conditions = event_config.get(event_name, [])
+        for condition in conditions:
+            alerts.append(condition(event_data))
         
         grouped_alerts = self.group_alerts_by_recipient(alerts)
         with open(self.alert_file_name, "w") as f:

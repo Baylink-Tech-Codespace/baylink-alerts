@@ -17,6 +17,8 @@ class Monitor:
         self.db_pool = None
         self.db_thread = None
         self.scheduler_thread = None
+        self.scheduler_lock = threading.Lock()
+        self.daily_job_scheduled = False
         
         try:
             self.db_pool = psycopg2.pool.ThreadedConnectionPool(
@@ -203,9 +205,19 @@ class Monitor:
             
         # Clear any existing jobs to prevent duplicates
         schedule.clear()
-        
+            
+        # if not any(job.job_func == self.daily_event_triggers for job in schedule.get_jobs()):
+
         # Schedule jobs
-        schedule.every().day.at("19:26").do(self.daily_event_triggers)
+        with self.scheduler_lock:
+            if not self.daily_job_scheduled:  # Only schedule if not already done
+                schedule.every().day.at("09:39:00").do(self.daily_event_triggers)
+                self.daily_job_scheduled = True  # Mark as scheduled
+                print("Scheduled daily_event_triggers at 16:03:30")
+            else:
+                print("Daily job already scheduled, skipping duplicate")
+        
+        # schedule.every().day.at("16:03:30").do(self.daily_event_triggers)
         schedule.every(30).days.at("11:18").do(self.monthly_event_triggers)
         
         print("Scheduler started for daily/monthly triggers...")
@@ -251,12 +263,3 @@ class Monitor:
         if self.db_pool:
             self.db_pool.closeall()
         print("Monitor stopped")
-
-if __name__ == "__main__":
-    monitor = Monitor()
-    monitor.listen_triggers()
-    try:
-        while True:
-            time.sleep(1)
-    except KeyboardInterrupt:
-        monitor.stop()

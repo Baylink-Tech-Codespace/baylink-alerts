@@ -6956,8 +6956,6 @@ psycopg2.InterfaceError: connection already closed
 2025-03-29 18:53:44,864 -  * Debugger PIN: 898-260-860
 2025-03-29 19:24:17,492 -  * Detected change in '/Users/anshumantiwari/Documents/codes/work/Baylink/baylink-alerts/pipeline.py', reloading
 2025-03-29 19:24:18,659 -  * Restarting with stat
-<<<<<<< HEAD
-=======
 2025-03-31 12:09:42,953 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
@@ -7004,7 +7002,6 @@ psycopg2.InterfaceError: connection already closed
 2025-03-31 14:43:21,960 - terminate chrome process...
 2025-03-31 14:43:23,949 - Browser listening on: ws://127.0.0.1:64524/devtools/browser/530ccbb8-d52f-4944-9d68-36b7308a309b
 2025-03-31 14:43:24,439 - terminate chrome process...
->>>>>>> 306a86cc0dfe9650938e4dbf489c272dcabf60c1
 2025-03-31 17:50:23,407 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:4000
@@ -7055,3 +7052,399 @@ psycopg2.InterfaceError: connection already closed
 2025-03-31 19:23:57,334 -  * Restarting with stat
 2025-03-31 19:24:07,618 -  * Debugger is active!
 2025-03-31 19:24:07,644 -  * Debugger PIN: 944-821-499
+2025-04-01 11:35:04,530 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 11:35:04,531 - [33mPress CTRL+C to quit[0m
+2025-04-01 11:35:04,531 -  * Restarting with stat
+2025-04-01 11:35:15,703 -  * Debugger is active!
+2025-04-01 11:35:15,718 -  * Debugger PIN: 944-821-499
+2025-04-01 12:25:05,275 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 12:25:05,275 - [33mPress CTRL+C to quit[0m
+2025-04-01 12:25:05,275 -  * Restarting with stat
+2025-04-01 12:25:15,517 -  * Debugger is active!
+2025-04-01 12:25:15,536 -  * Debugger PIN: 944-821-499
+2025-04-01 12:47:49,128 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 12:47:49,128 - [33mPress CTRL+C to quit[0m
+2025-04-01 12:47:49,129 -  * Restarting with stat
+2025-04-01 12:47:59,843 -  * Debugger is active!
+2025-04-01 12:47:59,861 -  * Debugger PIN: 944-821-499
+2025-04-01 13:32:07,241 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 13:32:07,241 - [33mPress CTRL+C to quit[0m
+2025-04-01 13:32:07,242 -  * Restarting with stat
+2025-04-01 13:32:17,743 -  * Debugger is active!
+2025-04-01 13:32:17,775 -  * Debugger PIN: 944-821-499
+2025-04-01 13:52:29,398 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 13:52:29,398 - [33mPress CTRL+C to quit[0m
+2025-04-01 13:52:29,398 -  * Restarting with stat
+2025-04-01 13:52:39,745 -  * Debugger is active!
+2025-04-01 13:52:39,775 -  * Debugger PIN: 944-821-499
+2025-04-01 14:49:45,075 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 14:49:45,076 - [33mPress CTRL+C to quit[0m
+2025-04-01 14:49:45,076 -  * Restarting with stat
+2025-04-01 14:49:56,746 -  * Debugger is active!
+2025-04-01 14:49:56,765 -  * Debugger PIN: 944-821-499
+2025-04-01 14:50:22,590 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 14:50:22,590 - [33mPress CTRL+C to quit[0m
+2025-04-01 14:50:22,590 -  * Restarting with stat
+2025-04-01 14:50:32,561 -  * Debugger is active!
+2025-04-01 14:50:32,581 -  * Debugger PIN: 944-821-499
+2025-04-01 14:53:45,461 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 14:53:45,461 - [33mPress CTRL+C to quit[0m
+2025-04-01 14:53:45,462 -  * Restarting with stat
+2025-04-01 14:53:55,350 -  * Debugger is active!
+2025-04-01 14:53:55,369 -  * Debugger PIN: 944-821-499
+2025-04-01 14:55:04,898 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 14:55:04,899 - [33mPress CTRL+C to quit[0m
+2025-04-01 14:55:04,899 -  * Restarting with stat
+2025-04-01 14:55:14,761 -  * Debugger is active!
+2025-04-01 14:55:14,781 -  * Debugger PIN: 944-821-499
+2025-04-01 14:58:39,330 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 14:58:39,331 - [33mPress CTRL+C to quit[0m
+2025-04-01 14:58:39,331 -  * Restarting with stat
+2025-04-01 14:58:49,642 -  * Debugger is active!
+2025-04-01 14:58:49,659 -  * Debugger PIN: 944-821-499
+2025-04-01 15:01:13,624 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/pipeline.py', reloading
+2025-04-01 15:01:37,551 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:01:37,551 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:01:37,551 -  * Restarting with stat
+2025-04-01 15:01:47,705 -  * Debugger is active!
+2025-04-01 15:01:47,724 -  * Debugger PIN: 944-821-499
+2025-04-01 15:08:28,786 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:08:28,786 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:08:28,786 -  * Restarting with stat
+2025-04-01 15:08:38,608 -  * Debugger is active!
+2025-04-01 15:08:38,628 -  * Debugger PIN: 944-821-499
+2025-04-01 15:11:00,739 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 15:11:01,995 -  * Restarting with stat
+2025-04-01 15:11:13,597 -  * Debugger is active!
+2025-04-01 15:11:13,613 -  * Debugger PIN: 944-821-499
+2025-04-01 15:14:02,523 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:14:02,524 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:14:02,524 -  * Restarting with stat
+2025-04-01 15:15:15,910 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:15:15,910 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:15:15,911 -  * Restarting with stat
+2025-04-01 15:15:25,824 -  * Debugger is active!
+2025-04-01 15:15:25,862 -  * Debugger PIN: 944-821-499
+2025-04-01 15:15:29,569 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 15:15:30,560 -  * Restarting with stat
+2025-04-01 15:15:44,869 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:15:44,869 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:15:44,869 -  * Restarting with stat
+2025-04-01 15:15:54,989 -  * Debugger is active!
+2025-04-01 15:15:55,005 -  * Debugger PIN: 944-821-499
+2025-04-01 15:38:34,165 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:38:34,165 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:38:34,165 -  * Restarting with stat
+2025-04-01 15:38:45,957 -  * Debugger is active!
+2025-04-01 15:38:45,974 -  * Debugger PIN: 944-821-499
+2025-04-01 15:41:22,650 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 15:41:23,540 -  * Restarting with stat
+2025-04-01 15:49:43,923 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 15:49:43,923 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:49:43,923 -  * Restarting with stat
+2025-04-01 15:49:53,940 -  * Debugger is active!
+2025-04-01 15:49:53,958 -  * Debugger PIN: 944-821-499
+2025-04-01 15:59:28,809 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.95.61.72:4000
+2025-04-01 15:59:28,809 - [33mPress CTRL+C to quit[0m
+2025-04-01 15:59:28,810 -  * Restarting with stat
+2025-04-01 15:59:38,860 -  * Debugger is active!
+2025-04-01 15:59:38,877 -  * Debugger PIN: 944-821-499
+2025-04-01 16:01:09,885 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 16:01:10,683 -  * Restarting with stat
+2025-04-01 16:01:21,702 -  * Debugger is active!
+2025-04-01 16:01:21,718 -  * Debugger PIN: 944-821-499
+2025-04-01 16:01:42,731 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 16:01:43,954 -  * Restarting with stat
+2025-04-01 16:02:14,092 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.95.61.72:4000
+2025-04-01 16:02:14,092 - [33mPress CTRL+C to quit[0m
+2025-04-01 16:02:14,092 -  * Restarting with stat
+2025-04-01 16:02:23,915 -  * Debugger is active!
+2025-04-01 16:02:23,935 -  * Debugger PIN: 944-821-499
+2025-04-01 16:10:27,870 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.95.61.72:4000
+2025-04-01 16:10:27,871 - [33mPress CTRL+C to quit[0m
+2025-04-01 16:10:27,871 -  * Restarting with stat
+2025-04-01 16:10:38,515 -  * Debugger is active!
+2025-04-01 16:10:38,539 -  * Debugger PIN: 944-821-499
+2025-04-01 16:10:51,217 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 16:10:52,000 -  * Restarting with stat
+2025-04-01 16:11:05,823 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.95.61.72:4000
+2025-04-01 16:11:05,824 - [33mPress CTRL+C to quit[0m
+2025-04-01 16:11:05,824 -  * Restarting with stat
+2025-04-01 16:11:15,856 -  * Debugger is active!
+2025-04-01 16:11:15,875 -  * Debugger PIN: 944-821-499
+2025-04-01 16:12:48,713 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-01 16:12:49,911 -  * Restarting with stat
+2025-04-01 16:13:01,444 -  * Debugger is active!
+2025-04-01 16:13:01,464 -  * Debugger PIN: 944-821-499
+2025-04-01 16:13:20,499 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/pipeline.py', reloading
+2025-04-01 16:13:21,281 -  * Restarting with stat
+2025-04-01 16:13:32,726 -  * Debugger is active!
+2025-04-01 16:13:32,777 -  * Debugger PIN: 944-821-499
+2025-04-01 16:13:33,884 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/config.py', reloading
+2025-04-01 16:13:34,674 -  * Restarting with stat
+2025-04-01 16:13:45,264 -  * Debugger is active!
+2025-04-01 16:13:45,283 -  * Debugger PIN: 944-821-499
+2025-04-01 16:13:50,977 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/config.py', reloading
+2025-04-01 16:13:51,728 -  * Restarting with stat
+2025-04-01 16:14:03,338 -  * Debugger is active!
+2025-04-01 16:14:03,366 -  * Debugger PIN: 944-821-499
+2025-04-01 16:15:19,983 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://10.95.61.72:4000
+2025-04-01 16:15:19,984 - [33mPress CTRL+C to quit[0m
+2025-04-01 16:15:19,984 -  * Restarting with stat
+2025-04-01 16:15:31,023 -  * Debugger is active!
+2025-04-01 16:15:31,046 -  * Debugger PIN: 944-821-499
+2025-04-01 16:39:33,261 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 16:39:33,262 - [33mPress CTRL+C to quit[0m
+2025-04-01 16:39:33,263 -  * Restarting with stat
+2025-04-01 16:39:43,034 -  * Debugger is active!
+2025-04-01 16:39:43,054 -  * Debugger PIN: 944-821-499
+2025-04-01 17:06:30,633 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/config.py', reloading
+2025-04-01 17:07:03,091 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 17:07:03,091 - [33mPress CTRL+C to quit[0m
+2025-04-01 17:07:03,092 -  * Restarting with stat
+2025-04-01 17:07:12,779 -  * Debugger is active!
+2025-04-01 17:07:12,797 -  * Debugger PIN: 944-821-499
+2025-04-01 17:11:14,893 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 17:11:14,893 - [33mPress CTRL+C to quit[0m
+2025-04-01 17:11:14,893 -  * Restarting with stat
+2025-04-01 17:11:24,734 -  * Debugger is active!
+2025-04-01 17:11:24,750 -  * Debugger PIN: 944-821-499
+2025-04-01 17:17:09,610 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 17:17:09,610 - [33mPress CTRL+C to quit[0m
+2025-04-01 17:17:09,610 -  * Restarting with stat
+2025-04-01 17:17:22,337 -  * Debugger is active!
+2025-04-01 17:17:22,357 -  * Debugger PIN: 944-821-499
+2025-04-01 17:22:27,749 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 17:22:27,750 - [33mPress CTRL+C to quit[0m
+2025-04-01 17:22:27,750 -  * Restarting with stat
+2025-04-01 17:22:37,681 -  * Debugger is active!
+2025-04-01 17:22:37,701 -  * Debugger PIN: 944-821-499
+2025-04-01 17:25:35,372 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 17:25:35,373 - [33mPress CTRL+C to quit[0m
+2025-04-01 17:25:35,373 -  * Restarting with stat
+2025-04-01 17:25:49,904 -  * Debugger is active!
+2025-04-01 17:25:49,955 -  * Debugger PIN: 944-821-499
+2025-04-01 17:36:25,465 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 17:36:25,465 - [33mPress CTRL+C to quit[0m
+2025-04-01 17:36:25,465 -  * Restarting with stat
+2025-04-01 17:36:35,381 -  * Debugger is active!
+2025-04-01 17:36:35,400 -  * Debugger PIN: 944-821-499
+2025-04-01 21:11:12,055 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 21:11:12,055 - [33mPress CTRL+C to quit[0m
+2025-04-01 21:11:12,055 -  * Restarting with stat
+2025-04-01 21:11:24,610 -  * Debugger is active!
+2025-04-01 21:11:24,632 -  * Debugger PIN: 944-821-499
+2025-04-01 21:16:40,704 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 21:16:40,705 - [33mPress CTRL+C to quit[0m
+2025-04-01 21:16:40,705 -  * Restarting with stat
+2025-04-01 21:16:52,109 -  * Debugger is active!
+2025-04-01 21:16:52,142 -  * Debugger PIN: 944-821-499
+2025-04-01 21:19:37,733 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 21:19:37,733 - [33mPress CTRL+C to quit[0m
+2025-04-01 21:19:37,733 -  * Restarting with stat
+2025-04-01 21:19:47,972 -  * Debugger is active!
+2025-04-01 21:19:48,006 -  * Debugger PIN: 944-821-499
+2025-04-01 21:22:21,587 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/pdf/main.py', reloading
+2025-04-01 21:22:43,487 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 21:22:43,487 - [33mPress CTRL+C to quit[0m
+2025-04-01 21:22:43,487 -  * Restarting with stat
+2025-04-01 21:22:53,661 -  * Debugger is active!
+2025-04-01 21:22:53,688 -  * Debugger PIN: 944-821-499
+2025-04-01 21:25:20,272 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 21:25:20,272 - [33mPress CTRL+C to quit[0m
+2025-04-01 21:25:20,272 -  * Restarting with stat
+2025-04-01 21:25:31,509 -  * Debugger is active!
+2025-04-01 21:25:31,537 -  * Debugger PIN: 944-821-499
+2025-04-01 21:27:22,218 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/pdf/main.py', reloading
+2025-04-01 21:27:23,936 -  * Restarting with stat
+2025-04-01 21:57:28,005 - Failed to send alert to 7007555103: None
+2025-04-01 21:59:36,472 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-01 21:59:36,473 - [33mPress CTRL+C to quit[0m
+2025-04-01 21:59:36,473 -  * Restarting with stat
+2025-04-01 21:59:48,581 -  * Debugger is active!
+2025-04-01 21:59:48,652 -  * Debugger PIN: 944-821-499
+2025-04-02 09:02:04,294 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:02:04,295 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:02:04,295 -  * Restarting with stat
+2025-04-02 09:02:14,131 -  * Debugger is active!
+2025-04-02 09:02:14,150 -  * Debugger PIN: 944-821-499
+2025-04-02 09:02:32,700 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:02:32,701 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:02:32,701 -  * Restarting with stat
+2025-04-02 09:02:44,042 -  * Debugger is active!
+2025-04-02 09:02:44,060 -  * Debugger PIN: 944-821-499
+2025-04-02 09:28:32,964 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:28:32,964 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:28:32,964 -  * Restarting with stat
+2025-04-02 09:28:43,462 -  * Debugger is active!
+2025-04-02 09:28:43,483 -  * Debugger PIN: 944-821-499
+2025-04-02 09:29:06,240 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-02 09:29:06,893 -  * Restarting with stat
+2025-04-02 09:30:18,117 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:30:18,117 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:30:18,118 -  * Restarting with stat
+2025-04-02 09:30:29,552 -  * Debugger is active!
+2025-04-02 09:30:29,568 -  * Debugger PIN: 944-821-499
+2025-04-02 09:30:47,313 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/main.py', reloading
+2025-04-02 09:30:48,074 -  * Restarting with stat
+2025-04-02 09:31:02,528 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:31:02,528 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:31:02,529 -  * Restarting with stat
+2025-04-02 09:31:23,328 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:31:23,328 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:31:23,328 -  * Restarting with stat
+2025-04-02 09:31:33,525 -  * Debugger is active!
+2025-04-02 09:31:33,542 -  * Debugger PIN: 944-821-499
+2025-04-02 09:32:09,542 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:32:09,542 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:32:09,542 -  * Restarting with stat
+2025-04-02 09:32:19,845 -  * Debugger is active!
+2025-04-02 09:32:19,862 -  * Debugger PIN: 944-821-499
+2025-04-02 09:33:12,967 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/event/main.py', reloading
+2025-04-02 09:33:13,770 -  * Restarting with stat
+2025-04-02 09:33:28,500 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:33:28,500 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:33:28,500 -  * Restarting with stat
+2025-04-02 09:33:38,273 -  * Debugger is active!
+2025-04-02 09:33:38,290 -  * Debugger PIN: 944-821-499
+2025-04-02 09:35:03,065 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/main.py', reloading
+2025-04-02 09:35:03,833 -  * Restarting with stat
+2025-04-02 09:35:34,405 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:4000
+ * Running on http://192.168.1.5:4000
+2025-04-02 09:35:34,405 - [33mPress CTRL+C to quit[0m
+2025-04-02 09:35:34,405 -  * Restarting with stat
+2025-04-02 09:35:44,122 -  * Debugger is active!
+2025-04-02 09:35:44,141 -  * Debugger PIN: 944-821-499
+2025-04-02 09:36:35,752 -  * Detected change in '/Users/lazycodebaker/Documents/Code/Work/Baylink/baylink-alerts/main.py', reloading
+2025-04-02 09:36:36,686 -  * Restarting with stat
